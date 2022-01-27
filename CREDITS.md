@@ -1,19 +1,17 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.0.2
-    Generated: 2022-01-27 20:10:58 UTC
+    Version:   0.0.3
+    Generated: 2022-01-27 23:09:30 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
 | [ahash](https://github.com/tkaitchuck/ahash) | 0.7.6 | [Tom Kaitchuck](mailto:Tom.Kaitchuck@gmail.com) | Apache-2.0 or MIT |
-| [ansi_term](https://github.com/ogham/rust-ansi-term) | 0.12.1 | ogham@bsago.me, [Ryan Scheel Havvy](mailto:ryan.havvy@gmail.com), and [Josh Triplett](mailto:josh@joshtriplett.org) | MIT |
 | [argyle](https://github.com/Blobfolio/argyle) | 0.5.2 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [atty](https://github.com/softprops/atty) | 0.2.14 | [softprops](mailto:d.tangren@gmail.com) | MIT |
 | [beef](https://github.com/maciejhirsz/beef) | 0.5.1 | [Maciej Hirsz](mailto:hello@maciej.codes) | Apache-2.0 or MIT |
 | [bitflags](https://github.com/bitflags/bitflags) | 1.3.2 | The Rust Project Developers | Apache-2.0 or MIT |
 | [byteorder](https://github.com/BurntSushi/byteorder) | 1.4.3 | [Andrew Gallant](mailto:jamslam@gmail.com) | MIT or Unlicense |
 | [cfg-if](https://github.com/alexcrichton/cfg-if) | 1.0.0 | [Alex Crichton](mailto:alex@alexcrichton.com) | Apache-2.0 or MIT |
-| [clap](https://github.com/clap-rs/clap) | 2.34.0 | [Kevin K.](mailto:kbknapp@gmail.com) | MIT |
 | [clap](https://github.com/clap-rs/clap) | 3.0.13 |  | Apache-2.0 or MIT |
 | [clap_derive](https://github.com/clap-rs/clap/tree/master/clap_derive) | 3.0.12 |  | Apache-2.0 or MIT |
 | [codemap](https://github.com/kevinmehall/codemap) | 0.1.3 | [Kevin Mehall](mailto:km@kevinmehall.net) | Apache-2.0 or MIT |
@@ -94,16 +92,12 @@
 | [siphasher](https://github.com/jedisct1/rust-siphash) | 0.3.9 | [Frank Denis](mailto:github@pureftpd.org) | Apache-2.0 or MIT |
 | [smallvec](https://github.com/servo/rust-smallvec) | 1.8.0 | The Servo Project Developers | Apache-2.0 or MIT |
 | [stable_deref_trait](https://github.com/storyyeller/stable_deref_trait) | 1.2.0 | [Robert Grosse](mailto:n210241048576@gmail.com) | Apache-2.0 or MIT |
-| [strsim](https://github.com/dguo/strsim-rs) | 0.8.0 | [Danny Guo](mailto:dannyguo91@gmail.com) | MIT |
 | [strsim](https://github.com/dguo/strsim-rs) | 0.10.0 | [Danny Guo](mailto:danny@dannyguo.com) | MIT |
 | [syn](https://github.com/dtolnay/syn) | 1.0.86 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [tempfile](https://github.com/Stebalien/tempfile) | 3.3.0 | [Steven Allen](mailto:steven@stebalien.com), The Rust Project Developers, [Ashley Mannix](mailto:ashleymannix@live.com.au), and [Jason White](mailto:jasonaw0@gmail.com) | Apache-2.0 or MIT |
 | [termcolor](https://github.com/BurntSushi/termcolor) | 1.1.2 | [Andrew Gallant](mailto:jamslam@gmail.com) | MIT or Unlicense |
-| [textwrap](https://github.com/mgeisler/textwrap) | 0.11.0 | [Martin Geisler](mailto:martin@geisler.net) | MIT |
 | [textwrap](https://github.com/mgeisler/textwrap) | 0.14.2 | [Martin Geisler](mailto:martin@geisler.net) | MIT |
-| [unicode-width](https://github.com/unicode-rs/unicode-width) | 0.1.9 | [kwantam](mailto:kwantam@gmail.com) and [Manish Goregaokar](mailto:manishsmail@gmail.com) | Apache-2.0 or MIT |
 | [unicode-xid](https://github.com/unicode-rs/unicode-xid) | 0.2.2 | [erick.tryzelaar](mailto:erick.tryzelaar@gmail.com), [kwantam](mailto:kwantam@gmail.com), and [Manish Goregaokar](mailto:manishsmail@gmail.com) | Apache-2.0 or MIT |
-| [vec_map](https://github.com/contain-rs/vec-map) | 0.8.2 | [Alex Crichton](mailto:alex@alexcrichton.com), [Jorge Aparicio](mailto:japaricious@gmail.com), [Alexis Beingessner](mailto:a.beingessner@gmail.com), Brian Anderson <>, tbu- <>, Manish Goregaokar <>, [Aaron Turon](mailto:aturon@mozilla.com), Adolfo Ochagavía <>, Niko Matsakis <>, Steven Fackler <>, [Chase Southwood](mailto:csouth3@illinois.edu), Eduard Burtescu <>, Florian Wilkens <>, Félix Raimundo <>, Tibor Benke <>, [Markus Siemens](mailto:markus@m-siemens.de), [Josh Branchaud](mailto:jbranchaud@gmail.com), [Huon Wilson](mailto:dbau.pp@gmail.com), [Corey Farwell](mailto:coref@rwell.org), Aaron Liblong <>, [Nick Cameron](mailto:nrc@ncameron.org), [Patrick Walton](mailto:pcwalton@mimiga.net), Felix S Klock II <>, [Andrew Paseltiner](mailto:apaseltiner@gmail.com), [Sean McArthur](mailto:sean.monstar@gmail.com), and Vadim Petrochenkov <> | Apache-2.0 or MIT |
 | [vlq](https://github.com/tromey/vlq) | 0.5.1 | [Tom Tromey](mailto:tom@tromey.com) and [Nick Fitzgerald](mailto:fitzgen@gmail.com) | Apache-2.0 or MIT |
 | [wasi](https://github.com/bytecodealliance/wasi) | 0.9.0+wasi-snapshot-preview1 | The Cranelift Project Developers | Apache-2.0, Apache-2.0 WITH LLVM-exception, or MIT |
 | [wasi](https://github.com/bytecodealliance/wasi) | 0.10.2+wasi-snapshot-preview1 | The Cranelift Project Developers | Apache-2.0, Apache-2.0 WITH LLVM-exception, or MIT |
