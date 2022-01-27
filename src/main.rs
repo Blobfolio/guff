@@ -24,8 +24,6 @@
 #![warn(unused_extern_crates)]
 #![warn(unused_import_braces)]
 
-#![allow(clippy::module_name_repetitions)]
-
 
 
 mod error;
