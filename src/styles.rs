@@ -39,71 +39,57 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 	let path: PathBuf = std::fs::canonicalize(OsStr::from_bytes(src))
 		.ok()
 		.filter(|x| x.is_file())
-		.ok_or(GuffError::SourceInvalid)?;
+		.ok_or(GuffError::NoSource)?;
 
-	// Build or read the CSS.
+	// Both grass and parcel_css require string paths for some reason, so we
+	// have to make sure it can be stringified.
+	let path_str: &str = path.to_str().ok_or(GuffError::SourceFileName)?;
+
+	// Come up with CSS.
 	let css: String = match StyleKind::try_from(src)? {
-		StyleKind::Scss => {
-			let opts = Options::default()
+		// The CSS has to be built from SASS.
+		StyleKind::Scss => grass::from_path(
+			path_str,
+			&Options::default()
 				.style(OutputStyle::Expanded)
-				.quiet(true);
-
-			grass::from_path(
-				path.to_str().ok_or(GuffError::SourceInvalid)?,
-				&opts
-			)
-				.map_err(GuffError::from)?
-		},
-		StyleKind::Css => {
-			let mut css: String = std::fs::read_to_string(&path)
-				.map_err(|_| GuffError::SourceInvalid)?;
-
-			// Make sure there is no UTF-8 BOM, as it can cause problems with
-			// inlined styles.
-			if css.len() > 3 {
-				let v = unsafe { css.as_mut_vec() };
-				if v[0] == 0xef && v[1] == 0xbb && v[2] == 0xbf {
-					let len = v.len() - 3;
-					// Shift everything down.
-					unsafe {
-						std::ptr::copy(
-							v.as_ptr().add(3),
-							v.as_mut_ptr(),
-							len
-						);
-					}
-					// Shrink accordingly.
-					v.truncate(len);
-				}
-			}
-
-			css
-		},
+				.quiet(true)
+		)?,
+		// The file is already CSS; we just need to read it!
+		StyleKind::Css => std::fs::read_to_string(&path)
+			.map_err(|_| GuffError::SourceInvalid)?
+			.chars()
+			.filter(|x| '\u{feff}'.ne(x))
+			.collect(),
 	};
+
+	// Easy abort.
+	if css.trim().is_empty() {
+		return Ok(String::new());
+	}
 
 	// Parse the stylesheet as CSS.
 	let mut stylesheet = StyleSheet::parse(
-		path.to_str().ok_or(GuffError::SourceInvalid)?.to_string(),
+		path_str.to_string(),
 		&css,
 		ParserOptions {
 			nesting: true,
 			css_modules: false,
 			custom_media: false,
 		},
-	)
-		.map_err(GuffError::from)?;
+	)?;
 
 	// Minify it.
 	stylesheet.minify(MinifyOptions::default())?;
 
 	// Turn it back into a string.
-	stylesheet.to_css(PrinterOptions {
+	let out = stylesheet.to_css(PrinterOptions {
 		minify: true,
 		source_map: false,
 		..PrinterOptions::default()
-	})
-		.map(|x| x.code)
-		.map_err(GuffError::from)
+	})?;
+
+	// Done!
+	Ok(out.code)
 }
 
 
@@ -129,15 +115,15 @@ impl TryFrom<&[u8]> for StyleKind {
 		if len > 5 && src[len - 2..].eq_ignore_ascii_case(b"ss") {
 			// A four-letter extension could be Sass.
 			if src[len - 5] == b'.' {
-				if src[len - 4].eq_ignore_ascii_case(&b's') {
-					let mid = src[len - 3].to_ascii_lowercase();
-					if mid == b'a' || mid == b'c' {
-						return Ok(Self::Scss);
-					}
+				if
+					(src[len - 4] == b's' || src[len - 4] == b'S') &&
+					matches!(src[len - 3], b'a' | b'c' | b'A' | b'C')
+				{
+					return Ok(Self::Scss);
 				}
 			}
 			// A three-letter extension could be CSS.
-			else if src[len - 4] == b'.' && src[len - 3].eq_ignore_ascii_case(&b'c') {
+			else if src[len - 4] == b'.' && (src[len - 3] == b'c' || src[len - 3] == b'C') {
 				return Ok(Self::Css);
 			}
 		}

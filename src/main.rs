@@ -2,6 +2,8 @@
 # Guff
 */
 
+#![forbid(unsafe_code)]
+
 #![warn(clippy::filetype_is_file)]
 #![warn(clippy::integer_division)]
 #![warn(clippy::needless_borrow)]
@@ -21,8 +23,6 @@
 #![warn(unused_crate_dependencies)]
 #![warn(unused_extern_crates)]
 #![warn(unused_import_braces)]
-
-#![allow(clippy::module_name_repetitions)]
 
 
 

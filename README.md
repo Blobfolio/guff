@@ -5,6 +5,8 @@
 
 Guff is a SASS/SCSS parser and CSS minifier rolled into one.
 
+Note: feature-complete SASS/SCSS parsing is still a work in progress. Known issues are tracked [here](https://github.com/connorskees/grass/issues/19).
+
 
 
 ## Usage

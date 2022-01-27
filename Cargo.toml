@@ -1,6 +1,6 @@
 [package]
 name = "guff"
-version = "0.0.2"
+version = "0.0.3"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
@@ -58,9 +58,13 @@ path = true
 argyle = "0.5.*"
 cssparser = "*"
 fyi_msg = "0.9.*"
-grass = "0.10.*"
 parcel_css = "1.0.0-alpha.13"
 write_atomic = "0.2.*"
+
+[dependencies.grass]
+version = "0.10.*"
+default-features = false
+features = [ "random" ]
 
 [profile.release]
 lto = true
