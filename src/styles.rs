@@ -53,8 +53,7 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 			&Options::default()
 				.style(OutputStyle::Expanded)
 				.quiet(true)
-		)
-			.map_err(GuffError::from)?,
+		)?,
 		// The file is already CSS; we just need to read it!
 		StyleKind::Css => std::fs::read_to_string(&path)
 			.map_err(|_| GuffError::SourceInvalid)?
@@ -77,20 +76,20 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 			css_modules: false,
 			custom_media: false,
 		},
-	)
-		.map_err(GuffError::from)?;
+	)?;
 
 	// Minify it.
 	stylesheet.minify(MinifyOptions::default())?;
 
 	// Turn it back into a string.
-	stylesheet.to_css(PrinterOptions {
+	let out = stylesheet.to_css(PrinterOptions {
 		minify: true,
 		source_map: false,
 		..PrinterOptions::default()
-	})
-		.map(|x| x.code)
-		.map_err(GuffError::from)
+	})?;
+
+	// Done!
+	Ok(out.code)
 }
 
 
