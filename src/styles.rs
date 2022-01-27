@@ -62,19 +62,7 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 			// inlined styles.
 			if css.len() > 3 {
 				let v = unsafe { css.as_mut_vec() };
-				if v[0] == 0xef && v[1] == 0xbb && v[2] == 0xbf {
-					let len = v.len() - 3;
-					// Shift everything down.
-					unsafe {
-						std::ptr::copy(
-							v.as_ptr().add(3),
-							v.as_mut_ptr(),
-							len
-						);
-					}
-					// Shrink accordingly.
-					v.truncate(len);
-				}
+				if v[0] == 0xef && v[1] == 0xbb && v[2] == 0xbf { v.drain(..3); }
 			}
 
 			css
