@@ -24,15 +24,25 @@ use std::{
 pub(super) enum GuffError {
 	/// # Argyle passthrough.
 	Argue(ArgyleError),
+
 	/// # CSS Parse Error.
-	CssParse(String),
-	CssParseSimple,
+	Css(String),
+
+	/// # Non-specific CSS Parse Error.
+	CssSimple,
+
 	/// # No Source.
 	NoSource,
+
 	/// # SCSS Parse Error.
-	ScssParse(String),
+	Scss(String),
+
+	/// # Source File Name.
+	SourceFileName,
+
 	/// # Invalid Source.
 	SourceInvalid,
+
 	/// # Write Error.
 	Write,
 }
@@ -42,8 +52,8 @@ impl Error for GuffError {}
 impl fmt::Display for GuffError {
 	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
 		match self {
-			Self::CssParse(s) => write!(f, "CSS error: {}", s),
-			Self::ScssParse(s) => write!(f, "SCSS error: {}", s),
+			Self::Css(s) => write!(f, "CSS error: {}", s),
+			Self::Scss(s) => write!(f, "SCSS error: {}", s),
 			_ => f.write_str(self.as_str()),
 		}
 	}
@@ -56,31 +66,27 @@ impl From<ArgyleError> for GuffError {
 
 impl From<Box<grass::Error>> for GuffError {
 	#[inline]
-	fn from(err: Box<grass::Error>) -> Self { Self::ScssParse(err.to_string()) }
+	fn from(err: Box<grass::Error>) -> Self { Self::Scss(err.to_string()) }
 }
 
-impl From<MinifyError> for GuffError {
-	#[inline]
-	fn from(err: MinifyError) -> Self { Self::CssParse(err.reason()) }
+macro_rules! parcel_error {
+	($($ty:ty),+) => ($(
+		impl From<$ty> for GuffError {
+			#[inline]
+			fn from(err: $ty) -> Self { Self::Css(err.reason()) }
+		}
+	)+)
 }
+
+parcel_error!(MinifyError, PrinterError, ParserError<'_>);
 
 impl<'a> From<ParseError<'a, ParserError<'a>>> for GuffError {
 	fn from(err: ParseError<'a, ParserError<'a>>) -> Self {
 		match err.kind {
-			ParseErrorKind::Basic(_) => Self::CssParseSimple,
+			ParseErrorKind::Basic(_) => Self::CssSimple,
 			ParseErrorKind::Custom(t) => t.into(),
 		}
 	}
-}
-
-impl<'a> From<ParserError<'a>> for GuffError {
-	#[inline]
-	fn from(err: ParserError<'a>) -> Self { Self::CssParse(err.reason()) }
-}
-
-impl From<PrinterError> for GuffError {
-	#[inline]
-	fn from(err: PrinterError) -> Self { Self::CssParse(err.reason()) }
 }
 
 impl GuffError {
@@ -88,9 +94,10 @@ impl GuffError {
 	pub(super) const fn as_str(&self) -> &'static str {
 		match self {
 			Self::Argue(e) => e.as_str(),
-			Self::CssParseSimple | Self::CssParse(_) => "Unable to parse CSS.",
+			Self::CssSimple | Self::Css(_) => "Unable to parse CSS.",
 			Self::NoSource => "An SCSS/CSS source is required.",
-			Self::ScssParse(_) => "Unable to parse SCSS.",
+			Self::Scss(_) => "Unable to parse SCSS.",
+			Self::SourceFileName => "File paths must be valid UTF-8.",
 			Self::SourceInvalid => "Invalid/unreadable SCSS/CSS source.",
 			Self::Write => "The output could not be saved to disk.",
 		}

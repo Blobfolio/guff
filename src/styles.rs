@@ -39,7 +39,7 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 	let path: PathBuf = std::fs::canonicalize(OsStr::from_bytes(src))
 		.ok()
 		.filter(|x| x.is_file())
-		.ok_or(GuffError::SourceInvalid)?;
+		.ok_or(GuffError::NoSource)?;
 
 	// Build or read the CSS.
 	let css: String = match StyleKind::try_from(src)? {
@@ -49,7 +49,7 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 				.quiet(true);
 
 			grass::from_path(
-				path.to_str().ok_or(GuffError::SourceInvalid)?,
+				path.to_str().ok_or(GuffError::SourceFileName)?,
 				&opts
 			)
 				.map_err(GuffError::from)?
