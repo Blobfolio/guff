@@ -23,7 +23,17 @@ use std::{
 
 /// # Parse and Process!
 ///
-/// This will process SCSS (if applicable) and return the minified CSS output.
+/// This method takes a file path — represented as bytes because that's what
+/// we've got — and parses, processes, and minifies the data, returning a
+/// minified CSS copy as a string if all went well.
+///
+/// If the source has a `.sass` or `.scss` extension, it will first be parsed
+/// into raw CSS. If the source is already `.css`, that step is skipped.
+///
+/// ## Errors
+///
+/// This will return an error if the file is invalid, unreadable, or
+/// unparseable.
 pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 	// Make the path sane.
 	let path: PathBuf = std::fs::canonicalize(OsStr::from_bytes(src))
@@ -45,11 +55,33 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 				.map_err(GuffError::from)?
 		},
 		StyleKind::Css => {
-			std::fs::read_to_string(&path).map_err(|_| GuffError::SourceInvalid)?
+			let mut css: String = std::fs::read_to_string(&path)
+				.map_err(|_| GuffError::SourceInvalid)?;
+
+			// Make sure there is no UTF-8 BOM, as it can cause problems with
+			// inlined styles.
+			if css.len() > 3 {
+				let v = unsafe { css.as_mut_vec() };
+				if v[0] == 0xef && v[1] == 0xbb && v[2] == 0xbf {
+					let len = v.len() - 3;
+					// Shift everything down.
+					unsafe {
+						std::ptr::copy(
+							v.as_ptr().add(3),
+							v.as_mut_ptr(),
+							len
+						);
+					}
+					// Shrink accordingly.
+					v.truncate(len);
+				}
+			}
+
+			css
 		},
 	};
 
-	// Turn it over to Parcel for minification!
+	// Parse the stylesheet as CSS.
 	let mut stylesheet = StyleSheet::parse(
 		path.to_str().ok_or(GuffError::SourceInvalid)?.to_string(),
 		&css,
@@ -61,8 +93,10 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 	)
 		.map_err(GuffError::from)?;
 
+	// Minify it.
 	stylesheet.minify(MinifyOptions::default())?;
 
+	// Turn it back into a string.
 	stylesheet.to_css(PrinterOptions {
 		minify: true,
 		source_map: false,
