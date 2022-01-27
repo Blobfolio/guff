@@ -35,7 +35,7 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 	let css: String = match StyleKind::try_from(src)? {
 		StyleKind::Scss => {
 			let opts = Options::default()
-				.style(OutputStyle::Compressed)
+				.style(OutputStyle::Expanded)
 				.quiet(true);
 
 			grass::from_path(
