@@ -3,7 +3,31 @@
 [![Build Status](https://github.com/Blobfolio/guff/workflows/Build/badge.svg)](https://github.com/Blobfolio/guff/actions)
 [![Dependency Status](https://deps.rs/repo/github/blobfolio/guff/status.svg)](https://deps.rs/repo/github/blobfolio/guff)
 
-Guff is an SCSS parser and CSS minifier rolled into one.
+Guff is a SASS/SCSS parser and CSS minifier rolled into one.
+
+
+
+## Usage
+
+It's easy; just give it a source and, optionally, a destination:
+```bash
+guff [FLAGS] [OPTIONS]
+```
+
+**Flags:**
+```text
+-h, --help        Print help information and exit.
+-V, --version     Print version information and exit.
+```
+
+**Options:**
+```text
+-i, --input <FILE>    The path to an SCSS or CSS source file.
+-o, --output <FILE>   The path to save the minified output to. If omitted,
+                      the result will be printed to STDOUT instead.
+```
+
+If the input is SCSS, it will be processed into CSS and then minified; if it is already CSS, it will just be minified.
 
 
 

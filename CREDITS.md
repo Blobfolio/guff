@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.0.1
-    Generated: 2022-01-27 08:13:41 UTC
+    Version:   0.0.2
+    Generated: 2022-01-27 20:10:58 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -41,7 +41,7 @@
 | [itoa](https://github.com/dtolnay/itoa) | 0.4.8 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [lasso](https://github.com/Kixiron/lasso) | 0.5.1 | [Chase Wilson](mailto:contact@chasewilson.dev) | Apache-2.0 or MIT |
 | [lazy_static](https://github.com/rust-lang-nursery/lazy-static.rs) | 1.4.0 | [Marvin Löbel](mailto:loebel.marvin@gmail.com) | Apache-2.0 or MIT |
-| [libc](https://github.com/rust-lang/libc) | 0.2.114 | The Rust Project Developers | Apache-2.0 or MIT |
+| [libc](https://github.com/rust-lang/libc) | 0.2.115 | The Rust Project Developers | Apache-2.0 or MIT |
 | [log](https://github.com/rust-lang/log) | 0.4.14 | The Rust Project Developers | Apache-2.0 or MIT |
 | [matches](https://github.com/SimonSapin/rust-std-candidates) | 0.1.9 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MIT |
 | [memchr](https://github.com/BurntSushi/memchr) | 2.4.1 | [Andrew Gallant](mailto:jamslam@gmail.com) and bluss | MIT or Unlicense |
