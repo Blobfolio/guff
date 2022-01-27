@@ -41,16 +41,21 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 		.filter(|x| x.is_file())
 		.ok_or(GuffError::NoSource)?;
 
+	// Both grass and parcel_css require string paths for some reason, so we
+	// have to make sure it can be stringified.
+	let path_str: &str = path.to_str().ok_or(GuffError::SourceFileName)?;
+
+	// Come up with CSS.
 	let css: String = match StyleKind::try_from(src)? {
 		// The CSS has to be built from SASS.
 		StyleKind::Scss => grass::from_path(
-			path.to_str().ok_or(GuffError::SourceFileName)?,
+			path_str,
 			&Options::default()
 				.style(OutputStyle::Expanded)
 				.quiet(true)
 		)
 			.map_err(GuffError::from)?,
-		// The file is already CSS; just read the file.
+		// The file is already CSS; we just need to read it!
 		StyleKind::Css => std::fs::read_to_string(&path)
 			.map_err(|_| GuffError::SourceInvalid)?
 			.chars()
@@ -65,7 +70,7 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 
 	// Parse the stylesheet as CSS.
 	let mut stylesheet = StyleSheet::parse(
-		path.to_str().ok_or(GuffError::SourceInvalid)?.to_string(),
+		path_str.to_string(),
 		&css,
 		ParserOptions {
 			nesting: true,
