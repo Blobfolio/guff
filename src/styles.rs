@@ -41,33 +41,27 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 		.filter(|x| x.is_file())
 		.ok_or(GuffError::NoSource)?;
 
-	// Build or read the CSS.
 	let css: String = match StyleKind::try_from(src)? {
-		StyleKind::Scss => {
-			let opts = Options::default()
+		// The CSS has to be built from SASS.
+		StyleKind::Scss => grass::from_path(
+			path.to_str().ok_or(GuffError::SourceFileName)?,
+			&Options::default()
 				.style(OutputStyle::Expanded)
-				.quiet(true);
-
-			grass::from_path(
-				path.to_str().ok_or(GuffError::SourceFileName)?,
-				&opts
-			)
-				.map_err(GuffError::from)?
-		},
-		StyleKind::Css => {
-			let mut css: String = std::fs::read_to_string(&path)
-				.map_err(|_| GuffError::SourceInvalid)?;
-
-			// Make sure there is no UTF-8 BOM, as it can cause problems with
-			// inlined styles.
-			if css.len() > 3 {
-				let v = unsafe { css.as_mut_vec() };
-				if v[0] == 0xef && v[1] == 0xbb && v[2] == 0xbf { v.drain(..3); }
-			}
-
-			css
-		},
+				.quiet(true)
+		)
+			.map_err(GuffError::from)?,
+		// The file is already CSS; just read the file.
+		StyleKind::Css => std::fs::read_to_string(&path)
+			.map_err(|_| GuffError::SourceInvalid)?
+			.chars()
+			.filter(|x| '\u{feff}'.ne(x))
+			.collect(),
 	};
+
+	// Easy abort.
+	if css.trim().is_empty() {
+		return Ok(String::new());
+	}
 
 	// Parse the stylesheet as CSS.
 	let mut stylesheet = StyleSheet::parse(
