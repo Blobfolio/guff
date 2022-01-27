@@ -117,15 +117,15 @@ impl TryFrom<&[u8]> for StyleKind {
 		if len > 5 && src[len - 2..].eq_ignore_ascii_case(b"ss") {
 			// A four-letter extension could be Sass.
 			if src[len - 5] == b'.' {
-				if src[len - 4].eq_ignore_ascii_case(&b's') {
-					let mid = src[len - 3].to_ascii_lowercase();
-					if mid == b'a' || mid == b'c' {
-						return Ok(Self::Scss);
-					}
+				if
+					(src[len - 4] == b's' || src[len - 4] == b'S') &&
+					matches!(src[len - 3], b'a' | b'c' | b'A' | b'C')
+				{
+					return Ok(Self::Scss);
 				}
 			}
 			// A three-letter extension could be CSS.
-			else if src[len - 4] == b'.' && src[len - 3].eq_ignore_ascii_case(&b'c') {
+			else if src[len - 4] == b'.' && (src[len - 3] == b'c' || src[len - 3] == b'C') {
 				return Ok(Self::Css);
 			}
 		}
