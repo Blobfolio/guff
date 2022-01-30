@@ -1,6 +1,6 @@
 [package]
 name = "guff"
-version = "0.0.3"
+version = "0.0.4"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
@@ -58,8 +58,12 @@ path = true
 argyle = "0.5.*"
 cssparser = "*"
 fyi_msg = "0.9.*"
-parcel_css = "1.0.0-alpha.13"
 write_atomic = "0.2.*"
+
+[dependencies.parcel_css]
+version = "1.0.0-alpha.13"
+git = "https://github.com/parcel-bundler/parcel-css.git"
+rev = "583ee72"
 
 [dependencies.grass]
 version = "0.10.*"
