@@ -63,7 +63,7 @@ write_atomic = "0.2.*"
 [dependencies.parcel_css]
 version = "1.0.0-alpha.13"
 git = "https://github.com/parcel-bundler/parcel-css.git"
-rev = "43d3a7f"
+rev = "583ee72"
 
 [dependencies.grass]
 version = "0.10.*"
