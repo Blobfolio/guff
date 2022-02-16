@@ -1,6 +1,6 @@
 [package]
 name = "guff"
-version = "0.0.4"
+version = "0.0.5"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
@@ -17,7 +17,7 @@ license-file = ["./LICENSE", "0"]
 extended-description = "An SCSS parser and CSS minifier rolled into one."
 revision = "1"
 depends = "$auto"
-section = "utility"
+section = "utils"
 assets = [
     ["./target/x86_64-unknown-linux-gnu/release/guff", "usr/bin/", "755"],
     ["./release/completions/guff.bash", "etc/bash_completion.d/", "644"],
@@ -56,14 +56,9 @@ path = true
 
 [dependencies]
 argyle = "0.5.*"
-cssparser = "*"
 fyi_msg = "0.9.*"
+parcel_css = "1.0.0-alpha.16"
 write_atomic = "0.2.*"
-
-[dependencies.parcel_css]
-version = "1.0.0-alpha.13"
-git = "https://github.com/parcel-bundler/parcel-css.git"
-rev = "583ee72"
 
 [dependencies.grass]
 version = "0.10.*"

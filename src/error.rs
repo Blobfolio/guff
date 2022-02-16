@@ -3,14 +3,10 @@
 */
 
 use argyle::ArgyleError;
-use cssparser::{
-	ParseError,
-	ParseErrorKind,
-};
 use parcel_css::error::{
-	MinifyError,
+	MinifyErrorKind,
 	ParserError,
-	PrinterError,
+	PrinterErrorKind,
 };
 use std::{
 	error::Error,
@@ -27,9 +23,6 @@ pub(super) enum GuffError {
 
 	/// # CSS Parse Error.
 	Css(String),
-
-	/// # Non-specific CSS Parse Error.
-	CssSimple,
 
 	/// # No Source.
 	NoSource,
@@ -52,8 +45,7 @@ impl Error for GuffError {}
 impl fmt::Display for GuffError {
 	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
 		match self {
-			Self::Css(s) => write!(f, "CSS error: {}", s),
-			Self::Scss(s) => write!(f, "SCSS error: {}", s),
+			Self::Css(s) | Self::Scss(s) => write!(f, "{} {}", self.as_str(), s),
 			_ => f.write_str(self.as_str()),
 		}
 	}
@@ -69,34 +61,27 @@ impl From<Box<grass::Error>> for GuffError {
 	fn from(err: Box<grass::Error>) -> Self { Self::Scss(err.to_string()) }
 }
 
-macro_rules! parcel_error {
+macro_rules! from_parcel {
 	($($ty:ty),+) => ($(
-		impl From<$ty> for GuffError {
+		impl From<parcel_css::error::Error<$ty>> for GuffError {
 			#[inline]
-			fn from(err: $ty) -> Self { Self::Css(err.reason()) }
+			fn from(err: parcel_css::error::Error<$ty>) -> Self {
+				Self::Css(err.kind.reason())
+			}
 		}
-	)+)
+	)+);
 }
 
-parcel_error!(MinifyError, PrinterError, ParserError<'_>);
-
-impl<'a> From<ParseError<'a, ParserError<'a>>> for GuffError {
-	fn from(err: ParseError<'a, ParserError<'a>>) -> Self {
-		match err.kind {
-			ParseErrorKind::Basic(_) => Self::CssSimple,
-			ParseErrorKind::Custom(t) => t.into(),
-		}
-	}
-}
+from_parcel!(MinifyErrorKind, ParserError<'_>, PrinterErrorKind);
 
 impl GuffError {
 	/// # As Str.
 	pub(super) const fn as_str(&self) -> &'static str {
 		match self {
 			Self::Argue(e) => e.as_str(),
-			Self::CssSimple | Self::Css(_) => "Unable to parse CSS.",
+			Self::Css(_) => "Unable to parse CSS:",
 			Self::NoSource => "An SCSS/CSS source is required.",
-			Self::Scss(_) => "Unable to parse SCSS.",
+			Self::Scss(_) => "Unable to parse SCSS:",
 			Self::SourceFileName => "File paths must be valid UTF-8.",
 			Self::SourceInvalid => "Invalid/unreadable SCSS/CSS source.",
 			Self::Write => "The output could not be saved to disk.",
