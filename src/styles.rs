@@ -75,6 +75,7 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 			nesting: true,
 			css_modules: false,
 			custom_media: false,
+			source_index: 0,
 		},
 	)?;
 
@@ -84,7 +85,7 @@ pub(super) fn parse(src: &[u8]) -> Result<String, GuffError> {
 	// Turn it back into a string.
 	let out = stylesheet.to_css(PrinterOptions {
 		minify: true,
-		source_map: false,
+		source_map: None,
 		..PrinterOptions::default()
 	})?;
 
