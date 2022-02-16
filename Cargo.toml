@@ -17,7 +17,7 @@ license-file = ["./LICENSE", "0"]
 extended-description = "An SCSS parser and CSS minifier rolled into one."
 revision = "1"
 depends = "$auto"
-section = "utility"
+section = "utils"
 assets = [
     ["./target/x86_64-unknown-linux-gnu/release/guff", "usr/bin/", "755"],
     ["./release/completions/guff.bash", "etc/bash_completion.d/", "644"],
