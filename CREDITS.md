@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.0.5
-    Generated: 2022-02-16 18:09:19 UTC
+    Version:   0.0.6
+    Generated: 2022-02-23 20:50:43 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -30,7 +30,7 @@
 | [fxhash](https://github.com/cbreeden/fxhash) | 0.2.1 | [cbreeden](mailto:github@u.breeden.cc) | Apache-2.0 or MIT |
 | [fyi_msg](https://github.com/Blobfolio/fyi) | 0.9.3 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.1.16 | The Rand Project Developers | Apache-2.0 or MIT |
-| [getrandom](https://github.com/rust-random/getrandom) | 0.2.4 | The Rand Project Developers | Apache-2.0 or MIT |
+| [getrandom](https://github.com/rust-random/getrandom) | 0.2.5 | The Rand Project Developers | Apache-2.0 or MIT |
 | [grass](https://github.com/connorskees/grass) | 0.10.8 | [ConnorSkees](mailto:39542938+ConnorSkees@users.noreply.github.com) | MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [indexmap](https://github.com/bluss/indexmap) | 1.8.0 | bluss and [Josh Stone](mailto:cuviper@gmail.com) | Apache-2.0 or MIT |
@@ -48,7 +48,7 @@
 | [num-traits](https://github.com/rust-num/num-traits) | 0.2.14 | The Rust Project Developers | Apache-2.0 or MIT |
 | [num_cpus](https://github.com/seanmonstar/num_cpus) | 1.13.1 | [Sean McArthur](mailto:sean@seanmonstar.com) | Apache-2.0 or MIT |
 | [once_cell](https://github.com/matklad/once_cell) | 1.9.0 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | Apache-2.0 or MIT |
-| [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.16 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
+| [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.17 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [parcel_selectors](https://github.com/servo/servo) | 0.24.1 | The Servo Project Developers | MPL-2.0 |
 | [parcel_sourcemap](https://github.com/parcel-bundler/source-map) | 2.0.2 | [Jasper De Moor](mailto:jasperdemoor@gmail.com) | MIT |
 | [parking_lot](https://github.com/Amanieu/parking_lot) | 0.12.0 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
