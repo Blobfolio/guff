@@ -67,7 +67,9 @@ fn _main() -> Result<(), GuffError> {
 
 	// Do we just want to generate a config?
 	let input = args.option2(b"-i", b"--input").ok_or(GuffError::NoSource)?;
-	let code = styles::parse(input)?;
+	let browsers = args.option2(b"-b", b"--browsers")
+		.and_then(|s| std::str::from_utf8(s).ok());
+	let code = styles::parse(input, browsers)?;
 
 	// Save it!
 	if let Some(path) = args.option2(b"-o", b"--output").map(OsStr::from_bytes) {
@@ -103,6 +105,9 @@ FLAGS:
     -V, --version     Print version information and exit.
 
 OPTIONS:
+    -b, --browsers <LIST> Comma-separated list of browser compatibility
+                          requirements, like 'last 2 versions, not dead,
+                          firefox 97'. Usage-based rules are unsupported.
     -i, --input <FILE>    The path to an SCSS or CSS source file.
     -o, --output <FILE>   The path to save the minified output to. If omitted,
                           the result will be printed to STDOUT instead.

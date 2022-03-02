@@ -1,6 +1,6 @@
 [package]
 name = "guff"
-version = "0.0.5"
+version = "0.0.7"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
@@ -14,7 +14,7 @@ publish = false
 maintainer = "Josh Stoik <hello@blobfolio.com>"
 copyright = "2022, Blobfolio, LLC <hello@blobfolio.com>"
 license-file = ["./LICENSE", "0"]
-extended-description = "An SCSS parser and CSS minifier rolled into one."
+extended-description = ""
 revision = "1"
 depends = "$auto"
 section = "utils"
@@ -41,6 +41,13 @@ long = "--version"
 description = "Print version information and exit."
 
 [[package.metadata.bashman.options]]
+short = "-b"
+long = "--browsers"
+label = "<LIST>"
+description = "Comma-separated list of browser compatibility requirements, like 'last 2 versions, not dead, firefox 97'. Usage-based rules are unsupported."
+path = false
+
+[[package.metadata.bashman.options]]
 short = "-i"
 long = "--input"
 label = "<FILE>"
@@ -56,8 +63,9 @@ path = true
 
 [dependencies]
 argyle = "0.5.*"
+browserslist-rs = "0.8.*"
 fyi_msg = "0.9.*"
-parcel_css = "1.0.0-alpha.16"
+parcel_css = "1.0.0-alpha.18"
 write_atomic = "0.2.*"
 
 [dependencies.grass]
