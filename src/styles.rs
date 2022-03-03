@@ -3,7 +3,6 @@
 */
 
 use crate::GuffError;
-use fyi_msg::Msg;
 use grass::{
 	Options,
 	OutputStyle,
@@ -38,7 +37,7 @@ use std::{
 ///
 /// This will return an error if the file is invalid, unreadable, or
 /// unparseable.
-pub(super) fn parse(src: &[u8], browsers: Option<&str>) -> Result<String, GuffError> {
+pub(super) fn parse(src: &[u8], browsers: Option<Browsers>) -> Result<String, GuffError> {
 	// Make the path sane.
 	let path: PathBuf = std::fs::canonicalize(OsStr::from_bytes(src))
 		.ok()
@@ -70,9 +69,6 @@ pub(super) fn parse(src: &[u8], browsers: Option<&str>) -> Result<String, GuffEr
 	if css.trim().is_empty() {
 		return Ok(String::new());
 	}
-
-	// Are we doing browsers?
-	let browsers = parse_browsers(browsers);
 
 	// Parse the stylesheet as CSS.
 	let mut stylesheet = StyleSheet::parse(
@@ -142,85 +138,4 @@ impl TryFrom<&[u8]> for StyleKind {
 
 		Err(GuffError::SourceInvalid)
 	}
-}
-
-
-
-/// # Parse Browsers.
-///
-/// This feeds a generic list of comma-separated browser requirements to the
-/// `browserlist-rs` crate, then maps those results (if any) to Parcel's
-/// `Browser` type.
-fn parse_browsers(cond: Option<&str>) -> Option<Browsers> {
-	use browserslist::Opts;
-
-	// Split everything out.
-	let raw: &str = cond?;
-	let conds: Vec<&str> = raw.split(',')
-		.filter_map(|mut s| {
-			s = s.trim();
-			if s.is_empty() { None }
-			else { Some(s) }
-		})
-		.collect();
-
-	// Easy abort on no conditions.
-	if conds.is_empty() { return None; }
-
-	// Feed them to browserlist to see what we've got.
-	let res = match browserslist::resolve(conds, Opts::new().mobile_to_desktop(true).ignore_unknown_versions(true)) {
-		Ok(b) => b,
-		Err(e) => {
-			Msg::warning(e.to_string()).print();
-			return None;
-		},
-	};
-
-	// Set up the parcel options.
-	let mut browsers = Browsers::default();
-	let mut any: bool = false;
-
-	// Helper: Assign if lower or missing.
-	macro_rules! browser {
-		($browser:ident, $version:ident) => (
-			if browsers.$browser.map_or(true, |v2| $version < v2) {
-				browsers.$browser.replace($version);
-				any = true;
-			}
-		)
-	}
-
-	for d in res {
-		if let Some(v) = parse_version(d.version()) {
-			match d.name() {
-				"android" => browser!(android, v),
-				"chrome" | "and_chr" => browser!(chrome, v),
-				"edge" => browser!(edge, v),
-				"firefox" | "and_ff" => browser!(firefox, v),
-				"ie" => browser!(ie, v),
-				"ios_saf" => browser!(ios_saf, v),
-				"opera" | "op_mob" => browser!(opera, v),
-				"safari" => browser!(safari, v),
-				"samsung" => browser!(samsung, v),
-				_ => {},
-			}
-		}
-	}
-
-	if any { Some(browsers) }
-	else { None }
-}
-
-/// # Parse Version.
-///
-/// This converts a string representation of a browser version to a single,
-/// packed `u32` that can be fed to Parcel's `Browser` type.
-fn parse_version(version: &str) -> Option<u32> {
-	let mut version = version.split('-').next()?.split('.');
-	let major = version.next().and_then(|v| v.parse::<u32>().ok())?;
-	let minor = version.next().and_then(|v| v.parse::<u32>().ok()).unwrap_or(0);
-	let patch = version.next().and_then(|v| v.parse::<u32>().ok()).unwrap_or(0);
-	let v: u32 = (major & 0xff) << 16 | (minor & 0xff) << 8 | (patch & 0xff);
-
-	Some(v)
 }

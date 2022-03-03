@@ -41,13 +41,6 @@ long = "--version"
 description = "Print version information and exit."
 
 [[package.metadata.bashman.options]]
-short = "-b"
-long = "--browsers"
-label = "<LIST>"
-description = "Comma-separated list of browser compatibility requirements, like 'last 2 versions, not dead, firefox 97'. Usage-based rules are unsupported."
-path = false
-
-[[package.metadata.bashman.options]]
 short = "-i"
 long = "--input"
 label = "<FILE>"
@@ -61,17 +54,98 @@ label = "<FILE>"
 description = "The path to save the minified output to. If omitted, the result will be printed to STDOUT instead."
 path = true
 
+[[package.metadata.bashman.options]]
+long = "--last"
+label = "<NUM>"
+description = "Set compatibility to the last X versions of each browser, except IE."
+path = false
+
+[[package.metadata.bashman.options]]
+long = "--age"
+label = "<YEARS>"
+description = "Set compatibility to versions released within the past X years, except IE."
+path = false
+
+[[package.metadata.bashman.options]]
+long = "--android"
+label = "<VER>"
+description = "Minimum supported version of the Android browser."
+path = false
+
+[[package.metadata.bashman.options]]
+long = "--chrome"
+label = "<VER>"
+description = "Minimum supported version of Google Chrome."
+path = false
+
+[[package.metadata.bashman.options]]
+long = "--edge"
+label = "<VER>"
+description = "Minimum supported version of Microsoft Edge."
+path = false
+
+[[package.metadata.bashman.options]]
+long = "--firefox"
+label = "<VER>"
+description = "Minimum supported version of Firefox."
+path = false
+
+[[package.metadata.bashman.options]]
+long = "--ie"
+label = "<VER>"
+description = "Minimum supported version of IE. If you want any IE support at all, this *must* be set."
+path = false
+
+[[package.metadata.bashman.options]]
+long = "--ios"
+label = "<VER>"
+description = "Minimum supported version of iOS (Safari)."
+path = false
+
+[[package.metadata.bashman.options]]
+long = "--opera"
+label = "<VER>"
+description = "Minimum supported version of Opera."
+path = false
+
+[[package.metadata.bashman.options]]
+long = "--safari"
+label = "<VER>"
+description = "Minimum supported version of Safari."
+path = false
+
+[[package.metadata.bashman.options]]
+long = "--samsung"
+label = "<VER>"
+description = "Minimum supported version of Samsung's Android browser."
+path = false
+
 [dependencies]
 argyle = "0.5.*"
-browserslist-rs = "0.8.*"
 fyi_msg = "0.9.*"
 parcel_css = "1.0.0-alpha.18"
+utc2k = "0.3.*"
 write_atomic = "0.2.*"
 
 [dependencies.grass]
 version = "0.10.*"
 default-features = false
 features = [ "random" ]
+
+[build-dependencies]
+dactyl = "0.2.*"
+
+[build-dependencies.serde]
+version = "1.0.*"
+features = [ "derive" ]
+
+[build-dependencies.serde_json]
+version = "1.0.*"
+
+[build-dependencies.ureq]
+version = "2.4.*"
+default-features = false
+features = [ "tls", "gzip" ]
 
 [profile.release]
 lto = true
