@@ -21,6 +21,12 @@ pub(super) enum GuffError {
 	/// # Argyle passthrough.
 	Argue(ArgyleError),
 
+	/// # Browser.
+	Browser(String),
+
+	/// # Browsers String.
+	Browsers,
+
 	/// # CSS Parse Error.
 	Css(String),
 
@@ -45,7 +51,7 @@ impl Error for GuffError {}
 impl fmt::Display for GuffError {
 	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
 		match self {
-			| Self::Css(s) | Self::Scss(s) => write!(f, "{} {}", self.as_str(), s),
+			Self::Browser(s) | Self::Css(s) | Self::Scss(s) => write!(f, "{} {}", self.as_str(), s),
 			_ => f.write_str(self.as_str()),
 		}
 	}
@@ -79,6 +85,8 @@ impl GuffError {
 	pub(super) const fn as_str(&self) -> &'static str {
 		match self {
 			Self::Argue(e) => e.as_str(),
+			Self::Browser(_) => "Invalid browser:",
+			Self::Browsers => "Malformed -b/--browsers filter.",
 			Self::Css(_) => "Unable to parse CSS:",
 			Self::NoSource => "An SCSS/CSS source is required.",
 			Self::Scss(_) => "Unable to parse SCSS:",

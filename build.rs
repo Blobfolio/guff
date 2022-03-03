@@ -23,11 +23,6 @@ use std::{
 /// # Can I Use? publishes their data here.
 const DATA_URL: &str = "https://github.com/Fyrd/caniuse/raw/main/fulldata-json/data-2.0.json";
 
-/// # The Version Triple.
-///
-/// This holds the Parcel value, major number, and release date.
-type Triple = (u32, u32, u32);
-
 
 
 /// # Pull (supported) browser version data from Can I Use.
@@ -79,55 +74,46 @@ fn fetch() -> String {
 
 /// # Process the Data.
 fn process(raw: Raw) -> String {
-	let all: HashMap<Agent, Vec<Triple>> = raw.agents.into_iter()
+	let all: HashMap<Agent, Vec<(u32, u32)>> = raw.agents.into_iter()
 		.filter_map(|(k, mut v)| {
 			let agent = Agent::try_from(k.as_str()).ok()?;
 			v.version_list.sort_by(|a, b| b.era.cmp(&a.era));
 
-			let mut releases: Vec<Triple> = v.version_list.into_iter()
+			let mut releases: Vec<(u32, u32)> = v.version_list.into_iter()
 				.filter_map(|v2| {
-					let date = v2.release_date?;
+					v2.release_date?;
 					let (parcel, major) = parse_version(&v2.version)?;
-					Some((parcel, major, date))
+					Some((parcel, major))
 				})
 				.collect();
 
-			// We don't need more than 20 of these things.
+			// We don't need more than 16 of these things.
 			if 16 < releases.len() { releases.truncate(16); }
 
 			Some((agent, releases))
 		})
 		.collect();
 
-	let all_len: usize = all.len();
-	let mut all = all.into_iter()
+	let mut all: Vec<String> = all.into_iter()
 		.map(|(k, v)| {
-			let v = v.into_iter().map(|v2| format!(
-				"({}, {}, {})",
-				NiceU32::with_separator(v2.0, b'_'),
-				NiceU32::with_separator(v2.1, b'_'),
-				NiceU32::with_separator(v2.2, b'_'),
-			))
-				.collect::<Vec<String>>()
-				.join(", ");
-
-			format!("(Agent::{}, &[{}])", k.as_str(), v)
+			format!(
+				"const {}: [(u32, u32); {}] = [{}];",
+				k.as_str(),
+				v.len(),
+				v.into_iter()
+					.map(|(a, b)| format!(
+						"({}, {})",
+						NiceU32::with_separator(a, b'_'),
+						NiceU32::with_separator(b, b'_'),
+					))
+					.collect::<Vec<String>>()
+					.join(", ")
+			)
 		})
-		.collect::<Vec<String>>();
+		.collect();
 	all.sort_unstable();
 
-	let out = format!(
-		"#[allow(clippy::type_complexity)]
-/// # Browser Data.
-///
-/// Each tuple holds the Parcel version, major version, and release date.
-const BROWSERS: [(Agent, &[(u32, u32, u32)]); {}] = [\n\t{}\n];
-",
-		all_len,
-		all.join(",\n\t"),
-	);
-
-	out
+	all.join("\n")
 }
 
 
@@ -170,15 +156,15 @@ enum Agent {
 impl Agent {
 	const fn as_str(self) -> &'static str  {
 		match self {
-			Self::Android => "Android",
-			Self::Chrome => "Chrome",
-			Self::Edge => "Edge",
-			Self::Firefox => "Firefox",
-			Self::Ie => "Ie",
-			Self::Ios => "Ios",
-			Self::Opera => "Opera",
-			Self::Safari => "Safari",
-			Self::Samsung => "Samsung",
+			Self::Android => "ANDROID",
+			Self::Chrome => "CHROME",
+			Self::Edge => "EDGE",
+			Self::Firefox => "FIREFOX",
+			Self::Ie => "IE",
+			Self::Ios => "IOS",
+			Self::Opera => "OPERA",
+			Self::Safari => "SAFARI",
+			Self::Samsung => "SAMSUNG",
 		}
 	}
 }
