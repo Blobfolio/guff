@@ -28,6 +28,7 @@
 
 mod error;
 mod styles;
+mod targets;
 
 
 
@@ -47,7 +48,7 @@ use std::{
 
 
 
-/// Main.
+/// # Main.
 fn main() {
 	match _main() {
 		Ok(_) => {},
@@ -60,15 +61,18 @@ fn main() {
 }
 
 #[inline]
-/// Actual Main.
+/// # Actual Main.
 fn _main() -> Result<(), GuffError> {
 	// Parse CLI arguments.
 	let args = Argue::new(FLAG_HELP | FLAG_REQUIRED | FLAG_VERSION)?;
 
 	// Do we just want to generate a config?
 	let input = args.option2(b"-i", b"--input").ok_or(GuffError::NoSource)?;
-	let browsers = args.option2(b"-b", b"--browsers")
-		.and_then(|s| std::str::from_utf8(s).ok());
+	let browsers =
+		if let Some(b) = args.option2(b"-b", b"--browsers") {
+			targets::parse_browsers(b)?
+		}
+		else { None };
 	let code = styles::parse(input, browsers)?;
 
 	// Save it!
@@ -86,7 +90,7 @@ fn _main() -> Result<(), GuffError> {
 
 #[allow(clippy::non_ascii_literal)] // Doesn't work with an r"" literal.
 #[cold]
-/// Print Help.
+/// # Print Help.
 fn helper() {
 	println!(concat!(
 		r"
@@ -105,12 +109,24 @@ FLAGS:
     -V, --version     Print version information and exit.
 
 OPTIONS:
-    -b, --browsers <LIST> Comma-separated list of browser compatibility
-                          requirements, like 'last 2 versions, not dead,
-                          firefox 97'. Usage-based rules are unsupported.
+    -b, --browsers <STR>  A comma-separated list of specific browser/version
+                          pairs to target for CSS compatibility, like
+                          'firefox 90, ie 11'. Specifying versions released
+                          after guff was built has no effect.
     -i, --input <FILE>    The path to an SCSS or CSS source file.
     -o, --output <FILE>   The path to save the minified output to. If omitted,
                           the result will be printed to STDOUT instead.
+
+COMPATIBILITY:
+    The following browser strings are supported by the -b/--browsers option:
+      * android ", "\x1b[2m(the generic Android browser)\x1b[0m
+      * chrome
+      * edge
+      * firefox
+      * ios \x1b[2m(mobile Safari)\x1b[0m
+      * opera
+      * safari
+      * samsung \x1b[2m(Samsung's Android browser)\x1b[0m
 "
 	));
 }
