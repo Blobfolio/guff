@@ -52,7 +52,7 @@ pub fn main() {
 /// # Download/Cache Raw JSON.
 fn fetch() -> String {
 	// Is it cached?
-	let cache = out_path("caniuse.json");
+	let cache = out_path("guff-browsers.json");
 	if let Some(x) = try_cache(&cache) {
 		return x;
 	}
