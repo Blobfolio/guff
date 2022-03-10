@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.0.8
-    Generated: 2022-03-04 03:56:03 UTC
+    Version:   0.0.9
+    Generated: 2022-03-10 19:41:27 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -28,7 +28,7 @@
 | [either](https://github.com/bluss/either) | 1.6.1 | bluss | Apache-2.0 or MIT |
 | [fastrand](https://github.com/smol-rs/fastrand) | 1.7.0 | [Stjepan Glavina](mailto:stjepang@gmail.com) | Apache-2.0 or MIT |
 | [fxhash](https://github.com/cbreeden/fxhash) | 0.2.1 | [cbreeden](mailto:github@u.breeden.cc) | Apache-2.0 or MIT |
-| [fyi_msg](https://github.com/Blobfolio/fyi) | 0.9.3 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
+| [fyi_msg](https://github.com/Blobfolio/fyi) | 0.9.5 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.1.16 | The Rand Project Developers | Apache-2.0 or MIT |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.5 | The Rand Project Developers | Apache-2.0 or MIT |
 | [grass](https://github.com/connorskees/grass) | 0.10.8 | [ConnorSkees](mailto:39542938+ConnorSkees@users.noreply.github.com) | MIT |
@@ -48,7 +48,7 @@
 | [num-traits](https://github.com/rust-num/num-traits) | 0.2.14 | The Rust Project Developers | Apache-2.0 or MIT |
 | [num_cpus](https://github.com/seanmonstar/num_cpus) | 1.13.1 | [Sean McArthur](mailto:sean@seanmonstar.com) | Apache-2.0 or MIT |
 | [once_cell](https://github.com/matklad/once_cell) | 1.10.0 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | Apache-2.0 or MIT |
-| [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.18 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
+| [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.19 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [parcel_selectors](https://github.com/servo/servo) | 0.24.1 | The Servo Project Developers | MPL-2.0 |
 | [parcel_sourcemap](https://github.com/parcel-bundler/source-map) | 2.0.2 | [Jasper De Moor](mailto:jasperdemoor@gmail.com) | MIT |
 | [parking_lot](https://github.com/Amanieu/parking_lot) | 0.12.0 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
@@ -84,7 +84,7 @@
 | [seahash](https://gitlab.redox-os.org/redox-os/seahash) | 4.1.0 | [ticki](mailto:ticki@users.noreply.github.com) and [Tom Almeida](mailto:tom@tommoa.me) | MIT |
 | [serde](https://github.com/serde-rs/serde) | 1.0.136 | [Erick Tryzelaar](mailto:erick.tryzelaar@gmail.com) and [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [serde_derive](https://github.com/serde-rs/serde) | 1.0.136 | [Erick Tryzelaar](mailto:erick.tryzelaar@gmail.com) and [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
-| [siphasher](https://github.com/jedisct1/rust-siphash) | 0.3.9 | [Frank Denis](mailto:github@pureftpd.org) | Apache-2.0 or MIT |
+| [siphasher](https://github.com/jedisct1/rust-siphash) | 0.3.10 | [Frank Denis](mailto:github@pureftpd.org) | Apache-2.0 or MIT |
 | [smallvec](https://github.com/servo/rust-smallvec) | 1.8.0 | The Servo Project Developers | Apache-2.0 or MIT |
 | [syn](https://github.com/dtolnay/syn) | 1.0.86 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [tempfile](https://github.com/Stebalien/tempfile) | 3.3.0 | [Steven Allen](mailto:steven@stebalien.com), The Rust Project Developers, [Ashley Mannix](mailto:ashleymannix@live.com.au), and [Jason White](mailto:jasonaw0@gmail.com) | Apache-2.0 or MIT |
