@@ -73,7 +73,7 @@ default-features = false
 features = [ "random" ]
 
 [build-dependencies]
-dactyl = "0.2.*"
+dactyl = "0.3.*"
 
 [build-dependencies.serde]
 version = "1.0.*"
