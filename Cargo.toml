@@ -64,7 +64,7 @@ path = true
 [dependencies]
 argyle = "0.5.*"
 fyi_msg = "0.9.*"
-parcel_css = "1.0.0-alpha.19"
+parcel_css = "1.0.0-alpha.20"
 write_atomic = "0.2.*"
 
 [dependencies.grass]
