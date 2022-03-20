@@ -205,17 +205,19 @@ fn out_path(name: &str) -> PathBuf {
 /// This parses a version from a string, generating the packed `u32` Parcel
 /// expects, and also returning the major for reference.
 fn parse_version(src: &str) -> Option<(u32, u32)> {
+	use dactyl::traits::BytesToUnsigned;
+
 	// Strip the revision and split on dots.
 	let mut version = src.split('-')
 		.next()?
 		.split('.');
 
 	// Major is first and required.
-	let major = version.next().and_then(|v| v.parse::<u32>().ok())?;
+	let major = version.next().and_then(|v| u32::btou(v.as_bytes()))?;
 
 	// Minor and patch follow, but may be zero.
-	let minor = version.next().and_then(|v| v.parse::<u32>().ok()).unwrap_or(0);
-	let patch = version.next().and_then(|v| v.parse::<u32>().ok()).unwrap_or(0);
+	let minor = version.next().and_then(|v| u32::btou(v.as_bytes())).unwrap_or(0);
+	let patch = version.next().and_then(|v| u32::btou(v.as_bytes())).unwrap_or(0);
 
 	let v: u32 = (major & 0xff) << 16 | (minor & 0xff) << 8 | (patch & 0xff);
 	let v = NonZeroU32::new(v)?;
