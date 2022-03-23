@@ -17,29 +17,30 @@ use parcel_css::{
 	targets::Browsers,
 };
 use std::{
-	ffi::OsStr,
 	os::unix::ffi::OsStrExt,
-	path::PathBuf,
+	path::{
+		Path,
+		PathBuf,
+	},
 };
+use trim_in_place::TrimInPlace;
 
 
 
-/// # Parse and Process!
+/// # Load/Make CSS.
 ///
-/// This method takes a file path — represented as bytes because that's what
-/// we've got — and parses, processes, and minifies the data, returning a
-/// minified CSS copy as a string if all went well.
-///
-/// If the source has a `.sass` or `.scss` extension, it will first be parsed
-/// into raw CSS. If the source is already `.css`, that step is skipped.
+/// This method will load the input and either return it as-is — if it is CSS —
+/// or build it — if it is SCSS.
 ///
 /// ## Errors
 ///
-/// This will return an error if the file is invalid, unreadable, or
-/// unparseable.
-pub(super) fn parse(src: &[u8], browsers: Option<Browsers>) -> Result<String, GuffError> {
+/// This will return an error if the file is invalid, unreadable, or does not
+/// end with `.css`, `.sass`, or `.scss`.
+pub(super) fn css<P>(src: P) -> Result<String, GuffError>
+where P: AsRef<Path> {
 	// Make the path sane.
-	let path: PathBuf = std::fs::canonicalize(OsStr::from_bytes(src))
+	let src = src.as_ref();
+	let path: PathBuf = std::fs::canonicalize(src)
 		.ok()
 		.filter(|x| x.is_file())
 		.ok_or(GuffError::NoSource)?;
@@ -49,7 +50,7 @@ pub(super) fn parse(src: &[u8], browsers: Option<Browsers>) -> Result<String, Gu
 	let path_str: &str = path.to_str().ok_or(GuffError::SourceFileName)?;
 
 	// Come up with CSS.
-	let css: String = match StyleKind::try_from(src)? {
+	let mut css: String = match StyleKind::try_from(src.as_os_str().as_bytes())? {
 		// The CSS has to be built from SASS.
 		StyleKind::Scss => grass::from_path(
 			path_str,
@@ -65,15 +66,39 @@ pub(super) fn parse(src: &[u8], browsers: Option<Browsers>) -> Result<String, Gu
 			.collect(),
 	};
 
+	css.trim_in_place();
+	Ok(css)
+}
+
+/// # Minify CSS.
+///
+/// This method accepts raw CSS and minifies it, returning the improved
+/// version.
+///
+/// If browser compatibility targets are specified, some advanced compression
+/// techniques may be disabled.
+///
+/// ## Errors
+///
+/// This will return an error if the document cannot be processed.
+pub(super) fn minify<P>(src: P, css: &str, browsers: Option<Browsers>)
+-> Result<String, GuffError>
+where P: AsRef<Path> {
 	// Easy abort.
-	if css.trim().is_empty() {
+	if css.is_empty() {
 		return Ok(String::new());
 	}
 
+	// The path shouldn't be needed, but is requested, so just in case.
+	let src: String = std::fs::canonicalize(src)
+		.map_err(|_| GuffError::NoSource)?
+		.to_string_lossy()
+		.into_owned();
+
 	// Parse the stylesheet as CSS.
 	let mut stylesheet = StyleSheet::parse(
-		path_str.to_string(),
-		&css,
+		src,
+		css,
 		ParserOptions {
 			nesting: true,
 			css_modules: false,

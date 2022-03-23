@@ -29,27 +29,6 @@ rustflags   := "-C link-arg=-s"
 
 
 
-# Bench it!
-bench BENCH="":
-	#!/usr/bin/env bash
-
-	clear
-	if [ -z "{{ BENCH }}" ]; then
-		RUSTFLAGS="{{ rustflags }}" cargo bench \
-			--benches \
-			--all-features \
-			--target x86_64-unknown-linux-gnu \
-			--target-dir "{{ cargo_dir }}"
-	else
-		RUSTFLAGS="{{ rustflags }}" cargo bench \
-			--bench "{{ BENCH }}" \
-			--all-features \
-			--target x86_64-unknown-linux-gnu \
-			--target-dir "{{ cargo_dir }}"
-	fi
-	exit 0
-
-
 # Build Release!
 @build:
 	# First let's build the Rust bit.
@@ -171,6 +150,13 @@ version:
 	toml set "{{ DIR }}/Cargo.toml" package.version "{{ VER }}" > /tmp/Cargo.toml
 	just _fix-chown "/tmp/Cargo.toml"
 	mv "/tmp/Cargo.toml" "{{ DIR }}/Cargo.toml"
+
+
+# Bench Reset.
+@_bench-reset:
+	[ ! -d "{{ data_dir }}" ] || rm -rf "{{ data_dir }}"
+	cp -a "{{ justfile_directory() }}/skel" "{{ data_dir }}"
+	just _fix-chown "{{ data_dir }}"
 
 
 # Init dependencies.

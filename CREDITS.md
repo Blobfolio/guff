@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.0
-    Generated: 2022-03-20 02:50:03 UTC
+    Version:   0.1.1
+    Generated: 2022-03-23 17:16:59 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -41,7 +41,7 @@
 | [lasso](https://github.com/Kixiron/lasso) | 0.5.1 | [Chase Wilson](mailto:contact@chasewilson.dev) | Apache-2.0 or MIT |
 | [lazy_static](https://github.com/rust-lang-nursery/lazy-static.rs) | 1.4.0 | [Marvin Löbel](mailto:loebel.marvin@gmail.com) | Apache-2.0 or MIT |
 | [lock_api](https://github.com/Amanieu/parking_lot) | 0.4.6 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
-| [log](https://github.com/rust-lang/log) | 0.4.14 | The Rust Project Developers | Apache-2.0 or MIT |
+| [log](https://github.com/rust-lang/log) | 0.4.16 | The Rust Project Developers | Apache-2.0 or MIT |
 | [matches](https://github.com/SimonSapin/rust-std-candidates) | 0.1.9 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MIT |
 | [memoffset](https://github.com/Gilnaa/memoffset) | 0.6.5 | [Gilad Naaman](mailto:gilad.naaman@gmail.com) | MIT |
 | [num-bigint](https://github.com/rust-num/num-bigint) | 0.4.3 | The Rust Project Developers | Apache-2.0 or MIT |
@@ -90,6 +90,7 @@
 | [smallvec](https://github.com/servo/rust-smallvec) | 1.8.0 | The Servo Project Developers | Apache-2.0 or MIT |
 | [syn](https://github.com/dtolnay/syn) | 1.0.89 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [tempfile](https://github.com/Stebalien/tempfile) | 3.3.0 | [Steven Allen](mailto:steven@stebalien.com), The Rust Project Developers, [Ashley Mannix](mailto:ashleymannix@live.com.au), and [Jason White](mailto:jasonaw0@gmail.com) | Apache-2.0 or MIT |
+| [trim-in-place](https://github.com/magiclen/trim-in-place) | 0.1.7 | [Magic Len](mailto:len@magiclen.org) | MIT |
 | [unicode-xid](https://github.com/unicode-rs/unicode-xid) | 0.2.2 | [erick.tryzelaar](mailto:erick.tryzelaar@gmail.com), [kwantam](mailto:kwantam@gmail.com), and [Manish Goregaokar](mailto:manishsmail@gmail.com) | Apache-2.0 or MIT |
 | [vlq](https://github.com/tromey/vlq) | 0.5.1 | [Tom Tromey](mailto:tom@tromey.com) and [Nick Fitzgerald](mailto:fitzgen@gmail.com) | Apache-2.0 or MIT |
 | [write_atomic](https://github.com/Blobfolio/write_atomic) | 0.2.2 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |

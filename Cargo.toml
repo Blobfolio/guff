@@ -1,6 +1,6 @@
 [package]
 name = "guff"
-version = "0.1.0"
+version = "0.1.1"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
@@ -40,6 +40,11 @@ short = "-V"
 long = "--version"
 description = "Print version information and exit."
 
+[[package.metadata.bashman.switches]]
+short = "-e"
+long = "--expanded"
+description = "Do not minify CSS."
+
 [[package.metadata.bashman.options]]
 short = "-b"
 long = "--browsers"
@@ -65,6 +70,7 @@ path = true
 argyle = "0.5.*"
 fyi_msg = "0.9.*"
 parcel_css = "1.0.0-alpha.20"
+trim-in-place = "0.1.*"
 write_atomic = "0.2.*"
 
 [dependencies.grass]

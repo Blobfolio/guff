@@ -12,6 +12,10 @@ _basher___guff() {
 		opts+=("-V")
 		opts+=("--version")
 	fi
+	if [[ ! " ${COMP_LINE} " =~ " -e " ]] && [[ ! " ${COMP_LINE} " =~ " --expanded " ]]; then
+		opts+=("-e")
+		opts+=("--expanded")
+	fi
 	if [[ ! " ${COMP_LINE} " =~ " -b " ]] && [[ ! " ${COMP_LINE} " =~ " --browsers " ]]; then
 		opts+=("-b")
 		opts+=("--browsers")
