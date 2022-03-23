@@ -47,6 +47,11 @@ label = "<VER>"
 description = "A comma-separated list of specific browser/version pairs to target for CSS compatibility, like 'firefox 90, ie 11'."
 path = false
 
+[[package.metadata.bashman.switches]]
+short = "-e"
+long = "--expanded"
+description = "Do not minify CSS."
+
 [[package.metadata.bashman.options]]
 short = "-i"
 long = "--input"
@@ -65,6 +70,7 @@ path = true
 argyle = "0.5.*"
 fyi_msg = "0.9.*"
 parcel_css = "1.0.0-alpha.20"
+trim-in-place = "0.1.*"
 write_atomic = "0.2.*"
 
 [dependencies.grass]
