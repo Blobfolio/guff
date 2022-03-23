@@ -1,0 +1,47 @@
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+
+	vertical-align: baseline;
+	box-sizing: border-box;
+
+	border: 0;
+	border-radius: 0;
+	border-style: none;
+	outline: none;
+
+	font: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+
+	-webkit-text-decoration-skip: objects;
+	touch-action: manipulation;
+
+	// Prevent children of clicky things from stealing interactions.
+	& > *,
+	&:before,
+	&:after { pointer-events: none; }
+}
+
+b,
+strong { font-weight: bold; }
+
+del,
+strike { text-decoration: line-through; }
+
+em,
+i { font-style: italic; }
+
+img,
+svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+svg:not(:root) { overflow: hidden; }

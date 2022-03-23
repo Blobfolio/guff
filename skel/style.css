@@ -1,0 +1,78 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 0;
+  border-style: none;
+  outline: none;
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-text-decoration-skip: objects;
+  touch-action: manipulation;
+}
+a > *, a:before, a:after {
+  pointer-events: none;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+del,
+strike {
+  text-decoration: line-through;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+img,
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+html {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-width: 300px;
+  min-height: 100vh;
+  padding-top: 85px;
+  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  text-transform: none;
+  letter-spacing: 0;
+  color: white;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url(/assets/bg.png), linear-gradient(to bottom right, black, 25%, purple);
+  background-blend-mode: multiply;
+  background-size: cover;
+}
