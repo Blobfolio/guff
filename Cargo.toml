@@ -68,6 +68,7 @@ path = true
 
 [dependencies]
 argyle = "0.5.*"
+dactyl = "0.3.*, >=0.3.3"
 fyi_msg = "0.9.*"
 parcel_css = "1.0.0-alpha.20"
 trim-in-place = "0.1.*"
@@ -79,7 +80,7 @@ default-features = false
 features = [ "random" ]
 
 [build-dependencies]
-dactyl = "0.3.*"
+dactyl = "0.3.*, >=0.3.3"
 
 [build-dependencies.serde]
 version = "1.0.*"
