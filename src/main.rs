@@ -41,10 +41,6 @@ use argyle::{
 };
 use error::GuffError;
 use fyi_msg::Msg;
-use std::{
-	ffi::OsStr,
-	os::unix::ffi::OsStrExt,
-};
 
 
 
@@ -67,9 +63,7 @@ fn _main() -> Result<(), GuffError> {
 	let args = Argue::new(FLAG_HELP | FLAG_REQUIRED | FLAG_VERSION)?;
 
 	// Do we just want to generate a config?
-	let input = args.option2(b"-i", b"--input")
-		.map(OsStr::from_bytes)
-		.ok_or(GuffError::NoSource)?;
+	let input = args.option2_os(b"-i", b"--input").ok_or(GuffError::NoSource)?;
 
 	// Always do the CSS.
 	let mut code = styles::css(input)?;
@@ -86,7 +80,7 @@ fn _main() -> Result<(), GuffError> {
 	}
 
 	// Save it!
-	if let Some(path) = args.option2(b"-o", b"--output").map(OsStr::from_bytes) {
+	if let Some(path) = args.option2_os(b"-o", b"--output") {
 		write_atomic::write_file(path, code.as_bytes())
 			.map_err(|_| GuffError::Write)?;
 	}
