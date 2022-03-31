@@ -1,6 +1,6 @@
 [package]
 name = "guff"
-version = "0.1.1"
+version = "0.1.2"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
@@ -67,9 +67,10 @@ description = "The path to save the minified output to. If omitted, the result w
 path = true
 
 [dependencies]
-argyle = "0.5.*"
+argyle = "0.5.*, >=0.5.3"
+dactyl = "0.3.*, >=0.3.3"
 fyi_msg = "0.9.*"
-parcel_css = "1.0.0-alpha.20"
+parcel_css = "1.0.0-alpha.21"
 trim-in-place = "0.1.*"
 write_atomic = "0.2.*"
 
@@ -79,7 +80,7 @@ default-features = false
 features = [ "random" ]
 
 [build-dependencies]
-dactyl = "0.3.*"
+dactyl = "0.3.*, >=0.3.3"
 
 [build-dependencies.serde]
 version = "1.0.*"

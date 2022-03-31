@@ -3,6 +3,7 @@
 */
 
 use crate::GuffError;
+use dactyl::traits::BytesToUnsigned;
 use fyi_msg::Msg;
 use parcel_css::targets::Browsers;
 use std::num::NonZeroU32;
@@ -132,7 +133,7 @@ fn parse_override(src: &str) -> Result<(Agent, Option<NonZeroU32>), GuffError> {
 	let agent = Agent::try_from(agent)?;
 
 	// Missing/invalid major versions just turn off filtering.
-	let major = split.next().and_then(|s| s.parse::<NonZeroU32>().ok());
+	let major = split.next().and_then(|s| NonZeroU32::btou(s.as_bytes()));
 	Ok((agent, major))
 }
 
