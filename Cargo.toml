@@ -70,12 +70,12 @@ path = true
 argyle = "0.5.*, >=0.5.3"
 dactyl = "0.3.*, >=0.3.3"
 fyi_msg = "0.9.*"
-parcel_css = "1.0.0-alpha.21"
-trim-in-place = "0.1.*"
+parcel_css = "=1.0.0-alpha.21"
+trim-in-place = "=0.1.7"
 write_atomic = "0.2.*"
 
 [dependencies.grass]
-version = "0.10.*"
+version = "=0.10.8"
 default-features = false
 features = [ "random" ]
 
@@ -83,14 +83,14 @@ features = [ "random" ]
 dactyl = "0.3.*, >=0.3.3"
 
 [build-dependencies.serde]
-version = "1.0.*"
+version = "=1.0.136"
 features = [ "derive" ]
 
 [build-dependencies.serde_json]
-version = "1.0.*"
+version = "=1.0.79"
 
 [build-dependencies.ureq]
-version = "2.4.*"
+version = "=2.4.0"
 default-features = false
 features = [ "tls", "gzip" ]
 
