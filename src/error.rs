@@ -72,7 +72,7 @@ macro_rules! from_parcel {
 		impl From<parcel_css::error::Error<$ty>> for GuffError {
 			#[inline]
 			fn from(err: parcel_css::error::Error<$ty>) -> Self {
-				Self::Css(err.kind.reason())
+				Self::Css(err.kind.to_string())
 			}
 		}
 	)+);
