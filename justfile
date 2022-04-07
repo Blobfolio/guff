@@ -24,15 +24,14 @@ cargo_bin   := cargo_dir + "/x86_64-unknown-linux-gnu/release/" + pkg_id
 data_dir    := "/tmp/bench-data"
 doc_dir     := justfile_directory() + "/doc"
 release_dir := justfile_directory() + "/release"
-
-rustflags   := "-C link-arg=-s"
+skel_dir    := justfile_directory() + "/skel"
 
 
 
 # Build Release!
 @build:
 	# First let's build the Rust bit.
-	RUSTFLAGS="--emit asm {{ rustflags }}" cargo build \
+	RUSTFLAGS="--emit asm" cargo build \
 		--bin "{{ pkg_id }}" \
 		--release \
 		--target x86_64-unknown-linux-gnu \
@@ -53,6 +52,32 @@ rustflags   := "-C link-arg=-s"
 
 	just _fix-chown "{{ release_dir }}"
 	mv "{{ justfile_directory() }}/target" "{{ cargo_dir }}"
+
+
+@build-pgo: clean
+	[ ! -d "/tmp/pgo-data" ] || rm -rf /tmp/pgo-data
+
+	RUSTFLAGS="-Cprofile-generate=/tmp/pgo-data" cargo build \
+		--bin "{{ pkg_id }}" \
+		--release \
+		--target x86_64-unknown-linux-gnu \
+		--target-dir "{{ cargo_dir }}"
+
+	"{{ cargo_bin }}" -i "{{ skel_dir }}/style.scss"
+	"{{ cargo_bin }}" -i "{{ skel_dir }}/style.css"
+	"{{ cargo_bin }}" -i "{{ skel_dir }}/style.scss" -o /tmp/foo.css
+	rm /tmp/foo.css
+	"{{ cargo_bin }}" -i "{{ skel_dir }}/style.scss" -o /tmp/foo.css -b "firefox 90, ie 11"
+	rm /tmp/foo.css
+
+	/usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-profdata \
+		merge -o /tmp/pgo-data/merged.profdata /tmp/pgo-data
+
+	RUSTFLAGS="-Cprofile-use=/tmp/pgo-data/merged.profdata -Cllvm-args=-pgo-warn-missing-function" cargo build \
+		--bin "{{ pkg_id }}" \
+		--release \
+		--target x86_64-unknown-linux-gnu \
+		--target-dir "{{ cargo_dir }}"
 
 
 # Check Release!
@@ -80,7 +105,7 @@ rustflags   := "-C link-arg=-s"
 # Clippy.
 @clippy:
 	clear
-	RUSTFLAGS="{{ rustflags }}" cargo clippy \
+	cargo clippy \
 		--release \
 		--all-features \
 		--target x86_64-unknown-linux-gnu \
@@ -112,7 +137,7 @@ rustflags   := "-C link-arg=-s"
 
 # Test Run.
 @run +ARGS:
-	RUSTFLAGS="{{ rustflags }}" cargo run \
+	cargo run \
 		--bin "{{ pkg_id }}" \
 		--release \
 		--target x86_64-unknown-linux-gnu \

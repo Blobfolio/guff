@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.2
-    Generated: 2022-03-31 16:54:23 UTC
+    Version:   0.1.3
+    Generated: 2022-04-07 16:39:55 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -33,7 +33,7 @@
 | [fyi_msg](https://github.com/Blobfolio/fyi) | 0.9.7 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.1.16 | The Rand Project Developers | Apache-2.0 or MIT |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.6 | The Rand Project Developers | Apache-2.0 or MIT |
-| [grass](https://github.com/connorskees/grass) | 0.10.8 | [ConnorSkees](mailto:39542938+ConnorSkees@users.noreply.github.com) | MIT |
+| [grass](https://github.com/connorskees/grass) | 0.11.0 | [ConnorSkees](mailto:39542938+ConnorSkees@users.noreply.github.com) | MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [indexmap](https://github.com/bluss/indexmap) | 1.8.1 | bluss and [Josh Stone](mailto:cuviper@gmail.com) | Apache-2.0 or MIT |
 | [itertools](https://github.com/rust-itertools/itertools) | 0.10.3 | bluss | Apache-2.0 or MIT |
@@ -50,8 +50,8 @@
 | [num-traits](https://github.com/rust-num/num-traits) | 0.2.14 | The Rust Project Developers | Apache-2.0 or MIT |
 | [num_cpus](https://github.com/seanmonstar/num_cpus) | 1.13.1 | [Sean McArthur](mailto:sean@seanmonstar.com) | Apache-2.0 or MIT |
 | [once_cell](https://github.com/matklad/once_cell) | 1.10.0 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | Apache-2.0 or MIT |
-| [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.21 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
-| [parcel_selectors](https://github.com/servo/servo) | 0.24.3 | The Servo Project Developers | MPL-2.0 |
+| [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.22 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
+| [parcel_selectors](https://github.com/servo/servo) | 0.24.4 | The Servo Project Developers | MPL-2.0 |
 | [parcel_sourcemap](https://github.com/parcel-bundler/source-map) | 2.0.2 | [Jasper De Moor](mailto:jasperdemoor@gmail.com) | MIT |
 | [parking_lot](https://github.com/Amanieu/parking_lot) | 0.12.0 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [parking_lot_core](https://github.com/Amanieu/parking_lot) | 0.9.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
@@ -66,7 +66,7 @@
 | [ppv-lite86](https://github.com/cryptocorrosion/cryptocorrosion) | 0.2.16 | The CryptoCorrosion Contributors | Apache-2.0 or MIT |
 | [precomputed-hash](https://github.com/emilio/precomputed-hash) | 0.1.1 | [Emilio Cobos Álvarez](mailto:emilio@crisal.io) | MIT |
 | [proc-macro-hack](https://github.com/dtolnay/proc-macro-hack) | 0.5.19 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
-| [proc-macro2](https://github.com/dtolnay/proc-macro2) | 1.0.36 | [David Tolnay](mailto:dtolnay@gmail.com) and [Alex Crichton](mailto:alex@alexcrichton.com) | Apache-2.0 or MIT |
+| [proc-macro2](https://github.com/dtolnay/proc-macro2) | 1.0.37 | [David Tolnay](mailto:dtolnay@gmail.com) and [Alex Crichton](mailto:alex@alexcrichton.com) | Apache-2.0 or MIT |
 | [ptr_meta](https://github.com/djkoloski/ptr_meta) | 0.1.4 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
 | [ptr_meta_derive](https://github.com/djkoloski/ptr_meta) | 0.1.4 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
 | [quote](https://github.com/dtolnay/quote) | 1.0.17 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
@@ -88,7 +88,7 @@
 | [serde_derive](https://github.com/serde-rs/serde) | 1.0.136 | [Erick Tryzelaar](mailto:erick.tryzelaar@gmail.com) and [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [siphasher](https://github.com/jedisct1/rust-siphash) | 0.3.10 | [Frank Denis](mailto:github@pureftpd.org) | Apache-2.0 or MIT |
 | [smallvec](https://github.com/servo/rust-smallvec) | 1.8.0 | The Servo Project Developers | Apache-2.0 or MIT |
-| [syn](https://github.com/dtolnay/syn) | 1.0.90 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
+| [syn](https://github.com/dtolnay/syn) | 1.0.91 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [tempfile](https://github.com/Stebalien/tempfile) | 3.3.0 | [Steven Allen](mailto:steven@stebalien.com), The Rust Project Developers, [Ashley Mannix](mailto:ashleymannix@live.com.au), and [Jason White](mailto:jasonaw0@gmail.com) | Apache-2.0 or MIT |
 | [trim-in-place](https://github.com/magiclen/trim-in-place) | 0.1.7 | [Magic Len](mailto:len@magiclen.org) | MIT |
 | [unicode-xid](https://github.com/unicode-rs/unicode-xid) | 0.2.2 | [erick.tryzelaar](mailto:erick.tryzelaar@gmail.com), [kwantam](mailto:kwantam@gmail.com), and [Manish Goregaokar](mailto:manishsmail@gmail.com) | Apache-2.0 or MIT |
