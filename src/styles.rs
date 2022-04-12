@@ -23,7 +23,7 @@ use std::{
 		PathBuf,
 	},
 };
-use trim_in_place::TrimInPlace;
+use trimothy::TrimMut;
 
 
 
@@ -66,7 +66,7 @@ where P: AsRef<Path> {
 			.collect(),
 	};
 
-	css.trim_in_place();
+	css.trim_mut();
 	Ok(css)
 }
 
