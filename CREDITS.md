@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.3
-    Generated: 2022-04-07 16:39:55 UTC
+    Version:   0.1.4
+    Generated: 2022-04-15 02:58:09 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -21,7 +21,7 @@
 | [crossbeam-utils](https://github.com/crossbeam-rs/crossbeam) | 0.8.8 |  | Apache-2.0 or MIT |
 | [cssparser](https://github.com/servo/rust-cssparser) | 0.29.2 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MPL-2.0 |
 | [cssparser-macros](https://github.com/servo/rust-cssparser) | 0.6.0 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MPL-2.0 |
-| [dactyl](https://github.com/Blobfolio/dactyl) | 0.3.3 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
+| [dactyl](https://github.com/Blobfolio/dactyl) | 0.3.4 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [dashmap](https://github.com/xacrimon/dashmap) | 5.2.0 | [Acrimon](mailto:joel.wejdenstal@gmail.com) | MIT |
 | [data-encoding](https://github.com/ia0/data-encoding) | 2.3.2 | [Julien Cretin](mailto:git@ia0.eu) | MIT |
 | [derive_more](https://github.com/JelteF/derive_more) | 0.99.17 | [Jelte Fennema](mailto:github-tech@jeltef.nl) | MIT |
@@ -50,7 +50,7 @@
 | [num-traits](https://github.com/rust-num/num-traits) | 0.2.14 | The Rust Project Developers | Apache-2.0 or MIT |
 | [num_cpus](https://github.com/seanmonstar/num_cpus) | 1.13.1 | [Sean McArthur](mailto:sean@seanmonstar.com) | Apache-2.0 or MIT |
 | [once_cell](https://github.com/matklad/once_cell) | 1.10.0 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | Apache-2.0 or MIT |
-| [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.22 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
+| [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.23 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [parcel_selectors](https://github.com/servo/servo) | 0.24.4 | The Servo Project Developers | MPL-2.0 |
 | [parcel_sourcemap](https://github.com/parcel-bundler/source-map) | 2.0.2 | [Jasper De Moor](mailto:jasperdemoor@gmail.com) | MIT |
 | [parking_lot](https://github.com/Amanieu/parking_lot) | 0.12.0 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
@@ -69,15 +69,15 @@
 | [proc-macro2](https://github.com/dtolnay/proc-macro2) | 1.0.37 | [David Tolnay](mailto:dtolnay@gmail.com) and [Alex Crichton](mailto:alex@alexcrichton.com) | Apache-2.0 or MIT |
 | [ptr_meta](https://github.com/djkoloski/ptr_meta) | 0.1.4 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
 | [ptr_meta_derive](https://github.com/djkoloski/ptr_meta) | 0.1.4 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
-| [quote](https://github.com/dtolnay/quote) | 1.0.17 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
+| [quote](https://github.com/dtolnay/quote) | 1.0.18 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [rand](https://github.com/rust-random/rand) | 0.7.3 | The Rand Project Developers and The Rust Project Developers | Apache-2.0 or MIT |
 | [rand](https://github.com/rust-random/rand) | 0.8.5 | The Rand Project Developers and The Rust Project Developers | Apache-2.0 or MIT |
 | [rand_chacha](https://github.com/rust-random/rand) | 0.3.1 | The Rand Project Developers, The Rust Project Developers, and The CryptoCorrosion Contributors | Apache-2.0 or MIT |
 | [rand_core](https://github.com/rust-random/rand) | 0.5.1 | The Rand Project Developers and The Rust Project Developers | Apache-2.0 or MIT |
 | [rand_core](https://github.com/rust-random/rand) | 0.6.3 | The Rand Project Developers and The Rust Project Developers | Apache-2.0 or MIT |
 | [rand_pcg](https://github.com/rust-random/rand) | 0.2.1 | The Rand Project Developers | Apache-2.0 or MIT |
-| [rayon](https://github.com/rayon-rs/rayon) | 1.5.1 | [Niko Matsakis](mailto:niko@alum.mit.edu) and [Josh Stone](mailto:cuviper@gmail.com) | Apache-2.0 or MIT |
-| [rayon-core](https://github.com/rayon-rs/rayon) | 1.9.1 | [Niko Matsakis](mailto:niko@alum.mit.edu) and [Josh Stone](mailto:cuviper@gmail.com) | Apache-2.0 or MIT |
+| [rayon](https://github.com/rayon-rs/rayon) | 1.5.2 | [Niko Matsakis](mailto:niko@alum.mit.edu) and [Josh Stone](mailto:cuviper@gmail.com) | Apache-2.0 or MIT |
+| [rayon-core](https://github.com/rayon-rs/rayon) | 1.9.2 | [Niko Matsakis](mailto:niko@alum.mit.edu) and [Josh Stone](mailto:cuviper@gmail.com) | Apache-2.0 or MIT |
 | [remove_dir_all](https://github.com/XAMPPRocky/remove_dir_all.git) | 0.5.3 | [Aaronepower](mailto:theaaronepower@gmail.com) | Apache-2.0 or MIT |
 | [retain_mut](https://github.com/upsuper/retain_mut) | 0.1.7 | [Xidorn Quan](mailto:me@upsuper.org) | MIT |
 | [rkyv](https://github.com/djkoloski/rkyv) | 0.6.7 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
@@ -90,7 +90,7 @@
 | [smallvec](https://github.com/servo/rust-smallvec) | 1.8.0 | The Servo Project Developers | Apache-2.0 or MIT |
 | [syn](https://github.com/dtolnay/syn) | 1.0.91 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [tempfile](https://github.com/Stebalien/tempfile) | 3.3.0 | [Steven Allen](mailto:steven@stebalien.com), The Rust Project Developers, [Ashley Mannix](mailto:ashleymannix@live.com.au), and [Jason White](mailto:jasonaw0@gmail.com) | Apache-2.0 or MIT |
-| [trim-in-place](https://github.com/magiclen/trim-in-place) | 0.1.7 | [Magic Len](mailto:len@magiclen.org) | MIT |
+| [trimothy](https://github.com/Blobfolio/trimothy) | 0.1.1 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [unicode-xid](https://github.com/unicode-rs/unicode-xid) | 0.2.2 | [erick.tryzelaar](mailto:erick.tryzelaar@gmail.com), [kwantam](mailto:kwantam@gmail.com), and [Manish Goregaokar](mailto:manishsmail@gmail.com) | Apache-2.0 or MIT |
 | [vlq](https://github.com/tromey/vlq) | 0.5.1 | [Tom Tromey](mailto:tom@tromey.com) and [Nick Fitzgerald](mailto:fitzgen@gmail.com) | Apache-2.0 or MIT |
 | [write_atomic](https://github.com/Blobfolio/write_atomic) | 0.2.2 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
