@@ -97,7 +97,7 @@ where P: AsRef<Path> {
 
 	// Parse the stylesheet as CSS.
 	let mut stylesheet = StyleSheet::parse(
-		src,
+		&src,
 		css,
 		ParserOptions {
 			nesting: true,
