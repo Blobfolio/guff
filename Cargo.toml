@@ -83,11 +83,11 @@ features = [ "random" ]
 dactyl = "0.3.*, >=0.3.3"
 
 [build-dependencies.serde]
-version = "=1.0.137"
+version = "1.0.*"
 features = [ "derive" ]
 
 [build-dependencies.serde_json]
-version = "=1.0.80"
+version = "1.0.*"
 
 [build-dependencies.ureq]
 version = "=2.4.0"
