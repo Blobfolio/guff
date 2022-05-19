@@ -92,18 +92,23 @@ fn _main() -> Result<(), GuffError> {
 	Ok(())
 }
 
-#[allow(clippy::non_ascii_literal)] // Doesn't work with an r"" literal.
 #[cold]
 /// # Print Help.
 fn helper() {
 	println!(concat!(
 		r"
-     __,---.__
-  ,-'         `-.__
-&/           `._\ _\
-/               ''._    ", "\x1b[38;5;199mGuff\x1b[0;38;5;69m v", env!("CARGO_PKG_VERSION"), "\x1b[0m", r"
-|   ,             (∞)   SCSS parsing, CSS minifying
-|__,'`-..--|__|--''     rolled into one simple app.
+   \``/
+   /o `))
+  /_/\_ss))
+      |_ss))/|
+     |__ss))_|
+    |__sss))_|
+    |___ss))\|
+     |_ss))
+      )_s))  ", "\x1b[38;5;199mGuff\x1b[0;38;5;69m v", env!("CARGO_PKG_VERSION"), "\x1b[0m", r"
+(`(  /_s))   SCSS parsing, CSS minifying.
+ (_\/_s))
+  (\/))
 
 USAGE:
     guff [FLAGS] [OPTIONS]
