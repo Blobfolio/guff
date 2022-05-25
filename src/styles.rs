@@ -101,7 +101,7 @@ where P: AsRef<Path> {
 		css,
 		ParserOptions {
 			nesting: true,
-			css_modules: false,
+			css_modules: None,
 			custom_media: false,
 			source_index: 0,
 		},

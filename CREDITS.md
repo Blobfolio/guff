@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.6
-    Generated: 2022-05-19 19:22:02 UTC
+    Version:   0.1.7
+    Generated: 2022-05-25 16:35:07 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -9,6 +9,8 @@
 | [argyle](https://github.com/Blobfolio/argyle) | 0.5.6 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [beef](https://github.com/maciejhirsz/beef) | 0.5.1 | [Maciej Hirsz](mailto:hello@maciej.codes) | Apache-2.0 or MIT |
 | [bitflags](https://github.com/bitflags/bitflags) | 1.3.2 | The Rust Project Developers | Apache-2.0 or MIT |
+| [bytecheck](https://github.com/djkoloski/bytecheck) | 0.6.8 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
+| [bytecheck_derive](https://github.com/djkoloski/bytecheck) | 0.6.8 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
 | [byteorder](https://github.com/BurntSushi/byteorder) | 1.4.3 | [Andrew Gallant](mailto:jamslam@gmail.com) | MIT or Unlicense |
 | [cfg-if](https://github.com/alexcrichton/cfg-if) | 1.0.0 | [Alex Crichton](mailto:alex@alexcrichton.com) | Apache-2.0 or MIT |
 | [codemap](https://github.com/kevinmehall/codemap) | 0.1.3 | [Kevin Mehall](mailto:km@kevinmehall.net) | Apache-2.0 or MIT |
@@ -19,7 +21,7 @@
 | [crossbeam-deque](https://github.com/crossbeam-rs/crossbeam) | 0.8.1 | The Crossbeam Project Developers | Apache-2.0 or MIT |
 | [crossbeam-epoch](https://github.com/crossbeam-rs/crossbeam) | 0.9.8 |  | Apache-2.0 or MIT |
 | [crossbeam-utils](https://github.com/crossbeam-rs/crossbeam) | 0.8.8 |  | Apache-2.0 or MIT |
-| [cssparser](https://github.com/servo/rust-cssparser) | 0.29.4 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MPL-2.0 |
+| [cssparser](https://github.com/servo/rust-cssparser) | 0.29.6 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MPL-2.0 |
 | [cssparser-macros](https://github.com/servo/rust-cssparser) | 0.6.0 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MPL-2.0 |
 | [dactyl](https://github.com/Blobfolio/dactyl) | 0.3.4 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [dashmap](https://github.com/xacrimon/dashmap) | 5.3.3 | [Acrimon](mailto:joel.wejdenstal@gmail.com) | MIT |
@@ -49,10 +51,10 @@
 | [num-rational](https://github.com/rust-num/num-rational) | 0.4.0 | The Rust Project Developers | Apache-2.0 or MIT |
 | [num-traits](https://github.com/rust-num/num-traits) | 0.2.15 | The Rust Project Developers | Apache-2.0 or MIT |
 | [num_cpus](https://github.com/seanmonstar/num_cpus) | 1.13.1 | [Sean McArthur](mailto:sean@seanmonstar.com) | Apache-2.0 or MIT |
-| [once_cell](https://github.com/matklad/once_cell) | 1.11.0 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | Apache-2.0 or MIT |
-| [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.25 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
+| [once_cell](https://github.com/matklad/once_cell) | 1.12.0 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | Apache-2.0 or MIT |
+| [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.26 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [parcel_selectors](https://github.com/servo/servo) | 0.24.4 | The Servo Project Developers | MPL-2.0 |
-| [parcel_sourcemap](https://github.com/parcel-bundler/source-map) | 2.0.3 | [Jasper De Moor](mailto:jasperdemoor@gmail.com) | MIT |
+| [parcel_sourcemap](https://github.com/parcel-bundler/source-map) | 2.0.5 | [Jasper De Moor](mailto:jasperdemoor@gmail.com) | MIT |
 | [phf](https://github.com/sfackler/rust-phf) | 0.8.0 | [Steven Fackler](mailto:sfackler@gmail.com) | MIT |
 | [phf](https://github.com/sfackler/rust-phf) | 0.9.0 | [Steven Fackler](mailto:sfackler@gmail.com) | MIT |
 | [phf](https://github.com/sfackler/rust-phf) | 0.10.1 | [Steven Fackler](mailto:sfackler@gmail.com) | MIT |
@@ -76,9 +78,9 @@
 | [rayon](https://github.com/rayon-rs/rayon) | 1.5.3 | [Niko Matsakis](mailto:niko@alum.mit.edu) and [Josh Stone](mailto:cuviper@gmail.com) | Apache-2.0 or MIT |
 | [rayon-core](https://github.com/rayon-rs/rayon) | 1.9.3 | [Niko Matsakis](mailto:niko@alum.mit.edu) and [Josh Stone](mailto:cuviper@gmail.com) | Apache-2.0 or MIT |
 | [remove_dir_all](https://github.com/XAMPPRocky/remove_dir_all.git) | 0.5.3 | [Aaronepower](mailto:theaaronepower@gmail.com) | Apache-2.0 or MIT |
-| [retain_mut](https://github.com/upsuper/retain_mut) | 0.1.7 | [Xidorn Quan](mailto:me@upsuper.org) | MIT |
-| [rkyv](https://github.com/djkoloski/rkyv) | 0.6.7 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
-| [rkyv_derive](https://github.com/djkoloski/rkyv) | 0.6.7 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
+| [rend](https://github.com/djkoloski/rend) | 0.3.6 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
+| [rkyv](https://github.com/rkyv/rkyv) | 0.7.38 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
+| [rkyv_derive](https://github.com/rkyv/rkyv) | 0.7.38 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
 | [scopeguard](https://github.com/bluss/scopeguard) | 1.1.0 | bluss | Apache-2.0 or MIT |
 | [seahash](https://gitlab.redox-os.org/redox-os/seahash) | 4.1.0 | [ticki](mailto:ticki@users.noreply.github.com) and [Tom Almeida](mailto:tom@tommoa.me) | MIT |
 | [serde](https://github.com/serde-rs/serde) | 1.0.137 | [Erick Tryzelaar](mailto:erick.tryzelaar@gmail.com) and [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
