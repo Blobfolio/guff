@@ -1,5 +1,7 @@
 # Guff
 
+[![Documentation](https://docs.rs/guff/badge.svg)](https://docs.rs/guff/)
+[![crates.io](https://img.shields.io/crates/v/guff.svg)](https://crates.io/crates/guff)
 [![Build Status](https://github.com/Blobfolio/guff/workflows/Build/badge.svg)](https://github.com/Blobfolio/guff/actions)
 [![Dependency Status](https://deps.rs/repo/github/blobfolio/guff/status.svg)](https://deps.rs/repo/github/blobfolio/guff)
 
@@ -24,6 +26,10 @@ guff [FLAGS] [OPTIONS]
 
 **Options:**
 ```text
+-b, --browsers <STR>  A comma-separated list of specific browser/version pairs
+                      to target for CSS compatibility, like 'firefox 90, ie
+                      11'. Specifying versions released after guff was built
+                      has no effect.
 -i, --input <FILE>    The path to an SCSS or CSS source file.
 -o, --output <FILE>   The path to save the minified output to. If omitted,
                       the result will be printed to STDOUT instead.
@@ -49,10 +55,24 @@ cd guff
 # Build as usual. Specify additional flags as desired.
 cargo build \
     --bin guff \
+    --all-features \
     --release
 ```
 
 (This should work under other 64-bit Unix environments too, like MacOS.)
+
+
+
+## Library
+
+Guff can also be used as a Rust library by adding it to your project's `Cargo.toml` like:
+
+```toml
+[dependencies]
+guff = "0.1"
+```
+
+Refer to the [documentation](docs.rs/guff/) for usage and other details.
 
 
 
