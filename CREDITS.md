@@ -1,12 +1,11 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.7
-    Generated: 2022-05-25 16:35:07 UTC
+    Version:   0.1.8
+    Generated: 2022-05-26 16:28:27 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
 | [ahash](https://github.com/tkaitchuck/ahash) | 0.7.6 | [Tom Kaitchuck](mailto:tom.kaitchuck@gmail.com) | Apache-2.0 or MIT |
-| [argyle](https://github.com/Blobfolio/argyle) | 0.5.6 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [beef](https://github.com/maciejhirsz/beef) | 0.5.1 | [Maciej Hirsz](mailto:hello@maciej.codes) | Apache-2.0 or MIT |
 | [bitflags](https://github.com/bitflags/bitflags) | 1.3.2 | The Rust Project Developers | Apache-2.0 or MIT |
 | [bytecheck](https://github.com/djkoloski/bytecheck) | 0.6.8 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
@@ -30,9 +29,7 @@
 | [dtoa](https://github.com/dtolnay/dtoa) | 0.4.8 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [dtoa-short](https://github.com/upsuper/dtoa-short) | 0.3.3 | [Xidorn Quan](mailto:me@upsuper.org) | MPL-2.0 |
 | [either](https://github.com/bluss/either) | 1.6.1 | bluss | Apache-2.0 or MIT |
-| [fastrand](https://github.com/smol-rs/fastrand) | 1.7.0 | [Stjepan Glavina](mailto:stjepang@gmail.com) | Apache-2.0 or MIT |
 | [fxhash](https://github.com/cbreeden/fxhash) | 0.2.1 | [cbreeden](mailto:github@u.breeden.cc) | Apache-2.0 or MIT |
-| [fyi_msg](https://github.com/Blobfolio/fyi) | 0.9.10 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.6 | The Rand Project Developers | Apache-2.0 or MIT |
 | [grass](https://github.com/connorskees/grass) | 0.11.0 | [ConnorSkees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
@@ -52,6 +49,7 @@
 | [num-traits](https://github.com/rust-num/num-traits) | 0.2.15 | The Rust Project Developers | Apache-2.0 or MIT |
 | [num_cpus](https://github.com/seanmonstar/num_cpus) | 1.13.1 | [Sean McArthur](mailto:sean@seanmonstar.com) | Apache-2.0 or MIT |
 | [once_cell](https://github.com/matklad/once_cell) | 1.12.0 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | Apache-2.0 or MIT |
+| [oxford_join](https://github.com/Blobfolio/oxford_join) | 0.2.3 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.26 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [parcel_selectors](https://github.com/servo/servo) | 0.24.4 | The Servo Project Developers | MPL-2.0 |
 | [parcel_sourcemap](https://github.com/parcel-bundler/source-map) | 2.0.5 | [Jasper De Moor](mailto:jasperdemoor@gmail.com) | MIT |
@@ -77,7 +75,6 @@
 | [rand_core](https://github.com/rust-random/rand) | 0.6.3 | The Rand Project Developers and The Rust Project Developers | Apache-2.0 or MIT |
 | [rayon](https://github.com/rayon-rs/rayon) | 1.5.3 | [Niko Matsakis](mailto:niko@alum.mit.edu) and [Josh Stone](mailto:cuviper@gmail.com) | Apache-2.0 or MIT |
 | [rayon-core](https://github.com/rayon-rs/rayon) | 1.9.3 | [Niko Matsakis](mailto:niko@alum.mit.edu) and [Josh Stone](mailto:cuviper@gmail.com) | Apache-2.0 or MIT |
-| [remove_dir_all](https://github.com/XAMPPRocky/remove_dir_all.git) | 0.5.3 | [Aaronepower](mailto:theaaronepower@gmail.com) | Apache-2.0 or MIT |
 | [rend](https://github.com/djkoloski/rend) | 0.3.6 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
 | [rkyv](https://github.com/rkyv/rkyv) | 0.7.38 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
 | [rkyv_derive](https://github.com/rkyv/rkyv) | 0.7.38 | [David Koloski](mailto:djkoloski@gmail.com) | MIT |
@@ -88,8 +85,6 @@
 | [siphasher](https://github.com/jedisct1/rust-siphash) | 0.3.10 | [Frank Denis](mailto:github@pureftpd.org) | Apache-2.0 or MIT |
 | [smallvec](https://github.com/servo/rust-smallvec) | 1.8.0 | The Servo Project Developers | Apache-2.0 or MIT |
 | [syn](https://github.com/dtolnay/syn) | 1.0.95 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
-| [tempfile](https://github.com/Stebalien/tempfile) | 3.3.0 | [Steven Allen](mailto:steven@stebalien.com), The Rust Project Developers, [Ashley Mannix](mailto:ashleymannix@live.com.au), and [Jason White](mailto:jasonaw0@gmail.com) | Apache-2.0 or MIT |
 | [trimothy](https://github.com/Blobfolio/trimothy) | 0.1.2 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [unicode-ident](https://github.com/dtolnay/unicode-ident) | 1.0.0 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [vlq](https://github.com/tromey/vlq) | 0.5.1 | [Tom Tromey](mailto:tom@tromey.com) and [Nick Fitzgerald](mailto:fitzgen@gmail.com) | Apache-2.0 or MIT |
-| [write_atomic](https://github.com/Blobfolio/write_atomic) | 0.2.3 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
