@@ -30,8 +30,15 @@ pub enum GuffError {
 	/// # CSS Parse Error.
 	Css(String),
 
+	#[cfg(feature = "bin")]
 	/// # No Source.
 	NoSource,
+
+	/// # Invalid Path Extension.
+	PathExt,
+
+	/// # Invalid Path UTF-8.
+	PathUtf8,
 
 	/// # SCSS Parse Error.
 	Scss(String),
@@ -92,7 +99,12 @@ impl GuffError {
 
 			Self::Browser(_) => "Invalid browser:",
 			Self::Css(_) => "Unable to parse CSS:",
+
+			#[cfg(feature = "bin")]
 			Self::NoSource => "An SCSS/CSS source is required.",
+
+			Self::PathExt => "Paths must contain a .css, .sass, or .scss extension.",
+			Self::PathUtf8 => "Paths must be valid UTF-8.",
 			Self::Scss(_) => "Unable to parse SCSS:",
 			Self::SourceFileName => "File paths must be valid UTF-8.",
 			Self::SourceInvalid => "Invalid/unreadable SCSS/CSS source.",

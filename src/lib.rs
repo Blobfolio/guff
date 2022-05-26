@@ -39,10 +39,7 @@ mod styles;
 mod targets;
 
 pub use error::GuffError;
-pub use styles::{
-	css,
-	minify,
-};
+pub use styles::Css;
 pub use targets::{
 	Agent,
 	Agents,

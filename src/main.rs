@@ -37,9 +37,13 @@ use argyle::{
 use fyi_msg::Msg;
 use guff::{
 	Agents,
+	Css,
 	GuffError,
 };
-use std::ffi::OsStr;
+use std::{
+	ffi::OsStr,
+	path::Path,
+};
 
 
 
@@ -63,28 +67,30 @@ fn _main() -> Result<(), GuffError> {
 
 	// Always do the CSS.
 	let input = args.option2_os(b"-i", b"--input").ok_or(GuffError::NoSource)?;
-	let mut code = guff::css(input)?;
+	let css = Css::try_from(Path::new(input))?;
 
 	// Minify?
-	if ! args.switch2(b"-e", b"--expanded") {
-		let browsers =
-			if let Some(b) = args.option2_os(b"-b", b"--browsers").and_then(OsStr::to_str) {
-				let agents = Agents::try_from(b)?;
-				if agents.is_empty() { None }
-				else {
-					Msg::custom("Compatibility", 13, &format!(
-						"CSS features capped to {}.", agents
-					))
-						.with_newline(true)
-						.print();
+	let code =
+		if args.switch2(b"-e", b"--expanded") { css.take() }
+		else {
+			let browsers =
+				if let Some(b) = args.option2_os(b"-b", b"--browsers").and_then(OsStr::to_str) {
+					let agents = Agents::try_from(b)?;
+					if agents.is_empty() { None }
+					else {
+						Msg::custom("Compatibility", 13, &format!(
+							"CSS features capped to {}.", agents
+						))
+							.with_newline(true)
+							.print();
 
-					Some(agents)
+						Some(agents)
+					}
 				}
-			}
-			else { None };
+				else { None };
 
-		code = guff::minify(&code, browsers)?;
-	}
+			css.minified(browsers)
+		}?;
 
 	// Save it!
 	if let Some(path) = args.option2_os(b"-o", b"--output") {
