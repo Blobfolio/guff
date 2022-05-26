@@ -5,9 +5,18 @@ license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
 rust-version = "1.61"
-description = "An SCSS parser and CSS minifier rolled into one."
+description = "A simple SASS/SCSS compiler and CSS parser/minifier."
 repository = "https://github.com/Blobfolio/guff"
 readme = "README.md"
+exclude = [
+	".gitattributes",
+	".github",
+	".gitignore",
+	".righteous-sandbox.json",
+	"doc",
+	"justfile",
+	"release",
+]
 publish = false
 
 [package.metadata.deb]

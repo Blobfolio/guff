@@ -123,8 +123,8 @@ fn helper() {
     |___ss))\|
      |_ss))
       )_s))  ", "\x1b[38;5;199mGuff\x1b[0;38;5;69m v", env!("CARGO_PKG_VERSION"), "\x1b[0m", r"
-(`(  /_s))   SCSS parsing, CSS minifying.
- (_\/_s))
+(`(  /_s))   A simple SASS/SCSS compiler
+ (_\/_s))    and CSS parser/minifier.
   (\/))
 
 USAGE:
