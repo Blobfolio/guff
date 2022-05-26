@@ -65,11 +65,12 @@ fn _main() -> Result<(), GuffError> {
 	// Parse CLI arguments.
 	let args = Argue::new(FLAG_HELP | FLAG_REQUIRED | FLAG_VERSION)?;
 
-	// Always do the CSS.
+	// In and out.
 	let input = args.option2_os(b"-i", b"--input").ok_or(GuffError::NoSource)?;
-	let css = Css::try_from(Path::new(input))?;
+	let output = args.option2_os(b"-o", b"--output");
 
 	// Minify?
+	let css = Css::try_from(Path::new(input))?;
 	let code =
 		if args.switch2(b"-e", b"--expanded") { css.take() }
 		else {
@@ -78,11 +79,16 @@ fn _main() -> Result<(), GuffError> {
 					let agents = Agents::try_from(b)?;
 					if agents.is_empty() { None }
 					else {
-						Msg::custom("Compatibility", 13, &format!(
-							"CSS features capped to {}.", agents
-						))
-							.with_newline(true)
-							.print();
+						// It's helpful to confirm compatibility is being
+						// capped and to what, but not if we're sending the CSS
+						// to STDOUT.
+						if output.is_some() {
+							Msg::custom("Compatibility", 13, &format!(
+								"CSS features capped to {}.", agents
+							))
+								.with_newline(true)
+								.print();
+						}
 
 						Some(agents)
 					}
@@ -93,7 +99,7 @@ fn _main() -> Result<(), GuffError> {
 		}?;
 
 	// Save it!
-	if let Some(path) = args.option2_os(b"-o", b"--output") {
+	if let Some(path) = output {
 		write_atomic::write_file(path, code.as_bytes())
 			.map_err(|_| GuffError::Write)?;
 	}
