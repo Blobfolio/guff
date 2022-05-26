@@ -2,7 +2,9 @@
 # Guff: Errors
 */
 
+#[cfg(feature = "bin")]
 use argyle::ArgyleError;
+
 use parcel_css::error::{
 	MinifyErrorKind,
 	ParserError,
@@ -17,15 +19,13 @@ use std::{
 
 #[derive(Debug, Clone)]
 /// # Error type.
-pub(super) enum GuffError {
+pub enum GuffError {
+	#[cfg(feature = "bin")]
 	/// # Argyle passthrough.
 	Argue(ArgyleError),
 
 	/// # Browser.
 	Browser(String),
-
-	/// # Browsers String.
-	Browsers,
 
 	/// # CSS Parse Error.
 	Css(String),
@@ -42,6 +42,7 @@ pub(super) enum GuffError {
 	/// # Invalid Source.
 	SourceInvalid,
 
+	#[cfg(feature = "bin")]
 	/// # Write Error.
 	Write,
 }
@@ -57,6 +58,7 @@ impl fmt::Display for GuffError {
 	}
 }
 
+#[cfg(feature = "bin")]
 impl From<ArgyleError> for GuffError {
 	#[inline]
 	fn from(err: ArgyleError) -> Self { Self::Argue(err) }
@@ -81,17 +83,21 @@ macro_rules! from_parcel {
 from_parcel!(MinifyErrorKind, ParserError<'_>, PrinterErrorKind);
 
 impl GuffError {
+	#[must_use]
 	/// # As Str.
-	pub(super) const fn as_str(&self) -> &'static str {
+	pub const fn as_str(&self) -> &'static str {
 		match self {
+			#[cfg(feature = "bin")]
 			Self::Argue(e) => e.as_str(),
+
 			Self::Browser(_) => "Invalid browser:",
-			Self::Browsers => "Malformed -b/--browsers filter.",
 			Self::Css(_) => "Unable to parse CSS:",
 			Self::NoSource => "An SCSS/CSS source is required.",
 			Self::Scss(_) => "Unable to parse SCSS:",
 			Self::SourceFileName => "File paths must be valid UTF-8.",
 			Self::SourceInvalid => "Invalid/unreadable SCSS/CSS source.",
+
+			#[cfg(feature = "bin")]
 			Self::Write => "The output could not be saved to disk.",
 		}
 	}

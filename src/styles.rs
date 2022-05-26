@@ -2,7 +2,10 @@
 # Guff: Styles!
 */
 
-use crate::GuffError;
+use crate::{
+	Agents,
+	GuffError,
+};
 use grass::{
 	Options,
 	OutputStyle,
@@ -27,16 +30,39 @@ use trimothy::TrimMut;
 
 
 
+macro_rules! parse {
+	($css:expr) => (
+		StyleSheet::parse("stylesheet.css", $css, ParserOptions {
+			nesting: true,
+			css_modules: None,
+			custom_media: false,
+			source_index: 0,
+		})
+	);
+}
+
+
+
 /// # Load/Make CSS.
 ///
-/// This method will load the input and either return it as-is — if it is CSS —
-/// or build it — if it is SCSS.
+/// This method loads (and/or compiles) style rules from the given CSS, SASS,
+/// or SCSS file, verifies the syntax is valid, and returns the result (with
+/// some light cleanup applied).
+///
+/// Paths ending in `.sass` or `.scss` are assumed to be SCSS, and are run
+/// through the compiler to generate valid CSS before doing anything else.
+///
+/// The CSS is trimmed, stripped of UTF-8 BOM markers, and validated before
+/// being returned.
+///
+/// Note: CSS modules are not supported, but SCSS imports are.
 ///
 /// ## Errors
 ///
 /// This will return an error if the file is invalid, unreadable, or does not
-/// end with `.css`, `.sass`, or `.scss`.
-pub(super) fn css<P>(src: P) -> Result<String, GuffError>
+/// end with `.css`, `.sass`, or `.scss`, or if the code cannot be parsed or
+/// validated.
+pub fn css<P>(src: P) -> Result<String, GuffError>
 where P: AsRef<Path> {
 	// Make the path sane.
 	let src = src.as_ref();
@@ -61,14 +87,23 @@ where P: AsRef<Path> {
 		// The file is already CSS; we just need to read it!
 		StyleKind::Css => std::fs::read_to_string(&path)
 			.map_err(|_| GuffError::SourceInvalid)?
-			.chars()
-			.filter(|x| '\u{feff}'.ne(x))
-			.collect(),
 	};
 
+	// Strip out UTF-8 BOM characters.
+	css.retain(|c| c != '\u{feff}');
+
+	// Trim it.
 	css.trim_mut();
+
+	// Make sure it is parseable.
+	if ! css.is_empty() {
+		parse!(&css)?;
+	}
+
 	Ok(css)
 }
+
+
 
 /// # Minify CSS.
 ///
@@ -81,53 +116,38 @@ where P: AsRef<Path> {
 /// ## Errors
 ///
 /// This will return an error if the document cannot be processed.
-pub(super) fn minify<P>(src: P, css: &str, browsers: Option<Browsers>)
--> Result<String, GuffError>
-where P: AsRef<Path> {
+pub fn minify(css: &str, browsers: Option<Agents>) -> Result<String, GuffError> {
 	// Easy abort.
-	if css.is_empty() {
-		return Ok(String::new());
+	if css.is_empty() { Ok(String::new()) }
+	else {
+		// Parse the stylesheet as CSS.
+		let mut stylesheet = parse!(css)?;
+
+		// Convert our Agents into a parcel Browsers object.
+		let browsers = browsers.and_then(Option::<Browsers>::from);
+
+		// Minify it.
+		stylesheet.minify(MinifyOptions {
+			targets: browsers,
+			..MinifyOptions::default()
+		})?;
+
+		// Turn it back into a string.
+		let out = stylesheet.to_css(PrinterOptions {
+			minify: true,
+			source_map: None,
+			targets: browsers,
+			..PrinterOptions::default()
+		})?;
+
+		// Done!
+		Ok(out.code)
 	}
-
-	// The path shouldn't be needed, but is requested, so just in case.
-	let src: String = std::fs::canonicalize(src)
-		.map_err(|_| GuffError::NoSource)?
-		.to_string_lossy()
-		.into_owned();
-
-	// Parse the stylesheet as CSS.
-	let mut stylesheet = StyleSheet::parse(
-		&src,
-		css,
-		ParserOptions {
-			nesting: true,
-			css_modules: None,
-			custom_media: false,
-			source_index: 0,
-		},
-	)?;
-
-	// Minify it.
-	stylesheet.minify(MinifyOptions {
-		targets: browsers,
-		..MinifyOptions::default()
-	})?;
-
-	// Turn it back into a string.
-	let out = stylesheet.to_css(PrinterOptions {
-		minify: true,
-		source_map: None,
-		targets: browsers,
-		..PrinterOptions::default()
-	})?;
-
-	// Done!
-	Ok(out.code)
 }
 
 
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, Eq, Hash, PartialEq)]
 /// # Style Kind.
 enum StyleKind {
 	Css,
@@ -145,12 +165,10 @@ impl TryFrom<&[u8]> for StyleKind {
 		let len: usize = src.len();
 
 		// The last two letters should always be ss.
-		if len > 5 && src[len - 2..].eq_ignore_ascii_case(b"ss") {
+		if 5 < len && matches!(src[len - 2], b's' | b'S') && matches!(src[len - 1], b's' | b'S') {
 			match src[len - 4] {
 				// Maybe CSS?
-				b'.' => if src[len - 3].eq_ignore_ascii_case(&b'c') {
-					return Ok(Self::Css);
-				},
+				b'.' => if matches!(src[len - 3], b'c' | b'C') { return Ok(Self::Css); },
 				// Maybe SCSS/SASS?
 				b's' | b'S' => if src[len - 5] == b'.' && matches!(src[len - 3], b'a' | b'c' | b'A' | b'C') {
 					return Ok(Self::Scss);
@@ -160,5 +178,26 @@ impl TryFrom<&[u8]> for StyleKind {
 		}
 
 		Err(GuffError::SourceInvalid)
+	}
+}
+
+
+
+#[cfg(test)]
+mod tests {
+	use super::*;
+
+	#[test]
+	fn t_stylekind() {
+		for (file, expected) in [
+			("/foo/bar.css", Some(StyleKind::Css)),
+			("/foo/bar.sass", Some(StyleKind::Scss)),
+			("/foo/bar.scss", Some(StyleKind::Scss)),
+			("/foo/bar.jpeg", None),
+		] {
+			assert_eq!(StyleKind::try_from(file.as_bytes()).ok(), expected);
+			let file = file.to_uppercase();
+			assert_eq!(StyleKind::try_from(file.as_bytes()).ok(), expected);
+		}
 	}
 }
