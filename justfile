@@ -145,6 +145,15 @@ skel_dir    := justfile_directory() + "/skel"
 		-- {{ ARGS }}
 
 
+# Unit tests!
+@test:
+	clear
+	cargo test \
+		--all-features \
+		--target x86_64-unknown-linux-gnu \
+		--target-dir "{{ cargo_dir }}"
+
+
 # Get/Set version.
 version:
 	#!/usr/bin/env bash
