@@ -1,12 +1,23 @@
 /*!
-# Guff - Targets
+# Guff: Targets
 */
 
 use crate::GuffError;
-use dactyl::traits::BytesToUnsigned;
-use fyi_msg::Msg;
+use dactyl::{
+	NoHash,
+	traits::BytesToUnsigned,
+};
+use oxford_join::OxfordJoin;
 use parcel_css::targets::Browsers;
-use std::num::NonZeroU32;
+use std::{
+	borrow::Borrow,
+	collections::HashMap,
+	fmt,
+	hash::{
+		Hash,
+		Hasher,
+	},
+};
 
 
 
@@ -15,48 +26,225 @@ include!(concat!(env!("OUT_DIR"), "/guff-browsers.rs"));
 
 
 
-/// # Parse Browsers.
-pub(super) fn parse_browsers(src: &[u8]) -> Result<Option<Browsers>, GuffError> {
-	let s = std::str::from_utf8(src).map_err(|_| GuffError::Browsers)?;
-	let mut out = Browsers::default();
-	let mut any: bool = false;
+#[derive(Debug, Clone, Default)]
+/// # Agents.
+///
+/// This struct holds a list of browsers and (major) version pairs used to _prevent_
+/// certain CSS minification operations for compatibility reasons (i.e. to keep
+/// things working with older browsers).
+///
+/// Depending on the CSS being minified, the existence or absence of [`Agents`]
+/// restrictions may not make any difference.
+///
+/// This is commonly instantiated using `TryFrom<&str>`, where the string slice
+/// is a comma-separated list like "firefox 100, ie 11", however there are also
+/// methods like [`Agent::set`] and [`Agent::set_nth`] for more granular
+/// control.
+///
+/// The following browser strings are supported:
+///
+/// * android (the generic Android browser)
+/// * chrome
+/// * edge
+/// * firefox
+/// * ios (mobile Safari)
+/// * opera
+/// * safari
+/// * samsung (Samsung's Android browser)
+///
+/// ## Examples
+///
+/// ```
+/// use guff::Agents;
+///
+/// let agents = Agents::try_from("firefox 100, ie 11").unwrap();
+/// assert_eq!(agents.len(), 2);
+/// assert_eq!(agents.to_string(), "Firefox (100) and IE (11)");
+///
+/// // Invalid browser strings trigger an error.
+/// assert!(Agents::try_from("foobar 11").is_err());
+/// ```
+pub struct Agents(HashMap<Agent, (u32, u32), NoHash>);
 
-	for line in s.split(',') {
-		let (agent, major) = parse_override(line.trim())?;
-		if let Some((p, m)) = parse_version(agent.set(), major) {
-			any = true;
-			Msg::custom(
-				"Compatibility",
-				13,
-				&format!("Capped to {}\x1b[2m/\x1b[0m{}.", agent.as_str(), m)
-			)
-				.with_newline(true)
-				.print();
+impl fmt::Display for Agents {
+	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+		if self.is_empty() { Ok(()) }
+		else {
+			let mut tmp: Vec<(&str, u32)> = self.0.iter()
+				.map(|(k, v)| (k.as_str(), v.1))
+				.collect();
+			tmp.sort_by(|a, b| a.0.cmp(b.0));
 
-			match agent {
-				Agent::Android => { out.android.replace(p); },
-				Agent::Chrome => { out.chrome.replace(p); },
-				Agent::Edge => { out.edge.replace(p); },
-				Agent::Firefox => { out.firefox.replace(p); },
-				Agent::Ie => { out.ie.replace(p); },
-				Agent::Ios => { out.ios_saf.replace(p); },
-				Agent::Opera => { out.opera.replace(p); },
-				Agent::Safari => { out.safari.replace(p); },
-				Agent::Samsung => { out.samsung.replace(p); },
-			}
+			let tmp: Vec<String> = tmp.into_iter()
+				.map(|(k, v)| format!("{} ({})", k, v))
+				.collect();
+
+			f.write_str(&tmp.oxford_and())
 		}
 	}
+}
 
-	if any { Ok(Some(out)) }
-	else { Ok(None) }
+impl TryFrom<&str> for Agents {
+	type Error = GuffError;
+
+	fn try_from(src: &str) -> Result<Self, Self::Error> {
+		let mut out = Self::default();
+
+		for line in src.split(',') {
+			let line = line.trim();
+			if line.is_empty() { continue; }
+
+			let mut split = line.split_ascii_whitespace().take(2);
+
+			// The agent has to be valid, but if it's missing entirely, we can
+			// just skip it.
+			let agent = match split.next() {
+				Some(a) => Agent::try_from(a)?,
+				None => continue,
+			};
+
+			// Missing/invalid major versions just turn off filtering.
+			let major = split.next()
+				.and_then(|s| u32::btou(s.as_bytes()))
+				.unwrap_or_default();
+
+			out.set(agent, major);
+		}
+
+		Ok(out)
+	}
+}
+
+impl Agents {
+	#[must_use]
+	/// # Is Empty?
+	pub fn is_empty(&self) -> bool { self.0.is_empty() }
+
+	#[must_use]
+	/// # Length.
+	pub fn len(&self) -> usize { self.0.len() }
+}
+
+impl Agents {
+	#[must_use]
+	/// # Get.
+	///
+	/// Return the major version the [`Agent`] is capped to, if any.
+	pub fn get(&self, agent: Agent) -> Option<u32> {
+		self.0.get(&agent).map(|(_, m)| *m)
+	}
+
+	/// # Set.
+	///
+	/// Restrict compatibility to a specific major browser release. If the
+	/// version is invalid or unknown, restrictions will be removed.
+	///
+	/// ## Examples
+	///
+	/// ```
+	/// use guff::{Agent, Agents};
+	///
+	/// let mut agents = Agents::default();
+	/// assert!(agents.is_empty()); // It starts with no restrictions.
+	///
+	/// // Cap Firefox to version 100.
+	/// agents.set(Agent::Firefox, 100);
+	/// assert_eq!(agents.len(), 1);
+	/// assert_eq!(Some(100), agents.get(Agent::Firefox));
+	///
+	/// // An invalid version (or zero) removes the restriction.
+	/// agents.set(Agent::Firefox, 0);
+	/// assert!(agents.is_empty());
+	/// assert!(agents.get(Agent::Firefox).is_none());
+	/// ```
+	pub fn set(&mut self, agent: Agent, major: u32) {
+		if 0 < major {
+			if let Some(x) = agent.set().iter().rfind(|(_, m)| *m == major).copied() {
+				*(self.0.entry(agent).or_insert((0,0))) = x;
+				return;
+			}
+		}
+
+		self.0.remove(&agent);
+	}
+
+	/// # Cap Support to N Versions Back.
+	///
+	/// This method will restrict compatibility for the specified [`Agent`] to
+	/// its _nth_ release (working backwards).
+	///
+	/// For example, if the latest Chrome release is 101 and you pass a value
+	/// of one, compatibility will be capped to version 100. A value of two,
+	/// on the other hand, would cap to version 99, and so on.
+	///
+	/// If `n` is less than one, restrictions will be removed. If it exceeds
+	/// the number of stored releases — which are capped to a maximum of 16 —
+	/// the oldest known release will be used instead.
+	///
+	/// Because release data is baked in at compile time, this method may set
+	/// the target farther back in time than necessary, particularly for
+	/// browsers with fast release schedules, like Chrome and Firefox.
+	///
+	/// ## Examples
+	///
+	/// ```
+	/// use guff::{Agent, Agents};
+	///
+	/// let mut agents = Agents::default();
+	/// assert!(agents.is_empty()); // It starts with no restrictions.
+	///
+	/// // Cap Firefox to its penultimate version.
+	/// agents.set_nth(Agent::Firefox, 1);
+	/// assert_eq!(agents.len(), 1);
+	/// assert_eq!(Some(Agent::Firefox.nth(1)), agents.get(Agent::Firefox));
+	/// ```
+	pub fn set_nth(&mut self, agent: Agent, n: usize) {
+		if 0 < n {
+			let set = agent.set();
+			let v =
+				if n < set.len() { set[n] }
+				else { set[set.len() - 1] };
+
+			*(self.0.entry(agent).or_insert((0, 0))) = v;
+		}
+		else {
+			self.0.remove(&agent);
+		}
+	}
+}
+
+impl From<Agents> for Option<Browsers> {
+	fn from(src: Agents) -> Self {
+		if src.is_empty() { None }
+		else {
+			let mut out = Browsers::default();
+			for (a, (p, _)) in src.0 {
+				match a {
+					Agent::Android => { out.android.replace(p); },
+					Agent::Chrome => { out.chrome.replace(p); },
+					Agent::Edge => { out.edge.replace(p); },
+					Agent::Firefox => { out.firefox.replace(p); },
+					Agent::Ie => { out.ie.replace(p); },
+					Agent::Ios => { out.ios_saf.replace(p); },
+					Agent::Opera => { out.opera.replace(p); },
+					Agent::Safari => { out.safari.replace(p); },
+					Agent::Samsung => { out.samsung.replace(p); },
+				}
+			}
+
+			Some(out)
+		}
+	}
 }
 
 
 
-#[derive(Debug, Clone, Copy, Eq, Hash, PartialEq)]
-/// # Agent Kind.
-enum Agent {
-	Android,
+#[allow(missing_docs)]
+#[repr(u8)]
+#[derive(Debug, Clone, Copy)]
+/// # Agent (Browser).
+pub enum Agent {
+	Android = 0_u8,
 	Chrome,
 	Edge,
 	Firefox,
@@ -65,6 +253,33 @@ enum Agent {
 	Opera,
 	Safari,
 	Samsung,
+}
+
+impl AsRef<str> for Agent {
+	#[inline]
+	fn as_ref(&self) -> &str { self.as_str() }
+}
+
+impl Borrow<str> for Agent {
+	#[inline]
+	fn borrow(&self) -> &str { self.as_str() }
+}
+
+impl fmt::Display for Agent {
+	#[inline]
+	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result { f.write_str(self.as_str()) }
+}
+
+impl Eq for Agent {}
+
+impl Hash for Agent {
+	#[inline]
+	fn hash<H: Hasher>(&self, state: &mut H) { state.write_u8(*self as u8); }
+}
+
+impl PartialEq for Agent {
+	#[inline]
+	fn eq(&self, other: &Self) -> bool { (*self as u8) == (*other as u8) }
 }
 
 impl TryFrom<&str> for Agent {
@@ -91,8 +306,9 @@ impl TryFrom<&str> for Agent {
 }
 
 impl Agent {
+	#[must_use]
 	/// # As Str.
-	const fn as_str(self) -> &'static str {
+	pub const fn as_str(self) -> &'static str {
 		match self {
 			Self::Android => "Android",
 			Self::Chrome => "Chrome",
@@ -106,7 +322,29 @@ impl Agent {
 		}
 	}
 
-	/// # Set.
+	#[inline]
+	#[must_use]
+	/// # Latest Version.
+	///
+	/// Return the latest (known) major version for the browser.
+	pub const fn latest(self) -> u32 { self.nth(0) }
+
+	#[must_use]
+	/// # Nth.
+	///
+	/// Return the _nth_ (known) version of the browser, working backwards from
+	/// the latest (0).
+	///
+	/// To keep the code size down, a maximum of 16 releases are tracked. If `n`
+	/// is greater than the number of stored releases, the oldest stored will
+	/// be returned.
+	pub const fn nth(self, n: usize) -> u32 {
+		let set = self.set();
+		if n < set.len() { set[n].1 }
+		else { set[set.len() - 1].1 }
+	}
+
+	/// # Release Dataset.
 	const fn set(self) -> &'static [(u32, u32)] {
 		match self {
 			Self::Android => &ANDROID,
@@ -120,27 +358,4 @@ impl Agent {
 			Self::Samsung => &SAMSUNG,
 		}
 	}
-}
-
-
-
-/// # Parse Override.
-fn parse_override(src: &str) -> Result<(Agent, Option<NonZeroU32>), GuffError> {
-	let mut split = src.split_ascii_whitespace().take(2);
-
-	// The agent has to be valid.
-	let agent = split.next().ok_or_else(|| GuffError::Browser("[None]".to_owned()))?;
-	let agent = Agent::try_from(agent)?;
-
-	// Missing/invalid major versions just turn off filtering.
-	let major = split.next().and_then(|s| NonZeroU32::btou(s.as_bytes()));
-	Ok((agent, major))
-}
-
-/// # Parse Version Specific.
-fn parse_version(set: &[(u32, u32)], version: Option<NonZeroU32>)
--> Option<(u32, u32)> {
-	version
-		.map(NonZeroU32::get)
-		.and_then(|major| set.iter().rfind(|(_, m)| *m == major).copied())
 }
