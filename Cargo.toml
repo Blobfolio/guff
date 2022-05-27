@@ -19,6 +19,11 @@ exclude = [
 ]
 publish = false
 
+[package.metadata.docs.rs]
+features = [ "docsrs" ]
+default-target = "x86_64-unknown-linux-gnu"
+targets = [ "x86_64-unknown-linux-gnu", "x86_64-apple-darwin" ]
+
 [package.metadata.deb]
 maintainer = "Josh Stoik <hello@blobfolio.com>"
 copyright = "2022, Blobfolio, LLC <hello@blobfolio.com>"
@@ -128,6 +133,10 @@ default = []
 
 # Used by the CLI binary.
 bin = [ "argyle", "fyi_msg", "write_atomic" ]
+
+# This is just a workaround for Docs.rs; don't enable this if you're a human or
+# the library will not function correctly.
+docsrs = []
 
 [profile.release]
 lto = true
