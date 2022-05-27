@@ -8,7 +8,6 @@ rust-version = "1.61"
 description = "A simple SASS/SCSS compiler and CSS parser/minifier."
 repository = "https://github.com/Blobfolio/guff"
 readme = "README.md"
-publish = false
 
 [package.metadata.docs.rs]
 features = [ "docsrs" ]
