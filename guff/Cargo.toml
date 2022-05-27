@@ -1,0 +1,76 @@
+[package]
+name = "guff"
+version = "0.1.8"
+license = "WTFPL"
+authors = ["Josh Stoik <josh@blobfolio.com>"]
+edition = "2021"
+rust-version = "1.61"
+description = "A simple SASS/SCSS compiler and CSS parser/minifier."
+repository = "https://github.com/Blobfolio/guff"
+readme = "README.md"
+publish = false
+
+[package.metadata.deb]
+maintainer = "Josh Stoik <hello@blobfolio.com>"
+copyright = "2022, Blobfolio, LLC <hello@blobfolio.com>"
+license-file = ["./LICENSE", "0"]
+extended-description = ""
+revision = "1"
+depends = "$auto"
+section = "utils"
+assets = [
+    ["../target/x86_64-unknown-linux-gnu/release/guff", "usr/bin/", "755"],
+    ["../release/completions/guff.bash", "etc/bash_completion.d/", "644"],
+    ["../release/man/guff.1.gz", "usr/share/man/man1/", "644"],
+]
+
+[package.metadata.bashman]
+name = "Guff"
+bash-dir = "../release/completions"
+man-dir = "../release/man"
+credits-dir = "../"
+
+[[package.metadata.bashman.switches]]
+short = "-h"
+long = "--help"
+description = "Print help information and exit."
+
+[[package.metadata.bashman.switches]]
+short = "-V"
+long = "--version"
+description = "Print version information and exit."
+
+[[package.metadata.bashman.switches]]
+short = "-e"
+long = "--expanded"
+description = "Do not minify CSS."
+
+[[package.metadata.bashman.options]]
+short = "-b"
+long = "--browsers"
+label = "<VER>"
+description = "A comma-separated list of specific browser/version pairs to target for CSS compatibility, like 'firefox 90, ie 11'."
+path = false
+
+[[package.metadata.bashman.options]]
+short = "-i"
+long = "--input"
+label = "<FILE>"
+description = "The path to an SCSS or CSS source file."
+path = true
+
+[[package.metadata.bashman.options]]
+short = "-o"
+long = "--output"
+label = "<FILE>"
+description = "The path to save the minified output to. If omitted, the result will be printed to STDOUT instead."
+path = true
+
+[dependencies]
+argyle = "0.5.*, >=0.5.3"
+fyi_msg = "0.9.*"
+write_atomic = "0.2.*"
+
+[dependencies.guff_css]
+path = "../guff_css"
+features = [ "bin" ]

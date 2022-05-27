@@ -52,17 +52,17 @@ use trimothy::TrimMut;
 /// ## Examples
 ///
 /// ```
-/// use guff::Css;
+/// use guff_css::Css;
 /// use std::path::Path;
 ///
 /// // Load, validate, and return CSS from a file.
-/// let css = Css::try_from(Path::new("skel/style.css"))
+/// let css = Css::try_from(Path::new("../skel/style.css"))
 ///     .unwrap()
 ///     .take()
 ///     .unwrap();
 ///
 /// // The same thing, but starting from SCSS, and minifying!
-/// let css = Css::try_from(Path::new("skel/style.scss"))
+/// let css = Css::try_from(Path::new("../skel/style.scss"))
 ///     .unwrap()
 ///     .minified(None)
 ///     .unwrap();
