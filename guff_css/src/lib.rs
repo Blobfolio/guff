@@ -1,9 +1,15 @@
 /*!
 # Guff CSS
 
+[![Documentation](https://docs.rs/guff_css/badge.svg)](https://docs.rs/guff_css/)
+[![crates.io](https://img.shields.io/crates/v/guff_css.svg)](https://crates.io/crates/guff_css)
+[![Build Status](https://github.com/Blobfolio/guff/workflows/Build/badge.svg)](https://github.com/Blobfolio/guff/actions)
+
 This is the backing library for the Guff command-line SCSS/CSS parser and
 minifier. It can be used to compile SCSS into CSS, and/or heavily minify CSS
 for production use.
+
+Refer to the [documentation](https://docs.rs/guff_css/) for usage and other details.
 
 **Compatibility**
 This library is only compatible with Unix platforms. For broader support,
