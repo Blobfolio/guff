@@ -118,7 +118,7 @@ skel_dir    := justfile_directory() + "/skel"
 
 # Generate CREDITS.
 @credits:
-	cargo bashman -m "{{ pkg_dir1 }}/Cargo.toml"
+	cargo bashman -f bin -m "{{ pkg_dir1 }}/Cargo.toml"
 	just _fix-chown "{{ justfile_directory() }}/CREDITS.md"
 
 
