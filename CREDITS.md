@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.8
-    Generated: 2022-05-26 17:42:48 UTC
+    Version:   0.1.9
+    Generated: 2022-05-27 02:16:05 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -35,6 +35,7 @@
 | [fyi_msg](https://github.com/Blobfolio/fyi) | 0.9.10 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.6 | The Rand Project Developers | Apache-2.0 or MIT |
 | [grass](https://github.com/connorskees/grass) | 0.11.0 | [ConnorSkees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
+| [guff_css](https://github.com/Blobfolio/guff) | 0.1.9 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.12.1 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [indexmap](https://github.com/bluss/indexmap) | 1.8.1 | bluss and [Josh Stone](mailto:cuviper@gmail.com) | Apache-2.0 or MIT |

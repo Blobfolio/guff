@@ -55,7 +55,7 @@ include!(concat!(env!("OUT_DIR"), "/guff-browsers.rs"));
 /// ## Examples
 ///
 /// ```
-/// use guff::Agents;
+/// use guff_css::Agents;
 ///
 /// let agents = Agents::try_from("firefox 100, ie 11").unwrap();
 /// assert_eq!(agents.len(), 2);
@@ -142,7 +142,7 @@ impl Agents {
 	/// ## Examples
 	///
 	/// ```
-	/// use guff::{Agent, Agents};
+	/// use guff_css::{Agent, Agents};
 	///
 	/// let mut agents = Agents::default();
 	/// assert!(agents.is_empty()); // It starts with no restrictions.
@@ -188,7 +188,7 @@ impl Agents {
 	/// ## Examples
 	///
 	/// ```
-	/// use guff::{Agent, Agents};
+	/// use guff_css::{Agent, Agents};
 	///
 	/// let mut agents = Agents::default();
 	/// assert!(agents.is_empty()); // It starts with no restrictions.

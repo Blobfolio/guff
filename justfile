@@ -17,7 +17,10 @@
 
 pkg_id      := "guff"
 pkg_name    := "Guff"
-pkg_dir1    := justfile_directory()
+pkg_dir1    := justfile_directory() + "/guff"
+pkg_dir2    := justfile_directory() + "/guff_css"
+
+features    := "bin"
 
 cargo_dir   := "/tmp/" + pkg_id + "-cargo"
 cargo_bin   := cargo_dir + "/x86_64-unknown-linux-gnu/release/" + pkg_id
@@ -34,7 +37,7 @@ skel_dir    := justfile_directory() + "/skel"
 	cargo build \
 		--bin "{{ pkg_id }}" \
 		--release \
-		--all-features \
+		--features "{{ features }}" \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
@@ -61,7 +64,7 @@ skel_dir    := justfile_directory() + "/skel"
 	RUSTFLAGS="-Cprofile-generate=/tmp/pgo-data" cargo build \
 		--bin "{{ pkg_id }}" \
 		--release \
-		--all-features \
+		--features "{{ features }}" \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
@@ -78,7 +81,7 @@ skel_dir    := justfile_directory() + "/skel"
 	RUSTFLAGS="-Cprofile-use=/tmp/pgo-data/merged.profdata -Cllvm-args=-pgo-warn-missing-function" cargo build \
 		--bin "{{ pkg_id }}" \
 		--release \
-		--all-features \
+		--features "{{ features }}" \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
@@ -89,7 +92,7 @@ skel_dir    := justfile_directory() + "/skel"
 	cargo check \
 		--bin "{{ pkg_id }}" \
 		--release \
-		--all-features \
+		--features "{{ features }}" \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
@@ -102,6 +105,7 @@ skel_dir    := justfile_directory() + "/skel"
 	# they place *other* shit in the designated target dir. Haha.
 	[ ! -d "{{ justfile_directory() }}/target" ] || rm -rf "{{ justfile_directory() }}/target"
 	[ ! -d "{{ pkg_dir1 }}/target" ] || rm -rf "{{ pkg_dir1 }}/target"
+	[ ! -d "{{ pkg_dir2 }}/target" ] || rm -rf "{{ pkg_dir2 }}/target"
 
 	cargo update
 
@@ -111,14 +115,14 @@ skel_dir    := justfile_directory() + "/skel"
 	clear
 	cargo clippy \
 		--release \
-		--all-features \
+		--features "{{ features }}" \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
 
 # Generate CREDITS.
 @credits:
-	cargo bashman -f bin -m "{{ pkg_dir1 }}/Cargo.toml"
+	cargo bashman -m "{{ pkg_dir1 }}/Cargo.toml"
 	just _fix-chown "{{ justfile_directory() }}/CREDITS.md"
 
 
@@ -143,7 +147,7 @@ skel_dir    := justfile_directory() + "/skel"
 @run +ARGS:
 	cargo run \
 		--bin "{{ pkg_id }}" \
-		--all-features \
+		--features "{{ features }}" \
 		--release \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}" \
@@ -154,7 +158,7 @@ skel_dir    := justfile_directory() + "/skel"
 @test:
 	clear
 	cargo test \
-		--all-features \
+		--features "{{ features }}" \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
@@ -179,6 +183,7 @@ version:
 
 	# Set the release version!
 	just _version "{{ pkg_dir1 }}" "$_ver2"
+	just _version "{{ pkg_dir2 }}" "$_ver2"
 
 
 # Set version for real.

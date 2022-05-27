@@ -1,7 +1,5 @@
 # Guff
 
-[![Documentation](https://docs.rs/guff/badge.svg)](https://docs.rs/guff/)
-[![crates.io](https://img.shields.io/crates/v/guff.svg)](https://crates.io/crates/guff)
 [![Build Status](https://github.com/Blobfolio/guff/workflows/Build/badge.svg)](https://github.com/Blobfolio/guff/actions)
 [![Dependency Status](https://deps.rs/repo/github/blobfolio/guff/status.svg)](https://deps.rs/repo/github/blobfolio/guff)
 
@@ -60,19 +58,6 @@ cargo build \
 ```
 
 (This should work under other 64-bit Unix environments too, like MacOS.)
-
-
-
-## Library
-
-Guff can also be used as a Rust library by adding it to your project's `Cargo.toml` like:
-
-```toml
-[dependencies]
-guff = "0.1"
-```
-
-Refer to the [documentation](https://docs.rs/guff/) for usage and other details.
 
 
 

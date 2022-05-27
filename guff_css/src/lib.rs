@@ -1,5 +1,5 @@
 /*!
-# Guff
+# Guff CSS
 
 This is the backing library for the Guff command-line SCSS/CSS parser and
 minifier. It can be used to compile SCSS into CSS, and/or heavily minify CSS
@@ -54,9 +54,3 @@ pub use targets::{
 	Agent,
 	Agents,
 };
-
-#[cfg(feature = "bin")]
-use fyi_msg as _;
-
-#[cfg(feature = "bin")]
-use write_atomic as _;

@@ -6,20 +6,21 @@ use dactyl::NiceU32;
 use serde::Deserialize;
 use std::{
 	collections::HashMap,
-	fs::{
-		File,
-		Metadata,
-	},
+	fs::File,
 	io::Write,
 	num::NonZeroU32,
-	path::{
-		Path,
-		PathBuf,
-	},
+	path::PathBuf,
+};
+
+#[cfg(not(feature = "docsrs"))]
+use std::{
+	fs::Metadata,
+	path::Path,
 };
 
 
 
+#[cfg(not(feature = "docsrs"))]
 /// # Can I Use? publishes their data here.
 const DATA_URL: &str = "https://github.com/Fyrd/caniuse/raw/main/fulldata-json/data-2.0.json";
 
@@ -49,6 +50,16 @@ pub fn main() {
 		.expect("Unable to save browser data.");
 }
 
+#[cfg(feature = "docsrs")]
+/// # Fetch Raw JSON.
+///
+/// This is a workaround for docs.rs that just pulls a stale copy shipped with
+/// the library.
+fn fetch() -> String {
+	std::fs::read_to_string("skel/data-2.0.json").expect("Unable to load browser data.")
+}
+
+#[cfg(not(feature = "docsrs"))]
 /// # Download/Cache Raw JSON.
 fn fetch() -> String {
 	// Is it cached?
@@ -225,6 +236,7 @@ fn parse_version(src: &str) -> Option<(u32, u32)> {
 	Some((v.get(), major))
 }
 
+#[cfg(not(feature = "docsrs"))]
 /// # Try Cache.
 ///
 /// The downloaded files are cached locally in the `target` directory, but we
