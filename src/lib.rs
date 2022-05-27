@@ -7,7 +7,7 @@ for production use.
 
 **Compatibility**
 This library is only compatible with Unix platforms. For broader support,
-consider using [grass](https://crates.io/crates/grass) and [parcel_css](https://crates.io/crates/parcel_css) directly.
+consider using [`grass`](https://crates.io/crates/grass) and [`parcel_css`](https://crates.io/crates/parcel_css) directly.
 
 **Work In Progress**
 Both the SASS/SCSS compilation and CSS minification features are works in
