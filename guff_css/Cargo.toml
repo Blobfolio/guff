@@ -21,7 +21,7 @@ parcel_css = "=1.0.0-alpha.26"
 trimothy = "0.1.*"
 
 [dependencies.argyle]
-version = "0.5.*, >=0.5.3"
+version = "0.6.*"
 optional = true
 
 [dependencies.grass]

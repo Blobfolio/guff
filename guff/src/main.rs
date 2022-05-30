@@ -41,10 +41,7 @@ use guff_css::{
 	Css,
 	GuffError,
 };
-use std::{
-	ffi::OsStr,
-	path::Path,
-};
+use std::path::Path;
 
 
 
@@ -76,7 +73,7 @@ fn _main() -> Result<(), GuffError> {
 		if args.switch2(b"-e", b"--expanded") { css.take() }
 		else {
 			let browsers =
-				if let Some(b) = args.option2_os(b"-b", b"--browsers").and_then(OsStr::to_str) {
+				if let Some(b) = args.option2(b"-b", b"--browsers").and_then(|x| std::str::from_utf8(x).ok()) {
 					let agents = Agents::try_from(b)?;
 					if agents.is_empty() { None }
 					else {
