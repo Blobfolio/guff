@@ -7,7 +7,10 @@ use serde::Deserialize;
 use std::{
 	collections::HashMap,
 	fs::File,
-	io::Write,
+	io::{
+		Read,
+		Write,
+	},
 	num::NonZeroU32,
 	path::PathBuf,
 };
@@ -41,7 +44,7 @@ const DATA_URL: &str = "https://github.com/Fyrd/caniuse/raw/main/fulldata-json/d
 pub fn main() {
 	println!("cargo:rerun-if-env-changed=CARGO_PKG_VERSION");
 
-	let raw: Raw = serde_json::from_str(&fetch()).expect("Unable to parse raw.");
+	let raw: Raw = serde_json::from_slice(&fetch()).expect("Unable to parse raw.");
 	let out: String = process(raw);
 
 	let cache = out_path("guff-browsers.rs");
@@ -55,13 +58,13 @@ pub fn main() {
 ///
 /// This is a workaround for docs.rs that just pulls a stale copy shipped with
 /// the library.
-fn fetch() -> String {
-	std::fs::read_to_string("skel/data-2.0.json").expect("Unable to load browser data.")
+fn fetch() -> Vec<u8> {
+	std::fs::read("skel/data-2.0.json").expect("Unable to load browser data.")
 }
 
 #[cfg(not(feature = "docsrs"))]
 /// # Download/Cache Raw JSON.
-fn fetch() -> String {
+fn fetch() -> Vec<u8> {
 	// Is it cached?
 	let cache = out_path("guff-browsers.json");
 	if let Some(x) = try_cache(&cache) {
@@ -69,15 +72,17 @@ fn fetch() -> String {
 	}
 
 	// Download it.
-	let out: String = ureq::get(DATA_URL)
+	let res = ureq::get(DATA_URL)
 		.set("user-agent", "Mozilla/5.0")
 		.call()
-		.and_then(|r| r.into_string().map_err(Into::into))
 		.expect("Unable to download data.");
+
+	let mut out: Vec<u8> = Vec::new();
+	res.into_reader().read_to_end(&mut out).expect("Unable to download data.");
 
 	// Try to save for next time.
 	let _res = File::create(cache)
-		.and_then(|mut f| f.write_all(out.as_bytes()).and_then(|_| f.flush()));
+		.and_then(|mut f| f.write_all(&out).and_then(|_| f.flush()));
 
 	// Return the raw value.
 	out
@@ -245,11 +250,11 @@ fn parse_version(src: &str) -> Option<(u32, u32)> {
 ///
 /// At the moment, cached files are used if they are less than an hour old,
 /// otherwise the cache is ignored and they're downloaded fresh.
-fn try_cache(path: &Path) -> Option<String> {
+fn try_cache(path: &Path) -> Option<Vec<u8>> {
 	std::fs::metadata(path)
 		.ok()
 		.filter(Metadata::is_file)
 		.and_then(|meta| meta.modified().ok())
 		.and_then(|time| time.elapsed().ok().filter(|secs| secs.as_secs() < 3600))
-		.and_then(|_| std::fs::read_to_string(path).ok())
+		.and_then(|_| std::fs::read(path).ok())
 }
