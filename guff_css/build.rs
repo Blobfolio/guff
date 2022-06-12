@@ -7,10 +7,7 @@ use serde::Deserialize;
 use std::{
 	collections::HashMap,
 	fs::File,
-	io::{
-		Read,
-		Write,
-	},
+	io::Write,
 	num::NonZeroU32,
 	path::PathBuf,
 };
@@ -65,6 +62,8 @@ fn fetch() -> Vec<u8> {
 #[cfg(not(feature = "docsrs"))]
 /// # Download/Cache Raw JSON.
 fn fetch() -> Vec<u8> {
+	use std::io::Read;
+
 	// Is it cached?
 	let cache = out_path("guff-browsers.json");
 	if let Some(x) = try_cache(&cache) {
