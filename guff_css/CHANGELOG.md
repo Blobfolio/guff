@@ -1,6 +1,14 @@
 # Changelog
 
 
+## [0.1.13](https://github.com/Blobfolio/argyle/releases/tag/v0.1.13) - 2022-07-14
+
+### Changes
+
+* Update dependencies
+
+
+
 ## [0.1.12](https://github.com/Blobfolio/argyle/releases/tag/v0.1.12) - 2022-07-07
 
 ### Changes

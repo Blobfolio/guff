@@ -163,11 +163,14 @@ impl Css<'_> {
 		// Minify it!
 		else {
 			// Parse the stylesheet as CSS.
-			let mut stylesheet = StyleSheet::parse(path, &css, ParserOptions {
+			let mut stylesheet = StyleSheet::parse(&css, ParserOptions {
+				filename: path.to_owned(),
 				nesting: true,
 				css_modules: None,
 				custom_media: false,
 				source_index: 0,
+				error_recovery: false,
+				warnings: None,
 			})?;
 
 			// Convert our Agents into a parcel Browsers object.
@@ -208,11 +211,14 @@ impl Css<'_> {
 
 		// Make sure it is parseable.
 		if ! css.is_empty() {
-			StyleSheet::parse(path, &css, ParserOptions {
+			StyleSheet::parse(&css, ParserOptions {
+				filename: path.to_owned(),
 				nesting: true,
 				css_modules: None,
 				custom_media: false,
 				source_index: 0,
+				error_recovery: false,
+				warnings: None,
 			})?;
 		}
 
