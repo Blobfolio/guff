@@ -1,7 +1,8 @@
 # Changelog
 
 
-## [0.1.13](https://github.com/Blobfolio/argyle/releases/tag/v0.1.13) - 2022-07-14
+
+## [0.1.14](https://github.com/Blobfolio/guff/releases/tag/v0.1.14) - 2022-07-31
 
 ### Changes
 
@@ -9,7 +10,7 @@
 
 
 
-## [0.1.12](https://github.com/Blobfolio/argyle/releases/tag/v0.1.12) - 2022-07-07
+## [0.1.13](https://github.com/Blobfolio/guff/releases/tag/v0.1.13) - 2022-07-14
 
 ### Changes
 
@@ -17,7 +18,7 @@
 
 
 
-## [0.1.11](https://github.com/Blobfolio/argyle/releases/tag/v0.1.11) - 2022-06-30
+## [0.1.12](https://github.com/Blobfolio/guff/releases/tag/v0.1.12) - 2022-07-07
 
 ### Changes
 
@@ -25,7 +26,15 @@
 
 
 
-## [0.1.9](https://github.com/Blobfolio/argyle/releases/tag/v0.1.9) - 2022-05-26
+## [0.1.11](https://github.com/Blobfolio/guff/releases/tag/v0.1.11) - 2022-06-30
+
+### Changes
+
+* Update dependencies
+
+
+
+## [0.1.9](https://github.com/Blobfolio/guff/releases/tag/v0.1.9) - 2022-05-26
 
 ### Added
 
