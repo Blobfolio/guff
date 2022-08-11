@@ -2,6 +2,14 @@
 
 
 
+## [0.1.15](https://github.com/Blobfolio/guff/releases/tag/v0.1.15) - 2022-08-11
+
+### Changes
+
+* None; bin-only release.
+
+
+
 ## [0.1.14](https://github.com/Blobfolio/guff/releases/tag/v0.1.14) - 2022-07-31
 
 ### Changes
