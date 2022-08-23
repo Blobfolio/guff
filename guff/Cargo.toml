@@ -68,7 +68,7 @@ path = true
 
 [dependencies]
 argyle = "0.6.*"
-fyi_msg = "0.9.*"
+fyi_msg = "0.10.*"
 write_atomic = "0.2.*"
 
 [dependencies.guff_css]
