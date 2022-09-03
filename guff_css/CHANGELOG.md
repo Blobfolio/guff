@@ -2,6 +2,14 @@
 
 
 
+## [0.1.17](https://github.com/Blobfolio/guff/releases/tag/v0.1.17) - 2022-09-02
+
+### Changes
+
+* Update dependencies
+
+
+
 ## [0.1.16](https://github.com/Blobfolio/guff/releases/tag/v0.1.16) - 2022-08-22
 
 ### Changes
