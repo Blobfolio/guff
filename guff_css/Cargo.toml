@@ -17,7 +17,7 @@ targets = [ "x86_64-unknown-linux-gnu", "x86_64-apple-darwin" ]
 [dependencies]
 dactyl = "0.4.*"
 oxford_join = "0.2.*"
-parcel_css = "=1.0.0-alpha.31"
+parcel_css = "=1.0.0-alpha.32"
 trimothy = "0.1.*"
 
 [dependencies.argyle]
