@@ -9,7 +9,7 @@ Refer to the [documentation](https://docs.rs/guff_css/) for usage and other deta
 
 **Compatibility**
 
-This library is only compatible with Unix platforms. For broader support, consider using [`grass`](https://crates.io/crates/grass) and [`parcel_css`](https://crates.io/crates/parcel_css) directly.
+This library is only compatible with Unix platforms. For broader support, consider using [`grass`](https://crates.io/crates/grass) and [`lightningcss`](https://crates.io/crates/lightningcss) directly.
 
 **Work In Progress**
 
