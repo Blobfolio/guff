@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.17
-    Generated: 2022-09-03 05:50:28 UTC
+    Version:   0.1.18
+    Generated: 2022-09-08 18:29:05 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -24,7 +24,7 @@
 | [crossbeam-utils](https://github.com/crossbeam-rs/crossbeam) | 0.8.11 |  | Apache-2.0 or MIT |
 | [cssparser](https://github.com/servo/rust-cssparser) | 0.29.6 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MPL-2.0 |
 | [cssparser-macros](https://github.com/servo/rust-cssparser) | 0.6.0 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MPL-2.0 |
-| [dactyl](https://github.com/Blobfolio/dactyl) | 0.4.3 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
+| [dactyl](https://github.com/Blobfolio/dactyl) | 0.4.4 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [dashmap](https://github.com/xacrimon/dashmap) | 5.4.0 | [Acrimon](mailto:joel.wejdenstal@gmail.com) | MIT |
 | [data-encoding](https://github.com/ia0/data-encoding) | 2.3.2 | [Julien Cretin](mailto:git@ia0.eu) | MIT |
 | [data-url](https://github.com/servo/rust-url) | 0.1.1 | [Simon Sapin](mailto:simon.sapin@exyr.org) | Apache-2.0 or MIT |
@@ -36,8 +36,8 @@
 | [fxhash](https://github.com/cbreeden/fxhash) | 0.2.1 | [cbreeden](mailto:github@u.breeden.cc) | Apache-2.0 or MIT |
 | [fyi_msg](https://github.com/Blobfolio/fyi) | 0.10.0 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.7 | The Rand Project Developers | Apache-2.0 or MIT |
-| [grass](https://github.com/connorskees/grass) | 0.11.1 | [ConnorSkees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
-| [guff_css](https://github.com/Blobfolio/guff) | 0.1.17 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [grass](https://github.com/connorskees/grass) | 0.11.2 | [ConnorSkees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
+| [guff_css](https://github.com/Blobfolio/guff) | 0.1.18 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.12.3 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [indexmap](https://github.com/bluss/indexmap) | 1.9.1 |  | Apache-2.0 or MIT |
@@ -45,6 +45,7 @@
 | [itoa](https://github.com/dtolnay/itoa) | 1.0.3 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [lasso](https://github.com/Kixiron/lasso) | 0.5.1 | [Chase Wilson](mailto:contact@chasewilson.dev) | Apache-2.0 or MIT |
 | [lazy_static](https://github.com/rust-lang-nursery/lazy-static.rs) | 1.4.0 | [Marvin Löbel](mailto:loebel.marvin@gmail.com) | Apache-2.0 or MIT |
+| [lightningcss](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.33 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [lock_api](https://github.com/Amanieu/parking_lot) | 0.4.8 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [log](https://github.com/rust-lang/log) | 0.4.17 | The Rust Project Developers | Apache-2.0 or MIT |
 | [matches](https://github.com/SimonSapin/rust-std-candidates) | 0.1.9 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MIT |
@@ -56,8 +57,7 @@
 | [num_cpus](https://github.com/seanmonstar/num_cpus) | 1.13.1 | [Sean McArthur](mailto:sean@seanmonstar.com) | Apache-2.0 or MIT |
 | [once_cell](https://github.com/matklad/once_cell) | 1.14.0 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | Apache-2.0 or MIT |
 | [oxford_join](https://github.com/Blobfolio/oxford_join) | 0.2.4 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
-| [parcel_css](https://github.com/parcel-bundler/parcel-css) | 1.0.0-alpha.32 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
-| [parcel_selectors](https://github.com/servo/servo) | 0.24.5 | The Servo Project Developers | MPL-2.0 |
+| [parcel_selectors](https://github.com/servo/servo) | 0.24.6 | The Servo Project Developers | MPL-2.0 |
 | [parcel_sourcemap](https://github.com/parcel-bundler/source-map) | 2.1.0 | [Jasper De Moor](mailto:jasperdemoor@gmail.com) | MIT |
 | [parking_lot_core](https://github.com/Amanieu/parking_lot) | 0.9.3 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [phf](https://github.com/sfackler/rust-phf) | 0.8.0 | [Steven Fackler](mailto:sfackler@gmail.com) | MIT |
