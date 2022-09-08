@@ -10,7 +10,7 @@ use grass::{
 	Options,
 	OutputStyle,
 };
-use parcel_css::{
+use lightningcss::{
 	stylesheet::{
 		MinifyOptions,
 		ParserOptions,

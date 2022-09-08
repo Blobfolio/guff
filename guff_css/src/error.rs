@@ -5,7 +5,7 @@
 #[cfg(feature = "bin")]
 use argyle::ArgyleError;
 
-use parcel_css::error::{
+use lightningcss::error::{
 	MinifyErrorKind,
 	ParserError,
 	PrinterErrorKind,
@@ -78,9 +78,9 @@ impl From<Box<grass::Error>> for GuffError {
 
 macro_rules! from_parcel {
 	($($ty:ty),+) => ($(
-		impl From<parcel_css::error::Error<$ty>> for GuffError {
+		impl From<lightningcss::error::Error<$ty>> for GuffError {
 			#[inline]
-			fn from(err: parcel_css::error::Error<$ty>) -> Self {
+			fn from(err: lightningcss::error::Error<$ty>) -> Self {
 				Self::Css(err.kind.to_string())
 			}
 		}
