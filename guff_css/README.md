@@ -1,6 +1,7 @@
 # Guff CSS
 
 [![Documentation](https://docs.rs/guff_css/badge.svg)](https://docs.rs/guff_css/)
+[![Changelog](https://img.shields.io/crates/v/guff_css.svg?label=Changelog&color=9cf)](https://github.com/Blobfolio/guff/blob/master/guff_css/CHANGELOG.md)
 [![crates.io](https://img.shields.io/crates/v/guff_css.svg)](https://crates.io/crates/guff_css)
 
 This is the backing library for the Guff command-line SCSS/CSS parser and minifier. It can be used to compile SCSS into CSS, and/or heavily minify CSS for production use.
