@@ -2,6 +2,14 @@
 
 
 
+## [0.1.19](https://github.com/Blobfolio/guff/releases/tag/v0.1.19) - TBD
+
+### Changes
+
+* Bump MSRV `1.63`
+
+
+
 ## [0.1.18](https://github.com/Blobfolio/guff/releases/tag/v0.1.18) - 2022-09-08
 
 ### Changes
