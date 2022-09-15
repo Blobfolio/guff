@@ -7,6 +7,7 @@
 ### Changes
 
 * Bump MSRV `1.63`
+* Update dependencies
 
 
 
