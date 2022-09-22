@@ -1,7 +1,9 @@
 # Guff
 
-[![Build Status](https://github.com/Blobfolio/guff/workflows/Build/badge.svg)](https://github.com/Blobfolio/guff/actions)
-[![Dependency Status](https://deps.rs/repo/github/blobfolio/guff/status.svg)](https://deps.rs/repo/github/blobfolio/guff)
+[![ci](https://img.shields.io/github/workflow/status/Blobfolio/guff/Build.svg?style=flat-square&label=ci)](https://github.com/Blobfolio/guff/actions)
+[![deps.rs](https://deps.rs/repo/github/blobfolio/guff/status.svg?style=flat-square&label=deps.rs)](https://deps.rs/repo/github/blobfolio/guff)<br>
+[![license](https://img.shields.io/badge/license-wtfpl-ff1493?style=flat-square)](https://en.wikipedia.org/wiki/WTFPL)
+[![contributions welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square&label=contributions)](https://github.com/Blobfolio/guff/issues)
 
 Guff is an x86-64 Linux CLI tool providing both SASS/SCSS compilation and CSS parsing/minification. It is a faster, lighter, compressier alternative to chaining together multiple tools like `sassc` and `csso`.
 
