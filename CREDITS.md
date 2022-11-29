@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.20
-    Generated: 2022-11-24 05:50:40 UTC
+    Version:   0.1.21
+    Generated: 2022-11-29 21:26:00 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -37,7 +37,7 @@
 | [fyi_msg](https://github.com/Blobfolio/fyi) | 0.10.3 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.8 | The Rand Project Developers | Apache-2.0 or MIT |
 | [grass](https://github.com/connorskees/grass) | 0.11.2 | [ConnorSkees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
-| [guff_css](https://github.com/Blobfolio/guff) | 0.1.20 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [guff_css](https://github.com/Blobfolio/guff) | 0.1.21 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.12.3 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [indexmap](https://github.com/bluss/indexmap) | 1.9.2 |  | Apache-2.0 or MIT |
@@ -45,7 +45,8 @@
 | [itoa](https://github.com/dtolnay/itoa) | 1.0.4 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [lasso](https://github.com/Kixiron/lasso) | 0.5.1 | [Chase Wilson](mailto:contact@chasewilson.dev) | Apache-2.0 or MIT |
 | [lazy_static](https://github.com/rust-lang-nursery/lazy-static.rs) | 1.4.0 | [Marvin Löbel](mailto:loebel.marvin@gmail.com) | Apache-2.0 or MIT |
-| [lightningcss](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.36 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
+| [lightningcss](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.37 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
+| [lightningcss-derive](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.35 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [lock_api](https://github.com/Amanieu/parking_lot) | 0.4.9 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [log](https://github.com/rust-lang/log) | 0.4.17 | The Rust Project Developers | Apache-2.0 or MIT |
 | [matches](https://github.com/SimonSapin/rust-std-candidates) | 0.1.9 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MIT |
@@ -58,9 +59,9 @@
 | [once_cell](https://github.com/matklad/once_cell) | 1.16.0 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | Apache-2.0 or MIT |
 | [outref](https://github.com/Nugine/outref) | 0.1.0 |  | MIT |
 | [oxford_join](https://github.com/Blobfolio/oxford_join) | 0.2.5 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
-| [parcel_selectors](https://github.com/servo/servo) | 0.24.8 | The Servo Project Developers | MPL-2.0 |
+| [parcel_selectors](https://github.com/servo/servo) | 0.24.9 | The Servo Project Developers | MPL-2.0 |
 | [parcel_sourcemap](https://github.com/parcel-bundler/source-map) | 2.1.1 | [Jasper De Moor](mailto:jasperdemoor@gmail.com) | MIT |
-| [parking_lot_core](https://github.com/Amanieu/parking_lot) | 0.9.4 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
+| [parking_lot_core](https://github.com/Amanieu/parking_lot) | 0.9.5 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [phf](https://github.com/sfackler/rust-phf) | 0.8.0 | [Steven Fackler](mailto:sfackler@gmail.com) | MIT |
 | [phf](https://github.com/sfackler/rust-phf) | 0.9.0 | [Steven Fackler](mailto:sfackler@gmail.com) | MIT |
 | [phf](https://github.com/sfackler/rust-phf) | 0.10.1 | [Steven Fackler](mailto:sfackler@gmail.com) | MIT |
@@ -90,13 +91,13 @@
 | [ryu](https://github.com/dtolnay/ryu) | 1.0.11 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or BSL-1.0 |
 | [scopeguard](https://github.com/bluss/scopeguard) | 1.1.0 | bluss | Apache-2.0 or MIT |
 | [seahash](https://gitlab.redox-os.org/redox-os/seahash) | 4.1.0 | [ticki](mailto:ticki@users.noreply.github.com) and [Tom Almeida](mailto:tom@tommoa.me) | MIT |
-| [serde](https://github.com/serde-rs/serde) | 1.0.147 | [Erick Tryzelaar](mailto:erick.tryzelaar@gmail.com) and [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
-| [serde_derive](https://github.com/serde-rs/serde) | 1.0.147 | [Erick Tryzelaar](mailto:erick.tryzelaar@gmail.com) and [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
+| [serde](https://github.com/serde-rs/serde) | 1.0.148 | [Erick Tryzelaar](mailto:erick.tryzelaar@gmail.com) and [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
+| [serde_derive](https://github.com/serde-rs/serde) | 1.0.148 | [Erick Tryzelaar](mailto:erick.tryzelaar@gmail.com) and [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [serde_json](https://github.com/serde-rs/json) | 1.0.89 | [Erick Tryzelaar](mailto:erick.tryzelaar@gmail.com) and [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [simd-abstraction](https://github.com/Nugine/simd) | 0.7.1 |  | MIT |
 | [siphasher](https://github.com/jedisct1/rust-siphash) | 0.3.10 | [Frank Denis](mailto:github@pureftpd.org) | Apache-2.0 or MIT |
 | [smallvec](https://github.com/servo/rust-smallvec) | 1.10.0 | The Servo Project Developers | Apache-2.0 or MIT |
-| [syn](https://github.com/dtolnay/syn) | 1.0.103 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
+| [syn](https://github.com/dtolnay/syn) | 1.0.104 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [tempfile](https://github.com/Stebalien/tempfile) | 3.3.0 | [Steven Allen](mailto:steven@stebalien.com), The Rust Project Developers, [Ashley Mannix](mailto:ashleymannix@live.com.au), and [Jason White](mailto:jasonaw0@gmail.com) | Apache-2.0 or MIT |
 | [trimothy](https://github.com/Blobfolio/trimothy) | 0.1.4 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [unicode-ident](https://github.com/dtolnay/unicode-ident) | 1.0.5 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 AND Unicode-DFS-2016 or MIT |
