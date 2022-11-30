@@ -2,6 +2,14 @@
 
 
 
+## [0.1.22](https://github.com/Blobfolio/guff/releases/tag/v0.1.22) - 2022-11-30
+
+### Changes
+
+* Update dependencies (fixes regression with `calc()` and `0`-values)
+
+
+
 ## [0.1.21](https://github.com/Blobfolio/guff/releases/tag/v0.1.21) - 2022-11-29
 
 ### Changes
