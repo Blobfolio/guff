@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.21
-    Generated: 2022-11-29 21:26:00 UTC
+    Version:   0.1.22
+    Generated: 2022-11-30 18:34:52 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -37,7 +37,7 @@
 | [fyi_msg](https://github.com/Blobfolio/fyi) | 0.10.3 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.8 | The Rand Project Developers | Apache-2.0 or MIT |
 | [grass](https://github.com/connorskees/grass) | 0.11.2 | [ConnorSkees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
-| [guff_css](https://github.com/Blobfolio/guff) | 0.1.21 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [guff_css](https://github.com/Blobfolio/guff) | 0.1.22 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.12.3 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [indexmap](https://github.com/bluss/indexmap) | 1.9.2 |  | Apache-2.0 or MIT |
@@ -45,7 +45,7 @@
 | [itoa](https://github.com/dtolnay/itoa) | 1.0.4 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [lasso](https://github.com/Kixiron/lasso) | 0.5.1 | [Chase Wilson](mailto:contact@chasewilson.dev) | Apache-2.0 or MIT |
 | [lazy_static](https://github.com/rust-lang-nursery/lazy-static.rs) | 1.4.0 | [Marvin Löbel](mailto:loebel.marvin@gmail.com) | Apache-2.0 or MIT |
-| [lightningcss](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.37 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
+| [lightningcss](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.38 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [lightningcss-derive](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.35 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [lock_api](https://github.com/Amanieu/parking_lot) | 0.4.9 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [log](https://github.com/rust-lang/log) | 0.4.17 | The Rust Project Developers | Apache-2.0 or MIT |
