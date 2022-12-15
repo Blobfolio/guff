@@ -76,7 +76,7 @@ impl fmt::Display for Agents {
 			tmp.sort_by(|a, b| a.0.cmp(b.0));
 
 			let tmp: Vec<String> = tmp.into_iter()
-				.map(|(k, v)| format!("{} ({})", k, v))
+				.map(|(k, v)| format!("{k} ({v})"))
 				.collect();
 
 			f.write_str(&tmp.oxford_and())
