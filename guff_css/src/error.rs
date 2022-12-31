@@ -59,7 +59,7 @@ impl Error for GuffError {}
 impl fmt::Display for GuffError {
 	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
 		match self {
-			Self::Browser(s) | Self::Css(s) | Self::Scss(s) => write!(f, "{} {}", self.as_str(), s),
+			Self::Browser(s) | Self::Css(s) | Self::Scss(s) => write!(f, "{} {s}", self.as_str()),
 			_ => f.write_str(self.as_str()),
 		}
 	}

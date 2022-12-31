@@ -82,7 +82,7 @@ fn _main() -> Result<(), GuffError> {
 						// to STDOUT.
 						if output.is_some() {
 							Msg::custom("Compatibility", 13, &format!(
-								"CSS features capped to {}.", agents
+								"CSS features capped to {agents}."
 							))
 								.with_newline(true)
 								.print();
@@ -102,7 +102,7 @@ fn _main() -> Result<(), GuffError> {
 			.map_err(|_| GuffError::Write)?;
 	}
 	// Print it!
-	else { println!("{}", code); }
+	else { println!("{code}"); }
 
 	Ok(())
 }

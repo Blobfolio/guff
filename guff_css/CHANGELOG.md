@@ -2,6 +2,16 @@
 
 
 
+## [0.1.23](https://github.com/Blobfolio/guff/releases/tag/v0.1.23) - 2022-12-30
+
+### Changes
+
+* Update dependencies (improved SCSS compatibility)
+* Minor code lints
+* Update ci badge syntax (docs)
+
+
+
 ## [0.1.22](https://github.com/Blobfolio/guff/releases/tag/v0.1.22) - 2022-11-30
 
 ### Changes
