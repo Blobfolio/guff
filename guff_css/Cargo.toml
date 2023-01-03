@@ -31,6 +31,7 @@ features = [ "random" ]
 
 [build-dependencies]
 dactyl = "0.4.*"
+ureq = "=2.6.1"
 
 [build-dependencies.serde]
 version = "1.0.*"
@@ -38,11 +39,6 @@ features = [ "derive" ]
 
 [build-dependencies.serde_json]
 version = "1.0.*"
-
-[build-dependencies.ureq]
-version = "=2.5.0"
-default-features = false
-features = [ "tls", "gzip" ]
 
 [features]
 default = []
