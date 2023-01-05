@@ -1,6 +1,6 @@
 [package]
 name = "guff_css"
-version = "0.1.23"
+version = "0.1.24"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
