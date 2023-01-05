@@ -17,7 +17,6 @@ targets = [ "x86_64-unknown-linux-gnu", "x86_64-apple-darwin" ]
 [dependencies]
 dactyl = "0.4.*"
 oxford_join = "0.2.*"
-lightningcss = "=1.0.0-alpha.38"
 trimothy = "0.1.*"
 
 [dependencies.argyle]
@@ -28,6 +27,11 @@ optional = true
 version = "=0.12.0"
 default-features = false
 features = [ "random" ]
+
+[dependencies.lightningcss]
+version = "=1.0.0-alpha.39"
+default-features = false
+features = [ "grid" ]
 
 [build-dependencies]
 dactyl = "0.4.*"
