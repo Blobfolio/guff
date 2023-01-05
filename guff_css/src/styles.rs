@@ -186,7 +186,6 @@ impl Css<'_> {
 			// Turn it back into a string.
 			let out = stylesheet.to_css(PrinterOptions {
 				minify: true,
-				source_map: None,
 				targets: browsers,
 				..PrinterOptions::default()
 			})?;
