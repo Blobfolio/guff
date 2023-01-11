@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.24
-    Generated: 2023-01-05 02:23:34 UTC
+    Version:   0.1.25
+    Generated: 2023-01-11 07:00:42 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -24,8 +24,9 @@
 | [fxhash](https://github.com/cbreeden/fxhash) | 0.2.1 | [cbreeden](mailto:github@u.breeden.cc) | Apache-2.0 or MIT |
 | [fyi_msg](https://github.com/Blobfolio/fyi) | 0.10.5 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.8 | The Rand Project Developers | Apache-2.0 or MIT |
-| [grass](https://github.com/connorskees/grass) | 0.12.0 | [ConnorSkees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
-| [guff_css](https://github.com/Blobfolio/guff) | 0.1.24 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [grass](https://github.com/connorskees/grass) | 0.12.1 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
+| [grass_compiler](https://github.com/connorskees/grass) | 0.12.1 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
+| [guff_css](https://github.com/Blobfolio/guff) | 0.1.25 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.12.3 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [indexmap](https://github.com/bluss/indexmap) | 1.9.2 |  | Apache-2.0 or MIT |
