@@ -35,7 +35,7 @@ features = [ "grid" ]
 
 [build-dependencies]
 dactyl = "0.4.*"
-ureq = "=2.6.1"
+ureq = "2.6.1"
 
 [build-dependencies.serde]
 version = "1.0.*"
