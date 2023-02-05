@@ -1,7 +1,7 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.26
-    Generated: 2023-01-26 18:44:04 UTC
+    Version:   0.1.27
+    Generated: 2023-02-05 04:17:47 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -19,14 +19,14 @@
 | [data-encoding](https://github.com/ia0/data-encoding) | 2.3.3 | [Julien Cretin](mailto:git@ia0.eu) | MIT |
 | [dtoa](https://github.com/dtolnay/dtoa) | 0.4.8 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [dtoa-short](https://github.com/upsuper/dtoa-short) | 0.3.3 | [Xidorn Quan](mailto:me@upsuper.org) | MPL-2.0 |
-| [either](https://github.com/bluss/either) | 1.8.0 | bluss | Apache-2.0 or MIT |
+| [either](https://github.com/bluss/either) | 1.8.1 | bluss | Apache-2.0 or MIT |
 | [fastrand](https://github.com/smol-rs/fastrand) | 1.8.0 | [Stjepan Glavina](mailto:stjepang@gmail.com) | Apache-2.0 or MIT |
 | [fxhash](https://github.com/cbreeden/fxhash) | 0.2.1 | [cbreeden](mailto:github@u.breeden.cc) | Apache-2.0 or MIT |
 | [fyi_msg](https://github.com/Blobfolio/fyi) | 0.10.6 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.8 | The Rand Project Developers | Apache-2.0 or MIT |
-| [grass](https://github.com/connorskees/grass) | 0.12.1 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
-| [grass_compiler](https://github.com/connorskees/grass) | 0.12.1 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
-| [guff_css](https://github.com/Blobfolio/guff) | 0.1.26 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [grass](https://github.com/connorskees/grass) | 0.12.2 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
+| [grass_compiler](https://github.com/connorskees/grass) | 0.12.2 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
+| [guff_css](https://github.com/Blobfolio/guff) | 0.1.27 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.12.3 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [indexmap](https://github.com/bluss/indexmap) | 1.9.2 |  | Apache-2.0 or MIT |
@@ -51,7 +51,7 @@
 | [ppv-lite86](https://github.com/cryptocorrosion/cryptocorrosion) | 0.2.17 | The CryptoCorrosion Contributors | Apache-2.0 or MIT |
 | [precomputed-hash](https://github.com/emilio/precomputed-hash) | 0.1.1 | [Emilio Cobos Álvarez](mailto:emilio@crisal.io) | MIT |
 | [proc-macro-hack](https://github.com/dtolnay/proc-macro-hack) | 0.5.20+deprecated | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
-| [proc-macro2](https://github.com/dtolnay/proc-macro2) | 1.0.50 | [David Tolnay](mailto:dtolnay@gmail.com) and [Alex Crichton](mailto:alex@alexcrichton.com) | Apache-2.0 or MIT |
+| [proc-macro2](https://github.com/dtolnay/proc-macro2) | 1.0.51 | [David Tolnay](mailto:dtolnay@gmail.com) and [Alex Crichton](mailto:alex@alexcrichton.com) | Apache-2.0 or MIT |
 | [quote](https://github.com/dtolnay/quote) | 1.0.23 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [rand](https://github.com/rust-random/rand) | 0.8.5 | The Rand Project Developers and The Rust Project Developers | Apache-2.0 or MIT |
 | [rand_chacha](https://github.com/rust-random/rand) | 0.3.1 | The Rand Project Developers, The Rust Project Developers, and The CryptoCorrosion Contributors | Apache-2.0 or MIT |
