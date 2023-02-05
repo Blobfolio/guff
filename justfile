@@ -129,9 +129,8 @@ skel_dir    := justfile_directory() + "/skel"
 # Build Docs.
 @doc:
 	# Make the docs.
-	cargo doc \
+	cargo rustdoc \
 		--release \
-		--no-deps \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
