@@ -37,7 +37,7 @@ skel_dir    := justfile_directory() + "/skel"
 	cargo build \
 		--bin "{{ pkg_id }}" \
 		--release \
-		--features "{{ features }}" \
+		--all-features \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
@@ -64,7 +64,7 @@ skel_dir    := justfile_directory() + "/skel"
 	RUSTFLAGS="-Cprofile-generate=/tmp/pgo-data" cargo build \
 		--bin "{{ pkg_id }}" \
 		--release \
-		--features "{{ features }}" \
+		--all-features \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
@@ -81,7 +81,7 @@ skel_dir    := justfile_directory() + "/skel"
 	RUSTFLAGS="-Cprofile-use=/tmp/pgo-data/merged.profdata -Cllvm-args=-pgo-warn-missing-function" cargo build \
 		--bin "{{ pkg_id }}" \
 		--release \
-		--features "{{ features }}" \
+		--all-features \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
@@ -92,7 +92,7 @@ skel_dir    := justfile_directory() + "/skel"
 	cargo check \
 		--bin "{{ pkg_id }}" \
 		--release \
-		--features "{{ features }}" \
+		--all-features \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
@@ -115,7 +115,7 @@ skel_dir    := justfile_directory() + "/skel"
 	clear
 	cargo clippy \
 		--release \
-		--features "{{ features }}" \
+		--all-features \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 
@@ -147,7 +147,7 @@ skel_dir    := justfile_directory() + "/skel"
 @run +ARGS:
 	cargo run \
 		--bin "{{ pkg_id }}" \
-		--features "{{ features }}" \
+		--all-features \
 		--release \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}" \
@@ -158,7 +158,7 @@ skel_dir    := justfile_directory() + "/skel"
 @test:
 	clear
 	cargo test \
-		--features "{{ features }}" \
+		--all-features \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 

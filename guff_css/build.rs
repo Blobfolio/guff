@@ -12,7 +12,7 @@ use std::{
 	path::PathBuf,
 };
 
-#[cfg(not(feature = "docsrs"))]
+#[cfg(not(docsrs))]
 use std::{
 	fs::Metadata,
 	path::Path,
@@ -20,7 +20,7 @@ use std::{
 
 
 
-#[cfg(not(feature = "docsrs"))]
+#[cfg(not(docsrs))]
 /// # Can I Use? publishes their data here.
 const DATA_URL: &str = "https://github.com/Fyrd/caniuse/raw/main/fulldata-json/data-2.0.json";
 
@@ -50,7 +50,7 @@ pub fn main() {
 		.expect("Unable to save browser data.");
 }
 
-#[cfg(feature = "docsrs")]
+#[cfg(docsrs)]
 /// # Fetch Raw JSON.
 ///
 /// This is a workaround for docs.rs that just pulls a stale copy shipped with
@@ -59,7 +59,7 @@ fn fetch() -> Vec<u8> {
 	std::fs::read("skel/data-2.0.json").expect("Unable to load browser data.")
 }
 
-#[cfg(not(feature = "docsrs"))]
+#[cfg(not(docsrs))]
 /// # Download/Cache Raw JSON.
 fn fetch() -> Vec<u8> {
 	use std::io::Read;
@@ -240,7 +240,7 @@ fn parse_version(src: &str) -> Option<(u32, u32)> {
 	Some((v.get(), major))
 }
 
-#[cfg(not(feature = "docsrs"))]
+#[cfg(not(docsrs))]
 /// # Try Cache.
 ///
 /// The downloaded files are cached locally in the `target` directory, but we

@@ -2,6 +2,15 @@
 
 
 
+## [0.1.27](https://github.com/Blobfolio/guff/releases/tag/v0.1.27) - 2023-02-04
+
+### Changes
+
+* Update dependencies
+* Improve docs.rs environment detection
+
+
+
 ## [0.1.26](https://github.com/Blobfolio/guff/releases/tag/v0.1.26) - 2023-01-26
 
 ### Changes
