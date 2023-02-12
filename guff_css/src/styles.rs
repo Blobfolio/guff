@@ -244,22 +244,15 @@ impl TryFrom<&[u8]> for StyleKind {
 	/// This just teases out the type based on the extension. We already have
 	/// raw bytes, so might as well take advantage of the easy comparisons.
 	fn try_from(src: &[u8]) -> Result<Self, Self::Error> {
-		let len: usize = src.len();
-
-		// The last two letters should always be ss.
-		if 5 < len && matches!(src[len - 2], b's' | b'S') && matches!(src[len - 1], b's' | b'S') {
-			match src[len - 4] {
-				// Maybe CSS?
-				b'.' => if matches!(src[len - 3], b'c' | b'C') { return Ok(Self::Css); },
-				// Maybe SCSS/SASS?
-				b's' | b'S' => if src[len - 5] == b'.' && matches!(src[len - 3], b'a' | b'c' | b'A' | b'C') {
-					return Ok(Self::Scss);
-				},
-				_ => {},
+		// Should end in SS either way.
+		if let [src @ .., b's' | b'S', b's' | b'S'] = src {
+			match src {
+				[.., 0..=46 | 48..=91 | 93..=255, b'.', b'c' | b'C'] => Ok(Self::Css),
+				[.., 0..=46 | 48..=91 | 93..=255, b'.', b's' | b'S', b'a' | b'c' | b'A' | b'C'] => Ok(Self::Scss),
+				_ => Err(GuffError::PathExt),
 			}
 		}
-
-		Err(GuffError::PathExt)
+		else { Err(GuffError::PathExt) }
 	}
 }
 
@@ -275,6 +268,15 @@ mod tests {
 			("/foo/bar.css", Some(StyleKind::Css)),
 			("/foo/bar.sass", Some(StyleKind::Scss)),
 			("/foo/bar.scss", Some(StyleKind::Scss)),
+			("a.css", Some(StyleKind::Css)),
+			("a.sass", Some(StyleKind::Scss)),
+			("a.scss", Some(StyleKind::Scss)),
+			(".css", None),
+			(".sass", None),
+			(".scss", None),
+			("/foo/.css", None),
+			("/foo/.sass", None),
+			("/foo/.scss", None),
 			("/foo/bar.jpeg", None),
 		] {
 			assert_eq!(StyleKind::try_from(file.as_bytes()).ok(), expected);
