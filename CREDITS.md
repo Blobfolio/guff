@@ -1,12 +1,12 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.1.27
-    Generated: 2023-02-05 04:17:47 UTC
+    Version:   0.1.28
+    Generated: 2023-02-14 06:38:48 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
 | [ahash](https://github.com/tkaitchuck/ahash) | 0.7.6 | [Tom Kaitchuck](mailto:tom.kaitchuck@gmail.com) | Apache-2.0 or MIT |
-| [argyle](https://github.com/Blobfolio/argyle) | 0.6.5 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
+| [argyle](https://github.com/Blobfolio/argyle) | 0.6.7 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [bitflags](https://github.com/bitflags/bitflags) | 1.3.2 | The Rust Project Developers | Apache-2.0 or MIT |
 | [byteorder](https://github.com/BurntSushi/byteorder) | 1.4.3 | [Andrew Gallant](mailto:jamslam@gmail.com) | MIT or Unlicense |
 | [cfg-if](https://github.com/alexcrichton/cfg-if) | 1.0.0 | [Alex Crichton](mailto:alex@alexcrichton.com) | Apache-2.0 or MIT |
@@ -22,11 +22,11 @@
 | [either](https://github.com/bluss/either) | 1.8.1 | bluss | Apache-2.0 or MIT |
 | [fastrand](https://github.com/smol-rs/fastrand) | 1.8.0 | [Stjepan Glavina](mailto:stjepang@gmail.com) | Apache-2.0 or MIT |
 | [fxhash](https://github.com/cbreeden/fxhash) | 0.2.1 | [cbreeden](mailto:github@u.breeden.cc) | Apache-2.0 or MIT |
-| [fyi_msg](https://github.com/Blobfolio/fyi) | 0.10.6 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
+| [fyi_msg](https://github.com/Blobfolio/fyi) | 0.10.7 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.8 | The Rand Project Developers | Apache-2.0 or MIT |
 | [grass](https://github.com/connorskees/grass) | 0.12.2 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
 | [grass_compiler](https://github.com/connorskees/grass) | 0.12.2 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
-| [guff_css](https://github.com/Blobfolio/guff) | 0.1.27 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [guff_css](https://github.com/Blobfolio/guff) | 0.1.28 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.12.3 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [indexmap](https://github.com/bluss/indexmap) | 1.9.2 |  | Apache-2.0 or MIT |
@@ -34,13 +34,13 @@
 | [itoa](https://github.com/dtolnay/itoa) | 1.0.5 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [lasso](https://github.com/Kixiron/lasso) | 0.6.0 | [Chase Wilson](mailto:contact@chasewilson.dev) | Apache-2.0 or MIT |
 | [lazy_static](https://github.com/rust-lang-nursery/lazy-static.rs) | 1.4.0 | [Marvin Löbel](mailto:loebel.marvin@gmail.com) | Apache-2.0 or MIT |
-| [lightningcss](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.39 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
+| [lightningcss](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.40 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [log](https://github.com/rust-lang/log) | 0.4.17 | The Rust Project Developers | Apache-2.0 or MIT |
 | [matches](https://github.com/SimonSapin/rust-std-candidates) | 0.1.10 |  | MIT |
 | [num-traits](https://github.com/rust-num/num-traits) | 0.2.15 | The Rust Project Developers | Apache-2.0 or MIT |
 | [once_cell](https://github.com/matklad/once_cell) | 1.17.0 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | Apache-2.0 or MIT |
 | [oxford_join](https://github.com/Blobfolio/oxford_join) | 0.2.7 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
-| [parcel_selectors](https://github.com/servo/servo) | 0.25.0 | The Servo Project Developers | MPL-2.0 |
+| [parcel_selectors](https://github.com/servo/servo) | 0.25.1 | The Servo Project Developers | MPL-2.0 |
 | [pathdiff](https://github.com/Manishearth/pathdiff) | 0.2.1 | [Manish Goregaokar](mailto:manishsmail@gmail.com) | Apache-2.0 or MIT |
 | [phf](https://github.com/sfackler/rust-phf) | 0.8.0 | [Steven Fackler](mailto:sfackler@gmail.com) | MIT |
 | [phf](https://github.com/sfackler/rust-phf) | 0.10.1 | [Steven Fackler](mailto:sfackler@gmail.com) | MIT |

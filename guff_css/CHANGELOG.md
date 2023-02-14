@@ -2,6 +2,15 @@
 
 
 
+## [0.1.28](https://github.com/Blobfolio/guff/releases/tag/v0.1.28) - 2023-02-13
+
+### Changes
+
+* Update dependencies
+* Disallow paths without file name components (e.g. "/path/to/.css")
+
+
+
 ## [0.1.27](https://github.com/Blobfolio/guff/releases/tag/v0.1.27) - 2023-02-04
 
 ### Changes
