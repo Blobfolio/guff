@@ -171,7 +171,6 @@ impl Css<'_> {
 				source_index: 0,
 				error_recovery: false,
 				warnings: None,
-				..ParserOptions::default()
 			})?;
 
 			// Convert our Agents into a parcel Browsers object.
@@ -219,7 +218,6 @@ impl Css<'_> {
 				source_index: 0,
 				error_recovery: false,
 				warnings: None,
-				..ParserOptions::default()
 			})?;
 		}
 

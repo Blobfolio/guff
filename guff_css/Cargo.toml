@@ -29,7 +29,7 @@ default-features = false
 features = [ "random" ]
 
 [dependencies.lightningcss]
-version = "=1.0.0-alpha.39"
+version = "=1.0.0-alpha.40"
 default-features = false
 features = [ "grid" ]
 
