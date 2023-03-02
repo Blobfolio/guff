@@ -26,7 +26,6 @@ optional = true
 [dependencies.grass]
 version = "0.12.*"
 default-features = false
-features = [ "random" ]
 
 [dependencies.lightningcss]
 version = "=1.0.0-alpha.40"
