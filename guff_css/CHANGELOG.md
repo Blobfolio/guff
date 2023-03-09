@@ -2,6 +2,16 @@
 
 
 
+## [0.1.29](https://github.com/Blobfolio/guff/releases/tag/v0.1.29) - 2023-03-09
+
+### Changes
+
+* Loosen `grass` version constraint
+* Remove support for SCSS `random()`
+* Update dependencies
+
+
+
 ## [0.1.28](https://github.com/Blobfolio/guff/releases/tag/v0.1.28) - 2023-02-13
 
 ### Changes
