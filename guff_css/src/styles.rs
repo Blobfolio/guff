@@ -174,7 +174,7 @@ impl Css<'_> {
 			})?;
 
 			// Convert our Agents into a parcel Browsers object.
-			let browsers = browsers.and_then(Option::<Browsers>::from);
+			let browsers = Option::<Browsers>::from(browsers.unwrap_or_default());
 
 			// Minify it.
 			stylesheet.minify(MinifyOptions {
