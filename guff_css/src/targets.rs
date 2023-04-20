@@ -26,7 +26,7 @@ include!(concat!(env!("OUT_DIR"), "/guff-browsers.rs"));
 
 
 
-#[derive(Debug, Clone, Default)]
+#[derive(Debug, Clone)]
 /// # Agents.
 ///
 /// This struct holds a list of browsers and (major) version pairs used to _prevent_
@@ -58,6 +58,13 @@ include!(concat!(env!("OUT_DIR"), "/guff-browsers.rs"));
 /// use guff_css::Agents;
 ///
 /// let agents = Agents::try_from("firefox 100, ie 11").unwrap();
+/// assert_eq!(agents.len(), 4);
+///
+/// // Note: by default iOS/Safari are set to 15 because they suck.
+/// assert_eq!(agents.to_string(), "Firefox (100), IE (11), Safari (15), and iOS (15)");
+///
+/// // You can get rid of that by setting them to "0".
+/// let agents = Agents::try_from("firefox 100, ie 11, safari 0, ios 0").unwrap();
 /// assert_eq!(agents.len(), 2);
 /// assert_eq!(agents.to_string(), "Firefox (100) and IE (11)");
 ///
@@ -65,6 +72,21 @@ include!(concat!(env!("OUT_DIR"), "/guff-browsers.rs"));
 /// assert!(Agents::try_from("foobar 11").is_err());
 /// ```
 pub struct Agents(HashMap<Agent, (u32, u32), NoHash>);
+
+impl Default for Agents {
+	fn default() -> Self {
+		let mut map = HashMap::with_capacity_and_hasher(2, NoHash::default());
+
+		if let Some(x) = Agent::Ios.set().iter().rfind(|(_, m)| *m == 15).copied() {
+			map.insert(Agent::Ios, x);
+		}
+		if let Some(x) = Agent::Safari.set().iter().rfind(|(_, m)| *m == 15).copied() {
+			map.insert(Agent::Safari, x);
+		}
+
+		Self(map)
+	}
+}
 
 impl fmt::Display for Agents {
 	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
@@ -145,16 +167,19 @@ impl Agents {
 	/// use guff_css::{Agent, Agents};
 	///
 	/// let mut agents = Agents::default();
-	/// assert!(agents.is_empty()); // It starts with no restrictions.
+	/// assert_eq!(agents.len(), 2); // It starts by capping iOS/Safari to 15.
+	/// assert!(! agents.is_empty());
+	/// assert_eq!(Some(15), agents.get(Agent::Ios));
+	/// assert_eq!(Some(15), agents.get(Agent::Safari));
 	///
 	/// // Cap Firefox to version 100.
 	/// agents.set(Agent::Firefox, 100);
-	/// assert_eq!(agents.len(), 1);
+	/// assert_eq!(agents.len(), 3);
 	/// assert_eq!(Some(100), agents.get(Agent::Firefox));
 	///
 	/// // An invalid version (or zero) removes the restriction.
 	/// agents.set(Agent::Firefox, 0);
-	/// assert!(agents.is_empty());
+	/// assert_eq!(agents.len(), 2);
 	/// assert!(agents.get(Agent::Firefox).is_none());
 	/// ```
 	pub fn set(&mut self, agent: Agent, major: u32) {
@@ -191,11 +216,14 @@ impl Agents {
 	/// use guff_css::{Agent, Agents};
 	///
 	/// let mut agents = Agents::default();
-	/// assert!(agents.is_empty()); // It starts with no restrictions.
+	/// assert_eq!(agents.len(), 2); // It starts by capping iOS/Safari to 15.
+	/// assert!(! agents.is_empty());
+	/// assert_eq!(Some(15), agents.get(Agent::Ios));
+	/// assert_eq!(Some(15), agents.get(Agent::Safari));
 	///
 	/// // Cap Firefox to its penultimate version.
 	/// agents.set_nth(Agent::Firefox, 1);
-	/// assert_eq!(agents.len(), 1);
+	/// assert_eq!(agents.len(), 3);
 	/// assert_eq!(Some(Agent::Firefox.nth(1)), agents.get(Agent::Firefox));
 	/// ```
 	pub fn set_nth(&mut self, agent: Agent, n: usize) {

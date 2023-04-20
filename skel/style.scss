@@ -35,3 +35,7 @@ body {
 	background-blend-mode: multiply;
 	background-size: cover;
 }
+
+@media(min-width: 320px) {
+	body { background: red; }
+}

@@ -2,9 +2,22 @@
 
 
 
+## [0.1.30](https://github.com/Blobfolio/guff/releases/tag/v0.1.30) - 2023-04-19
+
+### Changed
+
+* Cap CSS compatibility by default to iOS/Safari 15.x (mainly to avoid unexpected media query condition rewrites)
+* Update dependencies
+
+### Fixed
+
+* Accept "ios" as a browser filter string (in addition to "ios_saf")
+
+
+
 ## [0.1.29](https://github.com/Blobfolio/guff/releases/tag/v0.1.29) - 2023-03-09
 
-### Changes
+### Changed
 
 * Loosen `grass` version constraint
 * Remove support for SCSS `random()`
@@ -14,7 +27,7 @@
 
 ## [0.1.28](https://github.com/Blobfolio/guff/releases/tag/v0.1.28) - 2023-02-13
 
-### Changes
+### Changed
 
 * Update dependencies
 * Disallow paths without file name components (e.g. "/path/to/.css")
@@ -23,7 +36,7 @@
 
 ## [0.1.27](https://github.com/Blobfolio/guff/releases/tag/v0.1.27) - 2023-02-04
 
-### Changes
+### Changed
 
 * Update dependencies
 * Improve docs.rs environment detection
@@ -32,7 +45,7 @@
 
 ## [0.1.26](https://github.com/Blobfolio/guff/releases/tag/v0.1.26) - 2023-01-26
 
-### Changes
+### Changed
 
 * Update dependencies
 
@@ -40,7 +53,7 @@
 
 ## [0.1.25](https://github.com/Blobfolio/guff/releases/tag/v0.1.25) - 2023-01-10
 
-### Changes
+### Changed
 
 * Update dependencies
 
@@ -48,7 +61,7 @@
 
 ## [0.1.24](https://github.com/Blobfolio/guff/releases/tag/v0.1.24) - 2022-01-04
 
-### Changes
+### Changed
 
 * Update dependencies
 * Prune sub-dependencies
@@ -57,7 +70,7 @@
 
 ## [0.1.23](https://github.com/Blobfolio/guff/releases/tag/v0.1.23) - 2022-12-30
 
-### Changes
+### Changed
 
 * Update dependencies (improved SCSS compatibility)
 * Minor code lints
@@ -67,7 +80,7 @@
 
 ## [0.1.22](https://github.com/Blobfolio/guff/releases/tag/v0.1.22) - 2022-11-30
 
-### Changes
+### Changed
 
 * Update dependencies (fixes regression with `calc()` and `0`-values)
 
@@ -75,7 +88,7 @@
 
 ## [0.1.21](https://github.com/Blobfolio/guff/releases/tag/v0.1.21) - 2022-11-29
 
-### Changes
+### Changed
 
 * Update dependencies
 
@@ -83,7 +96,7 @@
 
 ## [0.1.20](https://github.com/Blobfolio/guff/releases/tag/v0.1.20) - 2022-11-23
 
-### Changes
+### Changed
 
 * Update dependencies
 
@@ -91,7 +104,7 @@
 
 ## [0.1.19](https://github.com/Blobfolio/guff/releases/tag/v0.1.19) - 2022-09-22
 
-### Changes
+### Changed
 
 * Bump MSRV `1.63`
 * Update dependencies
@@ -101,7 +114,7 @@
 
 ## [0.1.18](https://github.com/Blobfolio/guff/releases/tag/v0.1.18) - 2022-09-08
 
-### Changes
+### Changed
 
 * Update dependencies
 
@@ -109,7 +122,7 @@
 
 ## [0.1.17](https://github.com/Blobfolio/guff/releases/tag/v0.1.17) - 2022-09-02
 
-### Changes
+### Changed
 
 * Update dependencies
 
@@ -117,7 +130,7 @@
 
 ## [0.1.16](https://github.com/Blobfolio/guff/releases/tag/v0.1.16) - 2022-08-22
 
-### Changes
+### Changed
 
 * Update dependencies
 
@@ -125,7 +138,7 @@
 
 ## [0.1.15](https://github.com/Blobfolio/guff/releases/tag/v0.1.15) - 2022-08-11
 
-### Changes
+### Changed
 
 * None; bin-only release
 
@@ -133,7 +146,7 @@
 
 ## [0.1.14](https://github.com/Blobfolio/guff/releases/tag/v0.1.14) - 2022-07-31
 
-### Changes
+### Changed
 
 * Update dependencies
 
@@ -141,7 +154,7 @@
 
 ## [0.1.13](https://github.com/Blobfolio/guff/releases/tag/v0.1.13) - 2022-07-14
 
-### Changes
+### Changed
 
 * Update dependencies
 
@@ -149,7 +162,7 @@
 
 ## [0.1.12](https://github.com/Blobfolio/guff/releases/tag/v0.1.12) - 2022-07-07
 
-### Changes
+### Changed
 
 * Update dependencies
 
@@ -157,7 +170,7 @@
 
 ## [0.1.11](https://github.com/Blobfolio/guff/releases/tag/v0.1.11) - 2022-06-30
 
-### Changes
+### Changed
 
 * Update dependencies
 
