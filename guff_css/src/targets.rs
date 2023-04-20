@@ -292,7 +292,7 @@ impl TryFrom<&str> for Agent {
 			"edge" => Ok(Self::Edge),
 			"firefox" | "and_ff" => Ok(Self::Firefox),
 			"ie" => Ok(Self::Ie),
-			"ios_saf" => Ok(Self::Ios),
+			"ios" | "ios_saf" => Ok(Self::Ios),
 			"opera" | "op_mob" => Ok(Self::Opera),
 			"safari" => Ok(Self::Safari),
 			"samsung" => Ok(Self::Samsung),
