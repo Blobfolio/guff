@@ -28,7 +28,7 @@ version = "0.12.*"
 default-features = false
 
 [dependencies.lightningcss]
-version = "=1.0.0-alpha.40"
+version = "=1.0.0-alpha.41"
 default-features = false
 features = [ "grid" ]
 
