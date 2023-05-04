@@ -86,17 +86,6 @@ skel_dir    := justfile_directory() + "/skel"
 		--target-dir "{{ cargo_dir }}"
 
 
-# Check Release!
-@check:
-	# First let's build the Rust bit.
-	cargo check \
-		--bin "{{ pkg_id }}" \
-		--release \
-		--all-features \
-		--target x86_64-unknown-linux-gnu \
-		--target-dir "{{ cargo_dir }}"
-
-
 @clean:
 	# Most things go here.
 	[ ! -d "{{ cargo_dir }}" ] || rm -rf "{{ cargo_dir }}"
@@ -158,6 +147,11 @@ skel_dir    := justfile_directory() + "/skel"
 	clear
 	cargo test \
 		--all-features \
+		--target x86_64-unknown-linux-gnu \
+		--target-dir "{{ cargo_dir }}"
+	cargo test \
+		--all-features \
+		--release \
 		--target x86_64-unknown-linux-gnu \
 		--target-dir "{{ cargo_dir }}"
 

@@ -48,6 +48,7 @@ jobs:
 
     - name: Build
       run: |
+        cargo build --bin guff --all-features --target ${{ matrix.target }}
         cargo build --bin guff --release --all-features --target ${{ matrix.target }}
 
     - name: Clippy
@@ -57,3 +58,4 @@ jobs:
     - name: Tests
       run: |
         cargo test --all-features --target ${{ matrix.target }}
+        cargo test --release --all-features --target ${{ matrix.target }}
