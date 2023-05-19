@@ -1,4 +1,4 @@
-name: Build
+name: MSRV
 
 on:
   push:
@@ -38,7 +38,9 @@ jobs:
     - uses: dtolnay/rust-toolchain@stable
       with:
         targets: ${{ matrix.target }}
-        components: clippy
+    - uses: taiki-e/install-action@v2
+      with:
+        tool: cargo-msrv
 
     - name: Info
       run: |
@@ -46,16 +48,7 @@ jobs:
         cargo --version
         cargo clippy --version
 
-    - name: Build
+    - name: MSRV
       run: |
-        cargo build --bin guff --all-features --target ${{ matrix.target }}
-        cargo build --bin guff --release --all-features --target ${{ matrix.target }}
-
-    - name: Clippy
-      run: |
-        cargo clippy --all-features --target ${{ matrix.target }}
-
-    - name: Tests
-      run: |
-        cargo test --all-features --target ${{ matrix.target }}
-        cargo test --release --all-features --target ${{ matrix.target }}
+        cargo msrv --path guff verify
+        cargo msrv --path guff_css verify
