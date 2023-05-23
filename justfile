@@ -29,10 +29,13 @@ doc_dir     := justfile_directory() + "/doc"
 release_dir := justfile_directory() + "/release"
 skel_dir    := justfile_directory() + "/skel"
 
+caniuse_url := "https://github.com/Fyrd/caniuse/raw/main/fulldata-json/data-2.0.json"
+caniuse_tmp := "/tmp/caniuse.json"
+
 
 
 # Build Release!
-@build:
+@build: _caniuse
 	# First let's build the Rust bit.
 	cargo build \
 		--bin "{{ pkg_id }}" \
@@ -95,6 +98,9 @@ skel_dir    := justfile_directory() + "/skel"
 	[ ! -d "{{ justfile_directory() }}/target" ] || rm -rf "{{ justfile_directory() }}/target"
 	[ ! -d "{{ pkg_dir1 }}/target" ] || rm -rf "{{ pkg_dir1 }}/target"
 	[ ! -d "{{ pkg_dir2 }}/target" ] || rm -rf "{{ pkg_dir2 }}/target"
+
+	# Clear caniuse data.
+	[ ! -f "{{ caniuse_tmp }}" ] || rm "{{ caniuse_tmp }}"
 
 	cargo update
 
@@ -194,6 +200,14 @@ version:
 	[ ! -d "{{ data_dir }}" ] || rm -rf "{{ data_dir }}"
 	cp -a "{{ justfile_directory() }}/skel" "{{ data_dir }}"
 	just _fix-chown "{{ data_dir }}"
+
+
+# Refresh Remote Data.
+@_caniuse:
+	if [ ! -f "{{ caniuse_tmp }}" ]; then \
+		wget -q -O "{{ caniuse_tmp }}" "{{ caniuse_url }}"; \
+		cat "{{ caniuse_tmp }}" | jq '{agents: .agents}' > "{{ pkg_dir2 }}/skel/data-2.0.json"; \
+	fi
 
 
 # Init dependencies.
