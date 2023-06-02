@@ -1,10 +1,10 @@
 [package]
 name = "guff"
-version = "0.1.30"
+version = "0.2.0"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
-rust-version = "1.63"
+rust-version = "1.70"
 description = "A simple SASS/SCSS compiler and CSS parser/minifier."
 repository = "https://github.com/Blobfolio/guff"
 readme = "README.md"
@@ -68,7 +68,7 @@ path = true
 
 [dependencies]
 argyle = "0.6.*"
-fyi_msg = "0.10.*"
+fyi_msg = "0.11.*"
 write_atomic = "0.3.*"
 
 [dependencies.guff_css]

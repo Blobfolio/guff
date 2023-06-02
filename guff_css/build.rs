@@ -24,6 +24,9 @@ use std::{
 /// # Can I Use? publishes their data here.
 const DATA_URL: &str = "https://github.com/Fyrd/caniuse/raw/main/fulldata-json/data-2.0.json";
 
+/// # Fallback.
+const DATA_FALLBACK: &str = "skel/data-2.0.json";
+
 
 
 /// # Pull (supported) browser version data from Can I Use.
@@ -56,34 +59,50 @@ pub fn main() {
 /// This is a workaround for docs.rs that just pulls a stale copy shipped with
 /// the library.
 fn fetch() -> Vec<u8> {
-	std::fs::read("skel/data-2.0.json").expect("Unable to load browser data.")
+	std::fs::read(DATA_FALLBACK).expect("Unable to load browser data.")
 }
 
 #[cfg(not(docsrs))]
 /// # Download/Cache Raw JSON.
 fn fetch() -> Vec<u8> {
-	use std::io::Read;
-
 	// Is it cached?
 	let cache = out_path("guff-browsers.json");
 	if let Some(x) = try_cache(&cache) {
 		return x;
 	}
 
+	fetch_remote(&cache).unwrap_or_else(fetch_local)
+}
+
+#[cfg(not(docsrs))]
+/// # Fetch Remote.
+fn fetch_remote(cache: &Path) -> Option<Vec<u8>> {
+	use std::io::Read;
+
 	// Download it.
 	let res = ureq::get(DATA_URL)
 		.set("user-agent", "Mozilla/5.0")
 		.call()
-		.expect("Unable to download data.");
+		.ok()?;
 
 	let mut out: Vec<u8> = Vec::new();
-	res.into_reader().read_to_end(&mut out).expect("Unable to download data.");
+	res.into_reader().read_to_end(&mut out).ok()?;
 
-	// Try to save for next time.
-	let _res = File::create(cache)
-		.and_then(|mut f| f.write_all(&out).and_then(|_| f.flush()));
+	if out.is_empty() { None }
+	else {
+		// Try to save for next time.
+		let _res = File::create(cache)
+			.and_then(|mut f| f.write_all(&out).and_then(|_| f.flush()));
 
-	// Return the raw value.
+		Some(out)
+	}
+}
+
+#[cfg(not(docsrs))]
+/// # Fetch Local.
+fn fetch_local() -> Vec<u8> {
+	let out = std::fs::read(DATA_FALLBACK).expect("Unable to load browser data.");
+	println!("cargo:warning=Unable to download current caniuse data; building with bundled copy instead.");
 	out
 }
 
