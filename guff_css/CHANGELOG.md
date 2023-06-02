@@ -2,6 +2,17 @@
 
 
 
+## [0.2.0](https://github.com/Blobfolio/guff/releases/tag/v0.2.0) - 2023-06-01
+
+### Changed
+
+* Bump MSRV 1.70
+* Improve unit test coverage
+* Update dependencies
+* Add static build fallback
+
+
+
 ## [0.1.30](https://github.com/Blobfolio/guff/releases/tag/v0.1.30) - 2023-04-19
 
 ### Changed
