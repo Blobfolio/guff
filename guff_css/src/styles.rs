@@ -13,11 +13,16 @@ use grass::{
 use lightningcss::{
 	stylesheet::{
 		MinifyOptions,
+		ParserFlags,
 		ParserOptions,
 		PrinterOptions,
 		StyleSheet,
 	},
-	targets::Browsers,
+	targets::{
+		Browsers,
+		Features,
+		Targets,
+	},
 };
 use std::path::Path;
 use trimothy::TrimMut;
@@ -165,27 +170,34 @@ impl Css<'_> {
 			// Parse the stylesheet as CSS.
 			let mut stylesheet = StyleSheet::parse(&css, ParserOptions {
 				filename: path.to_owned(),
-				nesting: true,
 				css_modules: None,
-				custom_media: false,
 				source_index: 0,
 				error_recovery: false,
 				warnings: None,
+				flags: ParserFlags::NESTING,
 			})?;
 
 			// Convert our Agents into a parcel Browsers object.
-			let browsers = Option::<Browsers>::from(browsers.unwrap_or_default());
+			let browsers = browsers.and_then(Option::<Browsers>::from);
 
 			// Minify it.
 			stylesheet.minify(MinifyOptions {
-				targets: browsers,
+				targets: Targets {
+					browsers,
+					include: Features::MediaRangeSyntax,
+					exclude: Features::empty(),
+				},
 				..MinifyOptions::default()
 			})?;
 
 			// Turn it back into a string.
 			let out = stylesheet.to_css(PrinterOptions {
 				minify: true,
-				targets: browsers,
+				targets: Targets {
+					browsers,
+					include: Features::MediaRangeSyntax,
+					exclude: Features::empty(),
+				},
 				..PrinterOptions::default()
 			})?;
 
@@ -212,12 +224,11 @@ impl Css<'_> {
 		if ! css.is_empty() {
 			StyleSheet::parse(&css, ParserOptions {
 				filename: path.to_owned(),
-				nesting: true,
 				css_modules: None,
-				custom_media: false,
 				source_index: 0,
 				error_recovery: false,
 				warnings: None,
+				flags: ParserFlags::NESTING,
 			})?;
 		}
 

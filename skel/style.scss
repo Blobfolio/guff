@@ -39,3 +39,7 @@ body {
 @media(min-width: 320px) {
 	body { background: red; }
 }
+
+@media(width >= 360px) {
+	body { background: black; }
+}
