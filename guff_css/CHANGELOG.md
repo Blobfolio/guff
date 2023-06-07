@@ -2,6 +2,16 @@
 
 
 
+## [0.2.1](https://github.com/Blobfolio/guff/releases/tag/v0.2.1) - 2023-06-07
+
+### Changed
+
+* Update dependencies
+* Remove the default CSS compatibility cap introduced in `0.1.30`
+* Disable media query range syntax rewrites
+
+
+
 ## [0.2.0](https://github.com/Blobfolio/guff/releases/tag/v0.2.0) - 2023-06-01
 
 ### Changed
