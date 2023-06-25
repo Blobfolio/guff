@@ -2,6 +2,14 @@
 
 
 
+## [0.2.2](https://github.com/Blobfolio/guff/releases/tag/v0.2.2) - 2023-06-25
+
+### Changed
+
+* Update dependencies
+
+
+
 ## [0.2.1](https://github.com/Blobfolio/guff/releases/tag/v0.2.1) - 2023-06-07
 
 ### Changed
