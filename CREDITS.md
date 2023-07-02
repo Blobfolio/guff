@@ -1,13 +1,13 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.2.2
-    Generated: 2023-06-25 14:50:03 UTC
+    Version:   0.2.3
+    Generated: 2023-07-02 16:30:47 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
 | [ahash](https://github.com/tkaitchuck/ahash) | 0.7.6 | [Tom Kaitchuck](mailto:tom.kaitchuck@gmail.com) | Apache-2.0 or MIT |
 | [argyle](https://github.com/Blobfolio/argyle) | 0.6.8 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
-| [bitflags](https://github.com/bitflags/bitflags) | 2.3.2 | The Rust Project Developers | Apache-2.0 or MIT |
+| [bitflags](https://github.com/bitflags/bitflags) | 2.3.3 | The Rust Project Developers | Apache-2.0 or MIT |
 | [byteorder](https://github.com/BurntSushi/byteorder) | 1.4.3 | [Andrew Gallant](mailto:jamslam@gmail.com) | MIT or Unlicense |
 | [cfg-if](https://github.com/alexcrichton/cfg-if) | 1.0.0 | [Alex Crichton](mailto:alex@alexcrichton.com) | Apache-2.0 or MIT |
 | [codemap](https://github.com/kevinmehall/codemap) | 0.1.3 | [Kevin Mehall](mailto:km@kevinmehall.net) | Apache-2.0 or MIT |
@@ -26,7 +26,7 @@
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.10 | The Rand Project Developers | Apache-2.0 or MIT |
 | [grass](https://github.com/connorskees/grass) | 0.12.4 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
 | [grass_compiler](https://github.com/connorskees/grass) | 0.12.4 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
-| [guff_css](https://github.com/Blobfolio/guff) | 0.2.2 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [guff_css](https://github.com/Blobfolio/guff) | 0.2.3 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.12.3 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [indexmap](https://github.com/bluss/indexmap) | 1.9.3 |  | Apache-2.0 or MIT |
@@ -34,7 +34,7 @@
 | [itoa](https://github.com/dtolnay/itoa) | 1.0.6 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [lasso](https://github.com/Kixiron/lasso) | 0.6.0 | [Chase Wilson](mailto:contact@chasewilson.dev) | Apache-2.0 or MIT |
 | [lazy_static](https://github.com/rust-lang-nursery/lazy-static.rs) | 1.4.0 | [Marvin Löbel](mailto:loebel.marvin@gmail.com) | Apache-2.0 or MIT |
-| [lightningcss](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.43 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
+| [lightningcss](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.44 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [log](https://github.com/rust-lang/log) | 0.4.19 | The Rust Project Developers | Apache-2.0 or MIT |
 | [matches](https://github.com/SimonSapin/rust-std-candidates) | 0.1.10 |  | MIT |
 | [num-traits](https://github.com/rust-num/num-traits) | 0.2.15 | The Rust Project Developers | Apache-2.0 or MIT |
@@ -51,7 +51,7 @@
 | [precomputed-hash](https://github.com/emilio/precomputed-hash) | 0.1.1 | [Emilio Cobos Álvarez](mailto:emilio@crisal.io) | MIT |
 | [proc-macro-hack](https://github.com/dtolnay/proc-macro-hack) | 0.5.20+deprecated | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [proc-macro2](https://github.com/dtolnay/proc-macro2) | 1.0.63 | [David Tolnay](mailto:dtolnay@gmail.com) and [Alex Crichton](mailto:alex@alexcrichton.com) | Apache-2.0 or MIT |
-| [quote](https://github.com/dtolnay/quote) | 1.0.28 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
+| [quote](https://github.com/dtolnay/quote) | 1.0.29 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [rand](https://github.com/rust-random/rand) | 0.8.5 | The Rand Project Developers and The Rust Project Developers | Apache-2.0 or MIT |
 | [rand_chacha](https://github.com/rust-random/rand) | 0.3.1 | The Rand Project Developers, The Rust Project Developers, and The CryptoCorrosion Contributors | Apache-2.0 or MIT |
 | [rand_core](https://github.com/rust-random/rand) | 0.6.4 | The Rand Project Developers and The Rust Project Developers | Apache-2.0 or MIT |
