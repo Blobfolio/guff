@@ -1,6 +1,6 @@
 [package]
 name = "guff_css"
-version = "0.2.3"
+version = "0.2.4"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
@@ -24,7 +24,7 @@ version = "0.6.*"
 optional = true
 
 [dependencies.grass]
-version = "0.12.*"
+version = "0.13.*"
 default-features = false
 
 [dependencies.lightningcss]
