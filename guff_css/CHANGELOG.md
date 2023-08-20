@@ -1,6 +1,14 @@
 # Changelog
 
 
+## [0.2.5](https://github.com/Blobfolio/guff/releases/tag/v0.2.5) - 2023-08-19
+
+### Changed
+
+* Update dependencies
+* Browser compatibility can be set to any old release now, rather than just the latest 16
+
+
 
 ## [0.2.4](https://github.com/Blobfolio/guff/releases/tag/v0.2.4) - 2023-07-13
 

@@ -37,8 +37,7 @@ const DATA_FALLBACK: &str = "skel/data-2.0.json";
 /// 1. The major version number.
 /// 2. The release date (UTC).
 ///
-/// The versions are sorted descendingly, and capped at 16 entries because,
-/// come on! Haha.
+/// The versions are sorted descendingly.
 ///
 /// That's it!
 pub fn main() {
@@ -113,16 +112,13 @@ fn process(raw: Raw) -> String {
 			let agent = Agent::try_from(k.as_str()).ok()?;
 			v.version_list.sort_by(|a, b| b.era.cmp(&a.era));
 
-			let mut releases: Vec<(u32, u32)> = v.version_list.into_iter()
+			let releases: Vec<(u32, u32)> = v.version_list.into_iter()
 				.filter_map(|v2| {
 					v2.release_date?;
 					let (parcel, major) = parse_version(&v2.version)?;
 					Some((parcel, major))
 				})
 				.collect();
-
-			// We don't need more than 16 of these things.
-			if 16 < releases.len() { releases.truncate(16); }
 
 			Some((agent, releases))
 		})
