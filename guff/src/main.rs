@@ -48,7 +48,7 @@ use std::path::Path;
 /// # Main.
 fn main() {
 	match _main() {
-		Ok(_) => {},
+		Ok(()) => {},
 		Err(GuffError::Argue(ArgyleError::WantsVersion)) => {
 			println!(concat!("Guff v", env!("CARGO_PKG_VERSION")));
 		},
