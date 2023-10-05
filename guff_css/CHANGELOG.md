@@ -1,6 +1,14 @@
 # Changelog
 
 
+## [0.2.8](https://github.com/Blobfolio/guff/releases/tag/v0.2.8) - 2023-10-05
+
+### Changed
+
+* Bump `trimothy` to `0.2`
+
+
+
 ## [0.2.7](https://github.com/Blobfolio/guff/releases/tag/v0.2.7) - 2023-09-17
 
 ### Changed
