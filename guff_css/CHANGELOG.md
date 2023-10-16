@@ -1,6 +1,15 @@
 # Changelog
 
 
+## [0.2.9](https://github.com/Blobfolio/guff/releases/tag/v0.2.9) - 2023-10-15
+
+### Changed
+
+* Bump `dactyl` to `0.6`
+* Bump `lightningcss` to `alpha49`
+
+
+
 ## [0.2.8](https://github.com/Blobfolio/guff/releases/tag/v0.2.8) - 2023-10-05
 
 ### Changed
