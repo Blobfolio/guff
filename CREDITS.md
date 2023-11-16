@@ -1,11 +1,11 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.2.9
-    Generated: 2023-10-16 01:53:02 UTC
+    Version:   0.2.10
+    Generated: 2023-11-16 20:28:15 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
-| [ahash](https://github.com/tkaitchuck/ahash) | 0.7.6 | [Tom Kaitchuck](mailto:tom.kaitchuck@gmail.com) | Apache-2.0 or MIT |
+| [ahash](https://github.com/tkaitchuck/ahash) | 0.7.7 | [Tom Kaitchuck](mailto:tom.kaitchuck@gmail.com) | Apache-2.0 or MIT |
 | [argyle](https://github.com/Blobfolio/argyle) | 0.6.8 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [bitflags](https://github.com/bitflags/bitflags) | 2.4.1 | The Rust Project Developers | Apache-2.0 or MIT |
 | [byteorder](https://github.com/BurntSushi/byteorder) | 1.5.0 | [Andrew Gallant](mailto:jamslam@gmail.com) | MIT or Unlicense |
@@ -23,11 +23,11 @@
 | [either](https://github.com/bluss/either) | 1.9.0 | bluss | Apache-2.0 or MIT |
 | [fastrand](https://github.com/smol-rs/fastrand) | 2.0.1 | [Stjepan Glavina](mailto:stjepang@gmail.com) | Apache-2.0 or MIT |
 | [fxhash](https://github.com/cbreeden/fxhash) | 0.2.1 | [cbreeden](mailto:github@u.breeden.cc) | Apache-2.0 or MIT |
-| [fyi_msg](https://github.com/Blobfolio/fyi) | 0.11.7 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
-| [getrandom](https://github.com/rust-random/getrandom) | 0.2.10 | The Rand Project Developers | Apache-2.0 or MIT |
+| [fyi_msg](https://github.com/Blobfolio/fyi) | 0.11.8 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
+| [getrandom](https://github.com/rust-random/getrandom) | 0.2.11 | The Rand Project Developers | Apache-2.0 or MIT |
 | [grass](https://github.com/connorskees/grass) | 0.13.1 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
 | [grass_compiler](https://github.com/connorskees/grass) | 0.13.0 | [Connor Skees](mailto:39542938+connorskees@users.noreply.github.com) | MIT |
-| [guff_css](https://github.com/Blobfolio/guff) | 0.2.9 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [guff_css](https://github.com/Blobfolio/guff) | 0.2.10 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.11.2 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.12.3 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | Apache-2.0 or MIT |
 | [indexmap](https://github.com/bluss/indexmap) | 1.9.3 |  | Apache-2.0 or MIT |
@@ -35,11 +35,11 @@
 | [itoa](https://github.com/dtolnay/itoa) | 1.0.9 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [lasso](https://github.com/Kixiron/lasso) | 0.6.0 | [Chase Wilson](mailto:contact@chasewilson.dev) | Apache-2.0 or MIT |
 | [lazy_static](https://github.com/rust-lang-nursery/lazy-static.rs) | 1.4.0 | [Marvin Löbel](mailto:loebel.marvin@gmail.com) | Apache-2.0 or MIT |
-| [lightningcss](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.49 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
+| [lightningcss](https://github.com/parcel-bundler/lightningcss) | 1.0.0-alpha.51 | [Devon Govett](mailto:devongovett@gmail.com) | MPL-2.0 |
 | [log](https://github.com/rust-lang/log) | 0.4.20 | The Rust Project Developers | Apache-2.0 or MIT |
 | [once_cell](https://github.com/matklad/once_cell) | 1.18.0 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | Apache-2.0 or MIT |
 | [oxford_join](https://github.com/Blobfolio/oxford_join) | 0.2.9 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
-| [parcel_selectors](https://github.com/parcel-bundler/lightningcss) | 0.26.3 | The Servo Project Developers | MPL-2.0 |
+| [parcel_selectors](https://github.com/parcel-bundler/lightningcss) | 0.26.4 | The Servo Project Developers | MPL-2.0 |
 | [paste](https://github.com/dtolnay/paste) | 1.0.14 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
 | [pathdiff](https://github.com/Manishearth/pathdiff) | 0.2.1 | [Manish Goregaokar](mailto:manishsmail@gmail.com) | Apache-2.0 or MIT |
 | [phf](https://github.com/sfackler/rust-phf) | 0.10.1 | [Steven Fackler](mailto:sfackler@gmail.com) | MIT |
@@ -59,10 +59,10 @@
 | [rand_chacha](https://github.com/rust-random/rand) | 0.3.1 | The Rand Project Developers, The Rust Project Developers, and The CryptoCorrosion Contributors | Apache-2.0 or MIT |
 | [rand_core](https://github.com/rust-random/rand) | 0.6.4 | The Rand Project Developers and The Rust Project Developers | Apache-2.0 or MIT |
 | [siphasher](https://github.com/jedisct1/rust-siphash) | 0.3.11 | [Frank Denis](mailto:github@pureftpd.org) | Apache-2.0 or MIT |
-| [smallvec](https://github.com/servo/rust-smallvec) | 1.11.1 | The Servo Project Developers | Apache-2.0 or MIT |
+| [smallvec](https://github.com/servo/rust-smallvec) | 1.11.2 | The Servo Project Developers | Apache-2.0 or MIT |
 | [syn](https://github.com/dtolnay/syn) | 1.0.109 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
-| [syn](https://github.com/dtolnay/syn) | 2.0.38 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
-| [tempfile](https://github.com/Stebalien/tempfile) | 3.8.0 | [Steven Allen](mailto:steven@stebalien.com), The Rust Project Developers, [Ashley Mannix](mailto:ashleymannix@live.com.au), and [Jason White](mailto:me@jasonwhite.io) | Apache-2.0 or MIT |
+| [syn](https://github.com/dtolnay/syn) | 2.0.39 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 or MIT |
+| [tempfile](https://github.com/Stebalien/tempfile) | 3.8.1 | [Steven Allen](mailto:steven@stebalien.com), The Rust Project Developers, [Ashley Mannix](mailto:ashleymannix@live.com.au), and [Jason White](mailto:me@jasonwhite.io) | Apache-2.0 or MIT |
 | [trimothy](https://github.com/Blobfolio/trimothy) | 0.2.2 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
 | [unicode-ident](https://github.com/dtolnay/unicode-ident) | 1.0.12 | [David Tolnay](mailto:dtolnay@gmail.com) | Apache-2.0 AND Unicode-DFS-2016 or MIT |
 | [write_atomic](https://github.com/Blobfolio/write_atomic) | 0.5.0 | [Blobfolio, LLC.](mailto:hello@blobfolio.com) | WTFPL |
