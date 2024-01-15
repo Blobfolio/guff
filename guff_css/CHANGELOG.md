@@ -1,6 +1,15 @@
 # Changelog
 
 
+
+## [0.2.11](https://github.com/Blobfolio/guff/releases/tag/v0.2.11) - 2024-01-14
+
+### Changed
+
+* Bump `lightningcss` to `alpha52`
+
+
+
 ## [0.2.10](https://github.com/Blobfolio/guff/releases/tag/v0.2.10) - 2023-11-16
 
 ### Changed
