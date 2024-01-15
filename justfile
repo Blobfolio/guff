@@ -32,6 +32,8 @@ skel_dir    := justfile_directory() + "/skel"
 caniuse_url := "https://github.com/Fyrd/caniuse/raw/main/fulldata-json/data-2.0.json"
 caniuse_tmp := "/tmp/caniuse.json"
 
+export RUSTFLAGS := "-C target-cpu=x86-64-v3"
+
 
 
 # Build Release!
