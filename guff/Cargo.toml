@@ -19,7 +19,7 @@ revision = "1"
 depends = "$auto"
 section = "utils"
 assets = [
-    ["../target/x86_64-unknown-linux-gnu/release/guff", "usr/bin/", "755"],
+    ["../target/release/guff", "usr/bin/", "755"],
     ["../release/completions/guff.bash", "etc/bash_completion.d/", "644"],
     ["../release/man/guff.1.gz", "usr/share/man/man1/", "644"],
 ]
