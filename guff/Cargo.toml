@@ -67,7 +67,7 @@ description = "The path to save the minified output to. If omitted, the result w
 path = true
 
 [dependencies]
-argyle = "0.6.*"
+argyle = "0.7.*"
 fyi_msg = "0.11.*"
 write_atomic = "0.5.*"
 
