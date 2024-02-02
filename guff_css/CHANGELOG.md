@@ -2,6 +2,14 @@
 
 
 
+## [0.2.12](https://github.com/Blobfolio/guff/releases/tag/v0.2.12) - TBD
+
+### Changed
+
+* Replace `ureq` build dependency w/ `minreq`
+
+
+
 ## [0.2.11](https://github.com/Blobfolio/guff/releases/tag/v0.2.11) - 2024-01-14
 
 ### Changed

@@ -34,7 +34,11 @@ features = [ "grid" ]
 
 [build-dependencies]
 dactyl = "0.6.*"
-ureq = "^2.6, ^2.7"
+
+[build-dependencies.minreq]
+version = "2.11.*"
+default-features = false
+features = ["https"]
 
 [build-dependencies.serde]
 version = "1.0.*"
