@@ -2,6 +2,15 @@
 
 
 
+## [0.2.12](https://github.com/Blobfolio/guff/releases/tag/v0.2.12) - 2024-02-08
+
+### Changed
+
+* Replace `ureq` build dependency w/ `minreq`
+* Bump `dactyl` to `0.7`
+
+
+
 ## [0.2.11](https://github.com/Blobfolio/guff/releases/tag/v0.2.11) - 2024-01-14
 
 ### Changed

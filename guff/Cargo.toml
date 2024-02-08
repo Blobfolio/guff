@@ -1,6 +1,6 @@
 [package]
 name = "guff"
-version = "0.2.11"
+version = "0.2.12"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
@@ -19,7 +19,7 @@ revision = "1"
 depends = "$auto"
 section = "utils"
 assets = [
-    ["../target/x86_64-unknown-linux-gnu/release/guff", "usr/bin/", "755"],
+    ["../target/release/guff", "usr/bin/", "755"],
     ["../release/completions/guff.bash", "etc/bash_completion.d/", "644"],
     ["../release/man/guff.1.gz", "usr/share/man/man1/", "644"],
 ]
@@ -67,8 +67,8 @@ description = "The path to save the minified output to. If omitted, the result w
 path = true
 
 [dependencies]
-argyle = "0.6.*"
-fyi_msg = "0.11.*"
+argyle = "0.7.*"
+fyi_msg = "0.12.*"
 write_atomic = "0.5.*"
 
 [dependencies.guff_css]

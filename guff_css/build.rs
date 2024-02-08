@@ -76,25 +76,26 @@ fn fetch() -> Vec<u8> {
 #[cfg(not(docsrs))]
 /// # Fetch Remote.
 fn fetch_remote(cache: &Path) -> Option<Vec<u8>> {
-	use std::io::Read;
-
 	// Download it.
-	let res = ureq::get(DATA_URL)
-		.set("user-agent", "Mozilla/5.0")
-		.call()
+	let res = minreq::get(DATA_URL)
+		.with_header("user-agent", "Mozilla/5.0")
+		.with_timeout(30)
+		.send()
 		.ok()?;
 
-	let mut out: Vec<u8> = Vec::new();
-	res.into_reader().read_to_end(&mut out).ok()?;
+	// Only accept happy response codes with sized bodies.
+	if (200..=399).contains(&res.status_code) {
+		let out = res.into_bytes();
+		if ! out.is_empty() {
+			// Try to save for next time.
+			let _res = File::create(cache)
+				.and_then(|mut f| f.write_all(&out).and_then(|_| f.flush()));
 
-	if out.is_empty() { None }
-	else {
-		// Try to save for next time.
-		let _res = File::create(cache)
-			.and_then(|mut f| f.write_all(&out).and_then(|_| f.flush()));
-
-		Some(out)
+			return Some(out);
+		}
 	}
+
+	None
 }
 
 #[cfg(not(docsrs))]
