@@ -2,6 +2,14 @@
 
 
 
+## [0.2.13](https://github.com/Blobfolio/guff/releases/tag/v0.2.13) - 2024-02-14
+
+### Changed
+
+* Bump `lightningcss` to `alpha53`
+
+
+
 ## [0.2.12](https://github.com/Blobfolio/guff/releases/tag/v0.2.12) - 2024-02-08
 
 ### Changed
