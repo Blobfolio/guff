@@ -59,3 +59,8 @@ jobs:
       run: |
         cargo test --all-features --target ${{ matrix.target }}
         cargo test --release --all-features --target ${{ matrix.target }}
+
+    - name: Tests (Library Only)
+      run: |
+        cargo test -p guff_css --target ${{ matrix.target }}
+        cargo test --release -p guff_css --target ${{ matrix.target }}
