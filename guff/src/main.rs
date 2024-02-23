@@ -63,6 +63,14 @@ fn _main() -> Result<(), GuffError> {
 	// Parse CLI arguments.
 	let args = Argue::new(FLAG_HELP | FLAG_REQUIRED | FLAG_VERSION)?;
 
+	// Check for invalid arguments.
+	if let Some(boo) = args.check_keys(
+		&[b"--expanded", b"-e"],
+		&[b"--browsers", b"--input", b"--output", b"-b", b"-i", b"-o"],
+	) {
+		return Err(GuffError::Cli(String::from_utf8_lossy(boo).into_owned()));
+	}
+
 	// In and out.
 	let input = args.option2_os(b"-i", b"--input").ok_or(GuffError::NoSource)?;
 	let output = args.option2_os(b"-o", b"--output");

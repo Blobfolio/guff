@@ -27,6 +27,10 @@ pub enum GuffError {
 	/// # Browser.
 	Browser(String),
 
+	#[cfg(feature = "bin")]
+	/// # Invalid CLI.
+	Cli(String),
+
 	/// # CSS Parse Error.
 	Css(String),
 
@@ -60,6 +64,10 @@ impl fmt::Display for GuffError {
 	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
 		match self {
 			Self::Browser(s) | Self::Css(s) | Self::Scss(s) => write!(f, "{} {s}", self.as_str()),
+
+			#[cfg(feature = "bin")]
+			Self::Cli(s) => write!(f, "{} {s}", self.as_str()),
+
 			_ => f.write_str(self.as_str()),
 		}
 	}
@@ -98,6 +106,10 @@ impl GuffError {
 			Self::Argue(e) => e.as_str(),
 
 			Self::Browser(_) => "Invalid browser:",
+
+			#[cfg(feature = "bin")]
+			Self::Cli(_) => "Invalid/unknown option:",
+
 			Self::Css(_) => "Unable to parse CSS:",
 
 			#[cfg(feature = "bin")]
