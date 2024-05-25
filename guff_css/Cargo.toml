@@ -1,6 +1,6 @@
 [package]
 name = "guff_css"
-version = "0.3.3"
+version = "0.3.4"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
@@ -28,7 +28,7 @@ version = "=0.13.3"
 default-features = false
 
 [dependencies.lightningcss]
-version = "=1.0.0-alpha.56"
+version = "=1.0.0-alpha.57"
 default-features = false
 features = [ "grid" ]
 
