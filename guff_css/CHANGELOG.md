@@ -2,12 +2,18 @@
 
 
 
-## [0.3.5](https://github.com/Blobfolio/guff/releases/tag/v0.3.5) - 2024-08-06
+## [0.4.0](https://github.com/Blobfolio/guff/releases/tag/v0.4.0) - 2024-08-06
+
+### Breaking
+
+* Bump `MSRV` to `1.80`
 
 ### Changed
 
 * Bump `grass` to `0.13.4`
 * Bump `lightningcss` to `alpha58`
+* Bump `trimothy` to `0.3`
+* Bump `minreq` to `2.12` (build)
 
 
 
