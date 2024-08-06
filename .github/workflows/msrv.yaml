@@ -50,5 +50,4 @@ jobs:
 
     - name: MSRV
       run: |
-        cargo msrv --path guff verify
         cargo msrv --path guff_css verify
