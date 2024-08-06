@@ -1,6 +1,6 @@
 [package]
 name = "guff_css"
-version = "0.3.4"
+version = "0.3.5"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
@@ -17,18 +17,18 @@ targets = [ "x86_64-unknown-linux-gnu", "x86_64-apple-darwin" ]
 [dependencies]
 dactyl = "0.7.*"
 oxford_join = "0.2.*"
-trimothy = "0.2.*"
+trimothy = "0.3.*"
 
 [dependencies.argyle]
 version = "0.7.2"
 optional = true
 
 [dependencies.grass]
-version = "=0.13.3"
+version = "=0.13.4"
 default-features = false
 
 [dependencies.lightningcss]
-version = "=1.0.0-alpha.57"
+version = "=1.0.0-alpha.58"
 default-features = false
 features = [ "grid" ]
 
@@ -36,7 +36,7 @@ features = [ "grid" ]
 dactyl = "0.7.*"
 
 [build-dependencies.minreq]
-version = "2.11.*"
+version = "2.12.*"
 default-features = false
 features = ["https"]
 

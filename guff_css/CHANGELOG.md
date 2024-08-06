@@ -2,6 +2,15 @@
 
 
 
+## [0.3.5](https://github.com/Blobfolio/guff/releases/tag/v0.3.5) - 2024-08-06
+
+### Changed
+
+* Bump `grass` to `0.13.4`
+* Bump `lightningcss` to `alpha58`
+
+
+
 ## [0.3.4](https://github.com/Blobfolio/guff/releases/tag/v0.3.4) - 2024-05-25
 
 ### Changed
