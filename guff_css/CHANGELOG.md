@@ -7,6 +7,7 @@
 ### Changed
 
 * Bump `grass` to `0.13.4`
+* Bump `lightningcss` to `alpha58`
 
 
 
