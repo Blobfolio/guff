@@ -20,7 +20,7 @@ oxford_join = "0.2.*"
 trimothy = "0.3.*"
 
 [dependencies.argyle]
-version = "0.7.2"
+version = "0.8.*"
 optional = true
 
 [dependencies.grass]
