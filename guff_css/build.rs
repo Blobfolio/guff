@@ -128,7 +128,7 @@ fn process(raw: Raw) -> String {
 	all.into_iter()
 		.map(|(k, v)| {
 			format!(
-				"const {}: [(u32, u32); {}] = [{}];",
+				"#[expect(clippy::missing_docs_in_private_items, reason = \"List is auto-generated.\")]\nconst {}: [(u32, u32); {}] = [{}];",
 				k.as_str(),
 				v.len(),
 				v.into_iter()

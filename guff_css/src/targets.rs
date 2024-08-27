@@ -239,7 +239,6 @@ impl From<Agents> for Option<Browsers> {
 
 
 
-#[allow(missing_docs)]
 #[repr(u8)]
 #[derive(Debug, Clone, Copy)]
 /// # Agent (Browser).
