@@ -2,14 +2,20 @@
 
 
 
-## [0.4.0](https://github.com/Blobfolio/guff/releases/tag/v0.4.0) - 2024-08-06
-
-### Breaking
-
-* Bump `MSRV` to `1.80`
+## [0.5.0](https://github.com/Blobfolio/guff/releases/tag/v0.5.0) - TBD
 
 ### Changed
 
+* Bump MSRV to `1.81`
+* Minor code lints
+
+
+
+## [0.4.0](https://github.com/Blobfolio/guff/releases/tag/v0.4.0) - 2024-08-06
+
+### Changed
+
+* Bump MSRV to `1.80`
 * Bump `grass` to `0.13.4`
 * Bump `lightningcss` to `alpha58`
 * Bump `trimothy` to `0.3`
