@@ -239,6 +239,7 @@ impl From<Agents> for Option<Browsers> {
 
 
 
+#[expect(missing_docs, reason = "Self-explanatory.")]
 #[repr(u8)]
 #[derive(Debug, Clone, Copy)]
 /// # Agent (Browser).
