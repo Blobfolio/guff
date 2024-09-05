@@ -239,19 +239,35 @@ impl From<Agents> for Option<Browsers> {
 
 
 
-#[allow(missing_docs)]
 #[repr(u8)]
 #[derive(Debug, Clone, Copy)]
 /// # Agent (Browser).
 pub enum Agent {
+	/// # Generic Android Browser.
 	Android = 0_u8,
+
+	/// # Chrome.
 	Chrome,
+
+	/// # Edge.
 	Edge,
+
+	/// # Firefox.
 	Firefox,
+
+	/// # Internet Explorer.
 	Ie,
+
+	/// # Safari Mobile.
 	Ios,
+
+	/// # Opera.
 	Opera,
+
+	/// # Safari.
 	Safari,
+
+	/// # Samsung's Android Browser.
 	Samsung,
 }
 

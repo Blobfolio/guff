@@ -73,7 +73,10 @@ use trimothy::TrimMut;
 ///     .unwrap();
 /// ```
 pub struct Css<'a> {
+	/// # File Path.
 	path: &'a str,
+
+	/// # CSS.
 	css: String,
 }
 
@@ -241,7 +244,10 @@ impl Css<'_> {
 #[derive(Debug, Clone, Copy, Eq, Hash, PartialEq)]
 /// # Style Kind.
 enum StyleKind {
+	/// # CSS.
 	Css,
+
+	/// # SCSS.
 	Scss,
 }
 

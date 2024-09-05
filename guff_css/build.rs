@@ -5,7 +5,7 @@
 use dactyl::NiceU32;
 use serde::Deserialize;
 use std::{
-	collections::HashMap,
+	collections::BTreeMap,
 	fs::File,
 	io::Write,
 	num::NonZeroU32,
@@ -108,7 +108,7 @@ fn fetch_local() -> Vec<u8> {
 
 /// # Process the Data.
 fn process(raw: Raw) -> String {
-	let all: HashMap<Agent, Vec<(u32, u32)>> = raw.agents.into_iter()
+	let all: BTreeMap<Agent, Vec<(u32, u32)>> = raw.agents.into_iter()
 		.filter_map(|(k, mut v)| {
 			let agent = Agent::try_from(k.as_str()).ok()?;
 			v.version_list.sort_by(|a, b| b.era.cmp(&a.era));
@@ -125,10 +125,10 @@ fn process(raw: Raw) -> String {
 		})
 		.collect();
 
-	let mut all: Vec<String> = all.into_iter()
+	all.into_iter()
 		.map(|(k, v)| {
 			format!(
-				"const {}: [(u32, u32); {}] = [{}];",
+				"#[expect(clippy::missing_docs_in_private_items, reason = \"List is auto-generated.\")]\nconst {}: [(u32, u32); {}] = [{}];",
 				k.as_str(),
 				v.len(),
 				v.into_iter()
@@ -141,10 +141,8 @@ fn process(raw: Raw) -> String {
 					.join(", ")
 			)
 		})
-		.collect();
-	all.sort_unstable();
-
-	all.join("\n")
+		.collect::<Vec<String>>()
+		.join("\n")
 }
 
 
@@ -152,7 +150,7 @@ fn process(raw: Raw) -> String {
 #[derive(Deserialize)]
 /// # Agents.
 struct Raw {
-	agents: HashMap<String, RawAgent>
+	agents: BTreeMap<String, RawAgent>
 }
 
 #[derive(Deserialize)]
@@ -170,7 +168,7 @@ struct RawAgentVersions {
 	era: i32,
 }
 
-#[derive(Debug, Clone, Copy, Eq, Hash, PartialEq)]
+#[derive(Debug, Clone, Copy, Eq, Ord, PartialEq, PartialOrd)]
 /// # Agent Kind.
 enum Agent {
 	Android,

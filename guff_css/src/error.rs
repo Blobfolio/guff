@@ -84,6 +84,7 @@ impl From<Box<grass::Error>> for GuffError {
 	fn from(err: Box<grass::Error>) -> Self { Self::Scss(err.to_string()) }
 }
 
+/// # Helper: From Parcel.
 macro_rules! from_parcel {
 	($($ty:ty),+) => ($(
 		impl From<lightningcss::error::Error<$ty>> for GuffError {
