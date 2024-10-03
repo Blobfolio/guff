@@ -7,7 +7,7 @@ use dactyl::{
 	NoHash,
 	traits::BytesToUnsigned,
 };
-use oxford_join::OxfordJoin;
+use oxford_join::OxfordJoinFmt;
 use lightningcss::targets::Browsers;
 use std::{
 	borrow::Borrow,
@@ -79,7 +79,7 @@ impl fmt::Display for Agents {
 				.map(|(k, v)| format!("{k} ({v})"))
 				.collect();
 
-			f.write_str(&tmp.oxford_and())
+			write!(f, "{}", OxfordJoinFmt::and(tmp.as_slice()))
 		}
 	}
 }
