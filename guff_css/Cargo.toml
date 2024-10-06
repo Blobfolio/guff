@@ -16,7 +16,7 @@ targets = [ "x86_64-unknown-linux-gnu", "x86_64-apple-darwin" ]
 
 [dependencies]
 dactyl = "0.7.*"
-oxford_join = "0.3.*"
+oxford_join = "0.4.*"
 trimothy = "0.3.*"
 
 [dependencies.argyle]
@@ -34,6 +34,7 @@ features = [ "grid" ]
 
 [build-dependencies]
 dactyl = "0.7.*"
+oxford_join = "0.4.*"
 
 [build-dependencies.minreq]
 version = "2.12.*"

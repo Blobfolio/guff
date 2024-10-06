@@ -3,9 +3,9 @@
 */
 
 use dactyl::NiceU32;
+use oxford_join::JoinFmt;
 use serde::Deserialize;
 use std::{
-	cell::Cell,
 	collections::BTreeMap,
 	fmt,
 	fs::File,
@@ -136,7 +136,7 @@ fn process(raw: Raw) -> String {
 			"#[expect(clippy::missing_docs_in_private_items, reason = \"List is auto-generated.\")]\nconst {}: [(u32, u32); {}] = [{}];",
 			k.as_str(),
 			v.len(),
-			Join::new(v.into_iter(), ", "),
+			JoinFmt::new(v.into_iter(), ", "),
 		).unwrap();
 	}
 	out
@@ -190,52 +190,6 @@ impl TryFrom<&str> for Agent {
 			"samsung" => Ok(Self::Samsung),
 			_ => Err(()),
 		}
-	}
-}
-
-
-
-/// # Allocation-Free Joiner.
-///
-/// This lets us "join" directly into `format!` or the like, rather than
-/// collecting a bunch of strings into a vector and joining after the fact.
-struct Join<'a, I: Iterator>
-where <I as Iterator>::Item: fmt::Display {
-	iter: Cell<Option<I>>,
-	glue: &'a str,
-}
-
-impl<'a, I: Iterator> Join<'a, I>
-where <I as Iterator>::Item: fmt::Display {
-	#[inline]
-	/// # New.
-	const fn new(iter: I, glue: &'a str) -> Self {
-		Self {
-			iter: Cell::new(Some(iter)),
-			glue,
-		}
-	}
-}
-
-impl<I: Iterator> fmt::Display for Join<'_, I>
-where <I as Iterator>::Item: fmt::Display {
-	#[inline]
-	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-		// This should never fail.
-		let mut iter = self.iter.take().ok_or(fmt::Error)?;
-
-		// First one first.
-		if let Some(v) = iter.next() {
-			<I::Item as fmt::Display>::fmt(&v, f)?;
-
-			// The rest, with glue.
-			for v in iter {
-				f.write_str(self.glue)?;
-				<I::Item as fmt::Display>::fmt(&v, f)?;
-			}
-		}
-
-		Ok(())
 	}
 }
 
