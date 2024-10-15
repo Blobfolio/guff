@@ -65,8 +65,11 @@ label = "<FILE>"
 description = "The path to save the minified output to. If omitted, the result will be printed to STDOUT instead."
 path = true
 
+[build-dependencies]
+argyle = "0.10.*"
+
 [dependencies]
-argyle = "0.8.*"
+argyle = "0.10.*"
 fyi_msg = "1.1.*"
 write_atomic = "0.5.*"
 

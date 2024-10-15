@@ -2,9 +2,6 @@
 # Guff: Errors
 */
 
-#[cfg(feature = "bin")]
-use argyle::ArgyleError;
-
 use lightningcss::error::{
 	MinifyErrorKind,
 	ParserError,
@@ -20,10 +17,6 @@ use std::{
 #[derive(Debug, Clone)]
 /// # Error type.
 pub enum GuffError {
-	#[cfg(feature = "bin")]
-	/// # Argyle passthrough.
-	Argue(ArgyleError),
-
 	/// # Browser.
 	Browser(String),
 
@@ -56,6 +49,14 @@ pub enum GuffError {
 	#[cfg(feature = "bin")]
 	/// # Write Error.
 	Write,
+
+	#[cfg(feature = "bin")]
+	/// # Print Help (Not an Error).
+	PrintHelp,
+
+	#[cfg(feature = "bin")]
+	/// # Print Version (Not an Error).
+	PrintVersion,
 }
 
 impl Error for GuffError {}
@@ -71,12 +72,6 @@ impl fmt::Display for GuffError {
 			_ => f.write_str(self.as_str()),
 		}
 	}
-}
-
-#[cfg(feature = "bin")]
-impl From<ArgyleError> for GuffError {
-	#[inline]
-	fn from(err: ArgyleError) -> Self { Self::Argue(err) }
 }
 
 impl From<Box<grass::Error>> for GuffError {
@@ -103,9 +98,6 @@ impl GuffError {
 	/// # As Str.
 	pub const fn as_str(&self) -> &'static str {
 		match self {
-			#[cfg(feature = "bin")]
-			Self::Argue(e) => e.as_str(),
-
 			Self::Browser(_) => "Invalid browser:",
 
 			#[cfg(feature = "bin")]
@@ -124,6 +116,9 @@ impl GuffError {
 
 			#[cfg(feature = "bin")]
 			Self::Write => "The output could not be saved to disk.",
+
+			#[cfg(feature = "bin")]
+			Self::PrintHelp | Self::PrintVersion => "",
 		}
 	}
 }
