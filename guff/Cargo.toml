@@ -1,6 +1,6 @@
 [package]
 name = "guff"
-version = "0.5.0"
+version = "0.5.1"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2021"
@@ -65,9 +65,12 @@ label = "<FILE>"
 description = "The path to save the minified output to. If omitted, the result will be printed to STDOUT instead."
 path = true
 
+[build-dependencies]
+argyle = "0.10.*"
+
 [dependencies]
-argyle = "0.8.*"
-fyi_msg = "0.14.*"
+argyle = "0.10.*"
+fyi_msg = "1.1.*"
 write_atomic = "0.5.*"
 
 [dependencies.guff_css]

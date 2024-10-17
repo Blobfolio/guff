@@ -53,13 +53,7 @@
 
 
 
-use argyle::{
-	Argue,
-	ArgyleError,
-	FLAG_HELP,
-	FLAG_REQUIRED,
-	FLAG_VERSION,
-};
+use argyle::Argument;
 use fyi_msg::Msg;
 use guff_css::{
 	Agents,
@@ -74,10 +68,10 @@ use std::path::Path;
 fn main() {
 	match _main() {
 		Ok(()) => {},
-		Err(GuffError::Argue(ArgyleError::WantsVersion)) => {
+		Err(GuffError::PrintVersion) => {
 			println!(concat!("Guff v", env!("CARGO_PKG_VERSION")));
 		},
-		Err(GuffError::Argue(ArgyleError::WantsHelp)) => { helper(); },
+		Err(GuffError::PrintHelp) => { helper(); },
 		Err(e) => { Msg::error(e.to_string()).die(1); },
 	}
 }
@@ -86,28 +80,41 @@ fn main() {
 /// # Actual Main.
 fn _main() -> Result<(), GuffError> {
 	// Parse CLI arguments.
-	let args = Argue::new(FLAG_HELP | FLAG_REQUIRED | FLAG_VERSION)?;
+	let args = argyle::args()
+		.with_keywords(include!(concat!(env!("OUT_DIR"), "/argyle.rs")));
 
-	// Check for invalid arguments.
-	if let Some(boo) = args.check_keys(
-		&[b"--expanded", b"-e"],
-		&[b"--browsers", b"--input", b"--output", b"-b", b"-i", b"-o"],
-	) {
-		return Err(GuffError::Cli(String::from_utf8_lossy(boo).into_owned()));
+	let mut expanded = false;
+	let mut browsers = None;
+	let mut input = None;
+	let mut output = None;
+	for arg in args {
+		match arg {
+			Argument::Key("-e" | "--expanded") => { expanded = true; },
+			Argument::Key("-h" | "--help") => return Err(GuffError::PrintHelp),
+			Argument::Key("-V" | "--version") => return Err(GuffError::PrintVersion),
+
+			Argument::KeyWithValue("-b" | "--browsers", s) => { browsers.replace(s); },
+			Argument::KeyWithValue("-i" | "--input", s) => { input.replace(s); },
+			Argument::KeyWithValue("-o" | "--output", s) => { output.replace(s); },
+
+			// Nothing else is expected.
+			Argument::Other(s) => return Err(GuffError::Cli(s)),
+			Argument::InvalidUtf8(s) => return Err(GuffError::Cli(s.to_string_lossy().into_owned())),
+			_ => {},
+		}
 	}
 
 	// In and out.
-	let input = args.option2_os(b"-i", b"--input").ok_or(GuffError::NoSource)?;
-	let output = args.option2_os(b"-o", b"--output");
+	let input = input.ok_or(GuffError::NoSource)?;
 
 	// Minify?
-	let css = Css::try_from(Path::new(input))?;
+	let css = Css::try_from(Path::new(&input))?;
 	let code =
-		if args.switch2(b"-e", b"--expanded") { css.take() }
+		if expanded { css.take() }
 		else {
 			let browsers =
-				if let Some(b) = args.option2(b"-b", b"--browsers").and_then(|x| std::str::from_utf8(x).ok()) {
-					let agents = Agents::try_from(b)?;
+				if let Some(b) = browsers {
+					let agents = Agents::try_from(b.as_str())?;
 					if agents.is_empty() { None }
 					else {
 						// It's helpful to confirm compatibility is being
@@ -162,6 +169,7 @@ USAGE:
     guff [FLAGS] [OPTIONS]
 
 FLAGS:
+    -e, --expanded    Do not minify CSS.
     -h, --help        Print help information and exit.
     -V, --version     Print version information and exit.
 

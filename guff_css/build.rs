@@ -3,9 +3,11 @@
 */
 
 use dactyl::NiceU32;
+use oxford_join::JoinFmt;
 use serde::Deserialize;
 use std::{
 	collections::BTreeMap,
+	fmt,
 	fs::File,
 	io::Write,
 	num::NonZeroU32,
@@ -108,16 +110,18 @@ fn fetch_local() -> Vec<u8> {
 
 /// # Process the Data.
 fn process(raw: Raw) -> String {
-	let all: BTreeMap<Agent, Vec<(u32, u32)>> = raw.agents.into_iter()
+	use fmt::Write;
+
+	let all: BTreeMap<Agent, Vec<Versions>> = raw.agents.into_iter()
 		.filter_map(|(k, mut v)| {
 			let agent = Agent::try_from(k.as_str()).ok()?;
 			v.version_list.sort_by(|a, b| b.era.cmp(&a.era));
 
-			let releases: Vec<(u32, u32)> = v.version_list.into_iter()
+			let releases: Vec<Versions> = v.version_list.into_iter()
 				.filter_map(|v2| {
 					v2.release_date?;
 					let (parcel, major) = parse_version(&v2.version)?;
-					Some((parcel, major))
+					Some(Versions(parcel, major))
 				})
 				.collect();
 
@@ -125,48 +129,20 @@ fn process(raw: Raw) -> String {
 		})
 		.collect();
 
-	all.into_iter()
-		.map(|(k, v)| {
-			format!(
-				"#[expect(clippy::missing_docs_in_private_items, reason = \"List is auto-generated.\")]\nconst {}: [(u32, u32); {}] = [{}];",
-				k.as_str(),
-				v.len(),
-				v.into_iter()
-					.map(|(a, b)| format!(
-						"({}, {})",
-						NiceU32::with_separator(a, b'_'),
-						NiceU32::with_separator(b, b'_'),
-					))
-					.collect::<Vec<String>>()
-					.join(", ")
-			)
-		})
-		.collect::<Vec<String>>()
-		.join("\n")
+	let mut out = String::with_capacity(256 * all.len()); // Just a guess.
+	for (k, v) in all {
+		writeln!(
+			&mut out,
+			"#[expect(clippy::missing_docs_in_private_items, reason = \"List is auto-generated.\")]\nconst {}: [(u32, u32); {}] = [{}];",
+			k.as_str(),
+			v.len(),
+			JoinFmt::new(v.into_iter(), ", "),
+		).unwrap();
+	}
+	out
 }
 
 
-
-#[derive(Deserialize)]
-/// # Agents.
-struct Raw {
-	agents: BTreeMap<String, RawAgent>
-}
-
-#[derive(Deserialize)]
-/// # Agent.
-struct RawAgent {
-	version_list: Vec<RawAgentVersions>,
-}
-
-#[derive(Default, Deserialize)]
-#[serde(default)]
-/// # Agent Version List.
-struct RawAgentVersions {
-	version: String,
-	release_date: Option<u32>,
-	era: i32,
-}
 
 #[derive(Debug, Clone, Copy, Eq, Ord, PartialEq, PartialOrd)]
 /// # Agent Kind.
@@ -214,6 +190,49 @@ impl TryFrom<&str> for Agent {
 			"samsung" => Ok(Self::Samsung),
 			_ => Err(()),
 		}
+	}
+}
+
+
+
+#[derive(Deserialize)]
+/// # Agents.
+struct Raw {
+	agents: BTreeMap<String, RawAgent>
+}
+
+#[derive(Deserialize)]
+/// # Agent.
+struct RawAgent {
+	version_list: Vec<RawAgentVersions>,
+}
+
+#[derive(Default, Deserialize)]
+#[serde(default)]
+/// # Agent Version List.
+struct RawAgentVersions {
+	version: String,
+	release_date: Option<u32>,
+	era: i32,
+}
+
+
+
+#[derive(Clone, Copy)]
+/// # Versions.
+///
+/// This is just a tuple, but gives us control over the (codegen) `Display`.
+struct Versions(u32, u32);
+
+impl fmt::Display for Versions {
+	#[inline]
+	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+		write!(
+			f,
+			"({}, {})",
+			NiceU32::with_separator(self.0, b'_'),
+			NiceU32::with_separator(self.1, b'_'),
+		)
 	}
 }
 
