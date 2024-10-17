@@ -34,7 +34,7 @@ _basher___guff() {
 		return 0
 	fi
 	case "${prev}" in
-		-i|-o|--input|--output)
+		--input|--output|-i|-o)
 			if [ -z "$( declare -f _filedir )" ]; then
 				COMPREPLY=( $( compgen -f "${cur}" ) )
 			else

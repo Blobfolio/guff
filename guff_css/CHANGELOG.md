@@ -2,6 +2,16 @@
 
 
 
+## [0.5.1](https://github.com/Blobfolio/guff/releases/tag/v0.5.1) - 2024-10-17
+
+### Changed
+
+* Bump `lightningcss` to `alpha59`
+* Bump `oxford_join` to `0.3`
+* Reduce intermediary string allocations during build
+
+
+
 ## [0.5.0](https://github.com/Blobfolio/guff/releases/tag/v0.5.0) - 2024-09-05
 
 ### Changed
