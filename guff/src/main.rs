@@ -98,7 +98,9 @@ fn _main() -> Result<(), GuffError> {
 			Argument::KeyWithValue("-o" | "--output", s) => { output.replace(s); },
 
 			// Nothing else is expected.
-			Argument::Other(s) => return Err(GuffError::Cli(s)),
+			Argument::Other(s) => if s.starts_with('-') {
+				return Err(GuffError::Cli(s))
+			},
 			Argument::InvalidUtf8(s) => return Err(GuffError::Cli(s.to_string_lossy().into_owned())),
 			_ => {},
 		}
