@@ -4,6 +4,10 @@ _basher___guff() {
 	cur="${COMP_WORDS[COMP_CWORD]}"
 	prev="${COMP_WORDS[COMP_CWORD-1]}"
 	opts=()
+	if [[ ! " ${COMP_LINE} " =~ " -e " ]] && [[ ! " ${COMP_LINE} " =~ " --expanded " ]]; then
+		opts+=("-e")
+		opts+=("--expanded")
+	fi
 	if [[ ! " ${COMP_LINE} " =~ " -h " ]] && [[ ! " ${COMP_LINE} " =~ " --help " ]]; then
 		opts+=("-h")
 		opts+=("--help")
@@ -11,10 +15,6 @@ _basher___guff() {
 	if [[ ! " ${COMP_LINE} " =~ " -V " ]] && [[ ! " ${COMP_LINE} " =~ " --version " ]]; then
 		opts+=("-V")
 		opts+=("--version")
-	fi
-	if [[ ! " ${COMP_LINE} " =~ " -e " ]] && [[ ! " ${COMP_LINE} " =~ " --expanded " ]]; then
-		opts+=("-e")
-		opts+=("--expanded")
 	fi
 	if [[ ! " ${COMP_LINE} " =~ " -b " ]] && [[ ! " ${COMP_LINE} " =~ " --browsers " ]]; then
 		opts+=("-b")
