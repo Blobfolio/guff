@@ -66,7 +66,7 @@ use std::path::Path;
 
 /// # Main.
 fn main() {
-	match _main() {
+	match main__() {
 		Ok(()) => {},
 		Err(GuffError::PrintVersion) => {
 			println!(concat!("Guff v", env!("CARGO_PKG_VERSION")));
@@ -78,7 +78,7 @@ fn main() {
 
 #[inline]
 /// # Actual Main.
-fn _main() -> Result<(), GuffError> {
+fn main__() -> Result<(), GuffError> {
 	// Parse CLI arguments.
 	let args = argyle::args()
 		.with_keywords(include!(concat!(env!("OUT_DIR"), "/argyle.rs")));
