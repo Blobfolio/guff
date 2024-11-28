@@ -2,6 +2,16 @@
 
 
 
+## [0.5.3](https://github.com/Blobfolio/guff/releases/tag/v0.5.3) - 2024-11-28
+
+### Changed
+
+* Bump `dactyl` to `0.8`
+* Bump `lightningcss` to `alpha61`
+* Bump `trimothy` to `0.6`
+
+
+
 ## [0.5.2](https://github.com/Blobfolio/guff/releases/tag/v0.5.2) - 2024-11-04
 
 ### Changed
