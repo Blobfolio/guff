@@ -33,7 +33,7 @@ dactyl = "0.8.*"
 oxford_join = "0.4.*"
 
 [build-dependencies.minreq]
-version = "2.12.*"
+version = "2.13.*"
 default-features = false
 features = ["https"]
 
