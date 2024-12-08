@@ -15,7 +15,7 @@ default-target = "x86_64-unknown-linux-gnu"
 targets = [ "x86_64-unknown-linux-gnu", "x86_64-apple-darwin" ]
 
 [dependencies]
-dactyl = "0.8.*"
+dactyl = "0.9.*"
 oxford_join = "0.4.*"
 trimothy = "0.6.*"
 
@@ -29,7 +29,7 @@ default-features = false
 features = [ "grid" ]
 
 [build-dependencies]
-dactyl = "0.8.*"
+dactyl = "0.9.*"
 oxford_join = "0.4.*"
 
 [build-dependencies.minreq]
