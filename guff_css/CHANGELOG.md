@@ -2,6 +2,17 @@
 
 
 
+## [0.6.0](https://github.com/Blobfolio/guff/releases/tag/v0.6.0) - 2025-01-09
+
+### Changed
+
+* Bump `dactyl` to `0.9`
+* Bump `lightningcss` to `alpha63`
+* Bump MSRV to `1.83`
+* Miscellaneous code changes and lints
+
+
+
 ## [0.5.3](https://github.com/Blobfolio/guff/releases/tag/v0.5.3) - 2024-11-28
 
 ### Changed

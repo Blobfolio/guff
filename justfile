@@ -55,6 +55,7 @@ export RUSTFLAGS := "-C target-cpu=x86-64-v3"
 	# Build the deb.
 	cargo-deb \
 		--no-build \
+		--quiet \
 		-p {{ pkg_id }} \
 		-o "{{ release_dir }}"
 
