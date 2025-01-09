@@ -77,8 +77,6 @@ production.
 	unused_import_braces,
 )]
 
-#![expect(clippy::module_name_repetitions, reason = "Repetition is preferred.")]
-
 
 
 mod error;
