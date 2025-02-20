@@ -2,6 +2,14 @@
 
 
 
+## [0.6.1](https://github.com/Blobfolio/guff/releases/tag/v0.6.1) - 2025-02-20
+
+### Changed
+
+* Miscellaneous code lints
+
+
+
 ## [0.6.0](https://github.com/Blobfolio/guff/releases/tag/v0.6.0) - 2025-01-09
 
 ### Changed
