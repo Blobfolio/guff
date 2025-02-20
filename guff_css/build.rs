@@ -267,7 +267,7 @@ fn parse_version(src: &str) -> Option<(u32, u32)> {
 	let minor = version.next().and_then(|v| u32::btou(v.as_bytes())).unwrap_or(0);
 	let patch = version.next().and_then(|v| u32::btou(v.as_bytes())).unwrap_or(0);
 
-	let v: u32 = (major & 0xff) << 16 | (minor & 0xff) << 8 | (patch & 0xff);
+	let v: u32 = ((major & 0xff) << 16) | ((minor & 0xff) << 8) | (patch & 0xff);
 	let v = NonZeroU32::new(v)?;
 
 	Some((v.get(), major))
