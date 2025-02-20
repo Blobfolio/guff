@@ -11,9 +11,9 @@
         "6": 0,
         "7": 0,
         "8": 0,
-        "9": 0.0346884,
+        "9": 0.033801,
         "10": 0,
-        "11": 0.433605
+        "11": 0.371811
       },
       "version_list": [
         {
@@ -46,7 +46,7 @@
         },
         {
           "version": "9",
-          "global_usage": 0.0346884,
+          "global_usage": 0.033801,
           "release_date": 1300060800,
           "era": -2,
           "prefix": ""
@@ -60,7 +60,7 @@
         },
         {
           "version": "11",
-          "global_usage": 0.433605,
+          "global_usage": 0.371811,
           "release_date": 1381968000,
           "era": 0,
           "prefix": ""
@@ -80,8 +80,8 @@
         "14": 0,
         "15": 0,
         "16": 0,
-        "17": 0.003521,
-        "18": 0.084504,
+        "17": 0.003558,
+        "18": 0.117414,
         "79": 0,
         "80": 0,
         "81": 0,
@@ -94,7 +94,7 @@
         "89": 0,
         "90": 0,
         "91": 0,
-        "92": 0.014084,
+        "92": 0.010674,
         "93": 0,
         "94": 0,
         "95": 0,
@@ -105,452 +105,460 @@
         "100": 0,
         "101": 0,
         "102": 0,
-        "103": 0.003521,
+        "103": 0,
         "104": 0,
         "105": 0,
         "106": 0,
         "107": 0,
-        "108": 0.003521,
-        "109": 0.052815,
+        "108": 0.003558,
+        "109": 0.049812,
         "110": 0,
-        "111": 0.003521,
-        "112": 0.003521,
-        "113": 0.007042,
-        "114": 0.010563,
-        "115": 0.003521,
-        "116": 0.003521,
-        "117": 0.003521,
-        "118": 0.003521,
-        "119": 0.007042,
-        "120": 0.017605,
-        "121": 0.010563,
-        "122": 0.014084,
-        "123": 0.007042,
-        "124": 0.010563,
-        "125": 0.010563,
-        "126": 0.024647,
-        "127": 0.021126,
-        "128": 0.024647,
-        "129": 0.03521,
-        "130": 0.137319,
-        "131": 4.16182
+        "111": 0.003558,
+        "112": 0.007116,
+        "113": 0.007116,
+        "114": 0.010674,
+        "115": 0.003558,
+        "116": 0,
+        "117": 0.003558,
+        "118": 0.003558,
+        "119": 0.003558,
+        "120": 0.021348,
+        "121": 0.010674,
+        "122": 0.014232,
+        "123": 0.007116,
+        "124": 0.010674,
+        "125": 0.010674,
+        "126": 0.021348,
+        "127": 0.021348,
+        "128": 0.01779,
+        "129": 0.021348,
+        "130": 0.067602,
+        "131": 2.88198,
+        "132": 1.62245
       },
       "version_list": [
         {
           "version": "12",
           "global_usage": 0,
           "release_date": 1438128000,
-          "era": -58,
+          "era": -59,
           "prefix": "ms"
         },
         {
           "version": "13",
           "global_usage": 0,
           "release_date": 1447286400,
-          "era": -57,
+          "era": -58,
           "prefix": "ms"
         },
         {
           "version": "14",
           "global_usage": 0,
           "release_date": 1470096000,
-          "era": -56,
+          "era": -57,
           "prefix": "ms"
         },
         {
           "version": "15",
           "global_usage": 0,
           "release_date": 1491868800,
-          "era": -55,
+          "era": -56,
           "prefix": "ms"
         },
         {
           "version": "16",
           "global_usage": 0,
           "release_date": 1508198400,
-          "era": -54,
+          "era": -55,
           "prefix": "ms"
         },
         {
           "version": "17",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1525046400,
-          "era": -53,
+          "era": -54,
           "prefix": "ms"
         },
         {
           "version": "18",
-          "global_usage": 0.084504,
+          "global_usage": 0.117414,
           "release_date": 1542067200,
-          "era": -52,
+          "era": -53,
           "prefix": "ms"
         },
         {
           "version": "79",
           "global_usage": 0,
           "release_date": 1579046400,
-          "era": -51,
+          "era": -52,
           "prefix": ""
         },
         {
           "version": "80",
           "global_usage": 0,
           "release_date": 1581033600,
-          "era": -50,
+          "era": -51,
           "prefix": ""
         },
         {
           "version": "81",
           "global_usage": 0,
           "release_date": 1586736000,
-          "era": -49,
+          "era": -50,
           "prefix": ""
         },
         {
           "version": "83",
           "global_usage": 0,
           "release_date": 1590019200,
-          "era": -48,
+          "era": -49,
           "prefix": ""
         },
         {
           "version": "84",
           "global_usage": 0,
           "release_date": 1594857600,
-          "era": -47,
+          "era": -48,
           "prefix": ""
         },
         {
           "version": "85",
           "global_usage": 0,
           "release_date": 1598486400,
-          "era": -46,
+          "era": -47,
           "prefix": ""
         },
         {
           "version": "86",
           "global_usage": 0,
           "release_date": 1602201600,
-          "era": -45,
+          "era": -46,
           "prefix": ""
         },
         {
           "version": "87",
           "global_usage": 0,
           "release_date": 1605830400,
-          "era": -44,
+          "era": -45,
           "prefix": ""
         },
         {
           "version": "88",
           "global_usage": 0,
           "release_date": 1611360000,
-          "era": -43,
+          "era": -44,
           "prefix": ""
         },
         {
           "version": "89",
           "global_usage": 0,
           "release_date": 1614816000,
-          "era": -42,
+          "era": -43,
           "prefix": ""
         },
         {
           "version": "90",
           "global_usage": 0,
           "release_date": 1618358400,
-          "era": -41,
+          "era": -42,
           "prefix": ""
         },
         {
           "version": "91",
           "global_usage": 0,
           "release_date": 1622073600,
-          "era": -40,
+          "era": -41,
           "prefix": ""
         },
         {
           "version": "92",
-          "global_usage": 0.014084,
+          "global_usage": 0.010674,
           "release_date": 1626912000,
-          "era": -39,
+          "era": -40,
           "prefix": ""
         },
         {
           "version": "93",
           "global_usage": 0,
           "release_date": 1630627200,
-          "era": -38,
+          "era": -39,
           "prefix": ""
         },
         {
           "version": "94",
           "global_usage": 0,
           "release_date": 1632441600,
-          "era": -37,
+          "era": -38,
           "prefix": ""
         },
         {
           "version": "95",
           "global_usage": 0,
           "release_date": 1634774400,
-          "era": -36,
+          "era": -37,
           "prefix": ""
         },
         {
           "version": "96",
           "global_usage": 0,
           "release_date": 1637539200,
-          "era": -35,
+          "era": -36,
           "prefix": ""
         },
         {
           "version": "97",
           "global_usage": 0,
           "release_date": 1641427200,
-          "era": -34,
+          "era": -35,
           "prefix": ""
         },
         {
           "version": "98",
           "global_usage": 0,
           "release_date": 1643932800,
-          "era": -33,
+          "era": -34,
           "prefix": ""
         },
         {
           "version": "99",
           "global_usage": 0,
           "release_date": 1646265600,
-          "era": -32,
+          "era": -33,
           "prefix": ""
         },
         {
           "version": "100",
           "global_usage": 0,
           "release_date": 1649635200,
-          "era": -31,
+          "era": -32,
           "prefix": ""
         },
         {
           "version": "101",
           "global_usage": 0,
           "release_date": 1651190400,
-          "era": -30,
+          "era": -31,
           "prefix": ""
         },
         {
           "version": "102",
           "global_usage": 0,
           "release_date": 1653955200,
-          "era": -29,
+          "era": -30,
           "prefix": ""
         },
         {
           "version": "103",
-          "global_usage": 0.003521,
+          "global_usage": 0,
           "release_date": 1655942400,
-          "era": -28,
+          "era": -29,
           "prefix": ""
         },
         {
           "version": "104",
           "global_usage": 0,
           "release_date": 1659657600,
-          "era": -27,
+          "era": -28,
           "prefix": ""
         },
         {
           "version": "105",
           "global_usage": 0,
           "release_date": 1661990400,
-          "era": -26,
+          "era": -27,
           "prefix": ""
         },
         {
           "version": "106",
           "global_usage": 0,
           "release_date": 1664755200,
-          "era": -25,
+          "era": -26,
           "prefix": ""
         },
         {
           "version": "107",
           "global_usage": 0,
           "release_date": 1666915200,
-          "era": -24,
+          "era": -25,
           "prefix": ""
         },
         {
           "version": "108",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1670198400,
-          "era": -23,
+          "era": -24,
           "prefix": ""
         },
         {
           "version": "109",
-          "global_usage": 0.052815,
+          "global_usage": 0.049812,
           "release_date": 1673481600,
-          "era": -22,
+          "era": -23,
           "prefix": ""
         },
         {
           "version": "110",
           "global_usage": 0,
           "release_date": 1675900800,
-          "era": -21,
+          "era": -22,
           "prefix": ""
         },
         {
           "version": "111",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1678665600,
-          "era": -20,
+          "era": -21,
           "prefix": ""
         },
         {
           "version": "112",
-          "global_usage": 0.003521,
+          "global_usage": 0.007116,
           "release_date": 1680825600,
-          "era": -19,
+          "era": -20,
           "prefix": ""
         },
         {
           "version": "113",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1683158400,
-          "era": -18,
+          "era": -19,
           "prefix": ""
         },
         {
           "version": "114",
-          "global_usage": 0.010563,
+          "global_usage": 0.010674,
           "release_date": 1685664000,
-          "era": -17,
+          "era": -18,
           "prefix": ""
         },
         {
           "version": "115",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1689897600,
-          "era": -16,
+          "era": -17,
           "prefix": ""
         },
         {
           "version": "116",
-          "global_usage": 0.003521,
+          "global_usage": 0,
           "release_date": 1692576000,
-          "era": -15,
+          "era": -16,
           "prefix": ""
         },
         {
           "version": "117",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1694649600,
-          "era": -14,
+          "era": -15,
           "prefix": ""
         },
         {
           "version": "118",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1697155200,
-          "era": -13,
+          "era": -14,
           "prefix": ""
         },
         {
           "version": "119",
-          "global_usage": 0.007042,
+          "global_usage": 0.003558,
           "release_date": 1698969600,
-          "era": -12,
+          "era": -13,
           "prefix": ""
         },
         {
           "version": "120",
-          "global_usage": 0.017605,
+          "global_usage": 0.021348,
           "release_date": 1701993600,
-          "era": -11,
+          "era": -12,
           "prefix": ""
         },
         {
           "version": "121",
-          "global_usage": 0.010563,
+          "global_usage": 0.010674,
           "release_date": 1706227200,
-          "era": -10,
+          "era": -11,
           "prefix": ""
         },
         {
           "version": "122",
-          "global_usage": 0.014084,
+          "global_usage": 0.014232,
           "release_date": 1708732800,
-          "era": -9,
+          "era": -10,
           "prefix": ""
         },
         {
           "version": "123",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1711152000,
-          "era": -8,
+          "era": -9,
           "prefix": ""
         },
         {
           "version": "124",
-          "global_usage": 0.010563,
+          "global_usage": 0.010674,
           "release_date": 1713398400,
-          "era": -7,
+          "era": -8,
           "prefix": ""
         },
         {
           "version": "125",
-          "global_usage": 0.010563,
+          "global_usage": 0.010674,
           "release_date": 1715990400,
-          "era": -6,
+          "era": -7,
           "prefix": ""
         },
         {
           "version": "126",
-          "global_usage": 0.024647,
+          "global_usage": 0.021348,
           "release_date": 1718841600,
-          "era": -5,
+          "era": -6,
           "prefix": ""
         },
         {
           "version": "127",
-          "global_usage": 0.021126,
+          "global_usage": 0.021348,
           "release_date": 1721865600,
-          "era": -4,
+          "era": -5,
           "prefix": ""
         },
         {
           "version": "128",
-          "global_usage": 0.024647,
+          "global_usage": 0.01779,
           "release_date": 1724371200,
-          "era": -3,
+          "era": -4,
           "prefix": ""
         },
         {
           "version": "129",
-          "global_usage": 0.03521,
+          "global_usage": 0.021348,
           "release_date": 1726704000,
-          "era": -2,
+          "era": -3,
           "prefix": ""
         },
         {
           "version": "130",
-          "global_usage": 0.137319,
+          "global_usage": 0.067602,
           "release_date": 1729123200,
-          "era": -1,
+          "era": -2,
           "prefix": ""
         },
         {
           "version": "131",
-          "global_usage": 4.16182,
+          "global_usage": 2.88198,
           "release_date": 1731542400,
+          "era": -1,
+          "prefix": ""
+        },
+        {
+          "version": "132",
+          "global_usage": 1.62245,
+          "release_date": 1737417600,
           "era": 0,
           "prefix": ""
         }
       ],
-      "current_version": "131",
+      "current_version": "132",
       "prefix_exceptions": {
         "12": "ms",
         "13": "ms",
@@ -579,7 +587,7 @@
         "8": 0,
         "9": 0,
         "10": 0,
-        "11": 0.014084,
+        "11": 0.021348,
         "12": 0,
         "13": 0,
         "14": 0,
@@ -611,23 +619,23 @@
         "40": 0,
         "41": 0,
         "42": 0,
-        "43": 0.007042,
-        "44": 0.003521,
+        "43": 0.007116,
+        "44": 0.003558,
         "45": 0,
         "46": 0,
-        "47": 0,
+        "47": 0.003558,
         "48": 0,
         "49": 0,
         "50": 0,
         "51": 0,
-        "52": 0.028168,
+        "52": 0.028464,
         "53": 0,
         "54": 0,
-        "55": 0.007042,
-        "56": 0.014084,
+        "55": 0.003558,
+        "56": 0.014232,
         "57": 0,
         "58": 0,
-        "59": 0.003521,
+        "59": 0.003558,
         "60": 0,
         "61": 0,
         "62": 0,
@@ -646,7 +654,7 @@
         "75": 0,
         "76": 0,
         "77": 0,
-        "78": 0.010563,
+        "78": 0.010674,
         "79": 0,
         "80": 0,
         "81": 0,
@@ -656,7 +664,7 @@
         "85": 0,
         "86": 0,
         "87": 0,
-        "88": 0.003521,
+        "88": 0.003558,
         "89": 0,
         "90": 0,
         "91": 0,
@@ -671,1003 +679,1019 @@
         "100": 0,
         "101": 0,
         "102": 0,
-        "103": 0.007042,
+        "103": 0.007116,
         "104": 0,
         "105": 0,
         "106": 0,
         "107": 0,
         "108": 0,
-        "109": 0.003521,
+        "109": 0.003558,
         "110": 0,
         "111": 0,
         "112": 0,
-        "113": 0.007042,
-        "114": 0.003521,
-        "115": 0.253512,
+        "113": 0.007116,
+        "114": 0,
+        "115": 0.234828,
         "116": 0,
         "117": 0,
-        "118": 0.088025,
+        "118": 0.085392,
         "119": 0,
-        "120": 0.003521,
-        "121": 0,
+        "120": 0.003558,
+        "121": 0.003558,
         "122": 0,
         "123": 0,
         "124": 0,
-        "125": 0.017605,
-        "126": 0.003521,
-        "127": 0.010563,
-        "128": 0.07042,
-        "129": 0.007042,
-        "130": 0.007042,
-        "131": 0.017605,
-        "132": 0.077462,
-        "133": 1.38727,
-        "134": 0.007042,
-        "135": 0,
-        "136": 0
+        "125": 0.01779,
+        "126": 0,
+        "127": 0.007116,
+        "128": 0.078276,
+        "129": 0.003558,
+        "130": 0.007116,
+        "131": 0.010674,
+        "132": 0.021348,
+        "133": 0.49812,
+        "134": 1.02826,
+        "135": 0.007116,
+        "136": 0,
+        "137": 0,
+        "138": 0
       },
       "version_list": [
         {
           "version": "2",
           "global_usage": 0,
           "release_date": 1161648000,
-          "era": -133,
+          "era": -135,
           "prefix": ""
         },
         {
           "version": "3",
           "global_usage": 0,
           "release_date": 1213660800,
-          "era": -132,
+          "era": -134,
           "prefix": ""
         },
         {
           "version": "3.5",
           "global_usage": 0,
           "release_date": 1246320000,
-          "era": -131,
+          "era": -133,
           "prefix": ""
         },
         {
           "version": "3.6",
           "global_usage": 0,
           "release_date": 1264032000,
-          "era": -130,
+          "era": -132,
           "prefix": ""
         },
         {
           "version": "4",
           "global_usage": 0,
           "release_date": 1300752000,
-          "era": -129,
+          "era": -131,
           "prefix": ""
         },
         {
           "version": "5",
           "global_usage": 0,
           "release_date": 1308614400,
-          "era": -128,
+          "era": -130,
           "prefix": ""
         },
         {
           "version": "6",
           "global_usage": 0,
           "release_date": 1313452800,
-          "era": -127,
+          "era": -129,
           "prefix": ""
         },
         {
           "version": "7",
           "global_usage": 0,
           "release_date": 1317081600,
-          "era": -126,
+          "era": -128,
           "prefix": ""
         },
         {
           "version": "8",
           "global_usage": 0,
           "release_date": 1317081600,
-          "era": -125,
+          "era": -127,
           "prefix": ""
         },
         {
           "version": "9",
           "global_usage": 0,
           "release_date": 1320710400,
-          "era": -124,
+          "era": -126,
           "prefix": ""
         },
         {
           "version": "10",
           "global_usage": 0,
           "release_date": 1324339200,
-          "era": -123,
+          "era": -125,
           "prefix": ""
         },
         {
           "version": "11",
-          "global_usage": 0.014084,
+          "global_usage": 0.021348,
           "release_date": 1327968000,
-          "era": -122,
+          "era": -124,
           "prefix": ""
         },
         {
           "version": "12",
           "global_usage": 0,
           "release_date": 1331596800,
-          "era": -121,
+          "era": -123,
           "prefix": ""
         },
         {
           "version": "13",
           "global_usage": 0,
           "release_date": 1335225600,
-          "era": -120,
+          "era": -122,
           "prefix": ""
         },
         {
           "version": "14",
           "global_usage": 0,
           "release_date": 1338854400,
-          "era": -119,
+          "era": -121,
           "prefix": ""
         },
         {
           "version": "15",
           "global_usage": 0,
           "release_date": 1342483200,
-          "era": -118,
+          "era": -120,
           "prefix": ""
         },
         {
           "version": "16",
           "global_usage": 0,
           "release_date": 1346112000,
-          "era": -117,
+          "era": -119,
           "prefix": ""
         },
         {
           "version": "17",
           "global_usage": 0,
           "release_date": 1349740800,
-          "era": -116,
+          "era": -118,
           "prefix": ""
         },
         {
           "version": "18",
           "global_usage": 0,
           "release_date": 1353628800,
-          "era": -115,
+          "era": -117,
           "prefix": ""
         },
         {
           "version": "19",
           "global_usage": 0,
           "release_date": 1357603200,
-          "era": -114,
+          "era": -116,
           "prefix": ""
         },
         {
           "version": "20",
           "global_usage": 0,
           "release_date": 1361232000,
-          "era": -113,
+          "era": -115,
           "prefix": ""
         },
         {
           "version": "21",
           "global_usage": 0,
           "release_date": 1364860800,
-          "era": -112,
+          "era": -114,
           "prefix": ""
         },
         {
           "version": "22",
           "global_usage": 0,
           "release_date": 1368489600,
-          "era": -111,
+          "era": -113,
           "prefix": ""
         },
         {
           "version": "23",
           "global_usage": 0,
           "release_date": 1372118400,
-          "era": -110,
+          "era": -112,
           "prefix": ""
         },
         {
           "version": "24",
           "global_usage": 0,
           "release_date": 1375747200,
-          "era": -109,
+          "era": -111,
           "prefix": ""
         },
         {
           "version": "25",
           "global_usage": 0,
           "release_date": 1379376000,
-          "era": -108,
+          "era": -110,
           "prefix": ""
         },
         {
           "version": "26",
           "global_usage": 0,
           "release_date": 1386633600,
-          "era": -107,
+          "era": -109,
           "prefix": ""
         },
         {
           "version": "27",
           "global_usage": 0,
           "release_date": 1391472000,
-          "era": -106,
+          "era": -108,
           "prefix": ""
         },
         {
           "version": "28",
           "global_usage": 0,
           "release_date": 1395100800,
-          "era": -105,
+          "era": -107,
           "prefix": ""
         },
         {
           "version": "29",
           "global_usage": 0,
           "release_date": 1398729600,
-          "era": -104,
+          "era": -106,
           "prefix": ""
         },
         {
           "version": "30",
           "global_usage": 0,
           "release_date": 1402358400,
-          "era": -103,
+          "era": -105,
           "prefix": ""
         },
         {
           "version": "31",
           "global_usage": 0,
           "release_date": 1405987200,
-          "era": -102,
+          "era": -104,
           "prefix": ""
         },
         {
           "version": "32",
           "global_usage": 0,
           "release_date": 1409616000,
-          "era": -101,
+          "era": -103,
           "prefix": ""
         },
         {
           "version": "33",
           "global_usage": 0,
           "release_date": 1413244800,
-          "era": -100,
+          "era": -102,
           "prefix": ""
         },
         {
           "version": "34",
           "global_usage": 0,
           "release_date": 1417392000,
-          "era": -99,
+          "era": -101,
           "prefix": ""
         },
         {
           "version": "35",
           "global_usage": 0,
           "release_date": 1421107200,
-          "era": -98,
+          "era": -100,
           "prefix": ""
         },
         {
           "version": "36",
           "global_usage": 0,
           "release_date": 1424736000,
-          "era": -97,
+          "era": -99,
           "prefix": ""
         },
         {
           "version": "37",
           "global_usage": 0,
           "release_date": 1428278400,
-          "era": -96,
+          "era": -98,
           "prefix": ""
         },
         {
           "version": "38",
           "global_usage": 0,
           "release_date": 1431475200,
-          "era": -95,
+          "era": -97,
           "prefix": ""
         },
         {
           "version": "39",
           "global_usage": 0,
           "release_date": 1435881600,
-          "era": -94,
+          "era": -96,
           "prefix": ""
         },
         {
           "version": "40",
           "global_usage": 0,
           "release_date": 1439251200,
-          "era": -93,
+          "era": -95,
           "prefix": ""
         },
         {
           "version": "41",
           "global_usage": 0,
           "release_date": 1442880000,
-          "era": -92,
+          "era": -94,
           "prefix": ""
         },
         {
           "version": "42",
           "global_usage": 0,
           "release_date": 1446508800,
-          "era": -91,
+          "era": -93,
           "prefix": ""
         },
         {
           "version": "43",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1450137600,
-          "era": -90,
+          "era": -92,
           "prefix": ""
         },
         {
           "version": "44",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1453852800,
-          "era": -89,
+          "era": -91,
           "prefix": ""
         },
         {
           "version": "45",
           "global_usage": 0,
           "release_date": 1457395200,
-          "era": -88,
+          "era": -90,
           "prefix": ""
         },
         {
           "version": "46",
           "global_usage": 0,
           "release_date": 1461628800,
-          "era": -87,
+          "era": -89,
           "prefix": ""
         },
         {
           "version": "47",
-          "global_usage": 0,
+          "global_usage": 0.003558,
           "release_date": 1465257600,
-          "era": -86,
+          "era": -88,
           "prefix": ""
         },
         {
           "version": "48",
           "global_usage": 0,
           "release_date": 1470096000,
-          "era": -85,
+          "era": -87,
           "prefix": ""
         },
         {
           "version": "49",
           "global_usage": 0,
           "release_date": 1474329600,
-          "era": -84,
+          "era": -86,
           "prefix": ""
         },
         {
           "version": "50",
           "global_usage": 0,
           "release_date": 1479168000,
-          "era": -83,
+          "era": -85,
           "prefix": ""
         },
         {
           "version": "51",
           "global_usage": 0,
           "release_date": 1485216000,
-          "era": -82,
+          "era": -84,
           "prefix": ""
         },
         {
           "version": "52",
-          "global_usage": 0.028168,
+          "global_usage": 0.028464,
           "release_date": 1488844800,
-          "era": -81,
+          "era": -83,
           "prefix": ""
         },
         {
           "version": "53",
           "global_usage": 0,
           "release_date": 1492560000,
-          "era": -80,
+          "era": -82,
           "prefix": ""
         },
         {
           "version": "54",
           "global_usage": 0,
           "release_date": 1497312000,
-          "era": -79,
+          "era": -81,
           "prefix": ""
         },
         {
           "version": "55",
-          "global_usage": 0.007042,
+          "global_usage": 0.003558,
           "release_date": 1502150400,
-          "era": -78,
+          "era": -80,
           "prefix": ""
         },
         {
           "version": "56",
-          "global_usage": 0.014084,
+          "global_usage": 0.014232,
           "release_date": 1506556800,
-          "era": -77,
+          "era": -79,
           "prefix": ""
         },
         {
           "version": "57",
           "global_usage": 0,
           "release_date": 1510617600,
-          "era": -76,
+          "era": -78,
           "prefix": ""
         },
         {
           "version": "58",
           "global_usage": 0,
           "release_date": 1516665600,
-          "era": -75,
+          "era": -77,
           "prefix": ""
         },
         {
           "version": "59",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1520985600,
-          "era": -74,
+          "era": -76,
           "prefix": ""
         },
         {
           "version": "60",
           "global_usage": 0,
           "release_date": 1525824000,
-          "era": -73,
+          "era": -75,
           "prefix": ""
         },
         {
           "version": "61",
           "global_usage": 0,
           "release_date": 1529971200,
-          "era": -72,
+          "era": -74,
           "prefix": ""
         },
         {
           "version": "62",
           "global_usage": 0,
           "release_date": 1536105600,
-          "era": -71,
+          "era": -73,
           "prefix": ""
         },
         {
           "version": "63",
           "global_usage": 0,
           "release_date": 1540252800,
-          "era": -70,
+          "era": -72,
           "prefix": ""
         },
         {
           "version": "64",
           "global_usage": 0,
           "release_date": 1544486400,
-          "era": -69,
+          "era": -71,
           "prefix": ""
         },
         {
           "version": "65",
           "global_usage": 0,
           "release_date": 1548720000,
-          "era": -68,
+          "era": -70,
           "prefix": ""
         },
         {
           "version": "66",
           "global_usage": 0,
           "release_date": 1552953600,
-          "era": -67,
+          "era": -69,
           "prefix": ""
         },
         {
           "version": "67",
           "global_usage": 0,
           "release_date": 1558396800,
-          "era": -66,
+          "era": -68,
           "prefix": ""
         },
         {
           "version": "68",
           "global_usage": 0,
           "release_date": 1562630400,
-          "era": -65,
+          "era": -67,
           "prefix": ""
         },
         {
           "version": "69",
           "global_usage": 0,
           "release_date": 1567468800,
-          "era": -64,
+          "era": -66,
           "prefix": ""
         },
         {
           "version": "70",
           "global_usage": 0,
           "release_date": 1571788800,
-          "era": -63,
+          "era": -65,
           "prefix": ""
         },
         {
           "version": "71",
           "global_usage": 0,
           "release_date": 1575331200,
-          "era": -62,
+          "era": -64,
           "prefix": ""
         },
         {
           "version": "72",
           "global_usage": 0,
           "release_date": 1578355200,
-          "era": -61,
+          "era": -63,
           "prefix": ""
         },
         {
           "version": "73",
           "global_usage": 0,
           "release_date": 1581379200,
-          "era": -60,
+          "era": -62,
           "prefix": ""
         },
         {
           "version": "74",
           "global_usage": 0,
           "release_date": 1583798400,
-          "era": -59,
+          "era": -61,
           "prefix": ""
         },
         {
           "version": "75",
           "global_usage": 0,
           "release_date": 1586304000,
-          "era": -58,
+          "era": -60,
           "prefix": ""
         },
         {
           "version": "76",
           "global_usage": 0,
           "release_date": 1588636800,
-          "era": -57,
+          "era": -59,
           "prefix": ""
         },
         {
           "version": "77",
           "global_usage": 0,
           "release_date": 1591056000,
-          "era": -56,
+          "era": -58,
           "prefix": ""
         },
         {
           "version": "78",
-          "global_usage": 0.010563,
+          "global_usage": 0.010674,
           "release_date": 1593475200,
-          "era": -55,
+          "era": -57,
           "prefix": ""
         },
         {
           "version": "79",
           "global_usage": 0,
           "release_date": 1595894400,
-          "era": -54,
+          "era": -56,
           "prefix": ""
         },
         {
           "version": "80",
           "global_usage": 0,
           "release_date": 1598313600,
-          "era": -53,
+          "era": -55,
           "prefix": ""
         },
         {
           "version": "81",
           "global_usage": 0,
           "release_date": 1600732800,
-          "era": -52,
+          "era": -54,
           "prefix": ""
         },
         {
           "version": "82",
           "global_usage": 0,
           "release_date": 1603152000,
-          "era": -51,
+          "era": -53,
           "prefix": ""
         },
         {
           "version": "83",
           "global_usage": 0,
           "release_date": 1605571200,
-          "era": -50,
+          "era": -52,
           "prefix": ""
         },
         {
           "version": "84",
           "global_usage": 0,
           "release_date": 1607990400,
-          "era": -49,
+          "era": -51,
           "prefix": ""
         },
         {
           "version": "85",
           "global_usage": 0,
           "release_date": 1611619200,
-          "era": -48,
+          "era": -50,
           "prefix": ""
         },
         {
           "version": "86",
           "global_usage": 0,
           "release_date": 1614038400,
-          "era": -47,
+          "era": -49,
           "prefix": ""
         },
         {
           "version": "87",
           "global_usage": 0,
           "release_date": 1616457600,
-          "era": -46,
+          "era": -48,
           "prefix": ""
         },
         {
           "version": "88",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1618790400,
-          "era": -45,
+          "era": -47,
           "prefix": ""
         },
         {
           "version": "89",
           "global_usage": 0,
           "release_date": 1622505600,
-          "era": -44,
+          "era": -46,
           "prefix": ""
         },
         {
           "version": "90",
           "global_usage": 0,
           "release_date": 1626134400,
-          "era": -43,
+          "era": -45,
           "prefix": ""
         },
         {
           "version": "91",
           "global_usage": 0,
           "release_date": 1628553600,
-          "era": -42,
+          "era": -44,
           "prefix": ""
         },
         {
           "version": "92",
           "global_usage": 0,
           "release_date": 1630972800,
-          "era": -41,
+          "era": -43,
           "prefix": ""
         },
         {
           "version": "93",
           "global_usage": 0,
           "release_date": 1633392000,
-          "era": -40,
+          "era": -42,
           "prefix": ""
         },
         {
           "version": "94",
           "global_usage": 0,
           "release_date": 1635811200,
-          "era": -39,
+          "era": -41,
           "prefix": ""
         },
         {
           "version": "95",
           "global_usage": 0,
           "release_date": 1638835200,
-          "era": -38,
+          "era": -40,
           "prefix": ""
         },
         {
           "version": "96",
           "global_usage": 0,
           "release_date": 1641859200,
-          "era": -37,
+          "era": -39,
           "prefix": ""
         },
         {
           "version": "97",
           "global_usage": 0,
           "release_date": 1644364800,
-          "era": -36,
+          "era": -38,
           "prefix": ""
         },
         {
           "version": "98",
           "global_usage": 0,
           "release_date": 1646697600,
-          "era": -35,
+          "era": -37,
           "prefix": ""
         },
         {
           "version": "99",
           "global_usage": 0,
           "release_date": 1649116800,
-          "era": -34,
+          "era": -36,
           "prefix": ""
         },
         {
           "version": "100",
           "global_usage": 0,
           "release_date": 1651536000,
-          "era": -33,
+          "era": -35,
           "prefix": ""
         },
         {
           "version": "101",
           "global_usage": 0,
           "release_date": 1653955200,
-          "era": -32,
+          "era": -34,
           "prefix": ""
         },
         {
           "version": "102",
           "global_usage": 0,
           "release_date": 1656374400,
-          "era": -31,
+          "era": -33,
           "prefix": ""
         },
         {
           "version": "103",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1658793600,
-          "era": -30,
+          "era": -32,
           "prefix": ""
         },
         {
           "version": "104",
           "global_usage": 0,
           "release_date": 1661212800,
-          "era": -29,
+          "era": -31,
           "prefix": ""
         },
         {
           "version": "105",
           "global_usage": 0,
           "release_date": 1663632000,
-          "era": -28,
+          "era": -30,
           "prefix": ""
         },
         {
           "version": "106",
           "global_usage": 0,
           "release_date": 1666051200,
-          "era": -27,
+          "era": -29,
           "prefix": ""
         },
         {
           "version": "107",
           "global_usage": 0,
           "release_date": 1668470400,
-          "era": -26,
+          "era": -28,
           "prefix": ""
         },
         {
           "version": "108",
           "global_usage": 0,
           "release_date": 1670889600,
-          "era": -25,
+          "era": -27,
           "prefix": ""
         },
         {
           "version": "109",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1673913600,
-          "era": -24,
+          "era": -26,
           "prefix": ""
         },
         {
           "version": "110",
           "global_usage": 0,
           "release_date": 1676332800,
-          "era": -23,
+          "era": -25,
           "prefix": ""
         },
         {
           "version": "111",
           "global_usage": 0,
           "release_date": 1678752000,
-          "era": -22,
+          "era": -24,
           "prefix": ""
         },
         {
           "version": "112",
           "global_usage": 0,
           "release_date": 1681171200,
-          "era": -21,
+          "era": -23,
           "prefix": ""
         },
         {
           "version": "113",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1683590400,
-          "era": -20,
+          "era": -22,
           "prefix": ""
         },
         {
           "version": "114",
-          "global_usage": 0.003521,
+          "global_usage": 0,
           "release_date": 1686009600,
-          "era": -19,
+          "era": -21,
           "prefix": ""
         },
         {
           "version": "115",
-          "global_usage": 0.253512,
+          "global_usage": 0.234828,
           "release_date": 1688428800,
-          "era": -18,
+          "era": -20,
           "prefix": ""
         },
         {
           "version": "116",
           "global_usage": 0,
           "release_date": 1690848000,
-          "era": -17,
+          "era": -19,
           "prefix": ""
         },
         {
           "version": "117",
           "global_usage": 0,
           "release_date": 1693267200,
-          "era": -16,
+          "era": -18,
           "prefix": ""
         },
         {
           "version": "118",
-          "global_usage": 0.088025,
+          "global_usage": 0.085392,
           "release_date": 1695686400,
-          "era": -15,
+          "era": -17,
           "prefix": ""
         },
         {
           "version": "119",
           "global_usage": 0,
           "release_date": 1698105600,
-          "era": -14,
+          "era": -16,
           "prefix": ""
         },
         {
           "version": "120",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1700524800,
-          "era": -13,
+          "era": -15,
           "prefix": ""
         },
         {
           "version": "121",
-          "global_usage": 0,
+          "global_usage": 0.003558,
           "release_date": 1702944000,
-          "era": -12,
+          "era": -14,
           "prefix": ""
         },
         {
           "version": "122",
           "global_usage": 0,
           "release_date": 1705968000,
-          "era": -11,
+          "era": -13,
           "prefix": ""
         },
         {
           "version": "123",
           "global_usage": 0,
           "release_date": 1708387200,
-          "era": -10,
+          "era": -12,
           "prefix": ""
         },
         {
           "version": "124",
           "global_usage": 0,
           "release_date": 1710806400,
-          "era": -9,
+          "era": -11,
           "prefix": ""
         },
         {
           "version": "125",
-          "global_usage": 0.017605,
+          "global_usage": 0.01779,
           "release_date": 1713225600,
-          "era": -8,
+          "era": -10,
           "prefix": ""
         },
         {
           "version": "126",
-          "global_usage": 0.003521,
+          "global_usage": 0,
           "release_date": 1715644800,
-          "era": -7,
+          "era": -9,
           "prefix": ""
         },
         {
           "version": "127",
-          "global_usage": 0.010563,
+          "global_usage": 0.007116,
           "release_date": 1718064000,
-          "era": -6,
+          "era": -8,
           "prefix": ""
         },
         {
           "version": "128",
-          "global_usage": 0.07042,
+          "global_usage": 0.078276,
           "release_date": 1720483200,
-          "era": -5,
+          "era": -7,
           "prefix": ""
         },
         {
           "version": "129",
-          "global_usage": 0.007042,
+          "global_usage": 0.003558,
           "release_date": 1722902400,
-          "era": -4,
+          "era": -6,
           "prefix": ""
         },
         {
           "version": "130",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1725321600,
-          "era": -3,
+          "era": -5,
           "prefix": ""
         },
         {
           "version": "131",
-          "global_usage": 0.017605,
+          "global_usage": 0.010674,
           "release_date": 1727740800,
-          "era": -2,
+          "era": -4,
           "prefix": ""
         },
         {
           "version": "132",
-          "global_usage": 0.077462,
+          "global_usage": 0.021348,
           "release_date": 1730160000,
-          "era": -1,
+          "era": -3,
           "prefix": ""
         },
         {
           "version": "133",
-          "global_usage": 1.38727,
+          "global_usage": 0.49812,
           "release_date": 1732579200,
-          "era": 0,
+          "era": -2,
           "prefix": ""
         },
         {
           "version": "134",
-          "global_usage": 0.007042,
-          "release_date": null,
-          "era": 1,
+          "global_usage": 1.02826,
+          "release_date": 1736208000,
+          "era": -1,
           "prefix": ""
         },
         {
           "version": "135",
-          "global_usage": 0,
-          "release_date": null,
-          "era": 2,
+          "global_usage": 0.007116,
+          "release_date": 1738627200,
+          "era": 0,
           "prefix": ""
         },
         {
           "version": "136",
           "global_usage": 0,
           "release_date": null,
+          "era": 1,
+          "prefix": ""
+        },
+        {
+          "version": "137",
+          "global_usage": 0,
+          "release_date": null,
+          "era": 2,
+          "prefix": ""
+        },
+        {
+          "version": "138",
+          "global_usage": 0,
+          "release_date": null,
           "era": 3,
           "prefix": ""
         }
       ],
-      "current_version": "133"
+      "current_version": "135"
     },
     "chrome": {
       "browser": "Chrome",
@@ -1710,1016 +1734,1032 @@
         "35": 0,
         "36": 0,
         "37": 0,
-        "38": 0.007042,
+        "38": 0.007116,
         "39": 0,
         "40": 0,
         "41": 0,
         "42": 0,
         "43": 0,
         "44": 0,
-        "45": 0.003521,
+        "45": 0.003558,
         "46": 0,
-        "47": 0.003521,
-        "48": 0.017605,
-        "49": 0.014084,
-        "50": 0.014084,
+        "47": 0.003558,
+        "48": 0.014232,
+        "49": 0.014232,
+        "50": 0.024906,
         "51": 0,
-        "52": 0.003521,
-        "53": 0.003521,
+        "52": 0.007116,
+        "53": 0.007116,
         "54": 0,
         "55": 0,
-        "56": 0.007042,
+        "56": 0.010674,
         "57": 0,
-        "58": 0.024647,
+        "58": 0.007116,
         "59": 0,
         "60": 0,
-        "61": 0.007042,
+        "61": 0.007116,
         "62": 0,
         "63": 0,
         "64": 0,
         "65": 0,
-        "66": 0.021126,
+        "66": 0.021348,
         "67": 0,
         "68": 0,
-        "69": 0.010563,
-        "70": 0.014084,
+        "69": 0.007116,
+        "70": 0.010674,
         "71": 0,
         "72": 0,
-        "73": 0.007042,
-        "74": 0.007042,
-        "75": 0.007042,
-        "76": 0.003521,
-        "77": 0.017605,
-        "78": 0.010563,
-        "79": 0.084504,
-        "80": 0.007042,
-        "81": 0.03521,
-        "83": 0.028168,
-        "84": 0.003521,
-        "85": 0.014084,
-        "86": 0.021126,
-        "87": 0.063378,
-        "88": 0.007042,
-        "89": 0.010563,
-        "90": 0.007042,
-        "91": 0.031689,
-        "92": 0.014084,
-        "93": 0.014084,
-        "94": 0.03521,
-        "95": 0.038731,
-        "96": 0.007042,
-        "97": 0.010563,
-        "98": 0.042252,
-        "99": 0.014084,
-        "100": 0.021126,
-        "101": 0.014084,
-        "102": 0.010563,
-        "103": 0.10563,
-        "104": 0.021126,
-        "105": 0.010563,
-        "106": 0.017605,
-        "107": 0.021126,
-        "108": 0.03521,
-        "109": 1.09503,
-        "110": 0.017605,
-        "111": 0.031689,
-        "112": 0.03521,
-        "113": 0.109151,
-        "114": 0.07042,
-        "115": 0.024647,
-        "116": 0.130277,
-        "117": 0.07042,
-        "118": 0.059857,
-        "119": 0.042252,
-        "120": 0.063378,
-        "121": 0.119714,
-        "122": 0.077462,
-        "123": 0.080983,
-        "124": 0.14084,
-        "125": 1.28869,
-        "126": 0.415478,
-        "127": 0.334495,
-        "128": 0.179571,
-        "129": 0.232386,
-        "130": 0.982359,
-        "131": 15.0065,
-        "132": 0.017605,
-        "133": 0.014084,
-        "134": 0
+        "73": 0.007116,
+        "74": 0.007116,
+        "75": 0.003558,
+        "76": 0.003558,
+        "77": 0.010674,
+        "78": 0.010674,
+        "79": 0.08895,
+        "80": 0.010674,
+        "81": 0.024906,
+        "83": 0.032022,
+        "84": 0,
+        "85": 0.010674,
+        "86": 0.01779,
+        "87": 0.067602,
+        "88": 0.010674,
+        "89": 0.007116,
+        "90": 0.007116,
+        "91": 0.03558,
+        "92": 0.010674,
+        "93": 0.010674,
+        "94": 0.032022,
+        "95": 0.014232,
+        "96": 0.007116,
+        "97": 0.014232,
+        "98": 0.039138,
+        "99": 0.010674,
+        "100": 0.007116,
+        "101": 0.014232,
+        "102": 0.010674,
+        "103": 0.099624,
+        "104": 0.042696,
+        "105": 0.010674,
+        "106": 0.01779,
+        "107": 0.024906,
+        "108": 0.039138,
+        "109": 1.04605,
+        "110": 0.021348,
+        "111": 0.028464,
+        "112": 0.039138,
+        "113": 0.145878,
+        "114": 0.07116,
+        "115": 0.024906,
+        "116": 0.110298,
+        "117": 0.067602,
+        "118": 0.056928,
+        "119": 0.039138,
+        "120": 0.056928,
+        "121": 0.08895,
+        "122": 0.074718,
+        "123": 0.078276,
+        "124": 0.138762,
+        "125": 0.814782,
+        "126": 0.295314,
+        "127": 0.224154,
+        "128": 0.156552,
+        "129": 0.14232,
+        "130": 0.384264,
+        "131": 12.7946,
+        "132": 3.25201,
+        "133": 0.014232,
+        "134": 0.007116,
+        "135": 0,
+        "136": 0
       },
       "version_list": [
         {
           "version": "4",
           "global_usage": 0,
           "release_date": 1264377600,
-          "era": -126,
+          "era": -128,
           "prefix": ""
         },
         {
           "version": "5",
           "global_usage": 0,
           "release_date": 1274745600,
-          "era": -125,
+          "era": -127,
           "prefix": ""
         },
         {
           "version": "6",
           "global_usage": 0,
           "release_date": 1283385600,
-          "era": -124,
+          "era": -126,
           "prefix": ""
         },
         {
           "version": "7",
           "global_usage": 0,
           "release_date": 1287619200,
-          "era": -123,
+          "era": -125,
           "prefix": ""
         },
         {
           "version": "8",
           "global_usage": 0,
           "release_date": 1291248000,
-          "era": -122,
+          "era": -124,
           "prefix": ""
         },
         {
           "version": "9",
           "global_usage": 0,
           "release_date": 1296777600,
-          "era": -121,
+          "era": -123,
           "prefix": ""
         },
         {
           "version": "10",
           "global_usage": 0,
           "release_date": 1299542400,
-          "era": -120,
+          "era": -122,
           "prefix": ""
         },
         {
           "version": "11",
           "global_usage": 0,
           "release_date": 1303862400,
-          "era": -119,
+          "era": -121,
           "prefix": ""
         },
         {
           "version": "12",
           "global_usage": 0,
           "release_date": 1307404800,
-          "era": -118,
+          "era": -120,
           "prefix": ""
         },
         {
           "version": "13",
           "global_usage": 0,
           "release_date": 1312243200,
-          "era": -117,
+          "era": -119,
           "prefix": ""
         },
         {
           "version": "14",
           "global_usage": 0,
           "release_date": 1316131200,
-          "era": -116,
+          "era": -118,
           "prefix": ""
         },
         {
           "version": "15",
           "global_usage": 0,
           "release_date": 1316131200,
-          "era": -115,
+          "era": -117,
           "prefix": ""
         },
         {
           "version": "16",
           "global_usage": 0,
           "release_date": 1319500800,
-          "era": -114,
+          "era": -116,
           "prefix": ""
         },
         {
           "version": "17",
           "global_usage": 0,
           "release_date": 1323734400,
-          "era": -113,
+          "era": -115,
           "prefix": ""
         },
         {
           "version": "18",
           "global_usage": 0,
           "release_date": 1328659200,
-          "era": -112,
+          "era": -114,
           "prefix": ""
         },
         {
           "version": "19",
           "global_usage": 0,
           "release_date": 1332892800,
-          "era": -111,
+          "era": -113,
           "prefix": ""
         },
         {
           "version": "20",
           "global_usage": 0,
           "release_date": 1337040000,
-          "era": -110,
+          "era": -112,
           "prefix": ""
         },
         {
           "version": "21",
           "global_usage": 0,
           "release_date": 1340668800,
-          "era": -109,
+          "era": -111,
           "prefix": ""
         },
         {
           "version": "22",
           "global_usage": 0,
           "release_date": 1343692800,
-          "era": -108,
+          "era": -110,
           "prefix": ""
         },
         {
           "version": "23",
           "global_usage": 0,
           "release_date": 1348531200,
-          "era": -107,
+          "era": -109,
           "prefix": ""
         },
         {
           "version": "24",
           "global_usage": 0,
           "release_date": 1352246400,
-          "era": -106,
+          "era": -108,
           "prefix": ""
         },
         {
           "version": "25",
           "global_usage": 0,
           "release_date": 1357862400,
-          "era": -105,
+          "era": -107,
           "prefix": ""
         },
         {
           "version": "26",
           "global_usage": 0,
           "release_date": 1361404800,
-          "era": -104,
+          "era": -106,
           "prefix": ""
         },
         {
           "version": "27",
           "global_usage": 0,
           "release_date": 1364428800,
-          "era": -103,
+          "era": -105,
           "prefix": ""
         },
         {
           "version": "28",
           "global_usage": 0,
           "release_date": 1369094400,
-          "era": -102,
+          "era": -104,
           "prefix": ""
         },
         {
           "version": "29",
           "global_usage": 0,
           "release_date": 1374105600,
-          "era": -101,
+          "era": -103,
           "prefix": ""
         },
         {
           "version": "30",
           "global_usage": 0,
           "release_date": 1376956800,
-          "era": -100,
+          "era": -102,
           "prefix": ""
         },
         {
           "version": "31",
           "global_usage": 0,
           "release_date": 1384214400,
-          "era": -99,
+          "era": -101,
           "prefix": ""
         },
         {
           "version": "32",
           "global_usage": 0,
           "release_date": 1389657600,
-          "era": -98,
+          "era": -100,
           "prefix": ""
         },
         {
           "version": "33",
           "global_usage": 0,
           "release_date": 1392940800,
-          "era": -97,
+          "era": -99,
           "prefix": ""
         },
         {
           "version": "34",
           "global_usage": 0,
           "release_date": 1397001600,
-          "era": -96,
+          "era": -98,
           "prefix": ""
         },
         {
           "version": "35",
           "global_usage": 0,
           "release_date": 1400544000,
-          "era": -95,
+          "era": -97,
           "prefix": ""
         },
         {
           "version": "36",
           "global_usage": 0,
           "release_date": 1405468800,
-          "era": -94,
+          "era": -96,
           "prefix": ""
         },
         {
           "version": "37",
           "global_usage": 0,
           "release_date": 1409011200,
-          "era": -93,
+          "era": -95,
           "prefix": ""
         },
         {
           "version": "38",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1412640000,
-          "era": -92,
+          "era": -94,
           "prefix": ""
         },
         {
           "version": "39",
           "global_usage": 0,
           "release_date": 1416268800,
-          "era": -91,
+          "era": -93,
           "prefix": ""
         },
         {
           "version": "40",
           "global_usage": 0,
           "release_date": 1421798400,
-          "era": -90,
+          "era": -92,
           "prefix": ""
         },
         {
           "version": "41",
           "global_usage": 0,
           "release_date": 1425513600,
-          "era": -89,
+          "era": -91,
           "prefix": ""
         },
         {
           "version": "42",
           "global_usage": 0,
           "release_date": 1429401600,
-          "era": -88,
+          "era": -90,
           "prefix": ""
         },
         {
           "version": "43",
           "global_usage": 0,
           "release_date": 1432080000,
-          "era": -87,
+          "era": -89,
           "prefix": ""
         },
         {
           "version": "44",
           "global_usage": 0,
           "release_date": 1437523200,
-          "era": -86,
+          "era": -88,
           "prefix": ""
         },
         {
           "version": "45",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1441152000,
-          "era": -85,
+          "era": -87,
           "prefix": ""
         },
         {
           "version": "46",
           "global_usage": 0,
           "release_date": 1444780800,
-          "era": -84,
+          "era": -86,
           "prefix": ""
         },
         {
           "version": "47",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1449014400,
-          "era": -83,
+          "era": -85,
           "prefix": ""
         },
         {
           "version": "48",
-          "global_usage": 0.017605,
+          "global_usage": 0.014232,
           "release_date": 1453248000,
-          "era": -82,
+          "era": -84,
           "prefix": ""
         },
         {
           "version": "49",
-          "global_usage": 0.014084,
+          "global_usage": 0.014232,
           "release_date": 1456963200,
-          "era": -81,
+          "era": -83,
           "prefix": ""
         },
         {
           "version": "50",
-          "global_usage": 0.014084,
+          "global_usage": 0.024906,
           "release_date": 1460592000,
-          "era": -80,
+          "era": -82,
           "prefix": ""
         },
         {
           "version": "51",
           "global_usage": 0,
           "release_date": 1464134400,
-          "era": -79,
+          "era": -81,
           "prefix": ""
         },
         {
           "version": "52",
-          "global_usage": 0.003521,
+          "global_usage": 0.007116,
           "release_date": 1469059200,
-          "era": -78,
+          "era": -80,
           "prefix": ""
         },
         {
           "version": "53",
-          "global_usage": 0.003521,
+          "global_usage": 0.007116,
           "release_date": 1472601600,
-          "era": -77,
+          "era": -79,
           "prefix": ""
         },
         {
           "version": "54",
           "global_usage": 0,
           "release_date": 1476230400,
-          "era": -76,
+          "era": -78,
           "prefix": ""
         },
         {
           "version": "55",
           "global_usage": 0,
           "release_date": 1480550400,
-          "era": -75,
+          "era": -77,
           "prefix": ""
         },
         {
           "version": "56",
-          "global_usage": 0.007042,
+          "global_usage": 0.010674,
           "release_date": 1485302400,
-          "era": -74,
+          "era": -76,
           "prefix": ""
         },
         {
           "version": "57",
           "global_usage": 0,
           "release_date": 1489017600,
-          "era": -73,
+          "era": -75,
           "prefix": ""
         },
         {
           "version": "58",
-          "global_usage": 0.024647,
+          "global_usage": 0.007116,
           "release_date": 1492560000,
-          "era": -72,
+          "era": -74,
           "prefix": ""
         },
         {
           "version": "59",
           "global_usage": 0,
           "release_date": 1496707200,
-          "era": -71,
+          "era": -73,
           "prefix": ""
         },
         {
           "version": "60",
           "global_usage": 0,
           "release_date": 1500940800,
-          "era": -70,
+          "era": -72,
           "prefix": ""
         },
         {
           "version": "61",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1504569600,
-          "era": -69,
+          "era": -71,
           "prefix": ""
         },
         {
           "version": "62",
           "global_usage": 0,
           "release_date": 1508198400,
-          "era": -68,
+          "era": -70,
           "prefix": ""
         },
         {
           "version": "63",
           "global_usage": 0,
           "release_date": 1512518400,
-          "era": -67,
+          "era": -69,
           "prefix": ""
         },
         {
           "version": "64",
           "global_usage": 0,
           "release_date": 1516752000,
-          "era": -66,
+          "era": -68,
           "prefix": ""
         },
         {
           "version": "65",
           "global_usage": 0,
           "release_date": 1520294400,
-          "era": -65,
+          "era": -67,
           "prefix": ""
         },
         {
           "version": "66",
-          "global_usage": 0.021126,
+          "global_usage": 0.021348,
           "release_date": 1523923200,
-          "era": -64,
+          "era": -66,
           "prefix": ""
         },
         {
           "version": "67",
           "global_usage": 0,
           "release_date": 1527552000,
-          "era": -63,
+          "era": -65,
           "prefix": ""
         },
         {
           "version": "68",
           "global_usage": 0,
           "release_date": 1532390400,
-          "era": -62,
+          "era": -64,
           "prefix": ""
         },
         {
           "version": "69",
-          "global_usage": 0.010563,
+          "global_usage": 0.007116,
           "release_date": 1536019200,
-          "era": -61,
+          "era": -63,
           "prefix": ""
         },
         {
           "version": "70",
-          "global_usage": 0.014084,
+          "global_usage": 0.010674,
           "release_date": 1539648000,
-          "era": -60,
+          "era": -62,
           "prefix": ""
         },
         {
           "version": "71",
           "global_usage": 0,
           "release_date": 1543968000,
-          "era": -59,
+          "era": -61,
           "prefix": ""
         },
         {
           "version": "72",
           "global_usage": 0,
           "release_date": 1548720000,
-          "era": -58,
+          "era": -60,
           "prefix": ""
         },
         {
           "version": "73",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1552348800,
-          "era": -57,
+          "era": -59,
           "prefix": ""
         },
         {
           "version": "74",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1555977600,
-          "era": -56,
+          "era": -58,
           "prefix": ""
         },
         {
           "version": "75",
-          "global_usage": 0.007042,
+          "global_usage": 0.003558,
           "release_date": 1559606400,
-          "era": -55,
+          "era": -57,
           "prefix": ""
         },
         {
           "version": "76",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1564444800,
-          "era": -54,
+          "era": -56,
           "prefix": ""
         },
         {
           "version": "77",
-          "global_usage": 0.017605,
+          "global_usage": 0.010674,
           "release_date": 1568073600,
-          "era": -53,
+          "era": -55,
           "prefix": ""
         },
         {
           "version": "78",
-          "global_usage": 0.010563,
+          "global_usage": 0.010674,
           "release_date": 1571702400,
-          "era": -52,
+          "era": -54,
           "prefix": ""
         },
         {
           "version": "79",
-          "global_usage": 0.084504,
+          "global_usage": 0.08895,
           "release_date": 1575936000,
-          "era": -51,
+          "era": -53,
           "prefix": ""
         },
         {
           "version": "80",
-          "global_usage": 0.007042,
+          "global_usage": 0.010674,
           "release_date": 1580860800,
-          "era": -50,
+          "era": -52,
           "prefix": ""
         },
         {
           "version": "81",
-          "global_usage": 0.03521,
+          "global_usage": 0.024906,
           "release_date": 1586304000,
-          "era": -49,
+          "era": -51,
           "prefix": ""
         },
         {
           "version": "83",
-          "global_usage": 0.028168,
+          "global_usage": 0.032022,
           "release_date": 1589846400,
-          "era": -48,
+          "era": -50,
           "prefix": ""
         },
         {
           "version": "84",
-          "global_usage": 0.003521,
+          "global_usage": 0,
           "release_date": 1594684800,
-          "era": -47,
+          "era": -49,
           "prefix": ""
         },
         {
           "version": "85",
-          "global_usage": 0.014084,
+          "global_usage": 0.010674,
           "release_date": 1598313600,
-          "era": -46,
+          "era": -48,
           "prefix": ""
         },
         {
           "version": "86",
-          "global_usage": 0.021126,
+          "global_usage": 0.01779,
           "release_date": 1601942400,
-          "era": -45,
+          "era": -47,
           "prefix": ""
         },
         {
           "version": "87",
-          "global_usage": 0.063378,
+          "global_usage": 0.067602,
           "release_date": 1605571200,
-          "era": -44,
+          "era": -46,
           "prefix": ""
         },
         {
           "version": "88",
-          "global_usage": 0.007042,
+          "global_usage": 0.010674,
           "release_date": 1611014400,
-          "era": -43,
+          "era": -45,
           "prefix": ""
         },
         {
           "version": "89",
-          "global_usage": 0.010563,
+          "global_usage": 0.007116,
           "release_date": 1614556800,
-          "era": -42,
+          "era": -44,
           "prefix": ""
         },
         {
           "version": "90",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1618272000,
-          "era": -41,
+          "era": -43,
           "prefix": ""
         },
         {
           "version": "91",
-          "global_usage": 0.031689,
+          "global_usage": 0.03558,
           "release_date": 1621987200,
-          "era": -40,
+          "era": -42,
           "prefix": ""
         },
         {
           "version": "92",
-          "global_usage": 0.014084,
+          "global_usage": 0.010674,
           "release_date": 1626739200,
-          "era": -39,
+          "era": -41,
           "prefix": ""
         },
         {
           "version": "93",
-          "global_usage": 0.014084,
+          "global_usage": 0.010674,
           "release_date": 1630368000,
-          "era": -38,
+          "era": -40,
           "prefix": ""
         },
         {
           "version": "94",
-          "global_usage": 0.03521,
+          "global_usage": 0.032022,
           "release_date": 1632268800,
-          "era": -37,
+          "era": -39,
           "prefix": ""
         },
         {
           "version": "95",
-          "global_usage": 0.038731,
+          "global_usage": 0.014232,
           "release_date": 1634601600,
-          "era": -36,
+          "era": -38,
           "prefix": ""
         },
         {
           "version": "96",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1637020800,
-          "era": -35,
+          "era": -37,
           "prefix": ""
         },
         {
           "version": "97",
-          "global_usage": 0.010563,
+          "global_usage": 0.014232,
           "release_date": 1641340800,
-          "era": -34,
+          "era": -36,
           "prefix": ""
         },
         {
           "version": "98",
-          "global_usage": 0.042252,
+          "global_usage": 0.039138,
           "release_date": 1643673600,
-          "era": -33,
+          "era": -35,
           "prefix": ""
         },
         {
           "version": "99",
-          "global_usage": 0.014084,
+          "global_usage": 0.010674,
           "release_date": 1646092800,
-          "era": -32,
+          "era": -34,
           "prefix": ""
         },
         {
           "version": "100",
-          "global_usage": 0.021126,
+          "global_usage": 0.007116,
           "release_date": 1648512000,
-          "era": -31,
+          "era": -33,
           "prefix": ""
         },
         {
           "version": "101",
-          "global_usage": 0.014084,
+          "global_usage": 0.014232,
           "release_date": 1650931200,
-          "era": -30,
+          "era": -32,
           "prefix": ""
         },
         {
           "version": "102",
-          "global_usage": 0.010563,
+          "global_usage": 0.010674,
           "release_date": 1653350400,
-          "era": -29,
+          "era": -31,
           "prefix": ""
         },
         {
           "version": "103",
-          "global_usage": 0.10563,
+          "global_usage": 0.099624,
           "release_date": 1655769600,
-          "era": -28,
+          "era": -30,
           "prefix": ""
         },
         {
           "version": "104",
-          "global_usage": 0.021126,
+          "global_usage": 0.042696,
           "release_date": 1659398400,
-          "era": -27,
+          "era": -29,
           "prefix": ""
         },
         {
           "version": "105",
-          "global_usage": 0.010563,
+          "global_usage": 0.010674,
           "release_date": 1661817600,
-          "era": -26,
+          "era": -28,
           "prefix": ""
         },
         {
           "version": "106",
-          "global_usage": 0.017605,
+          "global_usage": 0.01779,
           "release_date": 1664236800,
-          "era": -25,
+          "era": -27,
           "prefix": ""
         },
         {
           "version": "107",
-          "global_usage": 0.021126,
+          "global_usage": 0.024906,
           "release_date": 1666656000,
-          "era": -24,
+          "era": -26,
           "prefix": ""
         },
         {
           "version": "108",
-          "global_usage": 0.03521,
+          "global_usage": 0.039138,
           "release_date": 1669680000,
-          "era": -23,
+          "era": -25,
           "prefix": ""
         },
         {
           "version": "109",
-          "global_usage": 1.09503,
+          "global_usage": 1.04605,
           "release_date": 1673308800,
-          "era": -22,
+          "era": -24,
           "prefix": ""
         },
         {
           "version": "110",
-          "global_usage": 0.017605,
+          "global_usage": 0.021348,
           "release_date": 1675728000,
-          "era": -21,
+          "era": -23,
           "prefix": ""
         },
         {
           "version": "111",
-          "global_usage": 0.031689,
+          "global_usage": 0.028464,
           "release_date": 1678147200,
-          "era": -20,
+          "era": -22,
           "prefix": ""
         },
         {
           "version": "112",
-          "global_usage": 0.03521,
+          "global_usage": 0.039138,
           "release_date": 1680566400,
-          "era": -19,
+          "era": -21,
           "prefix": ""
         },
         {
           "version": "113",
-          "global_usage": 0.109151,
+          "global_usage": 0.145878,
           "release_date": 1682985600,
-          "era": -18,
+          "era": -20,
           "prefix": ""
         },
         {
           "version": "114",
-          "global_usage": 0.07042,
+          "global_usage": 0.07116,
           "release_date": 1685404800,
-          "era": -17,
+          "era": -19,
           "prefix": ""
         },
         {
           "version": "115",
-          "global_usage": 0.024647,
+          "global_usage": 0.024906,
           "release_date": 1689724800,
-          "era": -16,
+          "era": -18,
           "prefix": ""
         },
         {
           "version": "116",
-          "global_usage": 0.130277,
+          "global_usage": 0.110298,
           "release_date": 1692057600,
-          "era": -15,
+          "era": -17,
           "prefix": ""
         },
         {
           "version": "117",
-          "global_usage": 0.07042,
+          "global_usage": 0.067602,
           "release_date": 1694476800,
-          "era": -14,
+          "era": -16,
           "prefix": ""
         },
         {
           "version": "118",
-          "global_usage": 0.059857,
+          "global_usage": 0.056928,
           "release_date": 1696896000,
-          "era": -13,
+          "era": -15,
           "prefix": ""
         },
         {
           "version": "119",
-          "global_usage": 0.042252,
+          "global_usage": 0.039138,
           "release_date": 1698710400,
-          "era": -12,
+          "era": -14,
           "prefix": ""
         },
         {
           "version": "120",
-          "global_usage": 0.063378,
+          "global_usage": 0.056928,
           "release_date": 1701993600,
-          "era": -11,
+          "era": -13,
           "prefix": ""
         },
         {
           "version": "121",
-          "global_usage": 0.119714,
+          "global_usage": 0.08895,
           "release_date": 1705968000,
-          "era": -10,
+          "era": -12,
           "prefix": ""
         },
         {
           "version": "122",
-          "global_usage": 0.077462,
+          "global_usage": 0.074718,
           "release_date": 1708387200,
-          "era": -9,
+          "era": -11,
           "prefix": ""
         },
         {
           "version": "123",
-          "global_usage": 0.080983,
+          "global_usage": 0.078276,
           "release_date": 1710806400,
-          "era": -8,
+          "era": -10,
           "prefix": ""
         },
         {
           "version": "124",
-          "global_usage": 0.14084,
+          "global_usage": 0.138762,
           "release_date": 1713225600,
-          "era": -7,
+          "era": -9,
           "prefix": ""
         },
         {
           "version": "125",
-          "global_usage": 1.28869,
+          "global_usage": 0.814782,
           "release_date": 1715644800,
-          "era": -6,
+          "era": -8,
           "prefix": ""
         },
         {
           "version": "126",
-          "global_usage": 0.415478,
+          "global_usage": 0.295314,
           "release_date": 1718064000,
-          "era": -5,
+          "era": -7,
           "prefix": ""
         },
         {
           "version": "127",
-          "global_usage": 0.334495,
+          "global_usage": 0.224154,
           "release_date": 1721174400,
-          "era": -4,
+          "era": -6,
           "prefix": ""
         },
         {
           "version": "128",
-          "global_usage": 0.179571,
+          "global_usage": 0.156552,
           "release_date": 1724112000,
-          "era": -3,
+          "era": -5,
           "prefix": ""
         },
         {
           "version": "129",
-          "global_usage": 0.232386,
+          "global_usage": 0.14232,
           "release_date": 1726531200,
-          "era": -2,
+          "era": -4,
           "prefix": ""
         },
         {
           "version": "130",
-          "global_usage": 0.982359,
+          "global_usage": 0.384264,
           "release_date": 1728950400,
-          "era": -1,
+          "era": -3,
           "prefix": ""
         },
         {
           "version": "131",
-          "global_usage": 15.0065,
+          "global_usage": 12.7946,
           "release_date": 1731369600,
-          "era": 0,
+          "era": -2,
           "prefix": ""
         },
         {
           "version": "132",
-          "global_usage": 0.017605,
+          "global_usage": 3.25201,
+          "release_date": 1736812800,
+          "era": -1,
+          "prefix": ""
+        },
+        {
+          "version": "133",
+          "global_usage": 0.014232,
+          "release_date": 1738627200,
+          "era": 0,
+          "prefix": ""
+        },
+        {
+          "version": "134",
+          "global_usage": 0.007116,
           "release_date": null,
           "era": 1,
           "prefix": ""
         },
         {
-          "version": "133",
-          "global_usage": 0.014084,
+          "version": "135",
+          "global_usage": 0,
           "release_date": null,
           "era": 2,
           "prefix": ""
         },
         {
-          "version": "134",
+          "version": "136",
           "global_usage": 0,
           "release_date": null,
           "era": 3,
           "prefix": ""
         }
       ],
-      "current_version": "131"
+      "current_version": "133"
     },
     "safari": {
       "browser": "Safari",
@@ -2743,37 +2783,38 @@
         "10": 0,
         "10.1": 0,
         "11": 0,
-        "11.1": 0.003521,
+        "11.1": 0.003558,
         "12": 0,
-        "12.1": 0.007042,
-        "13": 0.003521,
-        "13.1": 0.038731,
-        "14": 0.017605,
-        "14.1": 0.052815,
-        "15": 0.003521,
-        "15.1": 0.014084,
-        "15.2-15.3": 0.007042,
-        "15.4": 0.014084,
-        "15.5": 0.021126,
-        "15.6": 0.169008,
-        "16.0": 0.024647,
-        "16.1": 0.028168,
-        "16.2": 0.021126,
-        "16.3": 0.049294,
-        "16.4": 0.017605,
-        "16.5": 0.031689,
-        "16.6": 0.225344,
-        "17.0": 0.014084,
-        "17.1": 0.024647,
-        "17.2": 0.024647,
-        "17.3": 0.028168,
-        "17.4": 0.066899,
-        "17.5": 0.130277,
-        "17.6": 0.415478,
-        "18.0": 0.080983,
-        "18.1": 1.05278,
-        "18.2": 0.144361,
-        "18.3": 0.003521,
+        "12.1": 0.007116,
+        "13": 0.003558,
+        "13.1": 0.039138,
+        "14": 0.01779,
+        "14.1": 0.05337,
+        "15": 0.003558,
+        "15.1": 0.010674,
+        "15.2-15.3": 0.007116,
+        "15.4": 0.014232,
+        "15.5": 0.01779,
+        "15.6": 0.167226,
+        "16.0": 0.024906,
+        "16.1": 0.028464,
+        "16.2": 0.021348,
+        "16.3": 0.049812,
+        "16.4": 0.01779,
+        "16.5": 0.028464,
+        "16.6": 0.224154,
+        "17.0": 0.014232,
+        "17.1": 0.024906,
+        "17.2": 0.024906,
+        "17.3": 0.028464,
+        "17.4": 0.064044,
+        "17.5": 0.131646,
+        "17.6": 0.39138,
+        "18.0": 0.067602,
+        "18.1": 0.939312,
+        "18.2": 0.416286,
+        "18.3": 0.028464,
+        "18.4": 0,
         "TP": 0
       },
       "version_list": [
@@ -2781,320 +2822,327 @@
           "version": "3.1",
           "global_usage": 0,
           "release_date": 1205798400,
-          "era": -44,
+          "era": -45,
           "prefix": ""
         },
         {
           "version": "3.2",
           "global_usage": 0,
           "release_date": 1226534400,
-          "era": -43,
+          "era": -44,
           "prefix": ""
         },
         {
           "version": "4",
           "global_usage": 0,
           "release_date": 1244419200,
-          "era": -42,
+          "era": -43,
           "prefix": ""
         },
         {
           "version": "5",
           "global_usage": 0,
           "release_date": 1275868800,
-          "era": -41,
+          "era": -42,
           "prefix": ""
         },
         {
           "version": "5.1",
           "global_usage": 0,
           "release_date": 1311120000,
-          "era": -40,
+          "era": -41,
           "prefix": ""
         },
         {
           "version": "6",
           "global_usage": 0,
           "release_date": 1343174400,
-          "era": -39,
+          "era": -40,
           "prefix": ""
         },
         {
           "version": "6.1",
           "global_usage": 0,
           "release_date": 1382400000,
-          "era": -38,
+          "era": -39,
           "prefix": ""
         },
         {
           "version": "7",
           "global_usage": 0,
           "release_date": 1382400000,
-          "era": -37,
+          "era": -38,
           "prefix": ""
         },
         {
           "version": "7.1",
           "global_usage": 0,
           "release_date": 1410998400,
-          "era": -36,
+          "era": -37,
           "prefix": ""
         },
         {
           "version": "8",
           "global_usage": 0,
           "release_date": 1413417600,
-          "era": -35,
+          "era": -36,
           "prefix": ""
         },
         {
           "version": "9",
           "global_usage": 0,
           "release_date": 1443657600,
-          "era": -34,
+          "era": -35,
           "prefix": ""
         },
         {
           "version": "9.1",
           "global_usage": 0,
           "release_date": 1458518400,
-          "era": -33,
+          "era": -34,
           "prefix": ""
         },
         {
           "version": "10",
           "global_usage": 0,
           "release_date": 1474329600,
-          "era": -32,
+          "era": -33,
           "prefix": ""
         },
         {
           "version": "10.1",
           "global_usage": 0,
           "release_date": 1490572800,
-          "era": -31,
+          "era": -32,
           "prefix": ""
         },
         {
           "version": "11",
           "global_usage": 0,
           "release_date": 1505779200,
-          "era": -30,
+          "era": -31,
           "prefix": ""
         },
         {
           "version": "11.1",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1522281600,
-          "era": -29,
+          "era": -30,
           "prefix": ""
         },
         {
           "version": "12",
           "global_usage": 0,
           "release_date": 1537142400,
-          "era": -28,
+          "era": -29,
           "prefix": ""
         },
         {
           "version": "12.1",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1553472000,
-          "era": -27,
+          "era": -28,
           "prefix": ""
         },
         {
           "version": "13",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1568851200,
-          "era": -26,
+          "era": -27,
           "prefix": ""
         },
         {
           "version": "13.1",
-          "global_usage": 0.038731,
+          "global_usage": 0.039138,
           "release_date": 1585008000,
-          "era": -25,
+          "era": -26,
           "prefix": ""
         },
         {
           "version": "14",
-          "global_usage": 0.017605,
+          "global_usage": 0.01779,
           "release_date": 1600214400,
-          "era": -24,
+          "era": -25,
           "prefix": ""
         },
         {
           "version": "14.1",
-          "global_usage": 0.052815,
+          "global_usage": 0.05337,
           "release_date": 1619395200,
-          "era": -23,
+          "era": -24,
           "prefix": ""
         },
         {
           "version": "15",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1632096000,
-          "era": -22,
+          "era": -23,
           "prefix": ""
         },
         {
           "version": "15.1",
-          "global_usage": 0.014084,
+          "global_usage": 0.010674,
           "release_date": 1635292800,
-          "era": -21,
+          "era": -22,
           "prefix": ""
         },
         {
           "version": "15.2-15.3",
-          "global_usage": 0.007042,
+          "global_usage": 0.007116,
           "release_date": 1639353600,
-          "era": -20,
+          "era": -21,
           "prefix": ""
         },
         {
           "version": "15.4",
-          "global_usage": 0.014084,
+          "global_usage": 0.014232,
           "release_date": 1647216000,
-          "era": -19,
+          "era": -20,
           "prefix": ""
         },
         {
           "version": "15.5",
-          "global_usage": 0.021126,
+          "global_usage": 0.01779,
           "release_date": 1652745600,
-          "era": -18,
+          "era": -19,
           "prefix": ""
         },
         {
           "version": "15.6",
-          "global_usage": 0.169008,
+          "global_usage": 0.167226,
           "release_date": 1658275200,
-          "era": -17,
+          "era": -18,
           "prefix": ""
         },
         {
           "version": "16.0",
-          "global_usage": 0.024647,
+          "global_usage": 0.024906,
           "release_date": 1662940800,
-          "era": -16,
+          "era": -17,
           "prefix": ""
         },
         {
           "version": "16.1",
-          "global_usage": 0.028168,
+          "global_usage": 0.028464,
           "release_date": 1666569600,
-          "era": -15,
+          "era": -16,
           "prefix": ""
         },
         {
           "version": "16.2",
-          "global_usage": 0.021126,
+          "global_usage": 0.021348,
           "release_date": 1670889600,
-          "era": -14,
+          "era": -15,
           "prefix": ""
         },
         {
           "version": "16.3",
-          "global_usage": 0.049294,
+          "global_usage": 0.049812,
           "release_date": 1674432000,
-          "era": -13,
+          "era": -14,
           "prefix": ""
         },
         {
           "version": "16.4",
-          "global_usage": 0.017605,
+          "global_usage": 0.01779,
           "release_date": 1679875200,
-          "era": -12,
+          "era": -13,
           "prefix": ""
         },
         {
           "version": "16.5",
-          "global_usage": 0.031689,
+          "global_usage": 0.028464,
           "release_date": 1684368000,
-          "era": -11,
+          "era": -12,
           "prefix": ""
         },
         {
           "version": "16.6",
-          "global_usage": 0.225344,
+          "global_usage": 0.224154,
           "release_date": 1690156800,
-          "era": -10,
+          "era": -11,
           "prefix": ""
         },
         {
           "version": "17.0",
-          "global_usage": 0.014084,
+          "global_usage": 0.014232,
           "release_date": 1695686400,
-          "era": -9,
+          "era": -10,
           "prefix": ""
         },
         {
           "version": "17.1",
-          "global_usage": 0.024647,
+          "global_usage": 0.024906,
           "release_date": 1698192000,
-          "era": -8,
+          "era": -9,
           "prefix": ""
         },
         {
           "version": "17.2",
-          "global_usage": 0.024647,
+          "global_usage": 0.024906,
           "release_date": 1702252800,
-          "era": -7,
+          "era": -8,
           "prefix": ""
         },
         {
           "version": "17.3",
-          "global_usage": 0.028168,
+          "global_usage": 0.028464,
           "release_date": 1705881600,
-          "era": -6,
+          "era": -7,
           "prefix": ""
         },
         {
           "version": "17.4",
-          "global_usage": 0.066899,
+          "global_usage": 0.064044,
           "release_date": 1709596800,
-          "era": -5,
+          "era": -6,
           "prefix": ""
         },
         {
           "version": "17.5",
-          "global_usage": 0.130277,
+          "global_usage": 0.131646,
           "release_date": 1715558400,
-          "era": -4,
+          "era": -5,
           "prefix": ""
         },
         {
           "version": "17.6",
-          "global_usage": 0.415478,
+          "global_usage": 0.39138,
           "release_date": 1722211200,
-          "era": -3,
+          "era": -4,
           "prefix": ""
         },
         {
           "version": "18.0",
-          "global_usage": 0.080983,
+          "global_usage": 0.067602,
           "release_date": 1726444800,
-          "era": -2,
+          "era": -3,
           "prefix": ""
         },
         {
           "version": "18.1",
-          "global_usage": 1.05278,
+          "global_usage": 0.939312,
           "release_date": 1730073600,
-          "era": -1,
+          "era": -2,
           "prefix": ""
         },
         {
           "version": "18.2",
-          "global_usage": 0.144361,
+          "global_usage": 0.416286,
           "release_date": 1733875200,
-          "era": 0,
+          "era": -1,
           "prefix": ""
         },
         {
           "version": "18.3",
-          "global_usage": 0.003521,
+          "global_usage": 0.028464,
+          "release_date": 1737936000,
+          "era": 0,
+          "prefix": ""
+        },
+        {
+          "version": "18.4",
+          "global_usage": 0,
           "release_date": null,
           "era": 1,
           "prefix": ""
@@ -3107,7 +3155,7 @@
           "prefix": ""
         }
       ],
-      "current_version": "18.2"
+      "current_version": "18.3"
     },
     "opera": {
       "browser": "Opera",
@@ -3152,13 +3200,13 @@
         "37": 0,
         "38": 0,
         "39": 0,
-        "40": 0.003521,
+        "40": 0.003558,
         "41": 0,
         "42": 0,
         "43": 0,
         "44": 0,
         "45": 0,
-        "46": 0.014084,
+        "46": 0.014232,
         "47": 0,
         "48": 0,
         "49": 0,
@@ -3195,9 +3243,9 @@
         "82": 0,
         "83": 0,
         "84": 0,
-        "85": 0.007042,
-        "86": 0.028168,
-        "87": 0,
+        "85": 0,
+        "86": 0.032022,
+        "87": 0.010674,
         "88": 0,
         "89": 0,
         "90": 0,
@@ -3205,14 +3253,14 @@
         "92": 0,
         "93": 0,
         "94": 0,
-        "95": 0.031689,
+        "95": 0.032022,
         "96": 0,
         "97": 0,
         "98": 0,
         "99": 0,
         "100": 0,
         "101": 0,
-        "102": 0.021126,
+        "102": 0.010674,
         "103": 0,
         "104": 0,
         "105": 0,
@@ -3223,8 +3271,8 @@
         "110": 0,
         "111": 0,
         "112": 0,
-        "113": 0.003521,
-        "114": 0.616175
+        "113": 0,
+        "114": 0.313104
       },
       "version_list": [
         {
@@ -3481,7 +3529,7 @@
         },
         {
           "version": "40",
-          "global_usage": 0.003521,
+          "global_usage": 0.003558,
           "release_date": 1474329600,
           "era": -72,
           "prefix": ""
@@ -3523,7 +3571,7 @@
         },
         {
           "version": "46",
-          "global_usage": 0.014084,
+          "global_usage": 0.014232,
           "release_date": 1498003200,
           "era": -66,
           "prefix": ""
@@ -3782,21 +3830,21 @@
         },
         {
           "version": "85",
-          "global_usage": 0.007042,
+          "global_usage": 0,
           "release_date": 1647993600,
           "era": -29,
           "prefix": ""
         },
         {
           "version": "86",
-          "global_usage": 0.028168,
+          "global_usage": 0.032022,
           "release_date": 1650412800,
           "era": -28,
           "prefix": ""
         },
         {
           "version": "87",
-          "global_usage": 0,
+          "global_usage": 0.010674,
           "release_date": 1652745600,
           "era": -27,
           "prefix": ""
@@ -3852,7 +3900,7 @@
         },
         {
           "version": "95",
-          "global_usage": 0.031689,
+          "global_usage": 0.032022,
           "release_date": 1675209600,
           "era": -19,
           "prefix": ""
@@ -3901,7 +3949,7 @@
         },
         {
           "version": "102",
-          "global_usage": 0.021126,
+          "global_usage": 0.010674,
           "release_date": 1692748800,
           "era": -12,
           "prefix": ""
@@ -3978,14 +4026,14 @@
         },
         {
           "version": "113",
-          "global_usage": 0.003521,
+          "global_usage": 0,
           "release_date": 1724284800,
           "era": -1,
           "prefix": ""
         },
         {
           "version": "114",
-          "global_usage": 0.616175,
+          "global_usage": 0.313104,
           "release_date": 1727222400,
           "era": 0,
           "prefix": ""
@@ -4015,368 +4063,376 @@
       "usage_global": {
         "3.2": 0,
         "4.0-4.1": 0,
-        "4.2-4.3": 0.00278986,
-        "5.0-5.1": 0.00139493,
-        "6.0-6.1": 0.00557971,
-        "7.0-7.1": 0.00836957,
+        "4.2-4.3": 0.00293498,
+        "5.0-5.1": 0,
+        "6.0-6.1": 0.00733744,
+        "7.0-7.1": 0.00880493,
         "8": 0,
         "8.1-8.4": 0,
-        "9.0-9.2": 0.00557971,
-        "9.3": 0.0223189,
-        "10.0-10.2": 0.00278986,
-        "10.3": 0.0320834,
-        "11.0-11.2": 0.234348,
-        "11.3-11.4": 0.0111594,
-        "12.0-12.1": 0.00697464,
-        "12.2-12.5": 0.156232,
-        "13.0-13.1": 0.00278986,
-        "13.2": 0.0474276,
-        "13.3": 0.00697464,
-        "13.4-13.7": 0.0237138,
-        "14.0-14.4": 0.10462,
-        "14.5-14.8": 0.0655617,
-        "15.0-15.1": 0.0362681,
-        "15.2-15.3": 0.0348732,
-        "15.4": 0.0418479,
-        "15.5": 0.0474276,
-        "15.6-15.8": 0.542627,
-        "16.0": 0.0906704,
-        "16.1": 0.193895,
-        "16.2": 0.0990399,
-        "16.3": 0.171576,
-        "16.4": 0.0348732,
-        "16.5": 0.0711414,
-        "16.6-16.7": 0.683515,
-        "17.0": 0.0474276,
-        "17.1": 0.078116,
-        "17.2": 0.0641667,
-        "17.3": 0.0920653,
-        "17.4": 0.199475,
-        "17.5": 0.485435,
-        "17.6-17.7": 1.82178,
-        "18.0": 0.59424,
-        "18.1": 6.92303,
-        "18.2": 0.813243,
-        "18.3": 0.0306884
+        "9.0-9.2": 0.00293498,
+        "9.3": 0.0220123,
+        "10.0-10.2": 0.00440246,
+        "10.3": 0.0322847,
+        "11.0-11.2": 0.0924517,
+        "11.3-11.4": 0.0102724,
+        "12.0-12.1": 0.00586995,
+        "12.2-12.5": 0.155554,
+        "13.0-13.1": 0.00293498,
+        "13.2": 0.0176099,
+        "13.3": 0.00586995,
+        "13.4-13.7": 0.0220123,
+        "14.0-14.4": 0.143814,
+        "14.5-14.8": 0.0689719,
+        "15.0-15.1": 0.0352197,
+        "15.2-15.3": 0.0366872,
+        "15.4": 0.0425571,
+        "15.5": 0.0498946,
+        "15.6-15.8": 0.585528,
+        "16.0": 0.0880493,
+        "16.1": 0.192241,
+        "16.2": 0.0983217,
+        "16.3": 0.171696,
+        "16.4": 0.0366872,
+        "16.5": 0.0704394,
+        "16.6-16.7": 0.713199,
+        "17.0": 0.0454921,
+        "17.1": 0.0807118,
+        "17.2": 0.063102,
+        "17.3": 0.0895167,
+        "17.4": 0.192241,
+        "17.5": 0.463726,
+        "17.6-17.7": 1.59369,
+        "18.0": 0.490141,
+        "18.1": 6.52592,
+        "18.2": 2.20123,
+        "18.3": 0.190773,
+        "18.4": 0
       },
       "version_list": [
         {
           "version": "3.2",
           "global_usage": 0,
           "release_date": 1270252800,
-          "era": -43,
+          "era": -44,
           "prefix": ""
         },
         {
           "version": "4.0-4.1",
           "global_usage": 0,
           "release_date": 1283904000,
-          "era": -42,
+          "era": -43,
           "prefix": ""
         },
         {
           "version": "4.2-4.3",
-          "global_usage": 0.00278986,
+          "global_usage": 0.00293498,
           "release_date": 1299628800,
-          "era": -41,
+          "era": -42,
           "prefix": ""
         },
         {
           "version": "5.0-5.1",
-          "global_usage": 0.00139493,
+          "global_usage": 0,
           "release_date": 1331078400,
-          "era": -40,
+          "era": -41,
           "prefix": ""
         },
         {
           "version": "6.0-6.1",
-          "global_usage": 0.00557971,
+          "global_usage": 0.00733744,
           "release_date": 1359331200,
-          "era": -39,
+          "era": -40,
           "prefix": ""
         },
         {
           "version": "7.0-7.1",
-          "global_usage": 0.00836957,
+          "global_usage": 0.00880493,
           "release_date": 1394409600,
-          "era": -38,
+          "era": -39,
           "prefix": ""
         },
         {
           "version": "8",
           "global_usage": 0,
           "release_date": 1410912000,
-          "era": -37,
+          "era": -38,
           "prefix": ""
         },
         {
           "version": "8.1-8.4",
           "global_usage": 0,
           "release_date": 1413763200,
-          "era": -36,
+          "era": -37,
           "prefix": ""
         },
         {
           "version": "9.0-9.2",
-          "global_usage": 0.00557971,
+          "global_usage": 0.00293498,
           "release_date": 1442361600,
-          "era": -35,
+          "era": -36,
           "prefix": ""
         },
         {
           "version": "9.3",
-          "global_usage": 0.0223189,
+          "global_usage": 0.0220123,
           "release_date": 1458518400,
-          "era": -34,
+          "era": -35,
           "prefix": ""
         },
         {
           "version": "10.0-10.2",
-          "global_usage": 0.00278986,
+          "global_usage": 0.00440246,
           "release_date": 1473724800,
-          "era": -33,
+          "era": -34,
           "prefix": ""
         },
         {
           "version": "10.3",
-          "global_usage": 0.0320834,
+          "global_usage": 0.0322847,
           "release_date": 1490572800,
-          "era": -32,
+          "era": -33,
           "prefix": ""
         },
         {
           "version": "11.0-11.2",
-          "global_usage": 0.234348,
+          "global_usage": 0.0924517,
           "release_date": 1505779200,
-          "era": -31,
+          "era": -32,
           "prefix": ""
         },
         {
           "version": "11.3-11.4",
-          "global_usage": 0.0111594,
+          "global_usage": 0.0102724,
           "release_date": 1522281600,
-          "era": -30,
+          "era": -31,
           "prefix": ""
         },
         {
           "version": "12.0-12.1",
-          "global_usage": 0.00697464,
+          "global_usage": 0.00586995,
           "release_date": 1537142400,
-          "era": -29,
+          "era": -30,
           "prefix": ""
         },
         {
           "version": "12.2-12.5",
-          "global_usage": 0.156232,
+          "global_usage": 0.155554,
           "release_date": 1553472000,
-          "era": -28,
+          "era": -29,
           "prefix": ""
         },
         {
           "version": "13.0-13.1",
-          "global_usage": 0.00278986,
+          "global_usage": 0.00293498,
           "release_date": 1568851200,
-          "era": -27,
+          "era": -28,
           "prefix": ""
         },
         {
           "version": "13.2",
-          "global_usage": 0.0474276,
+          "global_usage": 0.0176099,
           "release_date": 1572220800,
-          "era": -26,
+          "era": -27,
           "prefix": ""
         },
         {
           "version": "13.3",
-          "global_usage": 0.00697464,
+          "global_usage": 0.00586995,
           "release_date": 1580169600,
-          "era": -25,
+          "era": -26,
           "prefix": ""
         },
         {
           "version": "13.4-13.7",
-          "global_usage": 0.0237138,
+          "global_usage": 0.0220123,
           "release_date": 1585008000,
-          "era": -24,
+          "era": -25,
           "prefix": ""
         },
         {
           "version": "14.0-14.4",
-          "global_usage": 0.10462,
+          "global_usage": 0.143814,
           "release_date": 1600214400,
-          "era": -23,
+          "era": -24,
           "prefix": ""
         },
         {
           "version": "14.5-14.8",
-          "global_usage": 0.0655617,
+          "global_usage": 0.0689719,
           "release_date": 1619395200,
-          "era": -22,
+          "era": -23,
           "prefix": ""
         },
         {
           "version": "15.0-15.1",
-          "global_usage": 0.0362681,
+          "global_usage": 0.0352197,
           "release_date": 1632096000,
-          "era": -21,
+          "era": -22,
           "prefix": ""
         },
         {
           "version": "15.2-15.3",
-          "global_usage": 0.0348732,
+          "global_usage": 0.0366872,
           "release_date": 1639353600,
-          "era": -20,
+          "era": -21,
           "prefix": ""
         },
         {
           "version": "15.4",
-          "global_usage": 0.0418479,
+          "global_usage": 0.0425571,
           "release_date": 1647216000,
-          "era": -19,
+          "era": -20,
           "prefix": ""
         },
         {
           "version": "15.5",
-          "global_usage": 0.0474276,
+          "global_usage": 0.0498946,
           "release_date": 1652659200,
-          "era": -18,
+          "era": -19,
           "prefix": ""
         },
         {
           "version": "15.6-15.8",
-          "global_usage": 0.542627,
+          "global_usage": 0.585528,
           "release_date": 1658275200,
-          "era": -17,
+          "era": -18,
           "prefix": ""
         },
         {
           "version": "16.0",
-          "global_usage": 0.0906704,
+          "global_usage": 0.0880493,
           "release_date": 1662940800,
-          "era": -16,
+          "era": -17,
           "prefix": ""
         },
         {
           "version": "16.1",
-          "global_usage": 0.193895,
+          "global_usage": 0.192241,
           "release_date": 1666569600,
-          "era": -15,
+          "era": -16,
           "prefix": ""
         },
         {
           "version": "16.2",
-          "global_usage": 0.0990399,
+          "global_usage": 0.0983217,
           "release_date": 1670889600,
-          "era": -14,
+          "era": -15,
           "prefix": ""
         },
         {
           "version": "16.3",
-          "global_usage": 0.171576,
+          "global_usage": 0.171696,
           "release_date": 1674432000,
-          "era": -13,
+          "era": -14,
           "prefix": ""
         },
         {
           "version": "16.4",
-          "global_usage": 0.0348732,
+          "global_usage": 0.0366872,
           "release_date": 1679875200,
-          "era": -12,
+          "era": -13,
           "prefix": ""
         },
         {
           "version": "16.5",
-          "global_usage": 0.0711414,
+          "global_usage": 0.0704394,
           "release_date": 1684368000,
-          "era": -11,
+          "era": -12,
           "prefix": ""
         },
         {
           "version": "16.6-16.7",
-          "global_usage": 0.683515,
+          "global_usage": 0.713199,
           "release_date": 1690156800,
-          "era": -10,
+          "era": -11,
           "prefix": ""
         },
         {
           "version": "17.0",
-          "global_usage": 0.0474276,
+          "global_usage": 0.0454921,
           "release_date": 1694995200,
-          "era": -9,
+          "era": -10,
           "prefix": ""
         },
         {
           "version": "17.1",
-          "global_usage": 0.078116,
+          "global_usage": 0.0807118,
           "release_date": 1698192000,
-          "era": -8,
+          "era": -9,
           "prefix": ""
         },
         {
           "version": "17.2",
-          "global_usage": 0.0641667,
+          "global_usage": 0.063102,
           "release_date": 1702252800,
-          "era": -7,
+          "era": -8,
           "prefix": ""
         },
         {
           "version": "17.3",
-          "global_usage": 0.0920653,
+          "global_usage": 0.0895167,
           "release_date": 1705881600,
-          "era": -6,
+          "era": -7,
           "prefix": ""
         },
         {
           "version": "17.4",
-          "global_usage": 0.199475,
+          "global_usage": 0.192241,
           "release_date": 1709596800,
-          "era": -5,
+          "era": -6,
           "prefix": ""
         },
         {
           "version": "17.5",
-          "global_usage": 0.485435,
+          "global_usage": 0.463726,
           "release_date": 1715558400,
-          "era": -4,
+          "era": -5,
           "prefix": ""
         },
         {
           "version": "17.6-17.7",
-          "global_usage": 1.82178,
+          "global_usage": 1.59369,
           "release_date": 1722211200,
-          "era": -3,
+          "era": -4,
           "prefix": ""
         },
         {
           "version": "18.0",
-          "global_usage": 0.59424,
+          "global_usage": 0.490141,
           "release_date": 1726444800,
-          "era": -2,
+          "era": -3,
           "prefix": ""
         },
         {
           "version": "18.1",
-          "global_usage": 6.92303,
+          "global_usage": 6.52592,
           "release_date": 1730073600,
-          "era": -1,
+          "era": -2,
           "prefix": ""
         },
         {
           "version": "18.2",
-          "global_usage": 0.813243,
+          "global_usage": 2.20123,
           "release_date": 1733875200,
-          "era": 0,
+          "era": -1,
           "prefix": ""
         },
         {
           "version": "18.3",
-          "global_usage": 0.0306884,
+          "global_usage": 0.190773,
+          "release_date": 1737936000,
+          "era": 0,
+          "prefix": ""
+        },
+        {
+          "version": "18.4",
+          "global_usage": 0,
           "release_date": null,
           "era": 1,
           "prefix": ""
         }
       ],
-      "current_version": "18.2"
+      "current_version": "18.3"
     },
     "op_mini": {
       "browser": "Opera Mini",
@@ -4410,11 +4466,11 @@
         "2.3": 0,
         "3": 0,
         "4": 0,
-        "4.1": 2.46202e-05,
-        "4.2-4.3": 4.92404e-05,
+        "4.1": 3.09216e-05,
+        "4.2-4.3": 6.18432e-05,
         "4.4": 0,
-        "4.4.3-4.4.4": 0.000295442,
-        "131": 0.24566
+        "4.4.3-4.4.4": 0.000371059,
+        "132": 0.308567
       },
       "version_list": [
         {
@@ -4454,14 +4510,14 @@
         },
         {
           "version": "4.1",
-          "global_usage": 2.46202e-05,
+          "global_usage": 3.09216e-05,
           "release_date": 1341792000,
           "era": -4,
           "prefix": ""
         },
         {
           "version": "4.2-4.3",
-          "global_usage": 4.92404e-05,
+          "global_usage": 6.18432e-05,
           "release_date": 1374624000,
           "era": -3,
           "prefix": ""
@@ -4475,20 +4531,20 @@
         },
         {
           "version": "4.4.3-4.4.4",
-          "global_usage": 0.000295442,
+          "global_usage": 0.000371059,
           "release_date": 1401667200,
           "era": -1,
           "prefix": ""
         },
         {
-          "version": "131",
-          "global_usage": 0.24566,
-          "release_date": 1731369600,
+          "version": "132",
+          "global_usage": 0.308567,
+          "release_date": 1737676800,
           "era": 0,
           "prefix": ""
         }
       ],
-      "current_version": "131"
+      "current_version": "132"
     },
     "bb": {
       "browser": "Blackberry Browser",
@@ -4531,7 +4587,7 @@
         "11.5": 0,
         "12": 0,
         "12.1": 0,
-        "80": 1.0096
+        "80": 1.03581
       },
       "version_list": [
         {
@@ -4578,7 +4634,7 @@
         },
         {
           "version": "80",
-          "global_usage": 1.0096,
+          "global_usage": 1.03581,
           "release_date": 1709769600,
           "era": 0,
           "prefix": "webkit"
@@ -4596,18 +4652,18 @@
       "prefix": "webkit",
       "type": "mobile",
       "usage_global": {
-        "131": 47.0453
+        "132": 46.1904
       },
       "version_list": [
         {
-          "version": "131",
-          "global_usage": 47.0453,
-          "release_date": 1731369600,
+          "version": "132",
+          "global_usage": 46.1904,
+          "release_date": 1737676800,
           "era": 0,
           "prefix": ""
         }
       ],
-      "current_version": "131"
+      "current_version": "132"
     },
     "and_ff": {
       "browser": "Firefox for Android",
@@ -4616,12 +4672,12 @@
       "prefix": "moz",
       "type": "mobile",
       "usage_global": {
-        "132": 0.32395
+        "132": 0.334984
       },
       "version_list": [
         {
           "version": "132",
-          "global_usage": 0.32395,
+          "global_usage": 0.334984,
           "release_date": 1730160000,
           "era": 0,
           "prefix": ""
@@ -4664,12 +4720,12 @@
       "prefix": "webkit",
       "type": "mobile",
       "usage_global": {
-        "15.5": 0.855228
+        "15.5": 0.83746
       },
       "version_list": [
         {
           "version": "15.5",
-          "global_usage": 0.855228,
+          "global_usage": 0.83746,
           "release_date": 1710115200,
           "era": 0,
           "prefix": "webkit"
@@ -4687,10 +4743,10 @@
       "prefix": "webkit",
       "type": "mobile",
       "usage_global": {
-        "4": 0.0859,
-        "5.0-5.4": 0.0107375,
+        "4": 0.0661544,
+        "5.0-5.4": 0.0110257,
         "6.2-6.4": 0,
-        "7.2-7.4": 0.021475,
+        "7.2-7.4": 0.0110257,
         "8.2": 0,
         "9.2": 0,
         "10.1": 0,
@@ -4700,29 +4756,29 @@
         "14.0": 0,
         "15.0": 0,
         "16.0": 0,
-        "17.0": 0.0107375,
+        "17.0": 0.0110257,
         "18.0": 0,
-        "19.0": 0.0107375,
+        "19.0": 0,
         "20": 0,
-        "21": 0.0322125,
-        "22": 0.0322125,
-        "23": 0.04295,
-        "24": 0.0536875,
-        "25": 0.04295,
-        "26": 0.1718,
-        "27": 1.77169
+        "21": 0.0220515,
+        "22": 0.0330772,
+        "23": 0.0330772,
+        "24": 0.0441029,
+        "25": 0.0441029,
+        "26": 0.110257,
+        "27": 1.90745
       },
       "version_list": [
         {
           "version": "4",
-          "global_usage": 0.0859,
+          "global_usage": 0.0661544,
           "release_date": 1461024000,
           "era": -23,
           "prefix": ""
         },
         {
           "version": "5.0-5.4",
-          "global_usage": 0.0107375,
+          "global_usage": 0.0110257,
           "release_date": 1481846400,
           "era": -22,
           "prefix": ""
@@ -4736,7 +4792,7 @@
         },
         {
           "version": "7.2-7.4",
-          "global_usage": 0.021475,
+          "global_usage": 0.0110257,
           "release_date": 1528329600,
           "era": -20,
           "prefix": ""
@@ -4806,7 +4862,7 @@
         },
         {
           "version": "17.0",
-          "global_usage": 0.0107375,
+          "global_usage": 0.0110257,
           "release_date": 1651708800,
           "era": -10,
           "prefix": ""
@@ -4820,7 +4876,7 @@
         },
         {
           "version": "19.0",
-          "global_usage": 0.0107375,
+          "global_usage": 0,
           "release_date": 1667260800,
           "era": -8,
           "prefix": ""
@@ -4834,49 +4890,49 @@
         },
         {
           "version": "21",
-          "global_usage": 0.0322125,
+          "global_usage": 0.0220515,
           "release_date": 1684454400,
           "era": -6,
           "prefix": ""
         },
         {
           "version": "22",
-          "global_usage": 0.0322125,
+          "global_usage": 0.0330772,
           "release_date": 1689292800,
           "era": -5,
           "prefix": ""
         },
         {
           "version": "23",
-          "global_usage": 0.04295,
+          "global_usage": 0.0330772,
           "release_date": 1697587200,
           "era": -4,
           "prefix": ""
         },
         {
           "version": "24",
-          "global_usage": 0.0536875,
+          "global_usage": 0.0441029,
           "release_date": 1711497600,
           "era": -3,
           "prefix": ""
         },
         {
           "version": "25",
-          "global_usage": 0.04295,
+          "global_usage": 0.0441029,
           "release_date": 1715126400,
           "era": -2,
           "prefix": ""
         },
         {
           "version": "26",
-          "global_usage": 0.1718,
+          "global_usage": 0.110257,
           "release_date": 1717718400,
           "era": -1,
           "prefix": ""
         },
         {
           "version": "27",
-          "global_usage": 1.77169,
+          "global_usage": 1.90745,
           "release_date": 1725667200,
           "era": 0,
           "prefix": ""
@@ -4891,12 +4947,12 @@
       "prefix": "webkit",
       "type": "mobile",
       "usage_global": {
-        "14.9": 0.239723
+        "14.9": 0.199702
       },
       "version_list": [
         {
           "version": "14.9",
-          "global_usage": 0.239723,
+          "global_usage": 0.199702,
           "release_date": 1710288000,
           "era": 0,
           "prefix": ""
@@ -4931,13 +4987,13 @@
       "prefix": "moz",
       "type": "mobile",
       "usage_global": {
-        "2.5": 0.019437,
+        "2.5": 0.019326,
         "3.0-3.1": 0
       },
       "version_list": [
         {
           "version": "2.5",
-          "global_usage": 0.019437,
+          "global_usage": 0.019326,
           "release_date": 1527811200,
           "era": -1,
           "prefix": ""
