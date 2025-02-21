@@ -6,7 +6,7 @@
 
 ### Changed
 
-* Miscellaneous code lints
+* Miscellaneous code changes and lints
 
 
 
