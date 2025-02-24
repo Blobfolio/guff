@@ -60,19 +60,29 @@ use guff_css::{
 	Css,
 	GuffError,
 };
-use std::path::Path;
+use std::{
+	path::Path,
+	process::ExitCode,
+};
 
 
 
 /// # Main.
-fn main() {
+fn main() -> ExitCode {
 	match main__() {
-		Ok(()) => {},
+		Ok(()) => ExitCode::SUCCESS,
+		Err(GuffError::PrintHelp) => {
+			helper();
+			ExitCode::SUCCESS
+		},
 		Err(GuffError::PrintVersion) => {
 			println!(concat!("Guff v", env!("CARGO_PKG_VERSION")));
+			ExitCode::SUCCESS
 		},
-		Err(GuffError::PrintHelp) => { helper(); },
-		Err(e) => { Msg::error(e.to_string()).die(1); },
+		Err(e) => {
+			Msg::error(e.to_string()).eprint();
+			ExitCode::FAILURE
+		},
 	}
 }
 
