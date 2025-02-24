@@ -66,10 +66,10 @@ description = "The path to save the minified output to. If omitted, the result w
 path = true
 
 [build-dependencies]
-argyle = "0.10.*"
+argyle = "0.11.*"
 
 [dependencies]
-argyle = "0.10.*"
+argyle = "0.11.*"
 fyi_msg = "1.6.*"
 write_atomic = "0.5.*"
 
