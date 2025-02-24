@@ -2,6 +2,15 @@
 
 
 
+## [0.7.0](https://github.com/Blobfolio/guff/releases/tag/v0.7.0) - TBD
+
+### Changed
+
+* Bump MSRV to `1.85`
+* Bump Rust edition to `2024`
+
+
+
 ## [0.6.1](https://github.com/Blobfolio/guff/releases/tag/v0.6.1) - 2025-02-20
 
 ### Changed
