@@ -6,8 +6,11 @@
 
 ### Changed
 
+* Bump `dactyl` to `0.10`
+* Bump `trimothy` to `0.7`
 * Bump MSRV to `1.85`
 * Bump Rust edition to `2024`
+* Miscellaneous code changes and lints
 
 
 
