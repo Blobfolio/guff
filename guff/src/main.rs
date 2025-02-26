@@ -60,19 +60,29 @@ use guff_css::{
 	Css,
 	GuffError,
 };
-use std::path::Path;
+use std::{
+	path::Path,
+	process::ExitCode,
+};
 
 
 
 /// # Main.
-fn main() {
+fn main() -> ExitCode {
 	match main__() {
-		Ok(()) => {},
+		Ok(()) => ExitCode::SUCCESS,
+		Err(GuffError::PrintHelp) => {
+			helper();
+			ExitCode::SUCCESS
+		},
 		Err(GuffError::PrintVersion) => {
 			println!(concat!("Guff v", env!("CARGO_PKG_VERSION")));
+			ExitCode::SUCCESS
 		},
-		Err(GuffError::PrintHelp) => { helper(); },
-		Err(e) => { Msg::error(e.to_string()).die(1); },
+		Err(e) => {
+			Msg::error(e.to_string()).eprint();
+			ExitCode::FAILURE
+		},
 	}
 }
 
@@ -98,9 +108,7 @@ fn main__() -> Result<(), GuffError> {
 			Argument::KeyWithValue("-o" | "--output", s) => { output.replace(s); },
 
 			// Nothing else is expected.
-			Argument::Other(s) => if s.starts_with('-') {
-				return Err(GuffError::Cli(s))
-			},
+			Argument::Other(s) => return Err(GuffError::Cli(s)),
 			Argument::InvalidUtf8(s) => return Err(GuffError::Cli(s.to_string_lossy().into_owned())),
 			_ => {},
 		}

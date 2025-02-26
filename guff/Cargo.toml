@@ -1,9 +1,9 @@
 [package]
 name = "guff"
-version = "0.6.1"
+version = "0.7.0"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
-edition = "2021"
+edition = "2024"
 description = "A simple SASS/SCSS compiler and CSS parser/minifier."
 repository = "https://github.com/Blobfolio/guff"
 readme = "README.md"
@@ -66,12 +66,12 @@ description = "The path to save the minified output to. If omitted, the result w
 path = true
 
 [build-dependencies]
-argyle = "0.10.*"
+argyle = "0.11.*"
 
 [dependencies]
-argyle = "0.10.*"
-fyi_msg = "1.6.*"
-write_atomic = "0.5.*"
+argyle = "0.11.*"
+fyi_msg = "1.7.*"
+write_atomic = "0.6.*"
 
 [dependencies.guff_css]
 path = "../guff_css"

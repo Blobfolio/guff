@@ -2,6 +2,19 @@
 
 
 
+## [0.7.0](https://github.com/Blobfolio/guff/releases/tag/v0.7.0) - 2025-02-25
+
+### Changed
+
+* Bump `dactyl` to `0.10`
+* Bump `oxford_join` to `0.5`
+* Bump `trimothy` to `0.7`
+* Bump MSRV to `1.85`
+* Bump Rust edition to `2024`
+* Miscellaneous code changes and lints
+
+
+
 ## [0.6.1](https://github.com/Blobfolio/guff/releases/tag/v0.6.1) - 2025-02-20
 
 ### Changed
