@@ -54,7 +54,10 @@
 
 
 use argyle::Argument;
-use fyi_msg::Msg;
+use fyi_msg::{
+	AnsiColor,
+	Msg,
+};
 use guff_css::{
 	Agents,
 	Css,
@@ -131,7 +134,7 @@ fn main__() -> Result<(), GuffError> {
 						// capped and to what, but not if we're sending the CSS
 						// to STDOUT.
 						if output.is_some() {
-							Msg::custom("Compatibility", 13, &format!(
+							Msg::new(("Compatibility", AnsiColor::LightMagenta), format!(
 								"CSS features capped to {agents}."
 							))
 								.with_newline(true)
