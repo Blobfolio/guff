@@ -1,6 +1,6 @@
 [package]
 name = "guff"
-version = "0.7.2"
+version = "0.7.3"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2024"
@@ -70,7 +70,7 @@ argyle = "0.12.*"
 
 [dependencies]
 argyle = "0.12.*"
-fyi_msg = "1.8.*"
+fyi_msg = "2.0.*"
 write_atomic = "0.6.*"
 
 [dependencies.guff_css]
