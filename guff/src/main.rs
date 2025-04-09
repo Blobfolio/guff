@@ -54,6 +54,11 @@
 
 
 use argyle::Argument;
+use fyi_ansi::{
+	ansi,
+	csi,
+	dim,
+};
 use fyi_msg::{
 	AnsiColor,
 	Msg,
@@ -173,7 +178,7 @@ fn helper() {
     |__sss))_|
     |___ss))\|
      |_ss))
-      )_s))  ", "\x1b[38;5;199mGuff\x1b[0;38;5;69m v", env!("CARGO_PKG_VERSION"), "\x1b[0m", r"
+      )_s))  ", csi!(199), "Guff", ansi!((cornflower_blue) " v", env!("CARGO_PKG_VERSION")), r"
 (`(  /_s))   A simple SASS/SCSS compiler
  (_\/_s))    and CSS parser/minifier.
   (\/))
@@ -197,14 +202,14 @@ OPTIONS:
 
 COMPATIBILITY:
     The following browser strings are supported by the -b/--browsers option:
-      * android ", "\x1b[2m(the generic Android browser)\x1b[0m
+      * android ", dim!("(the generic Android browser)"), "
       * chrome
       * edge
       * firefox
-      * ios \x1b[2m(mobile Safari)\x1b[0m
+      * ios ", dim!("(mobile Safari)"), "
       * opera
       * safari
-      * samsung \x1b[2m(Samsung's Android browser)\x1b[0m
+      * samsung ", dim!("(Samsung's Android browser)"), "
 "
 	));
 }
