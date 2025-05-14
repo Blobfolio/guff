@@ -24,9 +24,8 @@ version = "=0.13.4"
 default-features = false
 
 [dependencies.lightningcss]
-version = "=1.0.0-alpha.65"
+version = "=1.0.0-alpha.66"
 default-features = false
-features = [ "grid" ]
 
 [build-dependencies]
 dactyl = "0.10.*"
