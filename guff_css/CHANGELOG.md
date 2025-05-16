@@ -2,6 +2,15 @@
 
 
 
+## [0.7.4](https://github.com/Blobfolio/guff/releases/tag/v0.7.4) - 2025-05-15
+
+### Changed
+
+* Bump `lightningcss` to `alpha66`
+* Miscellaneous code changes and lints
+
+
+
 ## [0.7.3](https://github.com/Blobfolio/guff/releases/tag/v0.7.3) - 2025-04-03
 
 ### Changed
