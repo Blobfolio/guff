@@ -283,7 +283,9 @@ impl Borrow<str> for Agent {
 
 impl fmt::Display for Agent {
 	#[inline]
-	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result { f.write_str(self.as_str()) }
+	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+		<str as fmt::Display>::fmt(self.as_str(), f)
+	}
 }
 
 impl Eq for Agent {}
