@@ -70,8 +70,8 @@ argyle = "0.12.*"
 
 [dependencies]
 argyle = "0.12.*"
-fyi_ansi = "2.0.*"
-fyi_msg = "2.0.*"
+fyi_ansi = "2.1.*"
+fyi_msg = "2.1.*"
 write_atomic = "0.6.*"
 
 [dependencies.guff_css]
