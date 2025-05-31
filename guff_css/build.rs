@@ -42,7 +42,7 @@ const DATA_FALLBACK: &str = "skel/data-2.0.json";
 /// The versions are sorted descendingly.
 ///
 /// That's it!
-pub fn main() {
+fn main() {
 	println!("cargo:rerun-if-env-changed=CARGO_PKG_VERSION");
 
 	let raw: Raw = serde_json::from_slice(&fetch()).expect("Unable to parse raw.");
