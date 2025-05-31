@@ -2,6 +2,16 @@
 
 
 
+## [0.8.0](https://github.com/Blobfolio/guff/releases/tag/v0.8.0) - 2025-05-30
+
+### Changed
+
+* Bump `dactyl` to `0.11`
+* Bump MSRV to `1.87`
+* Fix deps.rs badge
+
+
+
 ## [0.7.4](https://github.com/Blobfolio/guff/releases/tag/v0.7.4) - 2025-05-15
 
 ### Changed
