@@ -8,6 +8,7 @@
 
 * Bump `dactyl` to `0.11`
 * Bump MSRV to `1.87`
+* Fix deps.rs badge
 
 
 

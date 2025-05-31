@@ -1,8 +1,8 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.7.4
+    Version:   0.8.0
     Target:    x86_64-unknown-linux-gnu
-    Generated: 2025-05-16 02:36:13 UTC
+    Generated: 2025-05-31 01:59:54 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -10,7 +10,7 @@
 | [allocator-api2](https://github.com/zakarumych/allocator-api2) | 0.2.21 | [Zakarum](mailto:zaq.dev@icloud.com) | MIT OR Apache-2.0 |
 | [**argyle**](https://github.com/Blobfolio/argyle) | 0.12.3 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [bitflags](https://github.com/bitflags/bitflags) | 2.9.1 | The Rust Project Developers | MIT OR Apache-2.0 |
-| [cc](https://github.com/rust-lang/cc-rs) ⚒️ | 1.2.22 | [Alex Crichton](mailto:alex@alexcrichton.com) | MIT OR Apache-2.0 |
+| [cc](https://github.com/rust-lang/cc-rs) ⚒️ | 1.2.25 | [Alex Crichton](mailto:alex@alexcrichton.com) | MIT OR Apache-2.0 |
 | [cfg-if](https://github.com/alexcrichton/cfg-if) | 1.0.0 | [Alex Crichton](mailto:alex@alexcrichton.com) | MIT OR Apache-2.0 |
 | [codemap](https://github.com/kevinmehall/codemap) | 0.1.3 | [Kevin Mehall](mailto:km@kevinmehall.net) | MIT OR Apache-2.0 |
 | [const-str](https://github.com/Nugine/const-str) | 0.3.2 | [Nugine](mailto:nugine@foxmail.com) | MIT |
@@ -19,20 +19,20 @@
 | [cssparser](https://github.com/servo/rust-cssparser) | 0.33.0 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MPL-2.0 |
 | [cssparser-color](https://github.com/servo/rust-cssparser) | 0.1.0 | [Emilio Cobos Álvarez](mailto:emilio@crisal.io) | MPL-2.0 |
 | [cssparser-macros](https://github.com/servo/rust-cssparser) | 0.6.1 | [Simon Sapin](mailto:simon.sapin@exyr.org) | MPL-2.0 |
-| [**dactyl**](https://github.com/Blobfolio/dactyl) | 0.10.2 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [**dactyl**](https://github.com/Blobfolio/dactyl) | 0.11.1 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [data-encoding](https://github.com/ia0/data-encoding) | 2.9.0 | [Julien Cretin](mailto:git@ia0.eu) | MIT |
 | [dtoa](https://github.com/dtolnay/dtoa) | 1.0.10 | [David Tolnay](mailto:dtolnay@gmail.com) | MIT OR Apache-2.0 |
 | [dtoa-short](https://github.com/upsuper/dtoa-short) | 0.3.5 | [Xidorn Quan](mailto:me@upsuper.org) | MPL-2.0 |
 | [either](https://github.com/rayon-rs/either) | 1.15.0 | bluss | MIT OR Apache-2.0 |
 | [equivalent](https://github.com/indexmap-rs/equivalent) | 1.0.2 |  | Apache-2.0 OR MIT |
 | [fastrand](https://github.com/smol-rs/fastrand) | 2.3.0 | [Stjepan Glavina](mailto:stjepang@gmail.com) | Apache-2.0 OR MIT |
-| [**fyi_ansi**](https://github.com/Blobfolio/fyi) | 2.1.0 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
-| [**fyi_msg**](https://github.com/Blobfolio/fyi) | 2.1.0 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [**fyi_ansi**](https://github.com/Blobfolio/fyi) | 2.1.2 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [**fyi_msg**](https://github.com/Blobfolio/fyi) | 2.1.2 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.2.16 | The Rand Project Developers | MIT OR Apache-2.0 |
 | [getrandom](https://github.com/rust-random/getrandom) | 0.3.3 | The Rand Project Developers | MIT OR Apache-2.0 |
 | [**grass**](https://github.com/connorskees/grass) | 0.13.4 | [Connor Skees](mailto:39542938&#43;connorskees@users.noreply.github.com) | MIT |
 | [grass_compiler](https://github.com/connorskees/grass) | 0.13.4 | [Connor Skees](mailto:39542938&#43;connorskees@users.noreply.github.com) | MIT |
-| [**guff_css**](https://github.com/Blobfolio/guff) | 0.7.4 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [**guff_css**](https://github.com/Blobfolio/guff) | 0.8.0 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.14.5 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | MIT OR Apache-2.0 |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.15.3 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | MIT OR Apache-2.0 |
 | [indexmap](https://github.com/indexmap-rs/indexmap) | 2.9.0 |  | Apache-2.0 OR MIT |
@@ -48,7 +48,7 @@
 | [memchr](https://github.com/BurntSushi/memchr) ⚒️ | 2.7.4 | [Andrew Gallant](mailto:jamslam@gmail.com) and bluss | Unlicense OR MIT |
 | [**minreq**](https://github.com/neonmoe/minreq) ⚒️ | 2.13.4 | [Jens Pitkanen](mailto:jens@neon.moe) | ISC |
 | [once_cell](https://github.com/matklad/once_cell) | 1.21.3 | [Aleksey Kladov](mailto:aleksey.kladov@gmail.com) | MIT OR Apache-2.0 |
-| [**oxford_join**](https://github.com/Blobfolio/oxford_join) | 0.5.0 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [**oxford_join**](https://github.com/Blobfolio/oxford_join) | 0.5.1 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [parcel_selectors](https://github.com/parcel-bundler/lightningcss) | 0.28.2 | The Servo Project Developers | MPL-2.0 |
 | [paste](https://github.com/dtolnay/paste) | 1.0.15 | [David Tolnay](mailto:dtolnay@gmail.com) | MIT OR Apache-2.0 |
 | [pathdiff](https://github.com/Manishearth/pathdiff) | 0.2.3 | [Manish Goregaokar](mailto:manishsmail@gmail.com) | MIT OR Apache-2.0 |
