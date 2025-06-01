@@ -8,6 +8,7 @@
 
 * Bump `dactyl` to `0.12`
 * Bump `oxford_join` to `0.6`
+* Bump `trimothy` to `0.8`
 * Miscellaneous code changes and lints
 
 

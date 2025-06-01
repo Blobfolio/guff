@@ -17,7 +17,7 @@ targets = [ "x86_64-unknown-linux-gnu", "x86_64-apple-darwin" ]
 [dependencies]
 dactyl = "0.12.*"
 oxford_join = "0.6.*"
-trimothy = "0.7.*"
+trimothy = "0.8.*"
 
 [dependencies.grass]
 version = "=0.13.4"
