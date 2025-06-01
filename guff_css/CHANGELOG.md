@@ -2,6 +2,15 @@
 
 
 
+## [0.8.1](https://github.com/Blobfolio/guff/releases/tag/v0.8.1) - TBD
+
+### Changed
+
+* Bump `dactyl` to `0.12`
+* Miscellaneous code changes and lints
+
+
+
 ## [0.8.0](https://github.com/Blobfolio/guff/releases/tag/v0.8.0) - 2025-05-30
 
 ### Changed
