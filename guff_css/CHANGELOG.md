@@ -2,7 +2,7 @@
 
 
 
-## [0.8.1](https://github.com/Blobfolio/guff/releases/tag/v0.8.1) - TBD
+## [0.8.1](https://github.com/Blobfolio/guff/releases/tag/v0.8.1) - 2025-06-01
 
 ### Changed
 
