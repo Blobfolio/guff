@@ -1,6 +1,6 @@
 [package]
 name = "guff_css"
-version = "0.8.0"
+version = "0.8.1"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2024"
@@ -15,9 +15,9 @@ default-target = "x86_64-unknown-linux-gnu"
 targets = [ "x86_64-unknown-linux-gnu", "x86_64-apple-darwin" ]
 
 [dependencies]
-dactyl = "0.11.*"
-oxford_join = "0.5.*"
-trimothy = "0.7.*"
+dactyl = "0.12.*"
+oxford_join = "0.6.*"
+trimothy = "0.8.*"
 
 [dependencies.grass]
 version = "=0.13.4"
@@ -28,8 +28,8 @@ version = "=1.0.0-alpha.66"
 default-features = false
 
 [build-dependencies]
-dactyl = "0.11.*"
-oxford_join = "0.5.*"
+dactyl = "0.12.*"
+oxford_join = "0.6.*"
 
 [build-dependencies.minreq]
 version = "2.13.*"

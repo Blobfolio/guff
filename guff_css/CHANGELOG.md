@@ -2,6 +2,17 @@
 
 
 
+## [0.8.1](https://github.com/Blobfolio/guff/releases/tag/v0.8.1) - 2025-06-01
+
+### Changed
+
+* Bump `dactyl` to `0.12`
+* Bump `oxford_join` to `0.6`
+* Bump `trimothy` to `0.8`
+* Miscellaneous code changes and lints
+
+
+
 ## [0.8.0](https://github.com/Blobfolio/guff/releases/tag/v0.8.0) - 2025-05-30
 
 ### Changed

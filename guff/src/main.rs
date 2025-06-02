@@ -54,12 +54,12 @@
 
 
 use argyle::Argument;
-use fyi_ansi::{
-	ansi,
-	csi,
-	dim,
-};
 use fyi_msg::{
+	fyi_ansi::{
+		ansi,
+		csi,
+		dim,
+	},
 	AnsiColor,
 	Msg,
 };
