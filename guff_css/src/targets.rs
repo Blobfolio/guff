@@ -158,14 +158,13 @@ impl Agents {
 	/// assert!(agents.get(Agent::Firefox).is_none());
 	/// ```
 	pub fn set(&mut self, agent: Agent, major: u32) {
-		if 0 < major {
-			if let Some(x) = agent.set().iter().rfind(|(_, m)| *m == major).copied() {
-				*(self.0.entry(agent).or_insert((0,0))) = x;
-				return;
-			}
+		if
+			0 < major &&
+			let Some(x) = agent.set().iter().rfind(|(_, m)| *m == major).copied()
+		{
+			*(self.0.entry(agent).or_insert((0,0))) = x;
 		}
-
-		self.0.remove(&agent);
+		else { self.0.remove(&agent); }
 	}
 
 	/// # Cap Support to N Versions Back.

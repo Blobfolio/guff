@@ -2,7 +2,10 @@
 # Guff: Build
 */
 
-use dactyl::NiceU32;
+use dactyl::{
+	NiceSeparator,
+	NiceU32,
+};
 use oxford_join::JoinFmt;
 use serde::Deserialize;
 use std::{
@@ -230,8 +233,8 @@ impl fmt::Display for Versions {
 		write!(
 			f,
 			"({}, {})",
-			NiceU32::with_separator(self.0, b'_'),
-			NiceU32::with_separator(self.1, b'_'),
+			NiceU32::with_separator(self.0, NiceSeparator::Underscore),
+			NiceU32::with_separator(self.1, NiceSeparator::Underscore),
 		)
 	}
 }
