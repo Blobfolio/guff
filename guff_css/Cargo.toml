@@ -15,7 +15,7 @@ default-target = "x86_64-unknown-linux-gnu"
 targets = [ "x86_64-unknown-linux-gnu", "x86_64-apple-darwin" ]
 
 [dependencies]
-dactyl = "0.12.*"
+dactyl = "0.13.*"
 oxford_join = "0.7.*"
 trimothy = "0.9.*"
 
@@ -28,7 +28,7 @@ version = "=1.0.0-alpha.67"
 default-features = false
 
 [build-dependencies]
-dactyl = "0.12.*"
+dactyl = "0.13.*"
 oxford_join = "0.7.*"
 
 [build-dependencies.minreq]
