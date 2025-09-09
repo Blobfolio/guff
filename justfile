@@ -32,7 +32,12 @@ skel_dir    := justfile_directory() + "/skel"
 caniuse_url := "https://github.com/Fyrd/caniuse/raw/main/fulldata-json/data-2.0.json"
 caniuse_tmp := "/tmp/caniuse.json"
 
-export RUSTFLAGS := "-C target-cpu=x86-64-v3"
+export RUSTFLAGS := "-Ctarget-cpu=x86-64-v3 -Cllvm-args=--cost-kind=throughput -Clinker-plugin-lto -Clink-arg=-fuse-ld=lld"
+export CC        := "clang"
+export CXX       := "clang++"
+export CFLAGS    := `llvm-config --cflags` + " -march=x86-64-v3 -Wall -Wextra -flto"
+export CXXFLAGS  := `llvm-config --cxxflags` + " -march=x86-64-v3 -Wall -Wextra -flto"
+export LDFLAGS   := `llvm-config --ldflags` + " -fuse-ld=lld -flto"
 
 
 
@@ -119,15 +124,29 @@ export RUSTFLAGS := "-C target-cpu=x86-64-v3"
 		-- {{ ARGS }}
 
 
-# Unit tests!
+# Unit Tests!
 @test:
 	clear
-	cargo test \
-		--all-features \
-		--target-dir "{{ cargo_dir }}"
+
+	fyi task "Test (Release)"
 	cargo test \
 		--all-features \
 		--release \
+		--target-dir "{{ cargo_dir }}"
+
+	just _test-debug
+
+
+# Unit Tests (Debug).
+_test-debug:
+	#!/usr/bin/env bash
+	set -e
+
+	unset -v RUSTFLAGS CC CXX CFLAGS CXXFLAGS LDFLAGS
+
+	fyi task "Test (Debug)"
+	cargo test \
+		--all-features \
 		--target-dir "{{ cargo_dir }}"
 
 
