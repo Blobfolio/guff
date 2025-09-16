@@ -51,6 +51,8 @@
 	unused_import_braces,
 )]
 
+#![expect(clippy::redundant_pub_crate, reason = "Unresolvable.")]
+
 
 
 mod targets;
