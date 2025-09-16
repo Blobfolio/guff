@@ -8,7 +8,7 @@ use dactyl::{
 	traits::BytesToUnsigned,
 };
 use oxford_join::OxfordJoinFmt;
-use lightningcss::targets::Browsers;
+use guff_css::lightningcss::targets::Browsers;
 use std::{
 	borrow::Borrow,
 	collections::HashMap,

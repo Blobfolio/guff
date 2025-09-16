@@ -15,10 +15,7 @@ for production use.
 
 Refer to the [documentation](https://docs.rs/guff_css/) for usage and other details.
 
-**Compatibility**
-
-This library is only compatible with Unix platforms. For broader support,
-consider using [`grass`](https://crates.io/crates/grass) and [`lightningcss`](https://crates.io/crates/lightningcss) directly.
+For more fine-grained control, consider using [`grass`](https://crates.io/crates/grass) and/or [`lightningcss`](https://crates.io/crates/lightningcss) directly.
 
 **Work In Progress**
 
@@ -81,11 +78,9 @@ production.
 
 mod error;
 mod styles;
-mod targets;
 
 pub use error::GuffError;
 pub use styles::Css;
-pub use targets::{
-	Agent,
-	Agents,
-};
+
+// Re-export.
+pub use lightningcss;
