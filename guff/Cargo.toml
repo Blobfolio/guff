@@ -80,7 +80,7 @@ version = "1.0.*"
 [dependencies]
 argyle = "0.13.*"
 dactyl = "0.13.*"
-fyi_msg = "2.3.*"
+fyi_msg = "2.4.*"
 oxford_join = "0.7.*"
 write_atomic = "0.7.*"
 
