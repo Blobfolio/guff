@@ -32,12 +32,17 @@ skel_dir    := justfile_directory() + "/skel"
 caniuse_url := "https://github.com/Fyrd/caniuse/raw/main/fulldata-json/data-2.0.json"
 caniuse_tmp := "/tmp/caniuse.json"
 
-export RUSTFLAGS := "-C target-cpu=x86-64-v3"
+export RUSTFLAGS := "-Ctarget-cpu=x86-64-v3 -Cllvm-args=--cost-kind=throughput -Clinker-plugin-lto -Clink-arg=-fuse-ld=lld"
+export CC        := "clang"
+export CXX       := "clang++"
+export CFLAGS    := `llvm-config --cflags` + " -march=x86-64-v3 -Wall -Wextra -flto"
+export CXXFLAGS  := `llvm-config --cxxflags` + " -march=x86-64-v3 -Wall -Wextra -flto"
+export LDFLAGS   := `llvm-config --ldflags` + " -fuse-ld=lld -flto"
 
 
 
 # Build Release!
-@build: _caniuse
+@build:
 	# First let's build the Rust bit.
 	cargo build \
 		--bin "{{ pkg_id }}" \
@@ -47,7 +52,7 @@ export RUSTFLAGS := "-C target-cpu=x86-64-v3"
 
 
 # Build Debian package!
-@build-deb: clean credits build
+@build-deb: clean credits _caniuse build
 	# cargo-deb doesn't support target_dir flags yet.
 	[ ! -d "{{ justfile_directory() }}/target" ] || rm -rf "{{ justfile_directory() }}/target"
 	mv "{{ cargo_dir }}" "{{ justfile_directory() }}/target"
@@ -73,9 +78,7 @@ export RUSTFLAGS := "-C target-cpu=x86-64-v3"
 	[ ! -d "{{ pkg_dir1 }}/target" ] || rm -rf "{{ pkg_dir1 }}/target"
 	[ ! -d "{{ pkg_dir2 }}/target" ] || rm -rf "{{ pkg_dir2 }}/target"
 
-	# Clear caniuse data.
-	[ ! -f "{{ caniuse_tmp }}" ] || rm "{{ caniuse_tmp }}"
-
+	# Update cargo.
 	cargo update
 
 
@@ -119,49 +122,56 @@ export RUSTFLAGS := "-C target-cpu=x86-64-v3"
 		-- {{ ARGS }}
 
 
-# Unit tests!
+# Unit Tests!
 @test:
 	clear
-	cargo test \
-		--all-features \
-		--target-dir "{{ cargo_dir }}"
+
+	fyi task "Test (Release)"
 	cargo test \
 		--all-features \
 		--release \
+		--target-dir "{{ cargo_dir }}"
+
+	just _test-debug
+
+
+# Unit Tests (Debug).
+_test-debug:
+	#!/usr/bin/env bash
+	set -e
+
+	unset -v RUSTFLAGS CC CXX CFLAGS CXXFLAGS LDFLAGS
+
+	fyi task "Test (Debug)"
+	cargo test \
+		--all-features \
 		--target-dir "{{ cargo_dir }}"
 
 
 # Get/Set version.
 version:
 	#!/usr/bin/env bash
+	set -e
 
 	# Current version.
-	_ver1="$( toml get "{{ pkg_dir1 }}/Cargo.toml" package.version | \
-		sed 's/"//g' )"
+	_ver1="$( tomli query -f "{{ pkg_dir1 }}/Cargo.toml" package.version | \
+		sed 's/[" ]//g' )"
 
 	# Find out if we want to bump it.
+	set +e
 	_ver2="$( whiptail --inputbox "Set {{ pkg_name }} version:" --title "Release Version" 0 0 "$_ver1" 3>&1 1>&2 2>&3 )"
 
 	exitstatus=$?
 	if [ $exitstatus != 0 ] || [ "$_ver1" = "$_ver2" ]; then
 		exit 0
 	fi
-
-	fyi success "Setting version to $_ver2."
-
-	# Set the release version!
-	just _version "{{ pkg_dir1 }}" "$_ver2"
-	just _version "{{ pkg_dir2 }}" "$_ver2"
-
-
-# Set version for real.
-@_version DIR VER:
-	[ -f "{{ DIR }}/Cargo.toml" ] || exit 1
+	set -e
 
 	# Set the release version!
-	toml set "{{ DIR }}/Cargo.toml" package.version "{{ VER }}" > /tmp/Cargo.toml
-	just _fix-chown "/tmp/Cargo.toml"
-	mv "/tmp/Cargo.toml" "{{ DIR }}/Cargo.toml"
+	tomli set -f "{{ pkg_dir1 }}/Cargo.toml" -i package.version "$_ver2"
+	tomli set -f "{{ pkg_dir2 }}/Cargo.toml" -i package.version "$_ver2"
+
+	fyi success "Set version to $_ver2."
 
 
 # Bench Reset.
@@ -171,17 +181,18 @@ version:
 	just _fix-chown "{{ data_dir }}"
 
 
-# Refresh Remote Data.
+# Update CANIUSE Data.
 @_caniuse:
-	if [ ! -f "{{ caniuse_tmp }}" ]; then \
-		wget -q -O "{{ caniuse_tmp }}" "{{ caniuse_url }}"; \
-		cat "{{ caniuse_tmp }}" | jq '{agents: .agents}' > "{{ pkg_dir2 }}/skel/data-2.0.json"; \
-	fi
+	wget -q -O "{{ caniuse_tmp }}" "{{ caniuse_url }}"
+	cat "{{ caniuse_tmp }}" | jq '{agents: .agents}' > "{{ pkg_dir1 }}/skel/data-2.0.json"
+	just _fix-chown "{{ pkg_dir1 }}/skel/data-2.0.json"
+	rm "{{ caniuse_tmp }}"
 
 
 # Init dependencies.
 @_init:
 	# Nothing here just now.
+
 
 # Fix file/directory permissions.
 @_fix-chmod PATH:

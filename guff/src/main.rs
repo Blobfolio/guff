@@ -51,6 +51,12 @@
 	unused_import_braces,
 )]
 
+#![expect(clippy::redundant_pub_crate, reason = "Unresolvable.")]
+
+
+
+mod targets;
+
 
 
 use argyle::Argument;
@@ -64,14 +70,15 @@ use fyi_msg::{
 	Msg,
 };
 use guff_css::{
-	Agents,
 	Css,
 	GuffError,
+	lightningcss::targets::Browsers,
 };
 use std::{
 	path::Path,
 	process::ExitCode,
 };
+use targets::Agents;
 
 
 
@@ -146,7 +153,7 @@ fn main__() -> Result<(), GuffError> {
 								.print();
 						}
 
-						Some(agents)
+						Option::<Browsers>::from(agents)
 					}
 				}
 				else { None };

@@ -2,6 +2,28 @@
 
 
 
+## [0.10.0](https://github.com/Blobfolio/guff/releases/tag/v0.10.0) - 2025-09-18
+
+### New
+
+* Re-export `lightningcss`
+
+### Changed
+
+* Remove `dactyl` dependency
+* Remove `minreq` dependency (build)
+* Remove `oxford_join` dependency
+* Remove `serde_json` dependency (build)
+* Remove `serde` dependency (build)
+
+### Breaking
+
+* Remove `Agent`
+* Remove `Agents`
+* `Css::minified` now takes `Option<Browsers>` directly
+
+
+
 ## [0.9.0](https://github.com/Blobfolio/guff/releases/tag/v0.9.0) - 2025-06-26
 
 ### Changed

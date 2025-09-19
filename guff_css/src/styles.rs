@@ -2,10 +2,7 @@
 # Guff: Styles!
 */
 
-use crate::{
-	Agents,
-	GuffError,
-};
+use crate::GuffError;
 use grass::{
 	Options,
 	OutputStyle,
@@ -156,13 +153,11 @@ impl Css<'_> {
 	/// argument can be used to override this behavior, maintaining backward
 	/// compatibility with the browsers specified.
 	///
-	/// See the documentation for [`Agents`] for more information.
-	///
 	/// ## Errors
 	///
 	/// If the CSS cannot be parsed or errors occur during minification, an
 	/// error will be returned.
-	pub fn minified(mut self, browsers: Option<Agents>) -> Result<String, GuffError> {
+	pub fn minified(mut self, browsers: Option<Browsers>) -> Result<String, GuffError> {
 		self.prepare();
 		let Self { path, css } = self;
 
@@ -179,9 +174,6 @@ impl Css<'_> {
 				warnings: None,
 				flags: ParserFlags::NESTING,
 			})?;
-
-			// Convert our Agents into a parcel Browsers object.
-			let browsers = browsers.and_then(Option::<Browsers>::from);
 
 			// Minify it.
 			stylesheet.minify(MinifyOptions {

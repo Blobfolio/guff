@@ -12,6 +12,11 @@ This is the backing library for the Guff command-line SCSS/CSS parser and minifi
 
 Refer to the [documentation](https://docs.rs/guff_css/) for usage and other details.
 
-**Compatibility**
+For more fine-grained control, consider using [`grass`](https://crates.io/crates/grass) and/or [`lightningcss`](https://crates.io/crates/lightningcss) directly.
 
-This library is only compatible with Unix platforms. For broader support, consider using [`grass`](https://crates.io/crates/grass) and/or [`lightningcss`](https://crates.io/crates/lightningcss) directly.
+**Work In Progress**
+
+Both the SASS/SCSS compilation and CSS minification features are works in
+progress, and might change subtly between releases. To be safe, CSS generated
+by Guff should be tested in a staging environment before being pushed to
+production.
