@@ -59,7 +59,6 @@ mod targets;
 
 
 
-use argyle::Argument;
 use fyi_msg::{
 	fyi_ansi::{
 		ansi,
@@ -104,28 +103,34 @@ fn main() -> ExitCode {
 #[inline]
 /// # Actual Main.
 fn main__() -> Result<(), GuffError> {
-	// Parse CLI arguments.
-	let args = argyle::args()
-		.with_keywords(include!(concat!(env!("OUT_DIR"), "/argyle.rs")));
+	argyle::argue! {
+		Expanded "-e" "--expanded",
+		Help     "-h" "--help",
+		Version  "-V" "--version",
+		@options
+		Browsers "-b" "--browsers",
+		Input    "-i" "--input",
+		Output   "-o" "--output",
+	}
 
+	// Parse CLI arguments.
 	let mut expanded = false;
 	let mut browsers = None;
 	let mut input = None;
 	let mut output = None;
-	for arg in args {
+	for arg in Argument::args_os() {
 		match arg {
-			Argument::Key("-e" | "--expanded") => { expanded = true; },
-			Argument::Key("-h" | "--help") => return Err(GuffError::PrintHelp),
-			Argument::Key("-V" | "--version") => return Err(GuffError::PrintVersion),
+			Argument::Expanded => { expanded = true; },
+			Argument::Help =>     return Err(GuffError::PrintHelp),
+			Argument::Version =>  return Err(GuffError::PrintVersion),
 
-			Argument::KeyWithValue("-b" | "--browsers", s) => { browsers.replace(s); },
-			Argument::KeyWithValue("-i" | "--input", s) => { input.replace(s); },
-			Argument::KeyWithValue("-o" | "--output", s) => { output.replace(s); },
+			Argument::Browsers(s) => { browsers.replace(s); },
+			Argument::Input(s) =>    { input.replace(s); },
+			Argument::Output(s) =>   { output.replace(s); },
 
 			// Nothing else is expected.
-			Argument::Other(s) => return Err(GuffError::Cli(s)),
-			Argument::InvalidUtf8(s) => return Err(GuffError::Cli(s.to_string_lossy().into_owned())),
-			_ => {},
+			Argument::Other(s) =>   return Err(GuffError::Cli(s)),
+			Argument::OtherOs(s) => return Err(GuffError::Cli(s.to_string_lossy().into_owned())),
 		}
 	}
 

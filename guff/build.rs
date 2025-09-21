@@ -2,7 +2,6 @@
 # Guff: Build
 */
 
-use argyle::KeyWordsBuilder;
 use dactyl::{
 	NiceSeparator,
 	NiceU32,
@@ -31,7 +30,6 @@ fn main() {
 	println!("cargo:rerun-if-changed=skel/data-2.0.json");
 
 	build_browser_data();
-	build_cli_args();
 }
 
 /// # Build Browser/Target Data.
@@ -43,22 +41,6 @@ fn build_browser_data() {
 	File::create(cache)
 		.and_then(|mut f| f.write_all(out.as_bytes()).and_then(|_| f.flush()))
 		.expect("Unable to save browser data.");
-}
-
-/// # Build CLI Args.
-fn build_cli_args() {
-	let mut builder = KeyWordsBuilder::default();
-	builder.push_keys([
-		"-e", "--expanded",
-		"-h", "--help",
-		"-V", "--version",
-	]);
-	builder.push_keys_with_values([
-		"-b", "--browsers",
-		"-i", "--input",
-		"-o", "--output",
-	]);
-	builder.save(out_path("argyle.rs"));
 }
 
 /// # Download/Cache Raw JSON.
