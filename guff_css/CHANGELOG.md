@@ -2,6 +2,18 @@
 
 
 
+## [0.10.1](https://github.com/Blobfolio/guff/releases/tag/v0.10.1) - 2025-09-29
+
+### New
+
+* Re-export `grass`
+
+### Changed
+
+* Bump `lightningcss` to `alpha68`
+
+
+
 ## [0.10.0](https://github.com/Blobfolio/guff/releases/tag/v0.10.0) - 2025-09-18
 
 ### New

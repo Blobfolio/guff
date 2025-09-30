@@ -82,5 +82,6 @@ mod styles;
 pub use error::GuffError;
 pub use styles::Css;
 
-// Re-export.
+// Re-exports.
+pub use grass;
 pub use lightningcss;
