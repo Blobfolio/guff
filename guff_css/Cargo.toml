@@ -22,7 +22,7 @@ version = "=0.13.4"
 default-features = false
 
 [dependencies.lightningcss]
-version = "=1.0.0-alpha.67"
+version = "=1.0.0-alpha.68"
 default-features = false
 
 [features]
