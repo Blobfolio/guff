@@ -10,9 +10,7 @@ repository = "https://github.com/Blobfolio/guff"
 readme = "README.md"
 
 [package.metadata.docs.rs]
-rustc-args = ["--cfg", "docsrs"]
 default-target = "x86_64-unknown-linux-gnu"
-targets = [ "x86_64-unknown-linux-gnu", "x86_64-apple-darwin" ]
 
 [dependencies]
 trimothy = "0.9.*"

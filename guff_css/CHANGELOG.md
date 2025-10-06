@@ -2,6 +2,14 @@
 
 
 
+## [0.10.2](https://github.com/Blobfolio/guff/releases/tag/v0.10.2) - 2025-10-06
+
+### Changed
+
+* Fix `docs.rs` generation
+
+
+
 ## [0.10.1](https://github.com/Blobfolio/guff/releases/tag/v0.10.1) - 2025-09-29
 
 ### New
