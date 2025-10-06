@@ -1,8 +1,8 @@
 # Project Dependencies
     Package:   guff
-    Version:   0.10.1
+    Version:   0.10.2
     Target:    x86_64-unknown-linux-gnu
-    Generated: 2025-09-30 03:15:55 UTC
+    Generated: 2025-10-06 19:26:47 UTC
 
 | Package | Version | Author(s) | License |
 | ---- | ---- | ---- | ---- |
@@ -32,7 +32,7 @@
 | [getrandom](https://github.com/rust-random/getrandom) | 0.3.3 | The Rand Project Developers | MIT OR Apache-2.0 |
 | [**grass**](https://github.com/connorskees/grass) | 0.13.4 | [Connor Skees](mailto:39542938&#43;connorskees@users.noreply.github.com) | MIT |
 | [grass_compiler](https://github.com/connorskees/grass) | 0.13.4 | [Connor Skees](mailto:39542938&#43;connorskees@users.noreply.github.com) | MIT |
-| [**guff_css**](https://github.com/Blobfolio/guff) | 0.10.1 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
+| [**guff_css**](https://github.com/Blobfolio/guff) | 0.10.2 | [Josh Stoik](mailto:josh@blobfolio.com) | WTFPL |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.14.5 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | MIT OR Apache-2.0 |
 | [hashbrown](https://github.com/rust-lang/hashbrown) | 0.16.0 | [Amanieu d'Antras](mailto:amanieu@gmail.com) | MIT OR Apache-2.0 |
 | [indexmap](https://github.com/indexmap-rs/indexmap) | 2.11.4 |  | Apache-2.0 OR MIT |
