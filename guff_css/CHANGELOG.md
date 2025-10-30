@@ -2,6 +2,15 @@
 
 
 
+## [0.11.0](https://github.com/Blobfolio/guff/releases/tag/v0.11.0) - 2025-10-30
+
+### Changed
+
+* Bump MSRV to `1.90`
+* Miscellaneous code changes and lints
+
+
+
 ## [0.10.2](https://github.com/Blobfolio/guff/releases/tag/v0.10.2) - 2025-10-06
 
 ### Changed
