@@ -2,6 +2,14 @@
 
 
 
+## [0.11.2](https://github.com/Blobfolio/guff/releases/tag/v0.11.2) - 2026-03-05
+
+### Changed
+
+* Update browser data
+
+
+
 ## [0.11.1](https://github.com/Blobfolio/guff/releases/tag/v0.11.1) - 2026-01-22
 
 ### Changed
