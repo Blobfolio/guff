@@ -89,7 +89,7 @@ fn process(raw: Raw) -> String {
 	let all: BTreeMap<Agent, Vec<Versions>> = raw.agents.into_iter()
 		.filter_map(|(k, mut v)| {
 			let agent = Agent::try_from(k.as_str()).ok()?;
-			v.version_list.sort_by(|a, b| b.era.cmp(&a.era));
+			v.version_list.sort_by_key(|b| std::cmp::Reverse(b.era));
 
 			let releases: Vec<Versions> = v.version_list.into_iter()
 				.filter_map(|v2| {
