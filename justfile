@@ -44,7 +44,7 @@ export LDFLAGS   := `llvm-config --ldflags` + " -fuse-ld=lld -flto"
 # Build Release!
 @build:
 	# First let's build the Rust bit.
-	cargo build \
+	cargo auditable build \
 		--bin "{{ pkg_id }}" \
 		--release \
 		--all-features \
