@@ -5118,7 +5118,7 @@
         "4.2-4.3": 0,
         "4.4": 0,
         "4.4.3-4.4.4": 0.0000570348,
-        "149": 0.142444
+        "150": 0.142444
       },
       "version_list": [
         {
@@ -5185,14 +5185,14 @@
           "prefix": ""
         },
         {
-          "version": "149",
+          "version": "150",
           "global_usage": 0.142444,
-          "release_date": 1779235200,
+          "release_date": 1782777600,
           "era": 0,
           "prefix": ""
         }
       ],
-      "current_version": "149"
+      "current_version": "150"
     },
     "bb": {
       "browser": "Blackberry Browser",
@@ -5300,18 +5300,18 @@
       "prefix": "webkit",
       "type": "mobile",
       "usage_global": {
-        "149": 44.7497
+        "150": 44.7497
       },
       "version_list": [
         {
-          "version": "149",
+          "version": "150",
           "global_usage": 44.7497,
-          "release_date": 1779235200,
+          "release_date": 1782777600,
           "era": 0,
           "prefix": ""
         }
       ],
-      "current_version": "149"
+      "current_version": "150"
     },
     "and_ff": {
       "browser": "Firefox for Android",
