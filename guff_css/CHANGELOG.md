@@ -2,6 +2,15 @@
 
 
 
+## [0.11.6](https://github.com/Blobfolio/guff/releases/tag/v0.11.6) - 2026-07-20
+
+### Changed
+
+* Bump `lightningcss` to `alpha72`
+* Update browser data
+
+
+
 ## [0.11.5](https://github.com/Blobfolio/guff/releases/tag/v0.11.5) - 2026-07-09
 
 ### Changed
