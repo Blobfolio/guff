@@ -81,7 +81,7 @@ argyle = "0.15.*"
 dactyl = "0.13.*"
 fyi_msg = "2.7.*"
 oxford_join = "0.7.*"
-write_atomic = "0.7.*"
+write_atomic = "0.9.*"
 
 [dependencies.guff_css]
 path = "../guff_css"
