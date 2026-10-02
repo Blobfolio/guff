@@ -67,7 +67,7 @@ path = true
 
 [build-dependencies]
 dactyl = "0.14.*"
-oxford_join = "0.7.*"
+oxford_join = "0.8.*"
 
 [build-dependencies.serde]
 version = "1.0.*"
@@ -80,7 +80,7 @@ version = "1.0.*"
 argyle = "0.16.*"
 dactyl = "0.14.*"
 fyi_msg = "2.7.*"
-oxford_join = "0.7.*"
+oxford_join = "0.8.*"
 write_atomic = "0.9.*"
 
 [dependencies.guff_css]
