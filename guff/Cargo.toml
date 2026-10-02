@@ -66,7 +66,7 @@ description = "The path to save the minified output to. If omitted, the result w
 path = true
 
 [build-dependencies]
-dactyl = "0.13.*"
+dactyl = "0.14.*"
 oxford_join = "0.7.*"
 
 [build-dependencies.serde]
@@ -78,7 +78,7 @@ version = "1.0.*"
 
 [dependencies]
 argyle = "0.16.*"
-dactyl = "0.13.*"
+dactyl = "0.14.*"
 fyi_msg = "2.7.*"
 oxford_join = "0.7.*"
 write_atomic = "0.9.*"
