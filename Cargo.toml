@@ -5,6 +5,27 @@ members = [
 	"guff_css",
 ]
 
+[workspace.dependencies]
+argyle = "0.16.*"
+dactyl = "0.14.*"
+fyi_msg = "2.7.*"
+oxford_join = "0.8.*"
+serde = "1.0.*"
+serde_json = "1.0.*"
+trimothy = "0.10.*"
+write_atomic = "0.9.*"
+
+[workspace.dependencies.grass]
+version = "=0.13.4"
+default-features = false
+
+[workspace.dependencies.guff_css]
+path = "guff_css"
+
+[workspace.dependencies.lightningcss]
+version = "=1.0.0-alpha.72"
+default-features = false
+
 [profile.release]
 lto = true
 codegen-units = 1
