@@ -7,7 +7,7 @@ use dactyl::{
 	NoHash,
 	traits::BytesToUnsigned,
 };
-use oxford_join::OxfordJoinFmt;
+use oxford_join::oxford_join;
 use guff_css::lightningcss::targets::Browsers;
 use std::{
 	collections::HashMap,
@@ -65,7 +65,7 @@ impl fmt::Display for Agents {
 				.map(|(k, v)| format!("{k} ({v})"))
 				.collect();
 
-			write!(f, "{}", OxfordJoinFmt::and(tmp.as_slice()))
+			write!(f, "{}", oxford_join!(tmp.iter()))
 		}
 	}
 }
