@@ -6,7 +6,7 @@ use dactyl::{
 	NiceSeparator,
 	NiceU32,
 };
-use oxford_join::JoinFmt;
+use oxford_join::join;
 use serde::Deserialize;
 use std::{
 	collections::BTreeMap,
@@ -110,7 +110,7 @@ fn process(raw: Raw) -> String {
 			"#[expect(clippy::missing_docs_in_private_items, reason = \"List is auto-generated.\")]\nconst {}: [(u32, u32); {}] = [{}];",
 			k.as_str(),
 			v.len(),
-			JoinFmt::new(v.into_iter(), ", "),
+			join!(", ", v.iter()),
 		).unwrap();
 	}
 	out

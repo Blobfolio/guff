@@ -1,6 +1,6 @@
 [package]
 name = "guff_css"
-version = "0.12.0"
+version = "0.12.1"
 license = "WTFPL"
 authors = ["Josh Stoik <josh@blobfolio.com>"]
 edition = "2024"
@@ -13,15 +13,9 @@ readme = "README.md"
 default-target = "x86_64-unknown-linux-gnu"
 
 [dependencies]
-trimothy = "0.10.*"
-
-[dependencies.grass]
-version = "=0.13.4"
-default-features = false
-
-[dependencies.lightningcss]
-version = "=1.0.0-alpha.72"
-default-features = false
+grass =        { workspace = true }
+lightningcss = { workspace = true }
+trimothy =     { workspace = true }
 
 [features]
 default = []
